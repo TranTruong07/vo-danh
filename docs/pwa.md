@@ -8,7 +8,7 @@ PWA chỉ đăng ký trong production, tránh lưu các chunk HMR thay đổi li
 
 1. Vào Home hoặc `/play` khi có mạng. Ứng dụng tự tải bộ dữ liệu công khai gồm tất cả nhân vật, ảnh chân dung, ảnh nền, câu hỏi, bốn đáp án và hai phản hồi.
 2. Thanh trạng thái chỉ xuất hiện khi offline: **Chuẩn bị chơi offline** trong lúc chưa đọc được bộ dữ liệu hoàn chỉnh; **Đang chơi offline** khi bộ dữ liệu đã sẵn sàng. Service worker chỉ công bố bộ dữ liệu sau khi tải đủ cả tài nguyên và ảnh. Đóng trang hoặc mất mạng trước khi tải đủ lần đầu có thể khiến offline chưa sử dụng được.
-3. Khi mất mạng: Home, `/play`, `/play/<id>` vẫn mở/tải lại được. Home giữ nội dung bình thường, không chèn mục “Nhân vật đã lưu trên máy”. Màn quét vẫn cho phép quét camera, chọn ảnh QR, dán liên kết hoặc chọn nhân vật trong danh sách đã lưu.
+3. Khi mất mạng: Home, `/play`, `/play/<id>` vẫn mở/tải lại được. Home giữ nội dung bình thường. Home và màn quét không chèn mục “Nhân vật đã lưu trên máy”. Màn quét cho phép quét camera, chọn ảnh QR hoặc dán liên kết / mã nhân vật.
 4. Câu hỏi được chọn và chấm tại máy. Mỗi chu kỳ dùng hết câu hỏi trước khi lặp, tránh lặp ngay ở ranh giới chu kỳ; lịch sử lưu riêng theo nhân vật trong trình duyệt, khóa giữa các tab khi Web Locks khả dụng.
 5. Khi có mạng trở lại, ứng dụng tự kiểm tra cập nhật. Cập nhật chỉ có hiệu lực sau khi tải đủ. Mất mạng/lỗi tải/hết dung lượng giữ nguyên bộ dữ liệu hoàn chỉnh trước đó.
 6. Cài ứng dụng từ menu trình duyệt trên Android/máy tính; iPhone dùng Safari → Chia sẻ → Thêm vào Màn hình chính. Không bắt buộc cài mới có thể chơi offline.

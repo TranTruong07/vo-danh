@@ -7,7 +7,6 @@ import { startQuizAction, answerQuizAction } from "@/actions/quiz";
 import type { PublicCharacter } from "@/server/domain/character";
 import type { PublicQuestion, AnswerResult } from "@/server/domain/quiz";
 import { usePwa } from "@/features/pwa/pwa-provider";
-import OfflineLibrary from "@/features/pwa/offline-library";
 import { drawLocalQuestion, gradeLocalQuestion, localPublicQuestion, matchSavedQuestion, readPack, rememberLocalQuestion } from "@/features/pwa/local-game";
 import type { CharacterQuestionRecord } from "@/server/domain/character-question";
 
@@ -20,7 +19,7 @@ export default function GamePlayer({ character }: { character?: PublicCharacter 
     // eslint-disable-next-line @next/next/no-location-assign-relative-destination
     window.location.assign(url);
   }
-  if (!character) return <><QrScanner onScan={scanned} /><OfflineLibrary /></>;
+  if (!character) return <QrScanner onScan={scanned} />;
   return <div className={`character-stage ${motion ? "" : "motion-paused"}`}>
     {/* eslint-disable-next-line @next/next/no-img-element */}
     <img className="scene-background" src={character.backgroundImage} alt="" referrerPolicy="no-referrer" />
