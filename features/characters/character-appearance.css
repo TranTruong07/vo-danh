@@ -1,0 +1,4 @@
+.character-appearance{position:relative;isolation:isolate;overflow:hidden;min-width:0;aspect-ratio:16/10;background:#e8e4db;border-radius:10px}
+.character-appearance .character-background{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.character-appearance .character-background-shade{position:absolute;inset:0;background:linear-gradient(0deg,#17233866,transparent 70%)}
+.character-appearance .character-portrait{position:absolute;inset:12% 20% 0;width:60%;height:88%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 8px 12px #0004)}

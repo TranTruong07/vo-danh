@@ -1,0 +1,156 @@
+import { chromium, expect } from '@playwright/test';
+import { MongoClient, ObjectId } from 'mongodb';
+import { createServer } from 'node:http';
+import { randomUUID, randomBytes, scryptSync } from 'node:crypto';
+import { mkdir } from 'node:fs/promises';
+import { PayOS } from '@payos/node';
+import ExcelJS from 'exceljs';
+process.loadEnvFile('.env.local');
+process.env.MONGODB_DB_NAME = (process.env.MONGODB_DB_NAME || 'vo_danh') + '_orders_test';
+const base = 'http://localhost:3012', marker = 'orders-probe-' + randomUUID();
+const id = new ObjectId(), email = marker + '@example.com', password = 'OrdersTest123!';
+const client = new MongoClient(process.env.MONGODB_URI);
+const sdk = new PayOS({ clientId: 'orders-test-only', apiKey: 'orders-test-only', checksumKey: 'orders-test-only', logLevel: 'off' });
+const payments = new Map();
+const provider = createServer(async (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  let data;
+  if (req.method === 'POST') {
+    let text = ''; for await (const chunk of req) text += chunk;
+    const input = JSON.parse(text), paymentId = randomBytes(16).toString('hex');
+    payments.set(input.orderCode, { id: paymentId, orderCode: input.orderCode, amount: input.amount, amountPaid: 0, amountRemaining: input.amount, status: 'PENDING', transactions: [], createdAt: new Date().toISOString() });
+    data = { paymentLinkId: paymentId, orderCode: input.orderCode, amount: input.amount, currency: 'VND', status: 'PENDING', checkoutUrl: 'https://pay.payos.vn/web/' + paymentId, qrCode: 'TEST-ONLY-NOT-A-PAYMENT', bin: 'test', accountNumber: 'test', accountName: 'Test', description: input.description };
+  } else {
+    data = payments.get(Number(req.url.split('/').at(-1)));
+    if (!data) { res.writeHead(404); res.end(JSON.stringify({ code: 'not-found' })); return; }
+  }
+  res.end(JSON.stringify({ code: '00', desc: 'success', data, signature: await sdk.crypto.createSignatureFromObj(data, 'orders-test-only') }));
+});
+await new Promise(resolve => provider.listen(3099, '127.0.0.1', resolve));
+const browser = await chromium.launch({ channel: 'msedge', headless: true });
+const customer = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+const admin = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+const outsider = await browser.newPage();
+const errors = [];
+for (const page of [customer, admin]) {
+  page.on('pageerror', error => errors.push(error.message));
+  page.on('console', message => { if (message.type() === 'error' && /hydration|hydrated/i.test(message.text())) errors.push(message.text()); });
+}
+try {
+  await client.connect(); const db = client.db(process.env.MONGODB_DB_NAME || undefined);
+  const salt = randomBytes(16).toString('hex');
+  await db.collection('users').insertOne({ _id: id, email, passwordHash: `scrypt$${salt}$${scryptSync(password, salt, 64).toString('hex')}`, role: 'user', authVersion: 0, createdAt: new Date(), updatedAt: new Date() });
+  await mkdir('test-results', { recursive: true });
+  await customer.goto(base + '/shop');
+  await customer.getByRole('link', { name: 'Mua ngay', exact: false }).click();
+  await expect(customer).toHaveURL(/auth=login.*next=/);
+  const login = customer.getByRole('dialog');
+  await login.getByLabel('Email', { exact: true }).fill(email);
+  await login.getByLabel('Mật khẩu', { exact: true }).fill(password);
+  await login.locator('button[type=submit]').click();
+  await expect(customer).toHaveURL(base + '/checkout', { timeout: 30000 });
+  await expect(customer.getByLabel('Email tài khoản', { exact: false })).toHaveValue(email);
+  await expect(customer.getByLabel('Email tài khoản', { exact: false })).toHaveAttribute('readonly', '');
+  await customer.getByLabel('Họ và tên người nhận').fill('Khách kiểm thử mua hàng');
+  await customer.getByLabel('Số điện thoại', { exact: true }).fill('0912345678');
+  await customer.getByLabel('Địa chỉ nhận hàng', { exact: true }).fill('12 Nguyễn Huệ, Quận 1, Thành phố Hồ Chí Minh');
+  await customer.getByLabel('Ghi chú', { exact: false }).fill('=1+1');
+  await customer.getByLabel('Số lượng', { exact: true }).fill('2');
+  await customer.screenshot({ path: 'test-results/checkout-desktop.png', fullPage: true, caret: 'initial' });
+  await customer.setViewportSize({ width: 390, height: 844 });
+  expect(await customer.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await customer.screenshot({ path: 'test-results/checkout-mobile.png', fullPage: true, caret: 'initial' });
+  await customer.getByRole('button', { name: 'Đặt hàng →' }).click();
+  await expect(customer).toHaveURL(/\/orders\/[a-f\d]{24}$/, { timeout: 30000 });
+  await expect(customer.getByRole('status')).toContainText('Đặt hàng thành công');
+  const cod = await db.collection('orders').findOne({ userId: id.toHexString() });
+  expect(cod.status).toBe('unpaid'); expect(cod.total).toBe(698000); expect(cod.email).toBe(email);
+  await customer.getByRole('link', { name: '← Lịch sử mua hàng' }).click();
+  await expect(customer.getByRole('heading', { name: 'Lịch sử mua hàng' })).toBeVisible();
+  await expect(customer.locator('.order-history')).toContainText(String(cod.orderCode));
+  expect((await customer.request.get(base + '/admin/orders/export')).status()).toBe(401);
+  // An anonymous visitor must log in even with a known order identifier.
+  await outsider.goto(base + '/orders/' + cod._id);
+  await expect(outsider).toHaveURL(/auth=login/);
+  await admin.goto(base + '/?auth=login');
+  const adminLogin = admin.getByRole('dialog');
+  await adminLogin.getByLabel('Email', { exact: true }).fill(process.env.ADMIN_EMAIL);
+  await adminLogin.getByLabel('Mật khẩu', { exact: true }).fill(process.env.ADMIN_PASSWORD);
+  await adminLogin.locator('button[type=submit]').click();
+  await expect(admin).toHaveURL(base + '/admin', { timeout: 30000 });
+  await admin.locator('.admin-sidebar').getByRole('link', { name: 'Đơn hàng', exact: true }).click();
+  await expect(admin.getByRole('heading', { name: 'Quản lý đơn hàng' })).toBeVisible();
+  await admin.getByRole('searchbox', { name: 'Tìm đơn hàng', exact: true }).fill(email);
+  await admin.locator('.order-search').getByRole('button', { name: 'Tìm kiếm', exact: true }).click();
+  await expect(admin.locator('.order-table tbody tr')).toHaveCount(1);
+  await admin.screenshot({ path: 'test-results/orders-admin-desktop.png', fullPage: true, caret: 'initial' });
+  const exported = await admin.request.get(base + '/admin/orders/export?q=' + encodeURIComponent(email));
+  expect(exported.status()).toBe(200);
+  const workbook = new ExcelJS.Workbook(); await workbook.xlsx.load(await exported.body());
+  const sheet = workbook.worksheets[0];
+  expect(sheet.rowCount).toBe(2); expect(sheet.getCell('D2').value).toBe(email);
+  expect(sheet.getCell('J2').value).toBe(698000); expect(sheet.getCell('O2').value).toBe('=1+1');
+  expect(sheet.getCell('O2').type).toBe(ExcelJS.ValueType.String);
+  await admin.getByRole('link', { name: 'Xem chi tiết →' }).click();
+  await admin.getByRole('button', { name: 'Hoàn tất đơn hàng', exact: true }).click();
+  const dialog = admin.getByRole('dialog');
+  await dialog.getByRole('button', { name: 'Hủy', exact: true }).click();
+  expect((await db.collection('orders').findOne({ _id: cod._id })).status).toBe('unpaid');
+  await admin.getByRole('button', { name: 'Hoàn tất đơn hàng', exact: true }).click();
+  await dialog.getByRole('button', { name: 'Xác nhận hoàn tất', exact: true }).click();
+  await expect(admin.locator('.order-badge')).toHaveText('Hoàn tất');
+  await expect(admin.getByRole('button', { name: 'Hoàn tất đơn hàng', exact: true })).toHaveCount(0);
+  expect((await db.collection('orders').findOne({ _id: cod._id })).completedBy).toBeTruthy();
+  // Admin cannot use the customer detail page to read another customer's order.
+  expect((await admin.goto(base + '/orders/' + cod._id)).status()).toBe(404);
+  await customer.goto(base + '/checkout');
+  await customer.getByLabel('Họ và tên người nhận').fill('Khách kiểm thử online');
+  await customer.getByLabel('Số điện thoại', { exact: true }).fill('0912345678');
+  await customer.getByLabel('Địa chỉ nhận hàng', { exact: true }).fill('12 Nguyễn Huệ, Thành phố Hồ Chí Minh');
+  await customer.getByRole('radio', { name: 'Chuyển khoản qua payOS', exact: false }).check();
+  await customer.getByRole('button', { name: 'Đặt hàng →' }).click();
+  await expect(customer.getByRole('link', { name: 'Mở trang thanh toán payOS ↗' })).toBeVisible({ timeout: 30000 });
+  const online = await db.collection('orders').findOne({ userId: id.toHexString(), paymentMethod: 'payos' });
+  expect(online.status).toBe('pending'); expect(online.total).toBe(349000);
+  await admin.goto(base + '/admin/orders/' + online._id);
+  await expect(admin.getByRole('button', { name: 'Hoàn tất đơn hàng', exact: true })).toHaveCount(0);
+  // Forged success query parameters never confirm payment.
+  await customer.goto(base + '/orders/' + online._id + '?status=PAID&code=00');
+  await expect(customer.locator('.order-badge')).toHaveText('Chờ thanh toán online');
+  const webhookData = { orderCode: online.orderCode, amount: online.total, description: 'TEST', accountNumber: 'test', reference: marker, transactionDateTime: new Date().toISOString(), currency: 'VND', paymentLinkId: online.paymentLinkId, code: '00', desc: 'success' };
+  const webhook = { code: '00', desc: 'success', success: true, data: webhookData, signature: await sdk.crypto.createSignatureFromObj(webhookData, 'orders-test-only') };
+  expect((await customer.request.post(base + '/api/payos/webhook', { data: { ...webhook, signature: 'forged' } })).status()).toBe(400);
+  const payment = payments.get(online.orderCode);
+  payment.status = 'UNDERPAID'; payment.amountPaid = 100000; payment.amountRemaining = online.total - 100000;
+  expect((await customer.request.post(base + '/api/payos/webhook', { data: webhook })).status()).toBe(200);
+  expect((await db.collection('orders').findOne({ _id: online._id })).status).toBe('pending');
+  payment.status = 'PAID'; payment.amountPaid = online.total; payment.amountRemaining = 0;
+  expect((await customer.request.post(base + '/api/payos/webhook', { data: webhook })).status()).toBe(200);
+  await customer.reload();
+  await expect(customer.locator('.order-badge')).toHaveText('Đã thanh toán');
+  await expect(customer.getByRole('status')).toContainText('Đã nhận thanh toán');
+  await admin.reload();
+  await admin.getByRole('button', { name: 'Hoàn tất đơn hàng', exact: true }).click();
+  await admin.getByRole('dialog').getByRole('button', { name: 'Xác nhận hoàn tất', exact: true }).click();
+  await expect(admin.locator('.order-badge')).toHaveText('Hoàn tất');
+  expect((await customer.request.post(base + '/api/payos/webhook', { data: webhook })).status()).toBe(200);
+  expect((await db.collection('orders').findOne({ _id: online._id })).status).toBe('completed');
+  await admin.goto(base + '/admin/orders?status=completed&q=' + encodeURIComponent(email));
+  await expect(admin.locator('.order-table tbody tr')).toHaveCount(2);
+  await admin.setViewportSize({ width: 390, height: 844 });
+  expect(await admin.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await admin.screenshot({ path: 'test-results/orders-admin-mobile.png', fullPage: true, caret: 'initial' });
+  expect(errors).toEqual([]);
+  console.log('PASS: login-to-checkout, prefilled email, COD order, customer history, owner isolation, admin completion restrictions, Excel text/amount/filter, mobile layout; simulated signed payOS creation/webhook/partial/full/duplicate payments. No real bank calls.');
+} catch (error) {
+  await customer.screenshot({ path: 'test-results/orders-customer-failure.png', fullPage: true, caret: 'initial' }).catch(() => {});
+  await admin.screenshot({ path: 'test-results/orders-admin-failure.png', fullPage: true, caret: 'initial' }).catch(() => {});
+  throw error;
+} finally {
+  await browser.close(); provider.closeAllConnections(); await new Promise(resolve => provider.close(resolve));
+  const db = client.db(process.env.MONGODB_DB_NAME || undefined);
+  await db.collection('orders').deleteMany({ userId: id.toHexString() });
+  await db.collection('auth_sessions').deleteMany({ userId: id });
+  await db.collection('users').deleteOne({ _id: id, email });
+  await client.close();
+}

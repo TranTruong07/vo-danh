@@ -1,0 +1,126 @@
+import { chromium, expect } from '@playwright/test';
+import { MongoClient } from 'mongodb';
+import { randomUUID } from 'node:crypto';
+import { mkdir, readdir, readFile, unlink } from 'node:fs/promises';
+import path from 'node:path';
+
+process.loadEnvFile('.env.local');
+const baseURL = process.env.ACCOUNT_TEST_BASE_URL || 'http://localhost:3001';
+if (process.env.MAIL_TRANSPORT !== 'preview') throw new Error('This test requires local mail preview; it never sends real email.');
+const email = `auth-probe-${randomUUID()}@example.com`;
+const password = 'Test-pass-123';
+const newPassword = 'New-pass-456';
+const client = new MongoClient(process.env.MONGODB_URI);
+const browser = await chromium.launch({ channel: 'msedge', headless: true });
+const page = await browser.newPage({ viewport: { width: 1280, height: 1000 } });
+const browserErrors = [];
+page.on('pageerror', error => browserErrors.push(error.message));
+let userId;
+let mailFile;
+async function login(targetEmail, targetPassword) {
+  await page.goto(baseURL + '/?auth=login');
+  const dialog = page.getByRole('dialog');
+  await expect(dialog).toBeVisible();
+  await dialog.getByLabel('Email', { exact: true }).fill(targetEmail);
+  await dialog.getByLabel('Mật khẩu', { exact: true }).fill(targetPassword);
+  await dialog.getByRole('button', { name: 'Đăng nhập', exact: false }).filter({ hasText: '→' }).click();
+}
+try {
+  await client.connect();
+  const db = client.db(process.env.MONGODB_DB_NAME || undefined);
+  await page.goto(baseURL + '/?auth=register');
+  const dialog = page.getByRole('dialog');
+  await expect(dialog).toBeVisible();
+  await dialog.getByLabel('Email', { exact: true }).fill(email.toUpperCase());
+  await dialog.getByLabel('Mật khẩu', { exact: true }).fill(password);
+  await dialog.getByLabel('Xác nhận mật khẩu', { exact: true }).fill('different-password');
+  await dialog.getByRole('button', { name: /Tạo tài khoản/ }).click();
+  await expect(dialog.getByText('Mật khẩu xác nhận không khớp.')).toBeVisible();
+  await dialog.getByLabel('Xác nhận mật khẩu', { exact: true }).fill(password);
+  await mkdir('test-results', { recursive: true });
+  await page.screenshot({ path: 'test-results/register-desktop.png' });
+  await dialog.getByRole('button', { name: /Tạo tài khoản/ }).click();
+  await expect(dialog).not.toBeVisible({ timeout: 20000 });
+  await expect(page.locator('.account-menu summary img')).toHaveAttribute('src', '/images/default-avatar.svg');
+  const stored = await db.collection('users').findOne({ email });
+  userId = stored._id;
+  expect(stored.role).toBe('user');
+  expect(stored.passwordHash).toMatch(/^scrypt\$/);
+  expect(stored.password).toBeUndefined();
+  expect(stored.confirmPassword).toBeUndefined();
+  await page.goto(baseURL + '/admin');
+  await expect(page).toHaveURL(/\/\?auth=login$/);
+  await page.getByRole('button', { name: 'Đóng đăng nhập' }).click();
+  const oldSession = (await page.context().cookies()).find(cookie => cookie.name === 'vo_danh_session');
+  await page.getByLabel('Mở menu tài khoản').click();
+  await page.getByRole('button', { name: 'Đăng xuất', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Đăng nhập', exact: true })).toBeVisible();
+  await page.goto(baseURL + '/?auth=register');
+  await dialog.getByLabel('Email', { exact: true }).fill(email);
+  await dialog.getByLabel('Mật khẩu', { exact: true }).fill(password);
+  await dialog.getByLabel('Xác nhận mật khẩu', { exact: true }).fill(password);
+  await dialog.getByRole('button', { name: /Tạo tài khoản/ }).click();
+  await expect(dialog.getByRole('alert')).toContainText('đã được đăng ký');
+  await login(email, password);
+  await expect(dialog).not.toBeVisible();
+  const resetRevokedCookie = (await page.context().cookies()).find(cookie => cookie.name === 'vo_danh_session');
+  await page.goto(baseURL + '/?auth=forgot');
+  await dialog.getByLabel('Email', { exact: true }).fill(email);
+  await dialog.getByRole('button', { name: /Gửi liên kết đặt lại/ }).click();
+  await expect(dialog.getByRole('status')).toContainText('hướng dẫn đặt lại mật khẩu');
+  const directory = path.resolve('.local/mail');
+  let resetUrl;
+  for (const name of await readdir(directory)) {
+    const candidate = path.join(directory, name);
+    const message = JSON.parse(await readFile(candidate, 'utf8'));
+    if (message.to === email) { mailFile = candidate; resetUrl = message.text.match(/https?:\/\/\S+/)[0]; break; }
+  }
+  expect(resetUrl).toBeTruthy();
+  await page.goto(resetUrl);
+  await dialog.getByLabel('Mật khẩu mới', { exact: true }).fill(newPassword);
+  await dialog.getByLabel('Xác nhận mật khẩu', { exact: true }).fill(newPassword);
+  await dialog.getByRole('button', { name: /Lưu mật khẩu mới/ }).click();
+  await expect(dialog.getByRole('status')).toContainText('Đã đổi mật khẩu');
+  await expect(dialog.getByRole('button', { name: /Quay lại đăng nhập/ })).toBeEnabled();
+  await page.context().addCookies([resetRevokedCookie]);
+  await page.goto(baseURL);
+  await expect(page.getByRole('button', { name: 'Đăng nhập', exact: true })).toBeVisible();
+  await page.goto(resetUrl);
+  await dialog.getByLabel('Mật khẩu mới', { exact: true }).fill('Another-pass');
+  await dialog.getByLabel('Xác nhận mật khẩu', { exact: true }).fill('Another-pass');
+  await dialog.getByRole('button', { name: /Lưu mật khẩu mới/ }).click();
+  await expect(dialog.getByRole('alert')).toContainText('hết hạn');
+  await login(email, password);
+  await expect(dialog.getByRole('alert')).toContainText('không đúng');
+  await login(email, newPassword);
+  await expect(dialog).not.toBeVisible();
+  await page.context().addCookies([oldSession]);
+  await page.goto(baseURL);
+  await expect(page.getByRole('button', { name: 'Đăng nhập', exact: true })).toBeVisible();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(baseURL + '/?auth=login');
+  await page.screenshot({ path: 'test-results/login-mobile.png' });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await login(process.env.ADMIN_EMAIL, process.env.ADMIN_PASSWORD);
+  await expect(page).toHaveURL(/\/admin$/, { timeout: 20000 });
+  await expect(page.getByRole('heading', { name: 'Dashboard quản trị' })).toBeVisible();
+  await page.getByRole('link', { name: 'Quản lý nhân vật →' }).click();
+  await expect(page.getByRole('heading', { name: 'Nhân vật lịch sử' })).toBeVisible();
+  await page.goto(baseURL + '/admin');
+  await page.getByRole('button', { name: 'Mở menu quản trị' }).click();
+  await page.getByRole('button', { name: 'Đăng xuất', exact: true }).click();
+  await expect(page).toHaveURL(baseURL + '/');
+  expect(browserErrors).toEqual([]);
+  console.log('PASS: MongoDB registration/hash/duplicate, validation, login/logout, user/admin guards, local reset mail, one-time token, session revocation, admin dashboard, mobile layout.');
+} finally {
+  await browser.close();
+  const db = client.db(process.env.MONGODB_DB_NAME || undefined);
+  const testUser = await db.collection('users').findOne({ email });
+  userId ??= testUser?._id;
+  if (userId) {
+    await db.collection('auth_sessions').deleteMany({ userId });
+    await db.collection('users').deleteOne({ _id: userId, email });
+  }
+  if (mailFile?.startsWith(path.resolve('.local/mail') + path.sep)) await unlink(mailFile);
+  await client.close();
+}

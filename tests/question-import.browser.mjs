@@ -1,0 +1,100 @@
+import { chromium, expect } from '@playwright/test';
+import { MongoClient, ObjectId } from 'mongodb';
+import ExcelJS from 'exceljs';
+import { randomUUID } from 'node:crypto';
+import { mkdir, readFile } from 'node:fs/promises';
+import { loader } from './support/load-typescript.mjs';
+
+process.loadEnvFile('.env.local');
+const base = process.env.GAME_TEST_BASE_URL || 'http://localhost:3001';
+const marker = 'excel-import-probe-' + randomUUID();
+const ids = [new ObjectId(), new ObjectId()];
+const client = new MongoClient(process.env.MONGODB_URI);
+const browser = await chromium.launch({ channel: 'msedge', headless: true });
+const admin = await browser.newPage({ viewport: { width: 1440, height: 1100 } });
+const errors = [];
+admin.on('pageerror', error => errors.push(error.message));
+const question = 'Nhân vật này gắn liền với chiến thắng nào?';
+const fresh = 'Chiến thắng này diễn ra trên con sông nào?';
+const makeRow = text => [text, 'Bạch Đằng', 'Sông Hồng', 'Sông Mã', 'Sông Lam', 'A', 'Đúng rồi, thật tuyệt!', 'Chưa đúng. Đáp án là Bạch Đằng.'];
+try {
+  await client.connect();
+  const db = client.db(process.env.MONGODB_DB_NAME || undefined);
+  const repo = loader({ '@/lib/db/client': { getDatabase: async () => db } })('@/server/repositories/character-questions');
+  await mkdir('test-results', { recursive: true });
+  await db.collection('characters').insertMany(ids.map((_id, index) => ({ _id, name: `Nhân vật Excel ${index + 1} ${marker.slice(-6)}`, openingLine: marker, image: '/images/history-landscape.webp', backgroundImage: '/images/history-landscape.webp', createdAt: new Date(), updatedAt: new Date() })));
+  // Legacy row intentionally has no questionKey.
+  await db.collection('character_questions').insertOne({ characterId: String(ids[0]), question, answers: ['A', 'B', 'C', 'D'], correctIndex: 0, correctFeedback: marker, incorrectFeedback: marker, createdAt: new Date(), updatedAt: new Date() });
+  const anonymous = await browser.newContext();
+  const response = await anonymous.request.get(base + '/admin/questions/template');
+  expect(response.status()).toBe(401); await anonymous.close();
+  await admin.goto(base + '/?auth=login');
+  const login = admin.getByRole('dialog');
+  await login.getByLabel('Email', { exact: true }).fill(process.env.ADMIN_EMAIL);
+  await login.getByLabel('Mật khẩu', { exact: true }).fill(process.env.ADMIN_PASSWORD);
+  await login.locator('button[type=submit]').click();
+  await expect(admin).toHaveURL(base + '/admin', { timeout: 30000 });
+  await admin.goto(base + '/admin/questions?characterId=' + ids[0]);
+  await admin.getByRole('link', { name: 'Nhập từ Excel', exact: true }).click();
+  await expect(admin.getByRole('heading', { name: 'Thêm câu hỏi từ Excel' })).toBeVisible();
+  await expect(admin.getByLabel('Nhân vật', { exact: true })).toHaveValue(String(ids[0]));
+  const downloadPromise = admin.waitForEvent('download');
+  await admin.getByRole('link', { name: 'Tải Excel mẫu ↓' }).click();
+  const download = await downloadPromise;
+  expect(download.suggestedFilename()).toBe('mau-cau-hoi-nhan-vat.xlsx');
+  const book = new ExcelJS.Workbook(); await book.xlsx.load(await readFile(await download.path()));
+  expect(book.getWorksheet('Hướng dẫn')).toBeTruthy();
+  const sheet = book.getWorksheet('Câu hỏi');
+  sheet.spliceRows(2, sheet.rowCount - 1);
+  [makeRow(question.toUpperCase().normalize('NFD')), makeRow(fresh), makeRow(fresh.replaceAll(' ', '  ')), makeRow('ngắn')].forEach(row => sheet.addRow(row));
+  const file = { name: 'cau-hoi.xlsx', mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', buffer: Buffer.from(await book.xlsx.writeBuffer()) };
+  await admin.locator('input[type=file]').setInputFiles(file);
+  await admin.getByRole('button', { name: 'Kiểm tra file', exact: true }).click();
+  const review = admin.getByRole('region', { name: 'Kết quả kiểm tra file' });
+  await expect(review).toBeVisible({ timeout: 30000 });
+  await expect(review.getByRole('status')).toContainText('1 hợp lệ');
+  await expect(review.getByRole('status')).toContainText('2 trùng lặp');
+  await expect(review.getByRole('status')).toContainText('1 cần sửa');
+  expect(await db.collection('character_questions').countDocuments({ characterId: String(ids[0]) })).toBe(1);
+  await admin.screenshot({ path: 'test-results/question-import-desktop.png', fullPage: true, caret: 'initial' });
+  await review.getByLabel('Hiển thị', { exact: true }).selectOption('invalid');
+  await expect(review.locator('tbody tr')).toHaveCount(1);
+  await expect(review.locator('tbody tr')).toContainText('10 đến 500');
+  await review.getByRole('button', { name: 'Nhập 1 câu hỏi hợp lệ', exact: true }).click();
+  await expect(review.getByRole('heading', { name: 'Kết quả nhập câu hỏi' })).toBeVisible({ timeout: 30000 });
+  await expect(review.getByRole('status')).toContainText('1 đã nhập');
+  const saved = await db.collection('character_questions').findOne({ characterId: String(ids[0]), question: fresh });
+  expect(saved.correctIndex).toBe(0); expect(saved.correctFeedback).toBe(makeRow(fresh)[6]); expect(saved.questionKey).toMatch(/^[a-f0-9]{64}$/);
+  // Re-upload cannot insert duplicates.
+  await admin.getByRole('button', { name: 'Kiểm tra file', exact: true }).click();
+  await expect(review.getByRole('button', { name: 'Nhập 0 câu hỏi hợp lệ' })).toBeDisabled({ timeout: 30000 });
+  await expect(review.getByRole('status')).toContainText('3 trùng lặp');
+  // Same questions can be imported into a different character; changing selection clears stale preview.
+  await admin.getByLabel('Nhân vật', { exact: true }).selectOption(String(ids[1]));
+  await expect(review).not.toBeVisible();
+  await admin.getByRole('button', { name: 'Kiểm tra file', exact: true }).click();
+  await expect(review.getByRole('status')).toContainText('2 hợp lệ', { timeout: 30000 });
+  await admin.setViewportSize({ width: 390, height: 844 });
+  expect(await admin.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await admin.screenshot({ path: 'test-results/question-import-mobile.png', fullPage: true, caret: 'initial' });
+  await review.getByRole('button', { name: 'Nhập 2 câu hỏi hợp lệ' }).click();
+  await expect(review.getByRole('status')).toContainText('2 đã nhập', { timeout: 30000 });
+  await review.getByRole('link', { name: 'Xem danh sách câu hỏi →' }).click();
+  await expect(admin.locator('.question-card')).toHaveCount(2);
+  // Actual database constraint: simultaneous imports of a new question insert exactly once.
+  const concurrent = { characterId: String(ids[1]), question: 'Câu hỏi dùng kiểm tra nhập đồng thời?', answers: ['A', 'B', 'C', 'D'], correctIndex: 1, correctFeedback: 'Đúng', incorrectFeedback: 'Sai' };
+  const results = await Promise.all([repo.importCharacterQuestions([concurrent]), repo.importCharacterQuestions([concurrent])]);
+  expect(results.reduce((sum, result) => sum + result.size, 0)).toBe(1);
+  expect(await db.collection('character_questions').countDocuments({ characterId: String(ids[1]), question: concurrent.question })).toBe(1);
+  expect(errors).toEqual([]);
+  console.log('PASS: template download, preview without writes, legacy and within-file duplicates, valid-only import, repeat upload, character isolation, concurrent DB import, feedback persistence, responsive layout, authorization.');
+} catch (error) {
+  await admin.screenshot({ path: 'test-results/question-import-failure.png', fullPage: true, caret: 'initial' }).catch(() => {});
+  throw error;
+} finally {
+  await browser.close();
+  const db = client.db(process.env.MONGODB_DB_NAME || undefined);
+  await db.collection('character_questions').deleteMany({ characterId: { $in: ids.map(String) } });
+  await db.collection('characters').deleteMany({ _id: { $in: ids }, openingLine: marker });
+  await client.close();
+}

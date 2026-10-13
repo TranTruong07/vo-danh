@@ -1,0 +1,171 @@
+import { chromium, expect } from '@playwright/test';
+import { MongoClient, ObjectId } from 'mongodb';
+import { randomUUID } from 'node:crypto';
+import { mkdir, readFile } from 'node:fs/promises';
+import { S3Client, DeleteObjectCommand, HeadObjectCommand } from '@aws-sdk/client-s3';
+
+process.loadEnvFile('.env.local');
+const base = process.env.GAME_TEST_BASE_URL || 'http://localhost:3001';
+const marker = 'game-probe-' + randomUUID();
+const client = new MongoClient(process.env.MONGODB_URI);
+const browser = await chromium.launch({ channel: 'msedge', headless: true });
+const admin = await browser.newPage({ viewport: { width: 1280, height: 1000 } });
+const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
+const player = await context.newPage();
+const errors = [];
+player.on('pageerror', error => errors.push(error.message));
+let id;
+const imageKeys = new Set();
+const storage = new S3Client({ region: 'auto', endpoint: `https://${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`, credentials: { accessKeyId: process.env.R2_ACCESS_KEY_ID, secretAccessKey: process.env.R2_SECRET_ACCESS_KEY } });
+let initialPayload = '';
+player.on('response', async response => {
+  if (response.request().method() === 'POST' && !initialPayload) {
+    const body = await response.text().catch(() => '');
+    if (body.includes('expiresAt')) initialPayload = body;
+  }
+});
+async function ready() {
+  await expect(player.getByRole('radio')).toHaveCount(4, { timeout: 40000 });
+  await expect(player.getByRole('heading', { name: /Ngô Quyền/ }).first()).toBeVisible();
+}
+try {
+  await client.connect(); const db = client.db(process.env.MONGODB_DB_NAME || undefined);
+  await mkdir('test-results', { recursive: true });
+  await player.goto(base + '/admin/characters');
+  await expect(player).toHaveURL(/\?auth=login$/);
+  await admin.goto(base + '/?auth=login');
+  const dialog = admin.getByRole('dialog');
+  await dialog.getByLabel('Email', { exact: true }).fill(process.env.ADMIN_EMAIL);
+  await dialog.getByLabel('Mật khẩu', { exact: true }).fill(process.env.ADMIN_PASSWORD);
+  await dialog.locator('button[type=submit]').click();
+  await expect(admin).toHaveURL(/\/admin$/, { timeout: 20000 });
+  await expect(admin.getByRole('link', { name: /video/i })).toHaveCount(0);
+  expect((await admin.request.get(base + '/admin/videos')).status()).toBe(404);
+  await admin.goto(base + '/admin/characters');
+  await admin.getByRole('link', { name: '+ Tạo mới nhân vật', exact: true }).click();
+  await admin.getByLabel('Tên nhân vật', { exact: true }).fill('Ngô Quyền');
+  await admin.getByLabel('Câu nói mở đầu', { exact: true }).fill('Hãy cùng ta tìm hiểu lịch sử! ' + marker);
+  await admin.getByLabel('Ảnh nền — URL HTTPS', { exact: true }).fill('https://example.com/background.png');
+  const portrait = await admin.evaluate(() => { const c = document.createElement('canvas'); c.width = c.height = 100; const x = c.getContext('2d'); x.fillStyle = '#93242a'; x.fillRect(0, 0, 100, 100); x.fillStyle = '#efcf8a'; x.font = 'bold 40px serif'; x.fillText('NQ', 15, 65); return c.toDataURL('image/png').split(',')[1]; });
+  await admin.locator('input[name=imageFile]').setInputFiles({ name: 'probe.png', mimeType: 'image/png', buffer: Buffer.from(portrait, 'base64') });
+  await admin.locator('input[name=backgroundImageFile]').setInputFiles({ name: 'background.png', mimeType: 'image/png', buffer: Buffer.from(portrait, 'base64') });
+  await admin.getByRole('button', { name: 'Lưu nhân vật' }).click();
+  await expect(admin.getByRole('status').filter({ hasText: 'Đã lưu nhân vật' })).toBeVisible({ timeout: 20000 });
+  const row = await db.collection('characters').findOne({ openingLine: { $regex: marker } });
+  id = row._id.toHexString();
+  const imageBase = process.env.R2_PUBLIC_BASE_URL.replace(/\/+$/, '') + '/';
+  expect(row.image.startsWith(imageBase)).toBe(true);
+  const imageKey = row.image.slice(imageBase.length);
+  imageKeys.add(imageKey); imageKeys.add(row.backgroundImage.slice(imageBase.length));
+  expect(imageKey).toMatch(/^images\/characters\/[a-f0-9-]{36}\.webp$/);
+  const object = await storage.send(new HeadObjectCommand({ Bucket: process.env.R2_BUCKET, Key: imageKey }));
+  expect(object.ContentType).toBe('image/webp');
+  const imageResponse = await admin.request.get(row.image);
+  expect(imageResponse.status()).toBe(200);
+  expect(imageResponse.headers()['content-type']).toContain('image/webp');
+  await expect(admin.getByLabel('Địa chỉ website')).toHaveValue(process.env.NEXT_PUBLIC_APP_URL.trim());
+  const downloadPromise = admin.waitForEvent('download');
+  await admin.getByRole('button', { name: 'Tải PNG' }).click();
+  const download = await downloadPromise; await download.saveAs('test-results/history-character-qr.png');
+  expect(await admin.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await admin.evaluate(() => window.scrollTo(0, 0));
+  await admin.screenshot({ path: 'test-results/history-admin.png', fullPage: true, caret: 'initial' });
+  await admin.setViewportSize({ width: 390, height: 844 });
+  expect(await admin.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await admin.locator('.character-qr').screenshot({ path: 'test-results/history-qr-mobile.png' });
+  await admin.setViewportSize({ width: 1280, height: 1000 });
+  await admin.getByRole('link', { name: 'Chỉnh sửa', exact: true }).click();
+  await admin.getByLabel('Câu nói mở đầu', { exact: true }).fill('Lời chào mới cho người chơi. ' + marker);
+  await admin.getByRole('button', { name: 'Lưu nhân vật' }).click();
+  await expect(admin.getByRole('status').filter({ hasText: 'Đã lưu nhân vật' })).toBeVisible();
+  const updated = await db.collection('characters').findOne({ _id: row._id });
+  expect(updated.image).toBe(row.image);
+  expect(updated.facts).toBeUndefined();
+  console.log('PASS: admin create/R2 WebP upload/public image/QR download; URL preserved on edit; video route removed; anonymous admin access blocked.');
+
+  await db.collection('character_questions').insertOne({ characterId: id, question: 'Ngô Quyền chiến thắng trên sông nào vào năm 938?', answers: ['Bạch Đằng', 'Sông Hồng', 'Sông Mã', 'Sông Hương'], correctIndex: 0, correctFeedback: 'Đúng rồi! ' + marker, incorrectFeedback: 'Đáp án là sông Bạch Đằng. ' + marker, createdAt: new Date(), updatedAt: new Date() });
+  await player.goto(base + '/play/' + id);
+  await expect(player.getByRole('dialog')).toHaveCount(0);
+  await expect(player.locator('.scene-background')).toHaveAttribute('src', row.backgroundImage);
+  await expect(player.locator('.actor-sprite img')).toHaveAttribute('src', row.image);
+  await ready();
+  expect((await context.cookies()).some(c => c.name === 'vo_danh_session')).toBe(false);
+  expect(initialPayload).not.toContain('correctIndex');
+  expect(initialPayload).not.toContain('factIndex');
+  let attempt = await db.collection('quiz_attempts').findOne({ characterId: id, state: 'ready' }, { sort: { createdAt: -1 } });
+  expect(attempt.question.options).toHaveLength(4);
+  const wrong = (attempt.question.correctIndex + 1) % 4;
+  await player.getByRole('radio').nth(wrong).check();
+  await player.getByRole('button', { name: 'Chốt đáp án →' }).click();
+  await expect(player.getByRole('status')).toContainText('Chưa đúng rồi', { timeout: 15000 });
+  await expect(player.getByRole('radio').first()).toBeDisabled();
+  await player.screenshot({ path: 'test-results/history-answer-mobile.png', fullPage: true, caret: 'initial' });
+  expect(await player.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  console.log('PASS: saved bank question, exactly 4 choices, no answer leaked, incorrect selection graded by server.');
+
+  await player.getByRole('button', { name: 'Quét nhân vật tiếp' }).click();
+  await player.getByLabel('Chọn ảnh QR', { exact: true }).setInputFiles('test-results/history-character-qr.png');
+  await expect(player).toHaveURL(/\?round=/);
+  await ready();
+  attempt = await db.collection('quiz_attempts').findOne({ characterId: id, state: 'ready' }, { sort: { createdAt: -1 } });
+  await player.getByRole('radio').nth(attempt.question.correctIndex).check();
+  await player.getByRole('button', { name: 'Chốt đáp án →' }).click();
+  await expect(player.getByRole('status')).toContainText('Chính xác!', { timeout: 15000 });
+  console.log('PASS: second QR read from PNG without leaving website, fresh bank round, correct selection.');
+
+  const qrData = 'data:image/png;base64,' + (await readFile('test-results/history-character-qr.png')).toString('base64');
+  await player.evaluate(data => {
+    window.probeStreams = [];
+    navigator.mediaDevices.getUserMedia = async () => {
+      const img = new Image(); img.src = data; await img.decode();
+      const canvas = document.createElement('canvas'); canvas.width = canvas.height = 800;
+      const x = canvas.getContext('2d'); x.fillStyle = 'white'; x.fillRect(0, 0, 800, 800); x.drawImage(img, 80, 80, 640, 640);
+      const stream = canvas.captureStream(5); window.probeStreams.push(stream);
+      const timer = setInterval(() => x.drawImage(img, 80, 80, 640, 640), 100);
+      const track = stream.getVideoTracks()[0]; const stop = track.stop.bind(track); track.stop = () => { clearInterval(timer); stop(); };
+      return stream;
+    };
+  }, qrData);
+  const secondUrl = player.url();
+  await player.getByRole('button', { name: 'Quét nhân vật tiếp' }).click();
+  await player.getByRole('button', { name: 'Bật camera quét QR' }).click();
+  await expect.poll(() => player.url(), { timeout: 15000 }).not.toBe(secondUrl);
+  await ready();
+  expect(await player.evaluate(() => window.probeStreams.every(s => s.getTracks().every(t => t.readyState === 'ended')))).toBe(true);
+  await player.setViewportSize({ width: 1280, height: 950 });
+  await player.screenshot({ path: 'test-results/history-question-desktop.png', fullPage: true, caret: 'initial' });
+  console.log('PASS: camera stream decoded actual QR and tracks stopped on scan.');
+
+  await player.goto(base + '/play');
+  await player.evaluate(() => { navigator.mediaDevices.getUserMedia = async () => { throw new DOMException('Denied in test', 'NotAllowedError'); }; });
+  await player.getByRole('button', { name: 'Bật camera quét QR' }).click();
+  await expect(player.locator('main').getByRole('alert')).toContainText('chưa cho phép dùng camera');
+  await player.getByText('Hoặc dán liên kết / mã nhân vật', { exact: true }).click();
+  await player.getByLabel('Liên kết hoặc ID nhân vật').fill('javascript:alert(1)');
+  await player.getByRole('button', { name: 'Mở nhân vật' }).click();
+  await expect(player.locator('main').getByRole('alert')).toContainText('không phải thẻ nhân vật');
+  await player.goto(base + '/play/000000000000000000000000');
+  await expect(player.getByRole('heading', { name: 'Chưa tìm thấy nhân vật' })).toBeVisible();
+  await db.collection('character_questions').deleteMany({ characterId: id });
+  await admin.getByRole('button', { name: 'Xóa', exact: true }).click();
+  await admin.getByRole('dialog', { name: 'Xóa nhân vật?' }).getByRole('button', { name: 'Xác nhận xóa' }).click();
+  await expect(admin.getByRole('status').filter({ hasText: 'Đã xóa nhân vật.' })).toBeVisible();
+  expect(await db.collection('characters').findOne({ _id: new ObjectId(id) })).toBeNull();
+  await player.goto(base + '/play/' + id);
+  await expect(player.getByRole('heading', { name: 'Chưa tìm thấy nhân vật' })).toBeVisible();
+  expect(errors).toEqual([]);
+  console.log('PASS: invalid QR, unknown and deleted characters, mobile width, no uncaught browser errors.');
+} catch (error) {
+  await player.screenshot({ path: 'test-results/history-failure.png', fullPage: true, caret: 'initial' }).catch(() => {});
+  console.error('Player message:', await player.locator('main').innerText().catch(() => 'unavailable'));
+  throw error;
+} finally {
+  await browser.close();
+  const db = client.db(process.env.MONGODB_DB_NAME || undefined);
+  const row = await db.collection('characters').findOne({ openingLine: { $regex: marker } });
+  if (id || row) for (const name of ['quiz_attempts', 'question_cycles', 'character_questions']) await db.collection(name).deleteMany({ characterId: id || row._id.toHexString() });
+  if (row) await db.collection('characters').deleteOne({ _id: row._id, openingLine: { $regex: marker } });
+  for (const imageKey of imageKeys) if (/^images\/characters\/[a-f0-9-]{36}\.webp$/.test(imageKey)) await storage.send(new DeleteObjectCommand({ Bucket: process.env.R2_BUCKET, Key: imageKey }));
+  storage.destroy();
+  await client.close();
+}
