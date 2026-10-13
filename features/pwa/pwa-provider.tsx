@@ -62,7 +62,7 @@ export default function PwaProvider({ children }: { children: React.ReactNode })
   }, [online, pack]);
   return <PwaContext.Provider value={{ online, pack, markOffline }}>
     {supportedPage && !online && <aside className="pwa-status is-offline" aria-label="Trạng thái chơi offline">
-      <div role="status">Chuẩn bị chơi offline</div>
+      <div role="status">{pack ? "Đang chơi offline" : "Chuẩn bị chơi offline"}</div>
     </aside>}
     {notice && <div className="pwa-notice" role="alert">{notice} <button onClick={() => setNotice("")} aria-label="Đóng thông báo">×</button></div>}
     {children}

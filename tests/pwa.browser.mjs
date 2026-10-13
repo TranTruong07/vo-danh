@@ -36,16 +36,16 @@ try {
   expect(manifest.display).toBe('standalone');
   expect(await page.evaluate(() => !!navigator.serviceWorker.controller)).toBe(true);
   await page.goto(`${base}/play/${ids[0]}`); await ready();
-  const seen = [await page.locator('.question-speech h2').innerText()];
+  const seen = [await page.locator('#scene-question-title:visible').innerText()];
   await context.setOffline(true);
-  await expect(page.locator('.pwa-status')).toHaveText('Chuẩn bị chơi offline');
+  await expect(page.locator('.pwa-status')).toHaveText('Đang chơi offline');
   await expect(page.locator('.pwa-status button, .pwa-status details')).toHaveCount(0);
   await page.getByRole('radio').first().check();
   await page.getByRole('button', { name: 'Chốt đáp án →' }).click();
   await expect(page.locator('.answer-feedback')).toContainText('Đúng rồi, chơi được khi mất mạng!');
   for (let i = 0; i < 3; i++) {
     await rescanCharacter(page, base + '/play/' + ids[0]); await ready();
-    seen.push(await page.locator('.question-speech h2').innerText());
+    seen.push(await page.locator('#scene-question-title:visible').innerText());
     await page.getByRole('radio').nth(1).check();
     await page.getByRole('button', { name: 'Chốt đáp án →' }).click();
     await expect(page.locator('.answer-feedback')).toContainText('Chưa đúng');
@@ -54,11 +54,13 @@ try {
   await page.getByRole('link', { name: 'Trang chủ', exact: true }).click();
   await expect(page.getByRole('heading', { name: /Theo dấu chân xưa/ })).toBeVisible();
   await page.reload();
-  await expect(page.getByRole('heading', { name: 'Nhân vật đã lưu trên máy' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Theo dấu chân xưa/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Nhân vật đã lưu trên máy' })).toHaveCount(0);
+  await expect(page.locator('.pwa-status')).toHaveText('Đang chơi offline');
   await expect(page.locator('.hero-art img')).toBeVisible();
   expect(await page.locator('.hero-art img').evaluate(img => img.complete && img.naturalWidth > 0)).toBe(true);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-  await page.screenshot({ path: 'test-results/pwa-home-offline.png', fullPage: true });
+  await page.screenshot({ path: 'test-results/pwa-home-offline.png', fullPage: true, caret: 'initial' });
   await page.getByRole('link', { name: 'Mua ngay' }).click();
   await expect(page.locator('.pwa-notice')).toContainText('Tính năng này cần mạng');
   await page.getByRole('button', { name: 'Đóng thông báo' }).click();
@@ -77,7 +79,7 @@ try {
   await expect(page.getByRole('dialog')).toContainText('Trò chuyện đang được chuẩn bị');
   await expect(page.getByRole('dialog').getByRole('button', { name: 'Gửi tin nhắn' })).toBeDisabled();
   await page.getByRole('dialog').getByRole('button', { name: 'Đóng trò chuyện', exact: true }).click();
-  await page.screenshot({ path: 'test-results/pwa-character-offline.png', fullPage: true });
+  await page.screenshot({ path: 'test-results/pwa-character-offline.png', fullPage: true, caret: 'initial' });
   await page.getByRole('button', { name: 'Quét nhân vật tiếp' }).click();
   const cameraQr = renderToStaticMarkup(createElement(QRCodeSVG, { value: `${base}/play/${ids[0]}`, size: 600, marginSize: 4 }));
   const cameraImage = (await sharp(Buffer.from(cameraQr)).png().toBuffer()).toString('base64');
@@ -102,8 +104,9 @@ try {
   // Wi-Fi can stay connected even when the Internet/server is unreachable.
   await page.addInitScript(() => Object.defineProperty(Navigator.prototype, 'onLine', { get: () => true, configurable: true }));
   await page.goto(base);
-  await expect(page.locator('.pwa-status')).toHaveText('Chuẩn bị chơi offline');
-  await expect(page.getByRole('heading', { name: 'Nhân vật đã lưu trên máy' })).toBeVisible();
+  await expect(page.locator('.pwa-status')).toHaveText('Đang chơi offline');
+  await expect(page.getByRole('heading', { name: /Theo dấu chân xưa/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Nhân vật đã lưu trên máy' })).toHaveCount(0);
   await context.setOffline(false);
   await db.collection('character_questions').updateOne({ _id: rows[0]._id }, { $set: { question: 'Câu hỏi đã cập nhật sau khi có mạng trở lại', updatedAt: new Date() } });
   await page.goto(base);
@@ -116,7 +119,7 @@ try {
   console.log('PASS: first sync, install manifest, mid-round disconnect, local correct/incorrect grading, no-repeat cycles, offline home reload and images, purchase notice, unvisited character from real QR image, simulated camera frame decoding, offline lazy decoder, character reload/background/portrait, unknown QR, reconnect update and private-route cache exclusion.');
 } catch (error) {
   console.error('Page:', page.url(), '\nPWA:', await page.locator('.pwa-status').innerText().catch(() => 'none'));
-  await page.screenshot({ path: 'test-results/pwa-failure.png', fullPage: true }).catch(() => {});
+  await page.screenshot({ path: 'test-results/pwa-failure.png', fullPage: true, caret: 'initial' }).catch(() => {});
   throw error;
 } finally {
   await browser.close(); const db = client.db(process.env.MONGODB_DB_NAME || undefined);

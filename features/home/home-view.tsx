@@ -1,4 +1,3 @@
-import OfflineLibrary from "@/features/pwa/offline-library";
 import { OfflineShellSignal } from "@/features/pwa/pwa-provider";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +12,6 @@ export default async function HomeView({ searchParams, offline = false }: { sear
       {offline && <OfflineShellSignal />}
       <SiteHeader publicOnly={offline} active="home" initialAuthMode={authMode} resetToken={typeof query.token === "string" ? query.token : undefined} />
       <main id="main-content">
-        <OfflineLibrary />
         <section className="hero-section">
           <div className="hero-copy">
             <div className="eyebrow"><span /> MỘT CÁCH MỚI ĐỂ YÊU LỊCH SỬ</div>
