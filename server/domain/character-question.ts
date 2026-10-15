@@ -8,7 +8,7 @@ export interface CharacterQuestionInput {
   correctFeedback: string;
   incorrectFeedback: string;
 }
-export interface CharacterQuestionRecord extends CharacterQuestionInput { id: string; updatedAt: string }
+export interface CharacterQuestionRecord extends CharacterQuestionInput { id: string; updatedAt: string; audio?: import("./speech").QuestionAudio }
 export interface QuestionCharacterChoice { id: string; name: string; image: string; questionCount: number }
 export interface CharacterQuestionListItem extends CharacterQuestionRecord { characterName: string; characterImage: string }
 

@@ -1,0 +1,94 @@
+import { chromium, expect } from '@playwright/test';
+import { MongoClient, ObjectId } from 'mongodb';
+import { randomUUID } from 'node:crypto';
+import { mkdir } from 'node:fs/promises';
+import { loader } from './support/load-typescript.mjs';
+
+process.loadEnvFile('.env.local');
+const base = process.env.GAME_TEST_BASE_URL || 'http://localhost:3001';
+const marker = 'speech-probe-' + randomUUID(), id = new ObjectId(), qid = new ObjectId();
+const client = new MongoClient(process.env.MONGODB_URI);
+const browser = await chromium.launch({ channel: 'msedge', headless: true, args: ['--autoplay-policy=no-user-gesture-required'] });
+const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 1440, height: 1000 } });
+const page = await context.newPage();
+const errors = []; page.on('pageerror', error => errors.push(error.message));
+const { speechParts } = loader()('@/server/services/speech');
+const { questionSpeech } = loader()('@/server/domain/speech');
+const opening = `Xin chào các bạn. ${marker}`;
+const question = { _id: qid, characterId: String(id), question: `Nhân vật thử âm thanh ${marker} hỏi điều gì?`, answers: ['Đáp án một', 'Đáp án hai', 'Đáp án ba', 'Đáp án bốn'], correctIndex: 0, correctFeedback: `Bạn trả lời đúng. ${marker}`, incorrectFeedback: `Bạn trả lời sai. ${marker}`, createdAt: new Date(), updatedAt: new Date() };
+const voice = 'vi-VN-Chirp3-HD-Fenrir';
+const parts = [opening, questionSpeech(question.question, question.answers), question.correctFeedback, question.incorrectFeedback].flatMap(text => speechParts(voice, text));
+const audioIds = parts.map(part => part.id);
+// A short local PCM tone exercises HTML media playback. No Google/R2 calls or cost.
+const wav = Buffer.alloc(44 + 16000 * 2);
+wav.write('RIFF'); wav.writeUInt32LE(wav.length - 8, 4); wav.write('WAVEfmt ', 8); wav.writeUInt32LE(16, 16); wav.writeUInt16LE(1, 20); wav.writeUInt16LE(1, 22); wav.writeUInt32LE(16000, 24); wav.writeUInt32LE(32000, 28); wav.writeUInt16LE(2, 32); wav.writeUInt16LE(16, 34); wav.write('data', 36); wav.writeUInt32LE(wav.length - 44, 40);
+for (let i = 0; i < 16000; i++) wav.writeInt16LE(Math.round(Math.sin(i * 2 * Math.PI * 440 / 16000) * 1000), 44 + i * 2);
+try {
+  await client.connect(); const db = client.db(process.env.MONGODB_DB_NAME || undefined);
+  await mkdir('test-results', { recursive: true });
+  await db.collection('characters').insertOne({ _id: id, name: 'Nhân vật âm thanh ' + marker.slice(-6), openingLine: opening, voiceName: 'vi-VN-Standard-B', image: '/images/history-landscape.webp', backgroundImage: '/images/history-landscape.webp', createdAt: new Date(), updatedAt: new Date() });
+  await db.collection('character_questions').insertOne(question);
+  await page.goto(base + '/?auth=login');
+  const login = page.getByRole('dialog');
+  await login.getByLabel('Email', { exact: true }).fill(process.env.ADMIN_EMAIL);
+  await login.getByLabel('Mật khẩu', { exact: true }).fill(process.env.ADMIN_PASSWORD);
+  await login.locator('button[type=submit]').click();
+  await expect(page).toHaveURL(base + '/admin', { timeout: 30000 });
+  await page.goto(`${base}/admin/characters/${id}/edit`);
+  await expect(page.getByLabel('Giọng đọc tiếng Việt')).toHaveValue('vi-VN-Standard-B');
+  await page.getByLabel('Giọng đọc tiếng Việt').selectOption(voice);
+  await expect(page.getByRole('button', { name: 'Nghe thử giọng' })).toBeDisabled();
+  await page.screenshot({ path: 'test-results/speech-admin.png', fullPage: true, caret: 'initial' });
+  await page.getByRole('button', { name: 'Lưu nhân vật', exact: true }).click();
+  await expect(page).toHaveURL(new RegExp(`/admin/characters/${id}\\?saved=1`), { timeout: 30000 });
+  expect((await db.collection('characters').findOne({ _id: id })).voiceName).toBe(voice);
+  await page.getByRole('button', { name: 'Tạo / cập nhật âm thanh' }).click();
+  await expect(page.locator('.character-speech [role=status]')).toContainText('Chưa cấu hình');
+  await db.collection('speech_assets').insertMany(audioIds.map(_id => ({ _id, state: 'ready', updatedAt: new Date() })));
+  await page.route('**/audio/*', route => route.fulfill({ contentType: 'audio/wav', body: wav }));
+  await page.addInitScript(() => {
+    window.__played = [];
+    const play = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function () { window.__played.push(this.getAttribute('src')); return play.call(this); };
+  });
+  await page.goto(`${base}/play/${id}`);
+  await expect(page.getByRole('radio')).toHaveCount(4, { timeout: 30000 });
+  await expect.poll(() => page.evaluate(() => window.__played)).toContain('/audio/' + audioIds[0]);
+  await expect.poll(() => page.evaluate(() => window.__played)).toContain('/audio/' + audioIds[1]);
+  await page.getByRole('radio').nth(1).check();
+  await page.getByRole('button', { name: 'Chốt đáp án →' }).click();
+  await expect.poll(() => page.evaluate(() => window.__played)).toContain('/audio/' + audioIds[3]);
+  await expect(page.locator('.answer-feedback')).toContainText('Bạn trả lời sai');
+  await page.getByRole('button', { name: 'Tắt âm thanh', exact: true }).click();
+  expect(await page.locator('.narration-player audio').evaluate(audio => audio.paused)).toBe(true);
+  await page.getByRole('button', { name: 'Bật âm thanh', exact: true }).click();
+  await page.getByRole('button', { name: 'Quét nhân vật tiếp' }).click();
+  expect(await page.locator('.narration-player audio').evaluate(audio => audio.paused)).toBe(true);
+  await page.goto(`${base}/play/${id}?round=${randomUUID()}`);
+  await expect(page.getByRole('radio')).toHaveCount(4, { timeout: 30000 });
+  await page.getByRole('radio').first().check();
+  await page.getByRole('button', { name: 'Chốt đáp án →' }).click();
+  await expect.poll(() => page.evaluate(() => window.__played)).toContain('/audio/' + audioIds[2]);
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.screenshot({ path: 'test-results/speech-player-mobile.png', fullPage: true, caret: 'initial' });
+  // Simulate a browser autoplay refusal, followed by an explicit user playback gesture.
+  await page.addInitScript(() => {
+    const play = HTMLMediaElement.prototype.play;
+    window.__allowAudio = false;
+    HTMLMediaElement.prototype.play = function () { return window.__allowAudio ? play.call(this) : Promise.reject(new DOMException('Blocked', 'NotAllowedError')); };
+  });
+  await page.goto(`${base}/play/${id}?round=${randomUUID()}`);
+  await expect(page.locator('.narration-player')).toContainText('Bấm nghe để bật giọng đọc.', { timeout: 30000 });
+  await page.evaluate(() => { window.__allowAudio = true; });
+  await page.getByRole('button', { name: 'Nghe câu hỏi', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Dừng đọc', exact: true })).toBeVisible();
+  expect(errors).toEqual([]);
+  console.log('PASS: voice selection/persistence, missing-credentials notice, real HTML audio playlist, correct/incorrect feedback, mute, scanner stop, autoplay fallback and mobile layout. Google/R2 audio mocked.');
+} finally {
+  await browser.close(); const db = client.db(process.env.MONGODB_DB_NAME || undefined);
+  await db.collection('speech_assets').deleteMany({ _id: { $in: audioIds } });
+  for (const name of ['quiz_attempts', 'question_cycles', 'character_questions']) await db.collection(name).deleteMany({ characterId: String(id) });
+  await db.collection('characters').deleteOne({ _id: id, openingLine: opening });
+  await client.close();
+}

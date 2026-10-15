@@ -6,6 +6,8 @@ import { prepareCharacterImage } from "@/server/infrastructure/character-image";
 import { uploadCharacterImage, discardUncommittedImage } from "@/server/repositories/images";
 import { MAX_IMAGE_BYTES, MAX_IMAGE_LABEL } from "@/server/domain/image";
 import { hasCharacterQuestions } from "@/server/repositories/character-questions";
+import { DEFAULT_VOICE } from "@/server/domain/speech";
+import { validateGoogleVoice } from "@/server/infrastructure/google-tts";
 
 export async function loadAdminCharacters(page: number, search: string) {
   await requireAdmin();
@@ -45,7 +47,9 @@ export async function saveCharacterForm(id: string | null, form: FormData) {
     }
     images[field] = image;
   }
-  const data = validateCharacter({ name: value("name"), openingLine: value("openingLine"), ...images });
+  const voiceName = value("voiceName") || existing?.voiceName || DEFAULT_VOICE;
+  const data = validateCharacter({ name: value("name"), openingLine: value("openingLine"), voiceName, ...images });
+  if (voiceName !== existing?.voiceName) await validateGoogleVoice(voiceName);
   const uploaded: { key: string; url: string }[] = [];
   try {
     for (const field of ["image", "backgroundImage"] as const) {

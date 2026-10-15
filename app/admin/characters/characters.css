@@ -78,3 +78,5 @@
   .admin-shell .character-detail>img{max-width:320px;height:260px}
   .admin-shell .character-detail dd{font-size:13px}
 }
+
+.admin-shell .character-voice-field{margin:22px 0;padding:20px;border:1px solid var(--border);border-radius:10px;background:#f8faff}.admin-shell .character-voice-field select{display:block;width:100%;padding:12px;margin-top:8px;border:1px solid var(--border);border-radius:8px;background:white;color:var(--text);font:inherit}.admin-shell .character-voice-field audio{display:block;max-width:100%;margin-top:14px}.admin-shell .character-speech p{font-size:13px;line-height:1.8;margin:12px 0}.admin-shell .character-speech progress{display:block;width:100%;margin-top:18px;accent-color:#356be8}

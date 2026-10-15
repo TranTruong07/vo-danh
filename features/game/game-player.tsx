@@ -3,14 +3,16 @@
 import { useEffect, useRef, useState } from "react";
 import QrScanner from "./qr-scanner";
 import CharacterChat from "./character-chat";
+import NarrationPlayer from "./narration-player";
 import { startQuizAction, answerQuizAction } from "@/actions/quiz";
 import type { PublicCharacter } from "@/server/domain/character";
 import type { PublicQuestion, AnswerResult } from "@/server/domain/quiz";
 import { usePwa } from "@/features/pwa/pwa-provider";
 import { drawLocalQuestion, gradeLocalQuestion, localPublicQuestion, matchSavedQuestion, readPack, rememberLocalQuestion } from "@/features/pwa/local-game";
 import type { CharacterQuestionRecord } from "@/server/domain/character-question";
+import type { OpenChatSessionAction } from "@/server/domain/chat";
 
-export default function GamePlayer({ character }: { character?: PublicCharacter }) {
+export default function GamePlayer({ character, openChatSessionAction }: { character?: PublicCharacter; openChatSessionAction?: OpenChatSessionAction }) {
   const [scanning, setScanning] = useState(!character);
   const [motion, setMotion] = useState(true);
   function scanned(id: string) {
@@ -26,11 +28,11 @@ export default function GamePlayer({ character }: { character?: PublicCharacter 
     <div className="scene-shade" aria-hidden="true" />
     <div className="scene-toolbar"><span>✦ MỘT THẺ BÀI · MỘT CÂU CHUYỆN</span><div><button className="scene-motion" type="button" aria-pressed={!motion} onClick={() => setMotion(value => !value)}>{motion ? "Tắt chuyển động" : "Bật chuyển động"}</button><button className="game-button" onClick={() => setScanning(value => !value)}>{scanning ? "Về câu hỏi" : "Quét nhân vật tiếp"} <span aria-hidden="true">↗</span></button></div></div>
     {scanning && <QrScanner onScan={scanned} />}
-    <div hidden={scanning}><QuestionRound character={character} /></div>
+    <div hidden={scanning}><QuestionRound character={character} active={!scanning} openChatSessionAction={openChatSessionAction} /></div>
   </div>;
 }
 
-function QuestionRound({ character }: { character: PublicCharacter }) {
+function QuestionRound({ character, active, openChatSessionAction }: { character: PublicCharacter; active: boolean; openChatSessionAction?: OpenChatSessionAction }) {
   const { pack } = usePwa();
   const localQuestion = useRef<CharacterQuestionRecord | null>(null);
   const initiated = useRef(false);
@@ -107,8 +109,9 @@ function QuestionRound({ character }: { character: PublicCharacter }) {
       {question && <><fieldset className="answer-options" aria-labelledby="scene-question-title" disabled={submitting || !!answer}><legend className="sr-only">Chọn một đáp án</legend>{question.options.map((option, index) => <label key={index} className={`answer-option ${selected === index ? "chosen" : ""} ${answer?.correctIndex === index ? "correct" : ""} ${answer && selected === index && !answer.correct ? "incorrect" : ""}`}><input type="radio" name="answer" value={index} checked={selected === index} onChange={() => setSelected(index)} /><span className="answer-letter">{"ABCD"[index]}</span><span>{option}</span>{answer?.correctIndex === index && <strong aria-label="Đáp án đúng">✓</strong>}</label>)}</fieldset>
         {!answer && <button className="game-button primary confirm-answer" disabled={selected === null || submitting} onClick={submit}>{submitting ? "Đang kiểm tra…" : "Chốt đáp án →"}</button>}
       </>}
+      {question && <NarrationPlayer urls={answer ? answer.narration : question.narration} feedback={!!answer} active={active} />}
       {error && <div className="game-message error" role="alert"><p>{error}</p>{!loading && !question && <button className="game-button" onClick={generate}>Thử tải lại câu hỏi</button>}</div>}
       {answer && <div className={`answer-feedback ${answer.correct ? "success" : "wrong"}`} role="status"><h3>{answer.correct ? "Chính xác! Bạn đã ghi thêm một dấu chân." : `Chưa đúng rồi! Đáp án đúng là ${"ABCD"[answer.correctIndex]}.`}</h3><p>{answer.explanation}</p>{answer.fact && <details><summary>Xem dữ kiện lịch sử</summary><blockquote>{answer.fact}</blockquote>{answer.sources && <p className="fact-source">Nguồn: {answer.sources}</p>}</details>}<p className="next-hint">Mỗi lượt quét chỉ có một câu hỏi. Để nhận câu hỏi tiếp theo, bấm “Quét nhân vật tiếp” và quét lại mã QR.</p></div>}
     </section>
-  </div><CharacterChat character={character} /></>;
+  </div><CharacterChat key={question?.id || "pending"} character={character} quizSessionId={question?.id} openChatSessionAction={openChatSessionAction} /></>;
 }

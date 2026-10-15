@@ -35,6 +35,8 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 !.env.example
+!.env.tts.example
+!.env.chat.example
 
 # vercel
 .vercel
@@ -45,3 +47,9 @@ next-env.d.ts
 
 # Generated after each production build
 /public/pwa-assets.json
+
+# Private source and unreviewed knowledge artifacts; never expose via public/ or PWA.
+/docs/source/*.docx
+/knowledge/*.json
+/knowledge/review-report*.md
+__pycache__/

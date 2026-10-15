@@ -33,7 +33,8 @@ async function sync() {
     staging = name;
     const target = await caches.open(name);
     const images = pack.characters.flatMap(character => [character.image, character.backgroundImage]).filter(Boolean);
-    const assets = [...new Set([...manifest.assets, ...images])];
+    const audio = pack.questions.flatMap(question => question.audio ? [...question.audio.prompt, ...question.audio.correct, ...question.audio.incorrect] : []).filter(url => /^\/audio\/[a-f0-9]{64}$/.test(url));
+    const assets = [...new Set([...manifest.assets, ...images, ...audio])];
     let completed = 0;
     // Bounded concurrency avoids overwhelming the connection on mobile.
     let cursor = 0;
@@ -42,7 +43,7 @@ async function sync() {
       while (!failed && cursor < assets.length) {
         const url = assets[cursor++];
         // Hashed scripts/fonts and immutable character image URLs can be reused.
-        const reusable = url.startsWith('/_next/static/') || images.includes(url);
+        const reusable = url.startsWith('/_next/static/') || images.includes(url) || audio.includes(url);
         const response = reusable && old ? await old.match(url) : null;
         try { await target.put(url, response || await download(url)); } catch (error) { failed = true; throw error; }
         completed++;
@@ -94,7 +95,19 @@ self.addEventListener('fetch', event => {
   event.respondWith((async () => {
     const cache = await activeCache();
     const saved = await cache?.match(request);
-    if (saved) return saved;
+    if (saved) {
+      // Safari and other media players request byte ranges, including while offline.
+      const range = request.headers.get('range');
+      if (range && /^\/audio\/[a-f0-9]{64}$/.test(url.pathname)) {
+        const bytes = await saved.arrayBuffer(), length = bytes.byteLength;
+        const match = range.match(/^bytes=(\d*)-(\d*)$/);
+        const start = match?.[1] ? Number(match[1]) : match?.[2] ? Math.max(0, length - Number(match[2])) : NaN;
+        const end = match?.[1] && match?.[2] ? Math.min(Number(match[2]), length - 1) : length - 1;
+        if (!Number.isSafeInteger(start) || start < 0 || start >= length || end < start) return new Response(null, { status: 416, headers: { 'Content-Range': `bytes */${length}` } });
+        return new Response(bytes.slice(start, end + 1), { status: 206, headers: { 'Content-Type': 'audio/mpeg', 'Accept-Ranges': 'bytes', 'Content-Length': String(end - start + 1), 'Content-Range': `bytes ${start}-${end}/${length}` } });
+      }
+      return saved;
+    }
     // Existing tabs can still request a hashed chunk from the preceding build.
     if (url.origin === self.location.origin && url.pathname.startsWith('/_next/static/')) {
       for (const name of await caches.keys()) if (name.startsWith(PREFIX)) {

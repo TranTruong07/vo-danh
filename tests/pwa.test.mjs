@@ -6,7 +6,7 @@ import { readFile } from 'node:fs/promises';
 
 test('offline pack contains only public character/question records, filters orphans and versions content changes', async () => {
   let text = 'Câu hỏi thứ nhất';
-  const { offlineGamePack } = loader({ '@/server/repositories/offline-game': { readOfflineGame: async () => ({ characters: [{ id: 'one', name: 'Name' }], questions: [{ id: 'q', characterId: 'one', question: text }, { id: 'orphan', characterId: 'deleted' }] }) } })('@/server/services/offline-game');
+  const { offlineGamePack } = loader({ './speech': { attachOfflineSpeech: async (_, questions) => questions }, '@/server/repositories/offline-game': { readOfflineGame: async () => ({ characters: [{ id: 'one', name: 'Name' }], questions: [{ id: 'q', characterId: 'one', question: text }, { id: 'orphan', characterId: 'deleted' }] }) } })('@/server/services/offline-game');
   const first = await offlineGamePack();
   assert.equal(first.questions.length, 1); assert.equal(first.schema, 1);
   assert.equal((await offlineGamePack()).version, first.version);
@@ -41,7 +41,7 @@ test('service worker commits complete packs only, keeps the previous pack on dow
     self: { location: { origin: 'https://example.test' }, addEventListener: (name, callback) => handlers.set(name, callback), clients: { matchAll: async () => [{ postMessage: message => messages.push(message) }], claim: async () => {} }, skipWaiting: () => {} },
     fetch: async url => {
       if (url === '/pwa-assets.json') return Response.json({ build: 'build', assets: ['/offline', '/offline-home', '/image.webp'] });
-      if (url === '/api/offline/pack') return Response.json({ schema: 1, version, characters: [], questions: [] });
+      if (url === '/api/offline/pack') return Response.json({ schema: 1, version, characters: [], questions: [{ audio: { prompt: ['/audio/' + 'a'.repeat(64)], correct: [], incorrect: [] } }] });
       if (fail && url === '/image.webp') return new Response('', { status: 503 });
       return new Response('asset');
     },
@@ -58,6 +58,11 @@ test('service worker commits complete packs only, keeps the previous pack on dow
   assert.equal(messages.at(-1).type, 'PWA_READY');
   await sync(); assert.equal(messages.at(-1).type, 'PWA_READY');
   const listener = handlers.get('fetch');
+  let ranged;
+  listener({ request: { url: key('/audio/' + 'a'.repeat(64)), method: 'GET', mode: 'cors', headers: new Headers({ range: 'bytes=1-3' }) }, respondWith: promise => { ranged = promise; } });
+  const audio = await ranged;
+  assert.equal(audio.status, 206); assert.equal(await audio.text(), 'sse');
+  assert.equal(audio.headers.get('Content-Range'), 'bytes 1-3/5');
   for (const [url, method, mode, headers] of [
     ['/admin', 'GET', 'navigate', new Headers()], ['/orders', 'GET', 'navigate', new Headers()],
     ['/?auth=reset&token=secret', 'GET', 'navigate', new Headers()],

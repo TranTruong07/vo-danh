@@ -1,0 +1,200 @@
+{
+  "phase": "5A",
+  "generatedAt": "2026-10-15T14:07:38.219Z",
+  "typescript": "passed",
+  "scopedEslint": "passed",
+  "productionBuild": "passed",
+  "chatUnit": {
+    "passed": 32,
+    "failed": 0
+  },
+  "ux": {
+    "startedAt": "2026-10-15T14:04:39.842Z",
+    "checks": [
+      {
+        "name": "1440x900: layout, published starters, exact answer and source disclosure",
+        "status": "passed"
+      },
+      {
+        "name": "1440x900: read older history without jumping, new-message button, reopen preserves scroll",
+        "status": "passed"
+      },
+      {
+        "name": "1440x900: network failure, manual retry once, suggestion retry retains questionId",
+        "status": "passed"
+      },
+      {
+        "name": "1440x900: IME, Shift+Enter, offline, rate limit and expired session",
+        "status": "passed"
+      },
+      {
+        "name": "390x844: layout, published starters, exact answer and source disclosure",
+        "status": "passed"
+      },
+      {
+        "name": "390x844: read older history without jumping, new-message button, reopen preserves scroll",
+        "status": "passed"
+      },
+      {
+        "name": "390x844: network failure, manual retry once, suggestion retry retains questionId",
+        "status": "passed"
+      },
+      {
+        "name": "390x844: IME, Shift+Enter, offline, rate limit and expired session",
+        "status": "passed"
+      },
+      {
+        "name": "390x844: virtual viewport keyboard resize/offset, focus trap and scroll restoration",
+        "status": "passed"
+      },
+      {
+        "name": "375x667: layout, published starters, exact answer and source disclosure",
+        "status": "passed"
+      },
+      {
+        "name": "375x667: read older history without jumping, new-message button, reopen preserves scroll",
+        "status": "passed"
+      },
+      {
+        "name": "375x667: network failure, manual retry once, suggestion retry retains questionId",
+        "status": "passed"
+      },
+      {
+        "name": "375x667: IME, Shift+Enter, offline, rate limit and expired session",
+        "status": "passed"
+      },
+      {
+        "name": "375x667: virtual viewport keyboard resize/offset, focus trap and scroll restoration",
+        "status": "passed"
+      },
+      {
+        "name": "Trường Chinh: responsive header and unchanged published persona",
+        "status": "passed"
+      },
+      {
+        "name": "Lê Duẩn: responsive header and unchanged published persona",
+        "status": "passed"
+      },
+      {
+        "name": "Phạm Văn Đồng: responsive header and unchanged published persona",
+        "status": "passed"
+      }
+    ],
+    "limitations": [
+      "Edge viewport + VisualViewport resize/offset simulation; no real iOS keyboard",
+      "Transport errors and delayed responses are injected for UX tests, using unchanged published answer text"
+    ],
+    "finishedAt": "2026-10-15T14:05:12.137Z"
+  },
+  "phase4Regression": {
+    "startedAt": "2026-10-15T14:02:54.115Z",
+    "baseURL": "http://localhost:3013",
+    "checks": [
+      {
+        "name": "Exact alias, fuzzy suggestion, selection, refusal",
+        "status": "passed"
+      },
+      {
+        "name": "Reject invalid session, foreign owner, client persona and unpublished revision IDs",
+        "status": "passed"
+      },
+      {
+        "name": "Rapid Enter sends once; Shift+Enter inserts a newline",
+        "status": "passed"
+      },
+      {
+        "name": "Offline notice, recovery and service failure",
+        "status": "passed"
+      },
+      {
+        "name": "Trường Chinh: refresh clears chat history",
+        "status": "passed"
+      },
+      {
+        "name": "Trường Chinh: QR character page, published starters, canonical and persona",
+        "status": "passed"
+      },
+      {
+        "name": "Lê Duẩn: refresh clears chat history",
+        "status": "passed"
+      },
+      {
+        "name": "Lê Duẩn: QR character page, published starters, canonical and persona",
+        "status": "passed"
+      },
+      {
+        "name": "Expired-session UI requires QR rescan",
+        "status": "passed"
+      },
+      {
+        "name": "Phạm Văn Đồng: refresh clears chat history",
+        "status": "passed"
+      },
+      {
+        "name": "Phạm Văn Đồng: QR character page, published starters, canonical and persona",
+        "status": "passed"
+      },
+      {
+        "name": "Real API shared rate limit",
+        "status": "passed"
+      },
+      {
+        "name": "Võ Nguyên Giáp: refresh clears chat history",
+        "status": "passed"
+      },
+      {
+        "name": "Võ Nguyên Giáp: QR character page, published starters, canonical and persona",
+        "status": "passed"
+      },
+      {
+        "name": "QR character switch resets chat and persona",
+        "status": "passed"
+      },
+      {
+        "name": "Production PWA: QR image, cached quiz chat binding, offline quiz and chat recovery",
+        "status": "passed"
+      }
+    ],
+    "limitations": [
+      "QR image and pasted payload tested; physical camera not tested",
+      "Expired-session UI uses injected HTTP 401; expiry validation tested by unit tests",
+      "Trường Chinh: no existing quiz questions; chat tested, quiz completion not available",
+      "Lê Duẩn: no existing quiz questions; chat tested, quiz completion not available",
+      "Phạm Văn Đồng: no existing quiz questions; chat tested, quiz completion not available"
+    ],
+    "finishedAt": "2026-10-15T14:03:26.854Z"
+  },
+  "sourceIntegrity": {
+    "changedExistingFilesInSnapshot": [
+      "features/game/character-chat.tsx",
+      "features/game/character-chat.css"
+    ],
+    "unchangedVerified": [
+      "features/game/chat-client.ts",
+      "features/game/game-player.tsx",
+      "server/services/chat-characters.ts",
+      "server/services/chat-game-session.ts",
+      "server/services/chat-matcher.ts",
+      "server/services/chat-rate-limit.ts",
+      "server/services/chat-session.ts",
+      "server/services/chat.ts",
+      "server/repositories/chat-game-sessions.ts",
+      "server/repositories/chat-knowledge.ts",
+      "server/repositories/chat-limits.ts",
+      "server/repositories/chat-session.ts",
+      "public/sw.js"
+    ]
+  },
+  "backendChanges": false,
+  "apiSchemaChanges": false,
+  "deployed": false,
+  "nextPhaseStarted": false,
+  "screenshots": [
+    "docs/assets/chatbot-phase-5a/desktop-1440x900.png",
+    "docs/assets/chatbot-phase-5a/keyboard-viewport-simulation.png",
+    "docs/assets/chatbot-phase-5a/mobile-375x667.png",
+    "docs/assets/chatbot-phase-5a/mobile-390x844.png"
+  ],
+  "knowledgeContentWrites": 0,
+  "runtimeWrites": "Only ordinary player/quiz/chat sessions and rate-limit metadata through existing demo flows"
+}

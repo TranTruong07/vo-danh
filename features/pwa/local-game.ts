@@ -40,12 +40,12 @@ export async function rememberLocalQuestion(question: CharacterQuestionRecord) {
 }
 
 export function localPublicQuestion(question: CharacterQuestionRecord): PublicQuestion {
-  return { id: `offline:${crypto.randomUUID()}`, question: question.question, options: question.answers, expiresAt: "" };
+  return { id: `offline:${crypto.randomUUID()}`, question: question.question, options: question.answers, expiresAt: "", ...(question.audio ? { narration: question.audio.prompt } : {}) };
 }
 export function gradeLocalQuestion(question: CharacterQuestionRecord, selectedIndex: number): AnswerResult {
   if (!Number.isInteger(selectedIndex) || selectedIndex < 0 || selectedIndex > 3) throw new Error("Chọn một đáp án hợp lệ.");
   const correct = selectedIndex === question.correctIndex;
-  return { selectedIndex, correctIndex: question.correctIndex, correct, explanation: correct ? question.correctFeedback : question.incorrectFeedback, fact: "", sources: "" };
+  return { selectedIndex, correctIndex: question.correctIndex, correct, explanation: correct ? question.correctFeedback : question.incorrectFeedback, fact: "", sources: "", ...(question.audio ? { narration: correct ? question.audio.correct : question.audio.incorrect } : {}) };
 }
 export function matchSavedQuestion(pack: OfflinePack, characterId: string, question: PublicQuestion) {
   return pack.questions.find(item => item.characterId === characterId && item.question === question.question && item.answers.every((answer, index) => answer === question.options[index]));

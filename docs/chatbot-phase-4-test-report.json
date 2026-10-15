@@ -1,0 +1,165 @@
+{
+  "phase": "4",
+  "generatedAt": "2026-10-15T09:21:27.356Z",
+  "environment": {
+    "database": "vo_danh",
+    "browser": "Edge headless",
+    "desktop": {
+      "width": 1440,
+      "height": 1000
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "knowledge": {
+    "logicalQuestions": 59,
+    "revisions": 74,
+    "approved": 60,
+    "draft": 14,
+    "publishedPointers": 59,
+    "runtimeReadableQuestions": 59,
+    "unchanged": true,
+    "collections": [
+      {
+        "name": "knowledge_audit",
+        "count": 134,
+        "contentSha256": "10769b8de42e0ef1f05a32e9effa54bf71a5aecb9f72aef9362860fcb300a9e3"
+      },
+      {
+        "name": "knowledge_question_revisions",
+        "count": 74,
+        "contentSha256": "a2585b2088f2679d02543b8988525ea8e5ac55c67b125a0bd0507ccd5b61c077"
+      },
+      {
+        "name": "knowledge_questions",
+        "count": 59,
+        "contentSha256": "b9381833a8305e8281350ecfe8cf6e6473d30cc349859e806e860558e1b6c2df"
+      }
+    ],
+    "beforeReport": "knowledge/phase-4-mongo-before.json",
+    "afterReport": "knowledge/phase-4-mongo-after.json"
+  },
+  "checks": {
+    "typescript": "passed",
+    "scopedEslint": "passed",
+    "productionBuild": "passed",
+    "chatUnit": {
+      "total": 32,
+      "passed": 32,
+      "failed": 0
+    },
+    "allUnit": {
+      "total": 139,
+      "passed": 133,
+      "failed": 5,
+      "skipped": 1,
+      "baselineFailures": "5 auth.test.mjs cases: ENOENT server/services/character.ts in existing test loader; unchanged from Phase 3A",
+      "skipReason": "MONGODB_TEST_URI not configured"
+    },
+    "browser": {
+      "startedAt": "2026-10-15T09:20:01.706Z",
+      "baseURL": "http://localhost:3013",
+      "checks": [
+        {
+          "name": "Exact alias, fuzzy suggestion, selection, refusal",
+          "status": "passed"
+        },
+        {
+          "name": "Reject invalid session, foreign owner, client persona and unpublished revision IDs",
+          "status": "passed"
+        },
+        {
+          "name": "Rapid Enter sends once; Shift+Enter inserts a newline",
+          "status": "passed"
+        },
+        {
+          "name": "Offline notice, recovery and service failure",
+          "status": "passed"
+        },
+        {
+          "name": "Trường Chinh: refresh clears chat history",
+          "status": "passed"
+        },
+        {
+          "name": "Trường Chinh: QR character page, published starters, canonical and persona",
+          "status": "passed"
+        },
+        {
+          "name": "Lê Duẩn: refresh clears chat history",
+          "status": "passed"
+        },
+        {
+          "name": "Lê Duẩn: QR character page, published starters, canonical and persona",
+          "status": "passed"
+        },
+        {
+          "name": "Expired-session UI requires QR rescan",
+          "status": "passed"
+        },
+        {
+          "name": "Phạm Văn Đồng: refresh clears chat history",
+          "status": "passed"
+        },
+        {
+          "name": "Phạm Văn Đồng: QR character page, published starters, canonical and persona",
+          "status": "passed"
+        },
+        {
+          "name": "Real API shared rate limit",
+          "status": "passed"
+        },
+        {
+          "name": "Võ Nguyên Giáp: refresh clears chat history",
+          "status": "passed"
+        },
+        {
+          "name": "Võ Nguyên Giáp: QR character page, published starters, canonical and persona",
+          "status": "passed"
+        },
+        {
+          "name": "QR character switch resets chat and persona",
+          "status": "passed"
+        },
+        {
+          "name": "Production PWA: QR image, cached quiz chat binding, offline quiz and chat recovery",
+          "status": "passed"
+        }
+      ],
+      "limitations": [
+        "QR image and pasted payload tested; physical camera not tested",
+        "Expired-session UI uses injected HTTP 401; expiry validation tested by unit tests",
+        "Trường Chinh: no existing quiz questions; chat tested, quiz completion not available",
+        "Lê Duẩn: no existing quiz questions; chat tested, quiz completion not available",
+        "Phạm Văn Đồng: no existing quiz questions; chat tested, quiz completion not available"
+      ],
+      "finishedAt": "2026-10-15T09:20:40.643Z"
+    }
+  },
+  "runtimeWrites": [
+    "Ordinary player/quiz session and quota writes through existing play flow",
+    "chat_game_sessions metadata with TTL and unique owner/request index",
+    "Existing chatbot quota counters"
+  ],
+  "knowledgeWrites": 0,
+  "llmCalls": 0,
+  "deployed": false,
+  "artifacts": {
+    "buildLog": ".local/chat-demo/build.log",
+    "unitLog": ".local/chat-demo/unit-tests.tap",
+    "desktopScreenshot": ".local/chat-demo/desktop-3.png",
+    "mobileScreenshot": ".local/chat-demo/mobile-cached-quiz.png"
+  },
+  "limitations": [
+    "QR image and pasted payload tested; physical camera not tested",
+    "Expired-session UI uses injected HTTP 401; expiry validation tested by unit tests",
+    "Trường Chinh: no existing quiz questions; chat tested, quiz completion not available",
+    "Lê Duẩn: no existing quiz questions; chat tested, quiz completion not available",
+    "Phạm Văn Đồng: no existing quiz questions; chat tested, quiz completion not available",
+    "No physical mobile keyboard or Safari/iOS check",
+    "No live payment/email/TTS generation or admin publication workflow exercised",
+    "Chat requires network; reload after reconnecting from offline shell"
+  ],
+  "nextPhaseStarted": false
+}

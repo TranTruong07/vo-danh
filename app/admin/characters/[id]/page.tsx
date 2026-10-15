@@ -5,6 +5,8 @@ import { loadAdminCharacter } from "@/server/services/characters";
 import CharacterQr from "@/features/characters/character-qr";
 import DeleteCharacterButton from "@/features/characters/delete-character-button";
 import CharacterAppearance from "@/features/characters/character-appearance";
+import PrepareSpeech from "@/features/characters/prepare-speech";
+import { DEFAULT_VOICE } from "@/server/domain/speech";
 
 export default async function CharacterDetailPage({ params, searchParams }: {
   params: Promise<{ id: string }>;
@@ -21,6 +23,7 @@ export default async function CharacterDetailPage({ params, searchParams }: {
     </div>
     {saved && <p className="character-notice" role="status">Đã lưu nhân vật. Mã QR đã sẵn sàng cho người chơi.</p>}
     <CharacterQr character={character} />
+    <PrepareSpeech characterId={character.id} voiceName={character.voiceName || DEFAULT_VOICE} />
     <section className="card character-detail" aria-label="Hồ sơ nhân vật">
       <CharacterAppearance character={character} />
       <div>
