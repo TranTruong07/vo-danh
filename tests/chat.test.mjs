@@ -56,6 +56,7 @@ test('server mapping resolves all four IDs and fails closed on absent/duplicate/
 
 function sessions(session, exists = true) {
   return loader({
+    '@/server/domain/chat': load('@/server/domain/chat'),
     './player-session': { playerSession: async create => { assert.equal(create, false); return hash; } },
     '@/server/repositories/chat-session': { readChatGameSession: async (id, owner) => { assert.equal(id, sid); assert.equal(owner, hash); return session; }, chatCharacterExists: async () => exists },
     './chat-characters': { resolveMappedCharacter: id => { assert.equal(id, dbid); return 'vo-nguyen-giap'; } },
@@ -66,6 +67,39 @@ test('session binds cookie owner and server character; never creates a cookie', 
   const service = sessions(validSession());
   assert.equal(await service.chatPlayerHash(), hash);
   assert.deepEqual(await service.resolveChatSession(sid, hash), { characterId: 'vo-nguyen-giap', sessionId: sid, ownerHash: hash });
+});
+test('server quiz cannot chat until a stored answer exists, regardless of correctness', async () => {
+  await assert.rejects(sessions({ ...validSession(), quizAnswered: false }).resolveChatSession(sid, hash), e => e.code === 'QUESTION_NOT_ANSWERED' && e.httpStatus === 403);
+  assert.equal((await sessions({ ...validSession(), quizAnswered: true }).resolveChatSession(sid, hash)).characterId, 'vo-nguyen-giap');
+  for (const input of [{ sessionId: sid, message: 'hi', isAnswerSubmitted: true }, { sessionId: sid, message: 'hi', canOpenChatbot: true }]) {
+    assert.throws(() => validateChatInput(input, 'message'), errorCode('INVALID_INPUT'));
+  }
+});
+test('all chat endpoints reject an unanswered server round before knowledge, history or AI work', async () => {
+  let reads = 0;
+  const service = loader({
+    './chat-session': sessions({ ...validSession(), quizAnswered: false }),
+    './chat-rate-limit': { limitChatRequests: async () => {} },
+    '@/server/repositories/chat-history': historyMemory(),
+    '@/server/repositories/chat-knowledge': {
+      readPublishedChatIndex: async () => { reads++; return []; },
+      readPublishedChatAnswer: async () => { reads++; return null; },
+    },
+    './chat-ai-matching': { assistChatMatch: async () => { throw Error('Must not call Gemini'); } },
+  })('@/server/services/chat');
+  const { handleChatRequest } = load('@/server/infrastructure/chat-http');
+  for (const [operation, input] of [
+    [service.suggestChatQuestions, { sessionId: sid }],
+    [service.sendChatMessage, { sessionId: sid, message: row.canonicalQuestion }],
+    [service.selectChatAnswer, { sessionId: sid, questionId: row.questionId }],
+  ]) {
+    const response = await handleChatRequest(new Request('https://game.test/api/chat', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(input),
+    }), operation);
+    assert.equal(response.status, 403);
+    assert.equal((await response.json()).code, 'QUESTION_NOT_ANSWERED');
+  }
+  assert.equal(reads, 0);
 });
 test('missing, foreign, expired, invalid, pending, deleted-character and offline sessions reject', async () => {
   for (const patch of [null, { _id: 'other' }, { ownerHash: 'foreign' }, { expiresAt: new Date(0) }, { expiresAt: new Date('invalid') }, { expiresAt: '2099' }, { state: 'pending' }, { characterId: 'invalid' }]) {

@@ -28,7 +28,7 @@ export default function GamePlayer({ character, openChatSessionAction }: { chara
     <div className="scene-shade" aria-hidden="true" />
     <div className="scene-toolbar"><span>✦ MỘT THẺ BÀI · MỘT CÂU CHUYỆN</span><div><button className="scene-motion" type="button" aria-pressed={!motion} onClick={() => setMotion(value => !value)}>{motion ? "Tắt chuyển động" : "Bật chuyển động"}</button><button className="game-button" onClick={() => setScanning(value => !value)}>{scanning ? "Về câu hỏi" : "Quét nhân vật tiếp"} <span aria-hidden="true">↗</span></button></div></div>
     {scanning && <QrScanner onScan={scanned} />}
-    <div hidden={scanning}><QuestionRound character={character} active={!scanning} openChatSessionAction={openChatSessionAction} /></div>
+    <div hidden={scanning}><QuestionRound key={character.id} character={character} active={!scanning} openChatSessionAction={openChatSessionAction} /></div>
   </div>;
 }
 
@@ -39,11 +39,14 @@ function QuestionRound({ character, active, openChatSessionAction }: { character
   const request = useRef("");
   const inFlight = useRef(false);
   const [question, setQuestion] = useState<PublicQuestion | null>(null);
-  const [answer, setAnswer] = useState<AnswerResult | null>(null);
+  const [submission, setSubmission] = useState<{ questionId: string; result: AnswerResult; serverRecorded: boolean } | null>(null);
+  const answer = submission?.questionId === question?.id ? submission?.result ?? null : null;
+  const mounted = useRef(false), answerInFlight = useRef(false);
   const [selected, setSelected] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  useEffect(() => { mounted.current = true; return () => { mounted.current = false; }; }, []);
   useEffect(() => {
     // A server round may arrive before the initial download finishes. Save its
     // grading snapshot and mark it seen before drawing from the offline bank.
@@ -54,7 +57,7 @@ function QuestionRound({ character, active, openChatSessionAction }: { character
   async function generate() {
     if (inFlight.current || question) return;
     inFlight.current = true;
-    setLoading(true); setError(""); setQuestion(null); setAnswer(null); setSelected(null);
+    setLoading(true); setError(""); setQuestion(null); setSubmission(null); setSelected(null);
     request.current = crypto.randomUUID();
     localQuestion.current = null;
     try {
@@ -78,17 +81,21 @@ function QuestionRound({ character, active, openChatSessionAction }: { character
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   async function submit() {
-    if (!question || selected === null || submitting || answer) return;
+    if (!question || selected === null || answerInFlight.current || submitting || answer) return;
+    answerInFlight.current = true;
+    const questionId = question.id;
     setSubmitting(true); setError("");
     try {
       const saved = pack || await readPack().catch(() => null);
+      if (!mounted.current) return;
       const snapshot = localQuestion.current || (saved && matchSavedQuestion(saved, character.id, question));
-      if (snapshot) { const result = gradeLocalQuestion(snapshot, selected); setAnswer(result); setSelected(result.selectedIndex); return; }
+      if (snapshot) { const result = gradeLocalQuestion(snapshot, selected); setSubmission({ questionId, result, serverRecorded: false }); setSelected(result.selectedIndex); return; }
       if (!navigator.onLine) { setError("Câu hỏi này chưa được lưu trên máy. Kết nối mạng để chốt đáp án."); return; }
       const result = await answerQuizAction(question.id, selected);
-      if (result.ok) { setAnswer(result.data); setSelected(result.data.selectedIndex); } else setError(result.message);
-    } catch { setError("Chưa gửi được đáp án. Hãy bấm chốt đáp án để thử lại."); }
-    finally { setSubmitting(false); }
+      if (!mounted.current) return;
+      if (result.ok) { setSubmission({ questionId, result: result.data, serverRecorded: true }); setSelected(result.data.selectedIndex); } else setError(result.message);
+    } catch { if (mounted.current) setError("Chưa gửi được đáp án. Hãy bấm chốt đáp án để thử lại."); }
+    finally { answerInFlight.current = false; if (mounted.current) setSubmitting(false); }
   }
   return <><div className={`scene-round ${loading ? "is-loading" : answer?.correct ? "is-celebrating" : "is-asking"}`}>
     <figure className="scene-actor">
@@ -113,5 +120,8 @@ function QuestionRound({ character, active, openChatSessionAction }: { character
       {error && <div className="game-message error" role="alert"><p>{error}</p>{!loading && !question && <button className="game-button" onClick={generate}>Thử tải lại câu hỏi</button>}</div>}
       {answer && <div className={`answer-feedback ${answer.correct ? "success" : "wrong"}`} role="status"><h3>{answer.correct ? "Chính xác! Bạn đã ghi thêm một dấu chân." : `Chưa đúng rồi! Đáp án đúng là ${"ABCD"[answer.correctIndex]}.`}</h3><p>{answer.explanation}</p>{answer.fact && <details><summary>Xem dữ kiện lịch sử</summary><blockquote>{answer.fact}</blockquote>{answer.sources && <p className="fact-source">Nguồn: {answer.sources}</p>}</details>}<p className="next-hint">Mỗi lượt quét chỉ có một câu hỏi. Để nhận câu hỏi tiếp theo, bấm “Quét nhân vật tiếp” và quét lại mã QR.</p></div>}
     </section>
-  </div><CharacterChat key={question?.id || "pending"} character={character} quizSessionId={question?.id} openChatSessionAction={openChatSessionAction} /></>;
+  </div><CharacterChat key={question?.id || "pending"} character={character} roundId={question?.id}
+    canOpenChatbot={active && !!answer && !loading && !submitting}
+    quizSessionId={submission?.serverRecorded && answer ? question?.id : undefined}
+    openChatSessionAction={openChatSessionAction} /></>;
 }

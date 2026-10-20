@@ -26,6 +26,7 @@ export async function requestChat(sessionId: string, input: ChatRequestInput | n
   } catch { throw new ChatClientError("NETWORK", "Chưa kết nối được trò chuyện. Hãy kiểm tra mạng rồi thử lại; câu hỏi trắc nghiệm vẫn được giữ nguyên."); }
   const data = await response.json().catch(() => null);
   if (!response.ok) {
+    if (response.status === 403 && data?.code === 'QUESTION_NOT_ANSWERED') throw new ChatClientError('QUESTION_NOT_ANSWERED', 'Hãy trả lời câu hỏi trước khi trò chuyện với nhân vật.');
     const retryAfter = Math.min(120, Math.max(1, Number(response.headers.get("Retry-After")) || 30));
     if (response.status === 401) throw new ChatClientError("INVALID_SESSION", "Phiên trò chuyện đã hết hạn hoặc không còn hợp lệ. Hãy quét lại mã QR.");
     if (response.status === 409) throw new ChatClientError('CONFLICT', 'Gợi ý hoặc lượt gửi này không còn hợp lệ. Hãy nhập một câu hỏi mới để tiếp tục.');

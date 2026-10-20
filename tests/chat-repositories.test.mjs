@@ -74,15 +74,28 @@ test('malformed published aliases and oversized indexes fail closed instead of h
   const repo = loader({ '@/lib/db/client': { getDatabase: async () => ({ collection: () => ({ aggregate: () => ({ toArray: async () => Array(2001).fill({}) }) }) }) } })('@/server/repositories/chat-knowledge');
   await assert.rejects(repo.readPublishedChatIndex(), /Invalid published/);
 });
-test('session repository reads only binding metadata with owner/expiry and never mutates quiz', async () => {
+test('session repository reads binding and completion metadata with owner/expiry and never mutates quiz', async () => {
   const calls = [];
   const repo = loader({ '@/lib/db/client': { getDatabase: async () => ({ collection: name => ({ findOne: async (query, options) => { calls.push({ name, query, options }); return null; } }) }) } })('@/server/repositories/chat-session');
   await repo.readChatGameSession('id', 'owner');
   assert.equal(calls[0].name, 'quiz_attempts');
   assert.equal(calls[0].query.ownerHash, 'owner'); assert.equal(calls[0].query.state, 'ready');
   assert.ok(calls[0].query.expiresAt.$gt instanceof Date);
-  assert.deepEqual(Object.keys(calls[0].options.projection).sort(), ['_id', 'characterId', 'expiresAt', 'ownerHash', 'state']);
+  assert.deepEqual(Object.keys(calls[0].options.projection).sort(), ['_id', 'characterId', 'expiresAt', 'ownerHash', 'selectedIndex', 'state']);
+  assert.equal(calls[1].options.projection.selectedIndex, undefined);
   assert.equal(await repo.chatCharacterExists('b'.repeat(24)), false);
+});
+test('quiz completion is derived from stored selection; unanswered quiz never falls through to a local binding', async () => {
+  for (const selectedIndex of [undefined, null, -1, 4, '0', 0, 1, 2, 3]) {
+    const calls = [];
+    const repo = loader({ '@/lib/db/client': { getDatabase: async () => ({ collection: name => ({ findOne: async () => {
+      calls.push(name); return { _id: 'quiz', selectedIndex };
+    } }) }) } })('@/server/repositories/chat-session');
+    const result = await repo.readChatGameSession('quiz', 'owner');
+    assert.equal(result.quizAnswered, Number.isInteger(selectedIndex) && selectedIndex >= 0 && selectedIndex <= 3);
+    assert.equal('selectedIndex' in result, false);
+    assert.deepEqual(calls, ['quiz_attempts']);
+  }
 });
 test('quota writes only its own collection, handles duplicate upsert and uses expiring atomic counters', async () => {
   const calls = [];

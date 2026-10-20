@@ -15,5 +15,6 @@ export async function resolveChatSession(sessionId: string, ownerHash: string) {
   const session = await readChatGameSession(sessionId, ownerHash);
   if (!session || session._id !== sessionId || session.ownerHash !== ownerHash || session.state !== "ready" || !(session.expiresAt instanceof Date) || !Number.isFinite(session.expiresAt.getTime()) || session.expiresAt.getTime() <= Date.now()) throw expired();
   if (!/^[a-f0-9]{24}$/.test(session.characterId) || !await chatCharacterExists(session.characterId)) throw expired();
+  if (session.quizAnswered === false) throw new ChatError("QUESTION_NOT_ANSWERED", "Hãy trả lời câu hỏi trước khi trò chuyện với nhân vật.", 403);
   return { characterId: resolveMappedCharacter(session.characterId), sessionId, ownerHash };
 }

@@ -94,6 +94,8 @@ test('client sends session/message or questionId, includes cookies and never sen
 test('client handles offline, session expiry, rate limit and malformed/server responses without leaking internals', async () => {
   const original = globalThis.fetch, { requestChat, requestChatSession } = load('@/features/game/chat-client');
   try {
+    globalThis.fetch = async () => Response.json({ code: 'QUESTION_NOT_ANSWERED' }, { status: 403 });
+    await assert.rejects(requestChat(sid, null, new AbortController().signal), e => e.code === 'QUESTION_NOT_ANSWERED' && e.message.includes('trả lời câu hỏi trước'));
     for (const [status, code] of [[401, 'INVALID_SESSION'], [429, 'RATE_LIMITED'], [503, 'CHAT_UNAVAILABLE']]) {
       globalThis.fetch = async () => Response.json({ code: 'CHAT_UNAVAILABLE', message: 'mongodb://secret' }, { status, headers: { 'Retry-After': '5' } });
       await assert.rejects(requestChat(sid, null, new AbortController().signal), e => e.code === code && !e.message.includes('secret') && (status !== 429 || e.retryAfter === 5));

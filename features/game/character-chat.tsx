@@ -12,9 +12,23 @@ const subscribeOnline = (listener: () => void) => { window.addEventListener("onl
 type ChatInput = ChatRequestInput;
 interface FailedRequest { id: number; text: string; input: ChatInput }
 interface Message { id: number; role: "user" | "assistant"; text: string; response?: ChatResponse; failed?: boolean }
-export default function CharacterChat({ character, quizSessionId, openChatSessionAction }: {
+interface CharacterChatProps {
   character: Pick<PublicCharacter, "name" | "image" | "openingLine">; quizSessionId?: string; openChatSessionAction?: OpenChatSessionAction;
-}) {
+}
+export default function CharacterChat({ canOpenChatbot, roundId, ...props }: CharacterChatProps & { canOpenChatbot: boolean; roundId?: string }) {
+  // Do not mount handlers or request state until this round is complete. Revoking
+  // access unmounts the conversation and aborts its pending request immediately.
+  if (!canOpenChatbot || !roundId) return <div className="character-chat-widget">
+    <button type="button" className="character-chat-launcher" disabled aria-expanded={false}
+      aria-label={`Mở trò chuyện với ${props.character.name}. Hãy trả lời câu hỏi trước khi trò chuyện với nhân vật.`}
+      title="Hãy trả lời câu hỏi trước khi trò chuyện với nhân vật.">
+      <svg aria-hidden="true" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M20 11.5a8 8 0 0 1-8 8H5l-3 2v-10a9 9 0 0 1 18 0Z" /><path d="M7 11h.01M12 11h.01M17 11h.01" strokeWidth="3" strokeLinecap="round" /></svg>
+      <span>Trò chuyện cùng nhân vật</span><small>Đã khóa</small>
+    </button>
+  </div>;
+  return <UnlockedCharacterChat key={roundId} {...props} />;
+}
+function UnlockedCharacterChat({ character, quizSessionId, openChatSessionAction }: CharacterChatProps) {
   const [open, setOpen] = useState(false);
   const [draft, setDraft] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
@@ -69,7 +83,7 @@ export default function CharacterChat({ character, quizSessionId, openChatSessio
     finally { clearTimeout(timer); if (controller.current === abort) controller.current = null; }
   }
   async function initialize() {
-    if (locked.current || ready || !online || expired || retryDelay) return;
+    if (!mounted.current || locked.current || ready || !online || expired || retryDelay) return;
     locked.current = true; setBusy(true); setError("");
     try {
       if (!session.current) {
@@ -89,7 +103,7 @@ export default function CharacterChat({ character, quizSessionId, openChatSessio
   }
   async function send(suggestion?: ChatSuggestion, retry?: FailedRequest) {
     const text = retry?.text || suggestion?.question || draft.trim();
-    if (!text || text.length > 500 || locked.current || !ready || !online || expired || retryDelay) return;
+    if (!mounted.current || !text || text.length > 500 || locked.current || !ready || !online || expired || retryDelay) return;
     const attempt = retry || { id: ++sequence.current, text, input: { requestId: crypto.randomUUID(),
       ...(suggestion ? { questionId: suggestion.questionId, offerToken: suggestion.offerToken } : { message: text }) } };
     locked.current = true; setBusy(true); setError("");
