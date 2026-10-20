@@ -1,0 +1,244 @@
+{
+  "phase": "5E.2",
+  "date": "2026-10-19",
+  "completedAt": "2026-10-19T15:56:13.443Z",
+  "status": "COMPLETED_PENDING_OWNER_REVIEW",
+  "safety": {
+    "target": "vo_danh_phase5e1_test",
+    "productionDatabaseConnected": false,
+    "liveGenerationCalls": 0,
+    "productionConfigChanged": false,
+    "envLocalChanged": false,
+    "approvedOrPublished": false,
+    "deployed": false,
+    "previousLedgersReset": false,
+    "fixtureRecordsRetained": true
+  },
+  "unit": {
+    "total": 203,
+    "passed": 203,
+    "failed": 0,
+    "exitCode": 0,
+    "generationCalls": 0,
+    "networkBlocked": true
+  },
+  "extraction": {
+    "passed": 11,
+    "total": 11,
+    "liveGenerationCalls": 0,
+    "warning": "PDF standard font warning; extraction assertions passed"
+  },
+  "preflight": {
+    "startedAt": "2026-10-19T04:29:13.025Z",
+    "target": "vo_danh_phase5e1_test",
+    "status": "passed",
+    "generationCalls": 0,
+    "checks": {
+      "ping": true,
+      "replicaSetOrMongos": true,
+      "writeAndIndexPrivileges": true,
+      "transactionCommit": true,
+      "transactionRollback": true
+    },
+    "uriContainsDatabase": false,
+    "targetSelection": "Explicit client.db(TEST_DATABASE), process MONGODB_DB_NAME, and db-name guard",
+    "runId": "preflight-65d13fc5-a0e9-4af3-99e2-f01e22dbf39b"
+  },
+  "mongodbIntegration": {
+    "runId": "2ea7d238-f6c6-4541-bc34-df93e93a39f2",
+    "target": "vo_danh_phase5e1_test",
+    "startedAt": "2026-10-19T04:29:22.530Z",
+    "status": "passed",
+    "checks": [
+      {
+        "name": "GridFS upload/read checksum; metadata and source chunks",
+        "status": "passed"
+      },
+      {
+        "name": "source confirmation and actor audit",
+        "status": "passed"
+      },
+      {
+        "name": "manual proposal, DB-resolved history, audit, no budget consumption and no PII",
+        "status": "passed"
+      },
+      {
+        "name": "manual idempotency, changed payload conflict and concurrent same request",
+        "status": "passed"
+      },
+      {
+        "name": "manual edit then explicit Draft conversion preserves provenance",
+        "status": "passed"
+      },
+      {
+        "name": "chat groups count filter is applied after aggregation",
+        "status": "passed"
+      },
+      {
+        "name": "proposal persistence, editing and compare-and-set",
+        "status": "passed"
+      },
+      {
+        "name": "Draft conversion is atomic with audit, real actor and no Published pointer",
+        "status": "passed"
+      },
+      {
+        "name": "conversion cannot be replayed",
+        "status": "passed"
+      },
+      {
+        "name": "exact duplicate blocks new logical question; explicit existing target gets a fresh Draft revision",
+        "status": "passed"
+      },
+      {
+        "name": "concurrent conversion commits exactly one revision and rejects the stale request",
+        "status": "passed"
+      },
+      {
+        "name": "transaction rollback leaves proposal and logical counts unchanged after late write failure",
+        "status": "passed"
+      },
+      {
+        "name": "generation reservation idempotency preserves budget; no provider calls",
+        "status": "passed"
+      },
+      {
+        "name": "indexes exist and source chunk ordering is unique",
+        "status": "passed"
+      },
+      {
+        "name": "all pre-existing Published pointers unchanged; no approve/publish operations",
+        "status": "passed"
+      }
+    ],
+    "generationCalls": 0,
+    "testBudgetReservations": 1,
+    "fixtureRecordsRetained": true
+  },
+  "browserE2E": {
+    "runId": "91f090d1-8cc4-45b9-a039-7d8fe407d14f",
+    "target": "vo_danh_phase5e1_test",
+    "status": "passed",
+    "generationCalls": 0,
+    "mockedProvider": true,
+    "checks": [
+      {
+        "name": "admin authorization: anonymous 401, regular user 403, pages redirect",
+        "status": "passed"
+      },
+      {
+        "name": "DOCX upload, extraction preview, loading and source confirmation",
+        "status": "passed"
+      },
+      {
+        "name": "PDF with Vietnamese text upload and source confirmation",
+        "status": "passed"
+      },
+      {
+        "name": "malformed PDF shows error without creating a source",
+        "status": "passed"
+      },
+      {
+        "name": "chat history navigation uses server-resolved question; rejects forged question",
+        "status": "passed"
+      },
+      {
+        "name": "select source, mock generation, loading and idempotent resubmission",
+        "status": "passed"
+      },
+      {
+        "name": "proposal edit, four personas, explicit Draft conversion and source review",
+        "status": "passed"
+      },
+      {
+        "name": "history manual creation, alias editor, duplicate resolution and Draft revision",
+        "status": "passed"
+      },
+      {
+        "name": "list network error and mobile layout",
+        "status": "passed"
+      },
+      {
+        "name": "Published unchanged and no approval or publish audit",
+        "status": "passed"
+      }
+    ],
+    "screenshots": [
+      ".local\\chat-phase-5e2\\sources-desktop-91f090d1-8cc4-45b9-a039-7d8fe407d14f.png",
+      ".local\\chat-phase-5e2\\generate-desktop-91f090d1-8cc4-45b9-a039-7d8fe407d14f.png",
+      ".local\\chat-phase-5e2\\proposals-desktop-91f090d1-8cc4-45b9-a039-7d8fe407d14f.png",
+      ".local\\chat-phase-5e2\\review-desktop-91f090d1-8cc4-45b9-a039-7d8fe407d14f.png",
+      ".local\\chat-phase-5e2\\manual-desktop-91f090d1-8cc4-45b9-a039-7d8fe407d14f.png",
+      ".local\\chat-phase-5e2\\manual-mobile-91f090d1-8cc4-45b9-a039-7d8fe407d14f.png",
+      ".local\\chat-phase-5e2\\manual-form-mobile-91f090d1-8cc4-45b9-a039-7d8fe407d14f.png",
+      ".local\\chat-phase-5e2\\manual-mobile-fixed-91f090d1-8cc4-45b9-a039-7d8fe407d14f.png",
+      ".local\\chat-phase-5e2\\proposals-mobile-91f090d1-8cc4-45b9-a039-7d8fe407d14f.png"
+    ],
+    "browser": "Chrome 155.0.8059.80",
+    "isolatedWorkspace": ".local\\chat-phase-5e2\\browser-workspace-91f090d1-8cc4-45b9-a039-7d8fe407d14f",
+    "port": 57875,
+    "testHistoryFixtureCreated": true,
+    "currentCheck": "Published unchanged and no approval or publish audit",
+    "docxSourceId": "0faa1808-53e4-49dc-8de3-f981d8825158",
+    "pdfSourceId": "41a74c4d-a01d-463d-a1b6-894b66829402",
+    "proposalId": "27050e3e556f80915787621054c028a6f8431e55db995452153435bc0f8599f3",
+    "draftId": "cmtt45-q007",
+    "revisionId": "cmtt45-q007:v1",
+    "manualProposalId": "e48522a3b020370c44f73b2e5a5a1a0f26df51f69af0e987614e663a64453e93",
+    "manualRevisionId": "cmtt45-q007:v2",
+    "fixtureRecordsRetained": true
+  },
+  "typescript": {
+    "status": "passed",
+    "command": "rtk proxy node node_modules/typescript/bin/tsc --noEmit"
+  },
+  "lint": {
+    "status": "passed",
+    "scope": "Files changed in Phase 5E.2; not whole-repository lint"
+  },
+  "productionBuild": {
+    "exitCode": 0,
+    "isolatedWorkspace": true,
+    "copiedEnvFile": false,
+    "generationCalls": 0,
+    "networkBlocked": true,
+    "responsiveFixIncluded": true,
+    "staticPages": 44,
+    "manualPageAndApiIncluded": true,
+    "warnings": [
+      "multiple lockfiles",
+      "experimental JSON modules",
+      "dependency build network retries; guard is not a socket firewall"
+    ]
+  },
+  "api": {
+    "created": [
+      "POST /api/admin/knowledge/manual"
+    ],
+    "updated": [
+      "GET /api/admin/knowledge/generate: context, quota, cap, model",
+      "POST /api/admin/knowledge/generate: confirmed true, cap, confirmed sources, status/errorCode",
+      "POST /api/admin/chat-questions: minCount/maxCount"
+    ]
+  },
+  "browserHarnessCorrections": [
+    "Source assertion narrowed after provenance introduced second blockquote",
+    "Success assertion narrowed to .knowledge-success instead of multiple role=status elements",
+    "Cold dev compilation action timeout increased from 20 to 60 seconds; no provider timeout change",
+    "Resumed completed checks without rerunning generation"
+  ],
+  "runtimeBugsFixed": [
+    "Editor grid children and long source/button text caused mobile horizontal overflow; minmax(0,1fr), min-width and wrapping added"
+  ],
+  "limitations": [
+    "Gemini live and Vercel deployment not tested in this phase",
+    "Manual and AI use existing extractive one-chunk grounding",
+    "Possible duplicates use lexical heuristic or identical neutral core, not semantic equivalence proof",
+    "Quota shown is application quota snapshot, not Google remaining quota",
+    "RequestId persists only during component lifetime; inspect proposals after reload",
+    "Mobile browser emulation, not physical iPhone; fixture sessions instead of login form",
+    "History equivalent group is explicitly linked by admin, not automatically inferred"
+  ],
+  "artifacts": ".local/chat-phase-5e2",
+  "productionGuide": "docs/chatbot-phase-5e2-production-guide.md"
+}

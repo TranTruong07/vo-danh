@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  serverExternalPackages: ['pdfjs-dist', 'yauzl'],
   // Private source stays in server traces for authenticated knowledge review only.
   outputFileTracingIncludes: {
     "/admin/knowledge{,/**}": ["./knowledge/extraction-manifest.json", "./knowledge/draft-questions-phase-2-v3.json", "./docs/source/Tong-hop-kien-thuc.docx"],

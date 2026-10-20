@@ -3,13 +3,13 @@
 import { useEffect, useId, useLayoutEffect, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import type { PublicCharacter } from "@/server/domain/character";
-import { isChatSessionId, type ChatResponse, type ChatSuggestion, type OpenChatSessionAction } from "@/server/domain/chat";
-import { ChatClientError, requestChat, requestChatSession } from "./chat-client";
+import { isChatSessionId, type ChatRequestInput, type ChatResponse, type ChatSuggestion, type OpenChatSessionAction } from "@/server/domain/chat";
+import { ChatClientError, chatResponseText, requestChat, requestChatSession } from "./chat-client";
 import { useChatViewport } from "./use-chat-viewport";
 import "./character-chat.css";
 
 const subscribeOnline = (listener: () => void) => { window.addEventListener("online", listener); window.addEventListener("offline", listener); return () => { window.removeEventListener("online", listener); window.removeEventListener("offline", listener); }; };
-type ChatInput = { message: string } | { questionId: string };
+type ChatInput = ChatRequestInput;
 interface FailedRequest { id: number; text: string; input: ChatInput }
 interface Message { id: number; role: "user" | "assistant"; text: string; response?: ChatResponse; failed?: boolean }
 export default function CharacterChat({ character, quizSessionId, openChatSessionAction }: {
@@ -62,7 +62,7 @@ export default function CharacterChat({ character, quizSessionId, openChatSessio
     if (problem.code === "INVALID_SESSION") setExpired(true);
     if (problem.retryAfter) setRetryDelay(problem.retryAfter);
   }
-  async function api(input: { message: string } | { questionId: string } | null) {
+  async function api(input: ChatInput | null) {
     const abort = new AbortController(); controller.current = abort;
     const timer = setTimeout(() => abort.abort(), 20000);
     try { return await requestChat(session.current, input, abort.signal); }
@@ -90,7 +90,8 @@ export default function CharacterChat({ character, quizSessionId, openChatSessio
   async function send(suggestion?: ChatSuggestion, retry?: FailedRequest) {
     const text = retry?.text || suggestion?.question || draft.trim();
     if (!text || text.length > 500 || locked.current || !ready || !online || expired || retryDelay) return;
-    const attempt = retry || { id: ++sequence.current, text, input: suggestion ? { questionId: suggestion.questionId } : { message: text } };
+    const attempt = retry || { id: ++sequence.current, text, input: { requestId: crypto.randomUUID(),
+      ...(suggestion ? { questionId: suggestion.questionId, offerToken: suggestion.offerToken } : { message: text }) } };
     locked.current = true; setBusy(true); setError("");
     setFailed(null); setStartersOpen(false); scrollToEnd();
     setMessages(items => retry ? items.map(item => item.id === retry.id ? { ...item, failed: false } : item) : [...items.slice(-98), { id: attempt.id, role: "user", text }]);
@@ -98,7 +99,7 @@ export default function CharacterChat({ character, quizSessionId, openChatSessio
     try {
       const result = await api(attempt.input);
       if (!mounted.current) return;
-      setMessages(items => [...items, { id: ++sequence.current, role: "assistant", text: result.status === "suggest" ? "Có phải bạn muốn hỏi một trong những câu này?" : result.answer, response: result }]);
+      setMessages(items => [...items, { id: ++sequence.current, role: "assistant", text: chatResponseText(result), response: result }]);
     } catch (cause) { if (mounted.current) {
       failure(cause); setFailed(attempt);
       setMessages(items => items.map(item => item.id === attempt.id ? { ...item, failed: true } : item));

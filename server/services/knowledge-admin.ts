@@ -50,12 +50,13 @@ export async function adminKnowledgeDetail(id: string, selectedId?: string, prev
     const selected = { revisionId: `${id}:v${draft.version}`, draft };
     return { id, preview: true, managementVersion: 0, publishedVersionId: null, selected, revisions: [selected], audit: [], warnings: pack.warnings.filter(w => w.questionId.split(", ").includes(id)), validationErrors: [] };
   }
-  const [{ question, revisions }, audit, manifest, catalog] = await Promise.all([readKnowledgeState(id), readKnowledgeAudit(id), readKnowledgeManifest().catch(error => {
-    if (error instanceof KnowledgeAdminError && error.code === "SOURCE_UNAVAILABLE") return undefined;
-    throw error;
-  }), listKnowledgeRecords()]);
+  const [{ question, revisions }, audit, catalog] = await Promise.all([readKnowledgeState(id), readKnowledgeAudit(id), listKnowledgeRecords()]);
   const row = selectedId ? revisions.find(r => r._id === selectedId) : revisions[0];
   if (!row) throw new KnowledgeAdminError("NOT_FOUND", "Không tìm thấy revision.", 404);
+  const manifest = await readKnowledgeManifest(row.source).catch(error => {
+    if (error instanceof KnowledgeAdminError && error.code === 'SOURCE_UNAVAILABLE') return undefined;
+    throw error;
+  });
   const selected = view(row);
   const check = manifest ? validateKnowledge([selected.draft], manifest, catalog.map(r => revisionDraft(r.latest))) : { warnings: [], errors: [{ questionId: id, code: "SOURCE_UNAVAILABLE", message: "Chưa đối chiếu được tài liệu nguồn trên server. Tạm khóa duyệt/công bố; vẫn có thể từ chối hoặc gỡ công bố." }] };
   return { id, preview: false, managementVersion: question.managementVersion ?? 0, publishedVersionId: question.publishedVersionId ?? null,
@@ -114,6 +115,8 @@ export function planKnowledgeMutation(state: KnowledgeState, command: KnowledgeC
 export async function adminKnowledgeMutation(id: string, input: unknown) {
   const actor = await requireKnowledgeAdmin();
   const command = parseKnowledgeCommand(input, id);
-  const manifest = ["reject", "unpublish"].includes(command.action) ? undefined : await readKnowledgeManifest();
+  const sourceRow = (await readKnowledgeState(id)).revisions.find(r => r._id === command.revisionId);
+  if (!sourceRow) throw new KnowledgeAdminError('NOT_FOUND', 'Không tìm thấy revision.', 404);
+  const manifest = ["reject", "unpublish"].includes(command.action) ? undefined : await readKnowledgeManifest(sourceRow.source);
   return mutateKnowledge(id, command.expectedVersion, state => planKnowledgeMutation(state, command, actor, manifest));
 }

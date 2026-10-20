@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import { createHash } from 'node:crypto';
+const folder = '.local/chat-phase-5d';
+fs.mkdirSync(folder, { recursive: true });
+const target = `${folder}/before.json`;
+if (fs.existsSync(target)) throw Error('Snapshot already exists');
+const files = ['server/domain/chat.ts', 'server/services/chat.ts', 'features/game/chat-client.ts', 'features/game/character-chat.tsx', 'features/admin/admin-frame.tsx', 'tests/chat.test.mjs', 'tests/chat-demo.test.mjs', 'tests/chat-fallback.test.mjs'];
+const protectedFiles = ['.env.local', 'server/services/chat-matcher.ts', 'server/services/chat-vietnamese-ranking.ts', 'server/services/chat-ai-candidates.ts', 'server/services/chat-ai-matching.ts', 'server/services/chat-ai-config.ts', 'server/infrastructure/gemini-question-matcher.ts', 'features/game/game-player.tsx'];
+fs.writeFileSync(target, JSON.stringify({ at: new Date().toISOString(), files: Object.fromEntries(files.map(file => [file, fs.readFileSync(file, 'utf8')])), protectedHashes: Object.fromEntries(protectedFiles.map(file => [file, createHash('sha256').update(fs.readFileSync(file)).digest('hex')])) }, null, 2));
+console.log('Phase 5D baseline saved without environment contents.');

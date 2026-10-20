@@ -1,0 +1,168 @@
+{
+  "phase": "5D",
+  "date": "2026-10-17",
+  "timezone": "Asia/Bangkok",
+  "generatedAt": "2026-10-17T00:35:34.760Z",
+  "generationCalls": 0,
+  "productionDatabaseWrites": 0,
+  "deployment": false,
+  "tests": {
+    "total": 163,
+    "passed": 163,
+    "failed": 0,
+    "exitCode": 0,
+    "generationCalls": 0,
+    "networkBlocked": true,
+    "previousRegressionTests": 115,
+    "newTests": 48
+  },
+  "typecheck": {
+    "command": "npx tsc --noEmit",
+    "exitCode": 0
+  },
+  "lint": {
+    "scope": "All changed TypeScript/TSX/test/tooling files for Phase 5D",
+    "exitCode": 0
+  },
+  "build": {
+    "exitCode": 0,
+    "isolatedWorkspace": true,
+    "copiedEnvFile": false,
+    "productionBuild": true,
+    "bundler": "webpack",
+    "networkBlocked": true,
+    "generationCalls": 0
+  },
+  "mongo": {
+    "database": "vo_danh",
+    "inspectedAt": "2026-10-17T00:29:56.728Z",
+    "existingCollections": [
+      "auth_attempts",
+      "auth_sessions",
+      "character_questions",
+      "characters",
+      "chat_ai_match_cache",
+      "chat_game_sessions",
+      "chat_limits",
+      "knowledge_audit",
+      "knowledge_question_revisions",
+      "knowledge_questions",
+      "orders",
+      "question_cycles",
+      "quiz_attempts",
+      "quiz_limits",
+      "settings",
+      "speech_assets",
+      "users"
+    ],
+    "newHistoryCollectionsCreatedDuringVerification": false,
+    "indexWrites": 0,
+    "readOnlyQuerySmoke": {
+      "analytics": "passed",
+      "groups": "passed",
+      "absentDetail": true,
+      "asks": 0,
+      "reviewGroups": 0
+    },
+    "logicalQuestions": 59,
+    "revisions": 74,
+    "publishedPointers": 59,
+    "runtimeReadableQuestions": 59,
+    "knowledgeHashes": [
+      {
+        "collection": "knowledge_audit",
+        "count": 134,
+        "unchanged": true
+      },
+      {
+        "collection": "knowledge_question_revisions",
+        "count": 74,
+        "unchanged": true
+      },
+      {
+        "collection": "knowledge_questions",
+        "count": 59,
+        "unchanged": true
+      }
+    ],
+    "integrationWrites": {
+      "status": "not_run",
+      "reason": "MONGODB_TEST_URI not configured; no fake data in production"
+    }
+  },
+  "protectedFiles": [
+    {
+      "file": ".env.local",
+      "unchanged": true,
+      "permittedMetadataOnlyChange": false
+    },
+    {
+      "file": "server/services/chat-matcher.ts",
+      "unchanged": true,
+      "permittedMetadataOnlyChange": false
+    },
+    {
+      "file": "server/services/chat-vietnamese-ranking.ts",
+      "unchanged": true,
+      "permittedMetadataOnlyChange": false
+    },
+    {
+      "file": "server/services/chat-ai-candidates.ts",
+      "unchanged": true,
+      "permittedMetadataOnlyChange": false
+    },
+    {
+      "file": "server/services/chat-ai-matching.ts",
+      "unchanged": false,
+      "permittedMetadataOnlyChange": true
+    },
+    {
+      "file": "server/services/chat-ai-config.ts",
+      "unchanged": true,
+      "permittedMetadataOnlyChange": false
+    },
+    {
+      "file": "server/infrastructure/gemini-question-matcher.ts",
+      "unchanged": true,
+      "permittedMetadataOnlyChange": false
+    },
+    {
+      "file": "features/game/game-player.tsx",
+      "unchanged": true,
+      "permittedMetadataOnlyChange": false
+    }
+  ],
+  "security": {
+    "serverCharacterOnly": true,
+    "publishedAnswersRevalidated": true,
+    "optionalSignedOfferBoundToSession": true,
+    "adminAuthorization": true,
+    "privateNoStore": true,
+    "chatTextInQueryString": false,
+    "rawAnswerCopiesStored": false,
+    "sessionTokensStored": false,
+    "historyRedaction": "heuristic; not complete DLP",
+    "defaultHistoryRetentionDays": 30
+  },
+  "api": [
+    "POST /api/admin/chat-analytics",
+    "POST /api/admin/chat-questions",
+    "POST /api/admin/chat-questions/[id]",
+    "PATCH /api/admin/chat-questions/[id]",
+    "DELETE /api/admin/chat-questions/[id]"
+  ],
+  "routes": [
+    "/admin/chat-analytics",
+    "/admin/chat-questions"
+  ],
+  "limitations": [
+    "Mongo TTL execution and transactional writes not integration-tested without a dedicated test DB.",
+    "No browser/mobile/manual demo in this phase.",
+    "History is best effort; storage outages may lose events or permit multiple answers to the same offer across instances.",
+    "Concurrent first requests may run matching twice; unique history ID prevents duplicate records, not distributed exactly-once generation.",
+    "Legacy clients without requestId cannot distinguish retry from a new deliberate identical message.",
+    "Shared CHAT_HISTORY_SIGNING_SECRET required for reliable multi-instance signed offers during DB outages; local fallback is process-scoped.",
+    "Raw history expiry removes its analytics contribution; review metadata/audit are retained without raw questions.",
+    "Read-only query smoke used an empty history database; does not validate realistic data volume."
+  ]
+}

@@ -1,0 +1,1035 @@
+{
+  "phase": "5C.3A",
+  "generatedAt": "2026-10-16T10:34:18.792Z",
+  "timezone": "Asia/Bangkok",
+  "status": "limited_live_evaluation",
+  "blockedReason": null,
+  "budget": {
+    "maximum": 6,
+    "reservedCalls": 6,
+    "actualNetworkGenerationCalls": 6,
+    "retries": 0,
+    "ledger": ".local/chat-phase-5c3/generation-ledger.json"
+  },
+  "api": {
+    "sdk": "@google/genai@2.30.0",
+    "version": "v1beta",
+    "timeoutMs": 5000,
+    "maxOutputTokens": 256,
+    "temperature": 0,
+    "attempts": 1,
+    "unchangedProductionMatcherUsedByHarness": true
+  },
+  "metadataRequest": {
+    "httpStatuses": [
+      200
+    ],
+    "keyPresent": true,
+    "listedModelsCount": 63
+  },
+  "models": [
+    {
+      "modelId": "gemini-3.5-flash-lite",
+      "release": "stable",
+      "officialFreeTier": true,
+      "pricingSource": "https://ai.google.dev/gemini-api/docs/pricing#gemini-3.5-flash-lite",
+      "capabilitiesSource": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite",
+      "listedForCurrentKey": true,
+      "generateContentInMetadata": true,
+      "projectMetadataAccessVerified": true,
+      "projectGenerationAccessVerifiedThisPhase": true,
+      "structuredOutputsDocumented": true,
+      "structuredOutputsVerifiedThisPhase": true,
+      "actualProjectQuota": null,
+      "actualProjectBillingTierVerifiedByApi": false,
+      "accountFreeTierOwnerConfirmed": true,
+      "metrics": {
+        "attempted": 2,
+        "transportSuccessRate": 1,
+        "successRate": 1,
+        "matchingAccuracyAllAttempts": 1,
+        "matchingAccuracyValidResponses": 1,
+        "jsonValidityAllAttempts": 1,
+        "jsonValidityHttp200": 1,
+        "p50LatencyMsAllAttempts": 2897,
+        "p95LatencyMsAllAttempts": 2946,
+        "p50LatencyMsSuccessful": 2897,
+        "p95LatencyMsSuccessful": 2946,
+        "providerErrors": {
+          "404": 0,
+          "429": 0,
+          "500": 0,
+          "503": 0,
+          "504": 0
+        },
+        "otherHttpErrors": 0,
+        "noHttpResponse": 0
+      }
+    },
+    {
+      "modelId": "gemini-3.1-flash-lite",
+      "release": "stable",
+      "officialFreeTier": true,
+      "pricingSource": "https://ai.google.dev/gemini-api/docs/pricing#gemini-3.1-flash-lite",
+      "capabilitiesSource": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite",
+      "listedForCurrentKey": true,
+      "generateContentInMetadata": true,
+      "projectMetadataAccessVerified": true,
+      "projectGenerationAccessVerifiedThisPhase": true,
+      "structuredOutputsDocumented": true,
+      "structuredOutputsVerifiedThisPhase": true,
+      "actualProjectQuota": null,
+      "actualProjectBillingTierVerifiedByApi": false,
+      "accountFreeTierOwnerConfirmed": true,
+      "metrics": {
+        "attempted": 2,
+        "transportSuccessRate": 0.5,
+        "successRate": 0.5,
+        "matchingAccuracyAllAttempts": 0.5,
+        "matchingAccuracyValidResponses": 1,
+        "jsonValidityAllAttempts": 0.5,
+        "jsonValidityHttp200": 1,
+        "p50LatencyMsAllAttempts": 1426,
+        "p95LatencyMsAllAttempts": 4119,
+        "p50LatencyMsSuccessful": 1426,
+        "p95LatencyMsSuccessful": 1426,
+        "providerErrors": {
+          "404": 0,
+          "429": 0,
+          "500": 0,
+          "503": 0,
+          "504": 1
+        },
+        "otherHttpErrors": 0,
+        "noHttpResponse": 0
+      }
+    },
+    {
+      "modelId": "gemini-3.8-flash",
+      "release": "stable",
+      "officialFreeTier": true,
+      "pricingSource": "https://ai.google.dev/gemini-api/docs/pricing#gemini-3.8-flash",
+      "capabilitiesSource": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash",
+      "listedForCurrentKey": true,
+      "generateContentInMetadata": true,
+      "projectMetadataAccessVerified": true,
+      "projectGenerationAccessVerifiedThisPhase": false,
+      "structuredOutputsDocumented": true,
+      "structuredOutputsVerifiedThisPhase": false,
+      "actualProjectQuota": null,
+      "actualProjectBillingTierVerifiedByApi": false,
+      "accountFreeTierOwnerConfirmed": true,
+      "metrics": {
+        "attempted": 2,
+        "transportSuccessRate": 0,
+        "successRate": 0,
+        "matchingAccuracyAllAttempts": 0,
+        "matchingAccuracyValidResponses": null,
+        "jsonValidityAllAttempts": 0,
+        "jsonValidityHttp200": null,
+        "p50LatencyMsAllAttempts": 3918,
+        "p95LatencyMsAllAttempts": 4930,
+        "p50LatencyMsSuccessful": null,
+        "p95LatencyMsSuccessful": null,
+        "providerErrors": {
+          "404": 0,
+          "429": 0,
+          "500": 0,
+          "503": 0,
+          "504": 2
+        },
+        "otherHttpErrors": 0,
+        "noHttpResponse": 0
+      }
+    }
+  ],
+  "offline": {
+    "total": 24,
+    "scored": 21,
+    "needsReview": 3,
+    "categories": {
+      "natural": 3,
+      "dates": 4,
+      "typo": 3,
+      "no_accent": 4,
+      "negation": 4,
+      "locations": 3,
+      "word_order": 1,
+      "out_of_scope": 2
+    },
+    "overlapsExistingPhrase": 0,
+    "legacyTop1": {
+      "numerator": 6,
+      "denominator": 21,
+      "rate": 0.2857142857142857
+    },
+    "candidateRecall": {
+      "numerator": 19,
+      "denominator": 19,
+      "rate": 1
+    },
+    "sourceSha256": "e6e605448defbca119fcd114682fd61604a0cf2ba48d6dfd614fd91c8223ec7b",
+    "publishedIndexSha256": "6f492510e1dfab3ffa59580e9debcfc15524601f25ab4bdf4b1cdf0ba0c27464",
+    "promptSha256": "57af322788d359d858e680c1ee220ae3e2093ecb68d8f1480f8ad9e5e645485d",
+    "schemaSha256": "181178308c3a3a4def130a6c18d4e2248f8bc9d0445cadcd600aa5f749d52a28",
+    "note": "Legacy retrieval metrics only, not Gemini quality. Three uncertain labels excluded; no historical data approved.",
+    "cases": [
+      {
+        "id": "5c-001",
+        "message": "Bác giải thích giúp cháu tính chất của cuộc cách mạng diễn ra tháng Tám 1945 nhé?",
+        "category": "natural",
+        "expectedQuestionId": "cmtt45-q001",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "d4bf9ae426b038681006f282035a2f7a0378d3c74e774074f139b3fec9375673",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q001",
+          "cmtt45-q021",
+          "cmtt45-q028",
+          "cmtt45-q030",
+          "cmtt45-q004",
+          "cmtt45-q041",
+          "cmtt45-q032",
+          "cmtt45-q044"
+        ]
+      },
+      {
+        "id": "5c-005",
+        "message": "Nhật tuyên bố chịu thua và chính thức ký đầu hàng có cùng ngày không, đó là những ngày nào?",
+        "category": "dates",
+        "expectedQuestionId": "cmtt45-q003",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "46a8e0168ee9285b5f5ef455b9fa02b86a5d952203651ccbdd5996d6fb8dc213",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q003",
+          "cmtt45-q013",
+          "cmtt45-q037",
+          "cmtt45-q020",
+          "cmtt45-q036",
+          "cmtt45-q033",
+          "cmtt45-q004",
+          "cmtt45-q046"
+        ]
+      },
+      {
+        "id": "5c-007",
+        "message": "Em cần nhớ ngày Nhật lật Pháp ở Đông Dương, bác nhắc lại được không?",
+        "category": "natural",
+        "expectedQuestionId": "cmtt45-q004",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "bc955ff0daca21fd91866598e4b64ed91ddf10df6e380d9322cc08ef95b37ae9",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q004",
+          "cmtt45-q046",
+          "cmtt45-q040",
+          "cmtt45-q047",
+          "cmtt45-q005",
+          "cmtt45-q028",
+          "cmtt45-q059",
+          "cmtt45-q045"
+        ]
+      },
+      {
+        "id": "5c-008",
+        "message": "Nhật đảo chín Pháp tại Đông Dương hôm nào thế?",
+        "category": "typo",
+        "expectedQuestionId": "cmtt45-q004",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "2e8c59ea6150528f2657b16e34c75eb96aed289137228786c1d56d5a6bbc552f",
+        "legacyIds": [
+          "cmtt45-q004"
+        ],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q004",
+          "cmtt45-q046",
+          "cmtt45-q005",
+          "cmtt45-q047",
+          "cmtt45-q059",
+          "cmtt45-q013",
+          "cmtt45-q022",
+          "cmtt45-q045"
+        ]
+      },
+      {
+        "id": "5c-010",
+        "message": "Chi thi Nhat Phap ban nhau va hanh dong cua chung ta ban hanh luc nao vay?",
+        "category": "no_accent",
+        "expectedQuestionId": "cmtt45-q005",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "888b7e6a199726da14782c24d1edcd252ea806a78b6fab7837d491039a8b4d02",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q005",
+          "cmtt45-q059",
+          "cmtt45-q004",
+          "cmtt45-q046",
+          "cmtt45-q038",
+          "cmtt45-q027",
+          "cmtt45-q047",
+          "cmtt45-q057"
+        ]
+      },
+      {
+        "id": "5c-015",
+        "message": "Bác nhắc em ngày Nguyễn Ái Quốc về lại Việt Nam để lãnh đạo cách mạng được không?",
+        "category": "natural",
+        "expectedQuestionId": "cmtt45-q008",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "674f644fee9c629cd39977e113ecc815e17233f41773b9858cfb47ffa0ee50ce",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q008",
+          "cmtt45-q001",
+          "cmtt45-q033",
+          "cmtt45-q002",
+          "cmtt45-q028",
+          "cmtt45-q050",
+          "cmtt45-q037",
+          "cmtt45-q010"
+        ]
+      },
+      {
+        "id": "5c-016",
+        "message": "Nguyen Ai Quoc ve nuoc lan nay vao ngay thang nam nao?",
+        "category": "no_accent",
+        "expectedQuestionId": "cmtt45-q008",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "801e11f01be8a872658915903d582137dfc474458fa4f7ba3d8bce724f3582fc",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q008",
+          "cmtt45-q026",
+          "cmtt45-q001",
+          "cmtt45-q003",
+          "cmtt45-q015",
+          "cmtt45-q029",
+          "cmtt45-q033",
+          "cmtt45-q004"
+        ]
+      },
+      {
+        "id": "5c-023",
+        "message": "Ngày tháng năm ra đời của Khu giải phóng Việt Bắc là bao giờ?",
+        "category": "dates",
+        "expectedQuestionId": "cmtt45-q012",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "2e03e8d94cc0bc2a333da3326af620108ee9c4ec88f63c1638805f8c348a13c7",
+        "legacyIds": [
+          "cmtt45-q012"
+        ],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q012",
+          "cmtt45-q010",
+          "cmtt45-q006",
+          "cmtt45-q029",
+          "cmtt45-q043",
+          "cmtt45-q026",
+          "cmtt45-q047",
+          "cmtt45-q048"
+        ]
+      },
+      {
+        "id": "5c-024",
+        "message": "Khu giải phóng Viêt Bắc thành lập vào thời gian nào vậy?",
+        "category": "typo",
+        "expectedQuestionId": "cmtt45-q012",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "21ee1c2de26d24b83ef5235be40ca359f9597e97282f1d48ea99fdc9ee989963",
+        "legacyIds": [
+          "cmtt45-q012"
+        ],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q012",
+          "cmtt45-q010",
+          "cmtt45-q026",
+          "cmtt45-q033",
+          "cmtt45-q011",
+          "cmtt45-q006",
+          "cmtt45-q054",
+          "cmtt45-q002"
+        ]
+      },
+      {
+        "id": "5c-027",
+        "message": "Bác cho biết thời điểm ban bố Quân lệnh số một nhé?",
+        "category": "dates",
+        "expectedQuestionId": "cmtt45-q014",
+        "needsReview": true,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "7c094259751f843d9160bb4990fac5a8aec4a87ef6eb662f1945f39f3474dcee",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q014",
+          "cmtt45-q026",
+          "cmtt45-q057",
+          "cmtt45-q013",
+          "cmtt45-q058",
+          "cmtt45-q054",
+          "cmtt45-q046",
+          "cmtt45-q024"
+        ]
+      },
+      {
+        "id": "5c-028",
+        "message": "Em hỏi lúc ban bố Quân lệnh số 1, không hỏi lúc đọc lệnh, là hôm nào?",
+        "category": "negation",
+        "expectedQuestionId": "cmtt45-q014",
+        "needsReview": true,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "645e10cef5230ad1bfa8af07eea8b8edc4951033014a5d2ec92a872b96689890",
+        "legacyIds": [
+          "cmtt45-q014"
+        ],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q014",
+          "cmtt45-q026",
+          "cmtt45-q057",
+          "cmtt45-q046",
+          "cmtt45-q033",
+          "cmtt45-q058",
+          "cmtt45-q020",
+          "cmtt45-q037"
+        ]
+      },
+      {
+        "id": "5c-033",
+        "message": "Hà Nội khởi nghĩa thắng lợi vào hôm nào vậy?",
+        "category": "locations",
+        "expectedQuestionId": "cmtt45-q017",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "74f797b498b80ab2517ffe8a2b4d9f45d10c027e14c5c8ea3d3d9ece51db0f1d",
+        "legacyIds": [
+          "cmtt45-q018"
+        ],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q018",
+          "cmtt45-q017",
+          "cmtt45-q051",
+          "cmtt45-q019",
+          "cmtt45-q014",
+          "cmtt45-q052",
+          "cmtt45-q013",
+          "cmtt45-q021"
+        ]
+      },
+      {
+        "id": "5c-034",
+        "message": "Ha Noi gianh duoc chinh quyen vao hom nao nam 1945?",
+        "category": "no_accent",
+        "expectedQuestionId": "cmtt45-q017",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "6412530abb0c0227d4e1f6d2902b43001a4ea23785631c8ec596cf532781c295",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q018",
+          "cmtt45-q017",
+          "cmtt45-q051",
+          "cmtt45-q013",
+          "cmtt45-q019",
+          "cmtt45-q028",
+          "cmtt45-q058",
+          "cmtt45-q003"
+        ]
+      },
+      {
+        "id": "5c-035",
+        "message": "Cho mình hỏi hôm nào Huế giành được chính quyền?",
+        "category": "locations",
+        "expectedQuestionId": "cmtt45-q018",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "189d8a9d0558e362edb905e0d7324c7df8c11d1ac5cdd411622055ba186a087b",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q018",
+          "cmtt45-q017",
+          "cmtt45-q019",
+          "cmtt45-q051",
+          "cmtt45-q013",
+          "cmtt45-q058",
+          "cmtt45-q028",
+          "cmtt45-q024"
+        ]
+      },
+      {
+        "id": "5c-036",
+        "message": "Khởi ngĩa ở Huế thắng vào hôm nào năm 1945 vậy?",
+        "category": "typo",
+        "expectedQuestionId": "cmtt45-q018",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "ecd7fc681a44d68f94eeef42e275c2b31f8a72713431c4b797414a4f2988c644",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q018",
+          "cmtt45-q017",
+          "cmtt45-q019",
+          "cmtt45-q057",
+          "cmtt45-q003",
+          "cmtt45-q013",
+          "cmtt45-q023",
+          "cmtt45-q004"
+        ]
+      },
+      {
+        "id": "5c-037",
+        "message": "Ở Sài Gòn, người dân giành chính quyền thành công hôm nào năm 1945?",
+        "category": "locations",
+        "expectedQuestionId": "cmtt45-q019",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "83a2efbe2741cbad107acfb47372af07c8adb9019687174206347b849bc10540",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q019",
+          "cmtt45-q018",
+          "cmtt45-q058",
+          "cmtt45-q017",
+          "cmtt45-q002",
+          "cmtt45-q028",
+          "cmtt45-q051",
+          "cmtt45-q013"
+        ]
+      },
+      {
+        "id": "5c-038",
+        "message": "Sai Gon noi day gianh chinh quyen thanh cong hom nao vay?",
+        "category": "no_accent",
+        "expectedQuestionId": "cmtt45-q019",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "17c8a11001c3b539bd78810037c691d2541f60690f606daa40c4fe1992031c0e",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q019",
+          "cmtt45-q018",
+          "cmtt45-q058",
+          "cmtt45-q017",
+          "cmtt45-q051",
+          "cmtt45-q013",
+          "cmtt45-q028",
+          "cmtt45-q024"
+        ]
+      },
+      {
+        "id": "5c-039",
+        "message": "Mùng hai tháng chín năm 1945 ở quảng trường Ba Đình có chuyện gì quan trọng?",
+        "category": "dates",
+        "expectedQuestionId": "cmtt45-q020",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "aeb80e4f8dc6c08ba5e4aa47843cc326ab1b6244df040cff624cbca6c6e78ec7",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q020",
+          "cmtt45-q043",
+          "cmtt45-q007",
+          "cmtt45-q016",
+          "cmtt45-q057",
+          "cmtt45-q053",
+          "cmtt45-q003",
+          "cmtt45-q015"
+        ]
+      },
+      {
+        "id": "5c-040",
+        "message": "Ba Đình vào 2/9/1945 đã chứng kiến sự kiện gì vậy bác?",
+        "category": "word_order",
+        "expectedQuestionId": "cmtt45-q020",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "f365f0ce7d2ecde598f640a2bc20c8c3814b52f95fe7865997e624e2abee3749",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q020",
+          "cmtt45-q037",
+          "cmtt45-q057",
+          "cmtt45-q003",
+          "cmtt45-q017",
+          "cmtt45-q005",
+          "cmtt45-q018",
+          "cmtt45-q019"
+        ]
+      },
+      {
+        "id": "5c-045",
+        "message": "Có đúng Lê Duẩn không trực tiếp chỉ huy khởi nghĩa Nam Bộ tháng 8/1945, tài liệu đính chính ra sao?",
+        "category": "negation",
+        "expectedQuestionId": "cmtt45-q023",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "e3245e1ed23b6682a23a3d319123f87e026a08614699966919435521ceb453c6",
+        "legacyIds": [
+          "cmtt45-q023"
+        ],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q023",
+          "cmtt45-q010",
+          "cmtt45-q057",
+          "cmtt45-q058",
+          "cmtt45-q051",
+          "cmtt45-q054",
+          "cmtt45-q038",
+          "cmtt45-q017"
+        ]
+      },
+      {
+        "id": "5c-052",
+        "message": "Cháu hỏi ngày Võ Nguyên Giáp đọc lệnh số 1 chứ không phải ngày ban bố lệnh nhé?",
+        "category": "negation",
+        "expectedQuestionId": "cmtt45-q026",
+        "needsReview": false,
+        "rationale": "Đối chiếu ý hỏi với excerpt và locator của câu tương ứng; nhãn đánh giá kỹ thuật, không phê duyệt lịch sử.",
+        "payloadSha256": "bb5417a85ba680d499db4384e5054a613343a9407814a22d2ddacf525c0b3c16",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q026",
+          "cmtt45-q014",
+          "cmtt45-q038",
+          "cmtt45-q033",
+          "cmtt45-q025",
+          "cmtt45-q040",
+          "cmtt45-q020",
+          "cmtt45-q037"
+        ]
+      },
+      {
+        "id": "5c-100",
+        "message": "Chỉ mình cách nấu phở bò nhé.",
+        "category": "out_of_scope",
+        "expectedQuestionId": null,
+        "needsReview": false,
+        "rationale": "Không có một câu published bao phủ đầy đủ yêu cầu; câu mơ hồ/đa ý cần người duyệt xác nhận no_match.",
+        "payloadSha256": "8261a136e86f5ac500d12faf563a70c3911fec0368076cf7f68576bdd7f4675e",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q024",
+          "cmtt45-q020",
+          "cmtt45-q022",
+          "cmtt45-q023",
+          "cmtt45-q025"
+        ]
+      },
+      {
+        "id": "5c-101",
+        "message": "Ngày mai trời ở Huế có mưa không?",
+        "category": "out_of_scope",
+        "expectedQuestionId": null,
+        "needsReview": false,
+        "rationale": "Không có một câu published bao phủ đầy đủ yêu cầu; câu mơ hồ/đa ý cần người duyệt xác nhận no_match.",
+        "payloadSha256": "8f8eb7922e59b6b142e6b2203ee533b6ad885ec32d755e20b1893ec4537bee3a",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q018",
+          "cmtt45-q004",
+          "cmtt45-q017",
+          "cmtt45-q015",
+          "cmtt45-q019",
+          "cmtt45-q037",
+          "cmtt45-q051",
+          "cmtt45-q016"
+        ]
+      },
+      {
+        "id": "5c-115",
+        "message": "Tại sao Hà Nội không giành được chính quyền trong năm 1945?",
+        "category": "negation",
+        "expectedQuestionId": null,
+        "needsReview": true,
+        "rationale": "Không có một câu published bao phủ đầy đủ yêu cầu; câu mơ hồ/đa ý cần người duyệt xác nhận no_match.",
+        "payloadSha256": "fbb43d6bc7664194a05e0365a543401a3817967b33feaba0526cdfe5588cdeba",
+        "legacyIds": [],
+        "matchesExistingPhrase": false,
+        "candidateIds": [
+          "cmtt45-q051",
+          "cmtt45-q017",
+          "cmtt45-q058",
+          "cmtt45-q018",
+          "cmtt45-q019",
+          "cmtt45-q028",
+          "cmtt45-q013",
+          "cmtt45-q023"
+        ]
+      }
+    ]
+  },
+  "livePlan": {
+    "models": [
+      "gemini-3.5-flash-lite",
+      "gemini-3.1-flash-lite",
+      "gemini-3.8-flash"
+    ],
+    "caseIds": [
+      "5c-033",
+      "5c-101"
+    ],
+    "callsPerModel": 2,
+    "totalCalls": 6,
+    "order": [
+      {
+        "model": "gemini-3.5-flash-lite",
+        "caseId": "5c-033"
+      },
+      {
+        "model": "gemini-3.1-flash-lite",
+        "caseId": "5c-033"
+      },
+      {
+        "model": "gemini-3.8-flash",
+        "caseId": "5c-033"
+      },
+      {
+        "model": "gemini-3.8-flash",
+        "caseId": "5c-101"
+      },
+      {
+        "model": "gemini-3.1-flash-lite",
+        "caseId": "5c-101"
+      },
+      {
+        "model": "gemini-3.5-flash-lite",
+        "caseId": "5c-101"
+      }
+    ],
+    "equalPayloadPerCase": true,
+    "frozenCandidateOrder": true,
+    "cachedAnswersUsedToScore": false,
+    "noWritesToApplicationQuotaOrCache": true,
+    "quotaCheckedReadOnly": true,
+    "stopModelOn": [
+      401,
+      403,
+      404,
+      429
+    ],
+    "noRetries": true
+  },
+  "liveResults": [
+    {
+      "model": "gemini-3.5-flash-lite",
+      "caseId": "5c-033",
+      "expectedQuestionId": "cmtt45-q017",
+      "call": 1,
+      "payloadSha256": "74f797b498b80ab2517ffe8a2b4d9f45d10c027e14c5c8ea3d3d9ece51db0f1d",
+      "candidateIds": [
+        "cmtt45-q018",
+        "cmtt45-q017",
+        "cmtt45-q051",
+        "cmtt45-q019",
+        "cmtt45-q014",
+        "cmtt45-q052",
+        "cmtt45-q013",
+        "cmtt45-q021"
+      ],
+      "timeoutMs": 5000,
+      "apiVersion": "v1beta",
+      "httpStatus": 200,
+      "validJson": true,
+      "schemaValid": true,
+      "correct": true,
+      "automaticRetries": 0,
+      "decision": "match",
+      "questionId": "cmtt45-q017",
+      "latencyMs": 2946,
+      "networkCalls": 1
+    },
+    {
+      "model": "gemini-3.1-flash-lite",
+      "caseId": "5c-033",
+      "expectedQuestionId": "cmtt45-q017",
+      "call": 2,
+      "payloadSha256": "74f797b498b80ab2517ffe8a2b4d9f45d10c027e14c5c8ea3d3d9ece51db0f1d",
+      "candidateIds": [
+        "cmtt45-q018",
+        "cmtt45-q017",
+        "cmtt45-q051",
+        "cmtt45-q019",
+        "cmtt45-q014",
+        "cmtt45-q052",
+        "cmtt45-q013",
+        "cmtt45-q021"
+      ],
+      "timeoutMs": 5000,
+      "apiVersion": "v1beta",
+      "httpStatus": 504,
+      "validJson": false,
+      "schemaValid": false,
+      "correct": null,
+      "automaticRetries": 0,
+      "providerFailure": {
+        "kind": "timeout",
+        "httpStatus": 504,
+        "providerCode": "DEADLINE_EXCEEDED",
+        "message": "Request was aborted or exceeded a deadline."
+      },
+      "failure": {
+        "kind": "timeout",
+        "httpStatus": 504,
+        "providerCode": "DEADLINE_EXCEEDED",
+        "message": "Request was aborted or exceeded a deadline."
+      },
+      "latencyMs": 4119,
+      "networkCalls": 1
+    },
+    {
+      "model": "gemini-3.8-flash",
+      "caseId": "5c-033",
+      "expectedQuestionId": "cmtt45-q017",
+      "call": 3,
+      "payloadSha256": "74f797b498b80ab2517ffe8a2b4d9f45d10c027e14c5c8ea3d3d9ece51db0f1d",
+      "candidateIds": [
+        "cmtt45-q018",
+        "cmtt45-q017",
+        "cmtt45-q051",
+        "cmtt45-q019",
+        "cmtt45-q014",
+        "cmtt45-q052",
+        "cmtt45-q013",
+        "cmtt45-q021"
+      ],
+      "timeoutMs": 5000,
+      "apiVersion": "v1beta",
+      "httpStatus": 504,
+      "validJson": false,
+      "schemaValid": false,
+      "correct": null,
+      "automaticRetries": 0,
+      "providerFailure": {
+        "kind": "timeout",
+        "httpStatus": 504,
+        "providerCode": "DEADLINE_EXCEEDED",
+        "message": "Request was aborted or exceeded a deadline."
+      },
+      "failure": {
+        "kind": "timeout",
+        "httpStatus": 504,
+        "providerCode": "DEADLINE_EXCEEDED",
+        "message": "Request was aborted or exceeded a deadline."
+      },
+      "latencyMs": 4930,
+      "networkCalls": 1
+    },
+    {
+      "model": "gemini-3.8-flash",
+      "caseId": "5c-101",
+      "expectedQuestionId": null,
+      "call": 4,
+      "payloadSha256": "8f8eb7922e59b6b142e6b2203ee533b6ad885ec32d755e20b1893ec4537bee3a",
+      "candidateIds": [
+        "cmtt45-q018",
+        "cmtt45-q004",
+        "cmtt45-q017",
+        "cmtt45-q015",
+        "cmtt45-q019",
+        "cmtt45-q037",
+        "cmtt45-q051",
+        "cmtt45-q016"
+      ],
+      "timeoutMs": 5000,
+      "apiVersion": "v1beta",
+      "httpStatus": 504,
+      "validJson": false,
+      "schemaValid": false,
+      "correct": null,
+      "automaticRetries": 0,
+      "providerFailure": {
+        "kind": "timeout",
+        "httpStatus": 504,
+        "providerCode": "DEADLINE_EXCEEDED",
+        "message": "Request was aborted or exceeded a deadline."
+      },
+      "failure": {
+        "kind": "timeout",
+        "httpStatus": 504,
+        "providerCode": "DEADLINE_EXCEEDED",
+        "message": "Request was aborted or exceeded a deadline."
+      },
+      "latencyMs": 3918,
+      "networkCalls": 1
+    },
+    {
+      "model": "gemini-3.1-flash-lite",
+      "caseId": "5c-101",
+      "expectedQuestionId": null,
+      "call": 5,
+      "payloadSha256": "8f8eb7922e59b6b142e6b2203ee533b6ad885ec32d755e20b1893ec4537bee3a",
+      "candidateIds": [
+        "cmtt45-q018",
+        "cmtt45-q004",
+        "cmtt45-q017",
+        "cmtt45-q015",
+        "cmtt45-q019",
+        "cmtt45-q037",
+        "cmtt45-q051",
+        "cmtt45-q016"
+      ],
+      "timeoutMs": 5000,
+      "apiVersion": "v1beta",
+      "httpStatus": 200,
+      "validJson": true,
+      "schemaValid": true,
+      "correct": true,
+      "automaticRetries": 0,
+      "decision": "no_match",
+      "questionId": null,
+      "latencyMs": 1426,
+      "networkCalls": 1
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "caseId": "5c-101",
+      "expectedQuestionId": null,
+      "call": 6,
+      "payloadSha256": "8f8eb7922e59b6b142e6b2203ee533b6ad885ec32d755e20b1893ec4537bee3a",
+      "candidateIds": [
+        "cmtt45-q018",
+        "cmtt45-q004",
+        "cmtt45-q017",
+        "cmtt45-q015",
+        "cmtt45-q019",
+        "cmtt45-q037",
+        "cmtt45-q051",
+        "cmtt45-q016"
+      ],
+      "timeoutMs": 5000,
+      "apiVersion": "v1beta",
+      "httpStatus": 200,
+      "validJson": true,
+      "schemaValid": true,
+      "correct": true,
+      "automaticRetries": 0,
+      "decision": "no_match",
+      "questionId": null,
+      "latencyMs": 2897,
+      "networkCalls": 1
+    }
+  ],
+  "metricDefinitions": {
+    "successRate": "HTTP 200 and valid runtime schema / all attempts",
+    "matchingAccuracyAllAttempts": "Correct decision and ID / all attempts; provider failures are not silently dropped",
+    "matchingAccuracyValidResponses": "Correct decision and ID / valid successful responses",
+    "jsonValidity": "Reported both across all attempts and conditional on HTTP 200; separate from schema validity",
+    "latency": "Nearest rank ceil(p*n); separate all-attempt and successful latency; empty samples -> null"
+  },
+  "historical504": {
+    "phase": "5C.2",
+    "errors": 6,
+    "calls": 9,
+    "rootCause": null,
+    "evidence": "HTTP 504 observed with 5000 ms request deadline; previous raw provider error body unavailable",
+    "hypothesesOnly": [
+      "provider gateway or processing deadline",
+      "request timeout budget interacting with model latency"
+    ],
+    "disprovedOrUnproven": [
+      "invalid key not established",
+      "billing issue not established",
+      "bad JSON schema not established"
+    ]
+  },
+  "current504": {
+    "errors": 3,
+    "rootCause": null,
+    "evidence": "Three HTTP 504 responses with provider status DEADLINE_EXCEEDED, observed before the 5000 ms local deadline. No provider request trace available; upstream cause remains unverified."
+  },
+  "recommendation": {
+    "changeMainModelNow": false,
+    "provenBestModel": null,
+    "candidateToEvaluateFirstAsAlternative": "gemini-3.1-flash-lite",
+    "fallbackModelRecommendation": null,
+    "reason": "Retain 3.5 Flash-Lite for demo: 2/2 correct structured responses versus 1/2 for 3.1 and 0/2 for 3.8 in this small paired sample. Prior 3.5 failures remain relevant; no proven reliability winner or automatic fallback justified.",
+    "currentMainModelRetained": "gemini-3.5-flash-lite",
+    "proposedAutoAnswer": false,
+    "proposedApiVersion": "v1beta",
+    "proposedTimeoutMs": 5000
+  },
+  "integrity": {
+    "protectedFilesUnchanged": {
+      ".env.local": true,
+      ".local/chat-phase-5c1/generation-ledger.json": true,
+      ".local/chat-phase-5c2/generation-ledger.json": true,
+      "server/infrastructure/gemini-question-matcher.ts": true,
+      "server/services/chat-ai-config.ts": true,
+      "server/services/chat-ai-matching.ts": true,
+      "server/domain/chat-ai.ts": true,
+      "server/repositories/chat-ai-cache.ts": true
+    },
+    "knowledgeCountAndHashesUnchanged": true,
+    "knowledgeBeforeInspectedAt": "2026-10-16T10:24:52.976Z",
+    "knowledgeAfterInspectedAt": "2026-10-16T10:33:25.368Z",
+    "knowledgeAfter": {
+      "logicalQuestions": 59,
+      "revisions": 74,
+      "approvedRevisions": 60,
+      "publishedQuestions": 59,
+      "integrity": {
+        "duplicateVersions": [],
+        "invalidRevisionIds": [],
+        "orphanRevisions": [],
+        "brokenPublishedPointers": []
+      }
+    },
+    "databaseWritesByHarness": 0,
+    "oldLedgersReset": false,
+    "billingChanged": false,
+    "productionDeployed": false
+  },
+  "validation": {
+    "typescript": "passed",
+    "changedFilesLint": "passed",
+    "metricTests": {
+      "passed": 3,
+      "failed": 0
+    }
+  },
+  "limitations": [
+    "No API exposes verified account billing tier via models.list",
+    "Model listing is not proof of generation access",
+    "Project RPM/TPM/RPD unknown; view AI Studio",
+    "24 offline cases are not 24 live calls",
+    "Two samples per model cannot establish production stability",
+    "Uncertain labels remain excluded",
+    "No application cache/quota mutations or production changes"
+  ],
+  "officialReferences": [
+    "https://ai.google.dev/gemini-api/docs/pricing",
+    "https://ai.google.dev/gemini-api/docs/models",
+    "https://ai.google.dev/gemini-api/docs/rate-limits"
+  ]
+}

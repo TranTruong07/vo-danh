@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { loader } from './support/load-typescript.mjs';
+import { historyMemory } from './support/chat-history-memory.mjs';
 
 const sid = '12345678-1234-1234-1234-123456789abc', owner = 'a'.repeat(64), character = 'b'.repeat(24);
 const load = loader(), { ChatError, validateChatSessionInput } = load('@/server/domain/chat');
@@ -13,13 +14,15 @@ test('starter suggestions accept only a valid session ID, with no persona overri
 test('starter suggestions check owner/session/quota and project only three published question labels', async () => {
   const calls = [], entries = Array.from({ length: 5 }, (_, n) => ({ questionId: `cmtt45-q00${n + 1}`, canonicalQuestion: `Published ${n}`, aliases: ['Hidden alias'], characterAnswers: { hidden: 'must not leak' } }));
   const service = loader({
+    '@/server/repositories/chat-history': historyMemory(),
     './chat-session': { chatPlayerHash: async () => owner, resolveChatSession: async (id, hash) => { calls.push('session'); assert.equal(id, sid); assert.equal(hash, owner); return { characterId: 'le-duan' }; } },
     './chat-rate-limit': { limitChatRequests: async () => { calls.push('limit'); } },
     '@/server/repositories/chat-knowledge': { readPublishedChatIndex: async () => { calls.push('published'); return entries; } },
   })('@/server/services/chat');
   const result = await service.suggestChatQuestions({ sessionId: sid });
   assert.deepEqual(calls, ['limit', 'session', 'published']); assert.equal(result.status, 'suggest'); assert.equal(result.suggestions.length, 3);
-  assert.deepEqual(Object.keys(result.suggestions[0]).sort(), ['question', 'questionId']);
+  assert.deepEqual(Object.keys(result.suggestions[0]).sort(), ['offerToken', 'question', 'questionId']);
+  assert.equal(typeof result.suggestions[0].offerToken, 'string');
 });
 function bindingFixture(patch = {}) {
   const calls = [];

@@ -1,0 +1,211 @@
+{
+  "phase": "5C",
+  "reportDate": "2026-10-16",
+  "timezone": "Asia/Bangkok",
+  "status": "implementation_tested_live_generation_unverified",
+  "featureEnabledOnWebsite": false,
+  "defaultModel": "gemini-2.5-flash-lite",
+  "sdk": {
+    "name": "@google/genai",
+    "version": "2.30.0"
+  },
+  "security": {
+    "apiSchemaUnchanged": true,
+    "sessionAndOriginValidationUnchanged": true,
+    "legacyThresholdUnchanged": 0.25,
+    "automaticAnswersFromGemini": false,
+    "providerPayload": [
+      "question",
+      "candidates.questionId",
+      "candidates.canonicalQuestion",
+      "candidates.aliases"
+    ],
+    "answersOrSourcesSentToGemini": false,
+    "playerIdentitySentToGemini": false,
+    "rawPromptsLogged": false,
+    "cacheContainsRawQueries": false,
+    "clientBuildKeyScan": {
+      "files": 75,
+      "secretFound": false
+    },
+    "knownLimits": [
+      "Obvious contact/URL/token filter does not detect every form of PII",
+      "Lexical guards are conservative, not historical fact verification"
+    ]
+  },
+  "checks": {
+    "typescript": {
+      "status": "passed",
+      "command": "rtk proxy npx tsc --noEmit"
+    },
+    "changedFilesLint": {
+      "status": "passed"
+    },
+    "productionBuild": {
+      "status": "passed",
+      "deployed": false
+    },
+    "chatTests": {
+      "status": "passed",
+      "total": 57,
+      "passed": 57,
+      "newGeminiTests": 25,
+      "existingChatTests": 32,
+      "artifact": ".local/chat-phase-5c/chat-tests.tap"
+    },
+    "fullRegression": {
+      "total": 163,
+      "passed": 157,
+      "failed": 5,
+      "skipped": 1,
+      "artifact": ".local/chat-phase-5c/all-tests.tap",
+      "timing": "Full run preceded the final additional missing-key/config test; final targeted run includes that test.",
+      "failures": {
+        "baseline": true,
+        "file": "tests/auth.test.mjs",
+        "cause": "Existing test loader resolves nonexistent server/services/character.ts"
+      },
+      "skippedReason": "MONGODB_TEST_URI not configured for opt-in knowledge integration test"
+    },
+    "fullLint": {
+      "status": "baseline_failures",
+      "errors": 5,
+      "warnings": 2,
+      "errorRule": "@next/next/no-assign-module-variable",
+      "errorFiles": [
+        "tests/character-images.test.mjs",
+        "tests/character-questions.test.mjs",
+        "tests/history-game.test.mjs",
+        "tests/orders.test.mjs",
+        "tests/support/load-typescript.mjs"
+      ],
+      "warningFiles": [
+        "app/author/page.tsx",
+        ".local/knowledge-coverage-audit.mjs"
+      ]
+    },
+    "browserUx": {
+      "passed": 17,
+      "failed": 0,
+      "viewports": [
+        "1440x900",
+        "390x844",
+        "375x667"
+      ],
+      "allFourPersonas": true,
+      "sourceUiHidden": true,
+      "artifact": ".local/chat-phase-5a/browser-report.json",
+      "geminiEnabled": false
+    },
+    "browserRegression": {
+      "passed": 16,
+      "failed": 0,
+      "artifact": ".local/chat-demo/browser-report.json",
+      "geminiEnabled": false
+    }
+  },
+  "liveSmoke": {
+    "generationCalls": 3,
+    "metadataCalls": 3,
+    "publishedQuestions": 59,
+    "matchingVerified": false,
+    "cases": [
+      {
+        "model": "gemini-2.5-flash-lite",
+        "timeoutMs": 5000,
+        "modelMetadataAvailable": true,
+        "outcome": "provider_404",
+        "latencyMs": 755,
+        "calls": 1,
+        "cacheHit": false,
+        "top1Correct": false
+      },
+      {
+        "model": "gemini-3.5-flash-lite",
+        "timeoutMs": 5000,
+        "modelMetadataAvailable": true,
+        "outcome": "error_fallback",
+        "latencyMs": 4484,
+        "calls": 1,
+        "cacheHit": false,
+        "top1Correct": false
+      },
+      {
+        "model": "gemini-3.5-flash-lite",
+        "timeoutMs": 10000,
+        "modelMetadataAvailable": true,
+        "outcome": "error_fallback",
+        "failureStage": "generation",
+        "failureKind": "unavailable",
+        "latencyMs": 9698,
+        "calls": 1,
+        "cacheHit": false,
+        "top1Correct": false
+      }
+    ],
+    "note": "All 3 requests used one independent Hanoi prompt. Legacy fallback suggested Hue. Do not infer general model quality or provider billing tier.",
+    "metrics": {
+      "top1Accuracy": 0,
+      "recallAt3": 0,
+      "noMatchPrecision": null,
+      "noMatchRecall": null,
+      "falseSuggestionRate": null,
+      "callsPerRequest": 1,
+      "cacheHitRate": 0,
+      "p50Ms": 4484,
+      "p95Ms": 9698,
+      "errors": 3,
+      "fallbacks": 3
+    },
+    "knowledgeFingerprintsUnchanged": true,
+    "fingerprintScope": [
+      "knowledge_questions",
+      "knowledge_question_revisions"
+    ],
+    "auditFingerprintLimitation": "Smoke originally referenced the nonexistent knowledge_audit_logs collection; script corrected to knowledge_audit for future runs. No knowledge/audit mutation code exists in matching.",
+    "billingChanged": false,
+    "environmentFileChanged": false,
+    "bulkGeminiBenchmarkRun": false
+  },
+  "benchmark": {
+    "total": 120,
+    "needsReview": 29,
+    "scored": 91,
+    "positives": 77,
+    "negatives": 14,
+    "overlapWithCanonicalOrAlias": 0,
+    "legacy": {
+      "top1Accuracy": 0.4835164835164835,
+      "positiveTop1Accuracy": 0.4025974025974026,
+      "recallAt3": 0.4155844155844156,
+      "candidateRecallAt8": 1,
+      "noMatchPrecision": 0.25,
+      "noMatchRecall": 0.9285714285714286,
+      "falseSuggestionRate": 0.07142857142857142,
+      "p50Ms": 16.43,
+      "p95Ms": 18.69
+    },
+    "enabledGeminiFullBenchmark": null,
+    "improvementClaimed": false,
+    "details": "docs/chatbot-phase-5c-benchmark-results.json"
+  },
+  "remaining": [
+    "Resolve provider generation failure and verify a working model before enabling website flag",
+    "Confirm project quota/billing tier in AI Studio; metadata availability is insufficient",
+    "Review 29 ambiguous benchmark labels",
+    "Bulk live benchmark requires a separately confirmed call budget",
+    "Live enabled browser and real iOS keyboard/camera remain untested",
+    "No distributed cache single-flight; simultaneous cache misses remain capped by shared Mongo quota"
+  ],
+  "scope": {
+    "knowledgeChanged": false,
+    "quizChanged": false,
+    "qrChanged": false,
+    "ttsChanged": false,
+    "pwaChanged": false,
+    "paymentChanged": false,
+    "popupChanged": false,
+    "phase5DStarted": false,
+    "productionDeployed": false
+  }
+}

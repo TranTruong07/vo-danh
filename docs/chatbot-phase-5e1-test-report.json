@@ -1,0 +1,787 @@
+{
+  "phase": "5E.1",
+  "date": "2026-10-19",
+  "timezone": "Asia/Bangkok",
+  "overallStatus": "COMPLETED_PENDING_OWNER_REVIEW",
+  "phaseCompleted": true,
+  "infrastructureAndMockDemoCompleted": true,
+  "blockers": [],
+  "awaiting": "Owner review of completed Phase 5E.1; no more generation calls authorized in this run",
+  "priorState": {
+    "status": "BLOCKED",
+    "reason": "MONGODB_TEST_URI was missing; resolved by owner configuration"
+  },
+  "configuration": {
+    "mongodbTestUriPresent": true,
+    "targetDatabase": "vo_danh_phase5e1_test",
+    "uriContainsDatabase": false,
+    "explicitDatabaseOverride": true,
+    "mainDatabaseUsedForTesting": false,
+    "environmentFileModified": false,
+    "mainFeatureFlagChanged": false,
+    "geminiModel": "gemini-3.5-flash-lite",
+    "geminiApiVersion": "v1beta",
+    "liveCredentialsInTestServer": false,
+    "providerBoundaryReplacedOnlyInDisposableCopy": true,
+    "testProviderModel": "fixture-no-provider",
+    "testProviderDailyLimit": 20,
+    "secretsLogged": false,
+    "baselineDate": "2026-10-18"
+  },
+  "preflight": {
+    "startedAt": "2026-10-18T09:32:09.806Z",
+    "target": "vo_danh_phase5e1_test",
+    "status": "passed",
+    "generationCalls": 0,
+    "checks": {
+      "ping": true,
+      "replicaSetOrMongos": true,
+      "writeAndIndexPrivileges": true,
+      "transactionCommit": true,
+      "transactionRollback": true
+    },
+    "uriContainsDatabase": false,
+    "targetSelection": "Explicit client.db(TEST_DATABASE), process MONGODB_DB_NAME, and db-name guard",
+    "runId": "preflight-f3955a2f-f5c7-4cb1-a6de-4ad91ff643b0"
+  },
+  "mongoIntegration": {
+    "runId": "419bbfe9-6eeb-472f-8955-c2b5af9f8e05",
+    "target": "vo_danh_phase5e1_test",
+    "startedAt": "2026-10-18T09:35:54.800Z",
+    "status": "passed",
+    "checks": [
+      {
+        "name": "GridFS upload/read checksum; metadata and source chunks",
+        "status": "passed"
+      },
+      {
+        "name": "source confirmation and actor audit",
+        "status": "passed"
+      },
+      {
+        "name": "proposal persistence, editing and compare-and-set",
+        "status": "passed"
+      },
+      {
+        "name": "Draft conversion is atomic with audit, real actor and no Published pointer",
+        "status": "passed"
+      },
+      {
+        "name": "conversion cannot be replayed",
+        "status": "passed"
+      },
+      {
+        "name": "exact duplicate blocks new logical question; explicit existing target gets a fresh Draft revision",
+        "status": "passed"
+      },
+      {
+        "name": "concurrent conversion commits exactly one revision and rejects the stale request",
+        "status": "passed"
+      },
+      {
+        "name": "transaction rollback leaves proposal and logical counts unchanged after late write failure",
+        "status": "passed"
+      },
+      {
+        "name": "generation reservation idempotency preserves budget; no provider calls",
+        "status": "passed"
+      },
+      {
+        "name": "indexes exist and source chunk ordering is unique",
+        "status": "passed"
+      },
+      {
+        "name": "all pre-existing Published pointers unchanged; no approve/publish operations",
+        "status": "passed"
+      }
+    ],
+    "generationCalls": 0,
+    "testBudgetReservations": 1,
+    "fixtureRecordsRetained": true,
+    "artifact": ".local/chat-phase-5e1/mongo-integration.json",
+    "connection": "fresh test-only MongoClient",
+    "serviceAuthentication": "integration service actor mock backed by a real test fixture user; browser checks use real account/session authorization"
+  },
+  "browserE2e": {
+    "runId": "b135a9d4-ce15-4631-8ec6-327d6fb6ddf8",
+    "target": "vo_danh_phase5e1_test",
+    "status": "passed",
+    "generationCalls": 0,
+    "mockedProvider": true,
+    "checks": [
+      {
+        "name": "admin authorization: anonymous 401, regular user 403, pages redirect",
+        "status": "passed"
+      },
+      {
+        "name": "DOCX upload, extraction preview, loading and source confirmation",
+        "status": "passed"
+      },
+      {
+        "name": "PDF with Vietnamese text upload and source confirmation",
+        "status": "passed"
+      },
+      {
+        "name": "malformed PDF shows error without creating a source",
+        "status": "passed"
+      },
+      {
+        "name": "chat history navigation uses server-resolved question; rejects forged question",
+        "status": "passed"
+      },
+      {
+        "name": "select source, mock generation, loading and idempotent resubmission",
+        "status": "passed"
+      },
+      {
+        "name": "proposal edit, four personas, explicit Draft conversion and source review",
+        "status": "passed"
+      },
+      {
+        "name": "list network error and mobile layout",
+        "status": "passed"
+      },
+      {
+        "name": "Published unchanged and no approval or publish audit",
+        "status": "passed"
+      }
+    ],
+    "screenshots": [
+      ".local\\chat-phase-5e1\\sources-desktop-b135a9d4-ce15-4631-8ec6-327d6fb6ddf8.png",
+      ".local\\chat-phase-5e1\\generate-desktop-b135a9d4-ce15-4631-8ec6-327d6fb6ddf8.png",
+      ".local\\chat-phase-5e1\\proposals-desktop-b135a9d4-ce15-4631-8ec6-327d6fb6ddf8.png",
+      ".local\\chat-phase-5e1\\review-desktop-b135a9d4-ce15-4631-8ec6-327d6fb6ddf8.png",
+      ".local\\chat-phase-5e1\\proposals-mobile-b135a9d4-ce15-4631-8ec6-327d6fb6ddf8.png"
+    ],
+    "isolatedWorkspace": ".local\\chat-phase-5e1\\browser-workspace-5745ca58-0a93-46b0-b691-e2b544397cea",
+    "port": 52576,
+    "testHistoryFixtureCreated": true,
+    "currentCheck": "Published unchanged and no approval or publish audit",
+    "docxSourceId": "4fb43dd5-a430-4119-843f-2cdcfbc95a3c",
+    "pdfSourceId": "d3034c6d-68d7-4baa-8212-512dc6f7bb88",
+    "browser": "Chrome 155.0.8059.80",
+    "proposalId": "56ef36c405d7313ad4effec5afb56ec5c470c8dd5c724e802fff4f1c7f206153",
+    "draftId": "cmtt45-q003",
+    "revisionId": "cmtt45-q003:v1",
+    "fixtureRecordsRetained": true,
+    "artifact": ".local/chat-phase-5e1/browser-e2e.json",
+    "developmentServerStopped": true,
+    "isolatedFromMainServer": true,
+    "routesTested": [
+      "/admin/knowledge/sources",
+      "/admin/knowledge/generate",
+      "/admin/knowledge/proposals",
+      "/admin/chat-questions"
+    ],
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "authentication": "test-only users and hashed sessions; cookies held in memory; real backend authorization; login form not tested",
+    "browsersUsed": [
+      "Edge 155.0.4283.62",
+      "Chrome 155.0.8059.80"
+    ],
+    "resumed": true,
+    "resumePolicy": "Keep successful checks and existing proposal; no generation replay or quota reset",
+    "harnessIssues": [
+      "Bundled Chromium unavailable; used installed browsers",
+      "Edge inspector response body eviction; verified UI plus database records instead",
+      "Duplicate fixture filename caused ambiguous selector; use run-specific filename",
+      "Next route announcer also has role=alert; scope to .knowledge-error",
+      "Cold development compilation waits; not Gemini timeout changes"
+    ],
+    "failedAttemptsRetained": ".local/chat-phase-5e1/browser-attempt-*.json",
+    "generatedProposalValidation": {
+      "status": "ready_for_review before explicit test-admin conversion",
+      "source": "Tong-hop-kien-thuc.docx body/3",
+      "neutralVerbatim": true,
+      "personas": 4,
+      "evidenceValidated": true,
+      "qualityOfLiveAi": "not_evaluated"
+    },
+    "errorSimulation": "Malformed real PDF upload rejected; list HTTP 503 simulated in browser, then real refresh verified and stale error removed"
+  },
+  "databaseAfterTests": {
+    "target": "vo_danh_phase5e1_test",
+    "checkedAt": "2026-10-18T14:03:11.628Z",
+    "readOnly": true,
+    "collections": {
+      "knowledge_sources": 8,
+      "knowledge_source_chunks": 8,
+      "knowledge_private_files.files": 8,
+      "knowledge_private_files.chunks": 8,
+      "knowledge_proposals": 6,
+      "knowledge_questions": 3,
+      "knowledge_question_revisions": 4,
+      "knowledge_generation_audit": 13,
+      "knowledge_audit": 4,
+      "chat_interactions": 6
+    },
+    "proposalStatuses": [
+      {
+        "_id": "ready_for_review",
+        "count": 1
+      },
+      {
+        "_id": "converted_to_draft",
+        "count": 4
+      },
+      {
+        "_id": "generating",
+        "count": 1
+      }
+    ],
+    "revisionStatuses": [
+      {
+        "_id": "draft",
+        "count": 4
+      }
+    ],
+    "publishedPointers": 0,
+    "approvePublishActions": 0,
+    "testBudget": [
+      {
+        "_id": "generation:2026-10-18",
+        "calls": 2
+      }
+    ],
+    "mockProposals": 6,
+    "pdfFullTextFidelity": {
+      "passed": 2,
+      "normalization": "NFC and whitespace only; no rewritten content"
+    },
+    "status": "passed"
+  },
+  "geminiLive": {
+    "status": "passed_with_editorial_warnings",
+    "approvalForPhase5e1Received": true,
+    "maximumCalls": 2,
+    "newGenerationCalls": 2,
+    "retryCount": 0,
+    "testDatabase": "vo_danh_phase5e1_test",
+    "model": "gemini-3.5-flash-lite",
+    "apiVersion": "v1beta",
+    "timeoutMs": 30000,
+    "freeTierBasis": {
+      "officialPricingAndStructuredOutputDocsVerifiedOn": "2026-10-18",
+      "projectTier": "Owner confirmed Free Tier/no linked billing earlier in this conversation; confirmation retained",
+      "billingVerifiedByApi": false,
+      "remainingProviderQuotaVerified": false,
+      "metadataAccessHttpStatus": 200
+    },
+    "execution": "Real generation service/repository/provider. CLI injects the test database and an actor from an existing test admin user. No Next browser live flow in this run; real browser authentication was verified in baseline E2E.",
+    "sourceDocument": "Tong-hop-kien-thuc.docx",
+    "sourceBlock": "body/3",
+    "calls": [
+      {
+        "number": 1,
+        "origin": "document",
+        "model": "gemini-3.5-flash-lite",
+        "apiVersion": "v1beta",
+        "timeoutMs": 30000,
+        "at": "2026-10-19T03:43:38.973Z",
+        "requestId": "fbdc4f98-5a17-44c9-b0dd-16cbd2e82d25",
+        "batchId": "6095362cca24782b5e1fedb7c344b354e227ed1c8e73e12414fba5711b6d12db",
+        "httpStatus": 200,
+        "latencyMs": 2627,
+        "usage": {
+          "promptTokenCount": 662,
+          "candidatesTokenCount": 793,
+          "totalTokenCount": 1455,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 662
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "jsonValid": true,
+        "schemaValid": true,
+        "citationValid": true,
+        "networkCalls": 1,
+        "retries": 0,
+        "serverResolvedQuestion": false,
+        "frontendQuestionRejected": true,
+        "payloadSha256": "9e0d9f0f1dee2bdfd2ce8a66269657ccf0edab2a7ec71df9dda758989811cda0",
+        "schemaSha256": "6673af0ee4d88e6d824eecd3e356f60e0896dafc0616e3ab0b617f9815531264",
+        "proposalStatus": "ready_for_review",
+        "errorCode": null,
+        "duplicates": [],
+        "actualModelVersion": "gemini-3.5-flash-lite",
+        "finishReasons": [
+          "STOP"
+        ],
+        "outputCount": 1,
+        "insufficientEvidence": false,
+        "groundingPassed": true,
+        "warnings": [
+          "Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn."
+        ],
+        "personas": [
+          "truong-chinh",
+          "le-duan",
+          "pham-van-dong",
+          "vo-nguyen-giap"
+        ],
+        "testDatabaseDuplicates": [],
+        "localV4SnapshotDuplicates": [
+          {
+            "kind": "possible_duplicate",
+            "id": "cmtt45-q001",
+            "question": "Cách mạng tháng Tám năm 1945 là cuộc cách mạng gì?",
+            "revisionId": "cmtt45-q001:v4"
+          }
+        ],
+        "protectedFilesUnchanged": true,
+        "knowledgeUnchanged": true,
+        "testBudgetAfter": {
+          "_id": "generation:2026-10-19",
+          "calls": 1
+        }
+      },
+      {
+        "number": 2,
+        "origin": "chat_question",
+        "model": "gemini-3.5-flash-lite",
+        "apiVersion": "v1beta",
+        "timeoutMs": 30000,
+        "at": "2026-10-19T03:44:27.677Z",
+        "requestId": "66b75b02-f0ee-4a0f-a24f-7583859fc1f4",
+        "batchId": "172742680763e1f310cb99aa0a3de43649a216a140f99302d9496fd100c15be7",
+        "httpStatus": 200,
+        "latencyMs": 2532,
+        "usage": {
+          "promptTokenCount": 714,
+          "candidatesTokenCount": 784,
+          "totalTokenCount": 1498,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 714
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "jsonValid": true,
+        "schemaValid": true,
+        "citationValid": true,
+        "networkCalls": 1,
+        "retries": 0,
+        "serverResolvedQuestion": true,
+        "frontendQuestionRejected": true,
+        "payloadSha256": "4463af4d8a81bc0fd7d6cf2e07790e831b35e0d3fe70605f0b7cafcbfe5e33d9",
+        "schemaSha256": "6673af0ee4d88e6d824eecd3e356f60e0896dafc0616e3ab0b617f9815531264",
+        "proposalStatus": "ready_for_review",
+        "errorCode": null,
+        "duplicates": [
+          {
+            "kind": "possible_duplicate",
+            "id": "cmtt45-q003",
+            "question": "Tư liệu mô tả Cách mạng tháng Tám như thế nào? [b135a9d4-ce15-4631-8ec6-327d6fb6ddf8]",
+            "revisionId": "cmtt45-q003:v1"
+          },
+          {
+            "kind": "possible_duplicate",
+            "id": "proposal:6095362cca24782b5e1fedb7c344b354e227ed1c8e73e12414fba5711b6d12db",
+            "question": "Cách mạng tháng Tám năm 1945 là gì và do ai lãnh đạo?",
+            "revisionId": null
+          }
+        ],
+        "actualModelVersion": "gemini-3.5-flash-lite",
+        "finishReasons": [
+          "STOP"
+        ],
+        "outputCount": 1,
+        "insufficientEvidence": false,
+        "groundingPassed": true,
+        "warnings": [
+          "Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn."
+        ],
+        "personas": [
+          "truong-chinh",
+          "le-duan",
+          "pham-van-dong",
+          "vo-nguyen-giap"
+        ],
+        "testDatabaseDuplicates": [
+          {
+            "kind": "possible_duplicate",
+            "id": "cmtt45-q003",
+            "question": "Tư liệu mô tả Cách mạng tháng Tám như thế nào? [b135a9d4-ce15-4631-8ec6-327d6fb6ddf8]",
+            "revisionId": "cmtt45-q003:v1"
+          },
+          {
+            "kind": "possible_duplicate",
+            "id": "proposal:6095362cca24782b5e1fedb7c344b354e227ed1c8e73e12414fba5711b6d12db",
+            "question": "Cách mạng tháng Tám năm 1945 là gì và do ai lãnh đạo?"
+          }
+        ],
+        "localV4SnapshotDuplicates": [
+          {
+            "kind": "possible_duplicate",
+            "id": "cmtt45-q001",
+            "question": "Cách mạng tháng Tám năm 1945 là cuộc cách mạng gì?",
+            "revisionId": "cmtt45-q001:v4"
+          }
+        ],
+        "protectedFilesUnchanged": true,
+        "knowledgeUnchanged": true,
+        "testBudgetAfter": {
+          "_id": "generation:2026-10-19",
+          "calls": 2
+        }
+      }
+    ],
+    "totalUsage": {
+      "promptTokens": 1376,
+      "outputTokens": 1577,
+      "totalTokens": 2953
+    },
+    "preflight": {
+      "status": "passed",
+      "at": "2026-10-19T03:42:40.338Z",
+      "target": "vo_danh_phase5e1_test",
+      "keyPresent": true,
+      "model": "gemini-3.5-flash-lite",
+      "apiVersion": "v1beta",
+      "sdkVersion": "2.30.0",
+      "modelMetadataHttpStatus": 200,
+      "generateContent": true,
+      "structuredOutputDocsSupported": true,
+      "freeTier": {
+        "officialPricingVerified": true,
+        "officialDocsCheckedOn": "2026-10-18",
+        "ownerConfirmation": "Owner confirmed in conversation: Free Tier, no linked billing",
+        "ownerConfirmedAt": "2026-10-16T10:29:33.683Z",
+        "billingApiVerified": false,
+        "providerQuotaRemaining": null,
+        "pricingUrl": "https://ai.google.dev/gemini-api/docs/pricing",
+        "modelUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite"
+      },
+      "sourceId": "4fb43dd5-a430-4119-843f-2cdcfbc95a3c",
+      "chunkId": "4fb43dd5-a430-4119-843f-2cdcfbc95a3c:0",
+      "sourceChecksum": "77f5d640be863e8ce4498c3b3e3ebe78daec3fb5928a2b7d2414743223bc40e0",
+      "chunkSha256": "e9a102587121c76296f04aac59263006015de2f789fc7ad8c65116d3ee6a2a24",
+      "actorId": "6ad4d019dbe514357c8eb313",
+      "groupId": "df6d8aecddefb2a7d099d5b91ced4ec215a10498013ac72cf7362d9814b5cf17",
+      "testDailyLimit": 5,
+      "testDailyBudgetUsed": 0,
+      "protectedHashes": {
+        ".env.local": "dd91da495c7441f99e884c40524d73ad349d16b830c3f60d1602d91f7b468fa3",
+        ".local/chat-phase-5c1/generation-ledger.json": "86f6d6d1592961d361365c6163e99407c3a1e0446fd4502b05e70d1aab985759",
+        ".local/chat-phase-5c2/generation-ledger.json": "04e36cec52314d521e5d5039d9a462e3db59233b4226527e9dbf79ba4a227662",
+        ".local/chat-phase-5c3/generation-ledger.json": "45ea47b8c9c4531227d21c2523bacf3d23060338209f8ce98ee1d5c902f72581",
+        "server/infrastructure/gemini-question-matcher.ts": "6cd513c6eee3197b79a2d7cf6ef3db2f44588046f4347aabd2fd914cb03ec081",
+        "server/services/chat-ai-config.ts": "def0f2ca15eb811fc7076855f5f626a05978539d887c8691907694b589b0118d",
+        "server/infrastructure/gemini-knowledge-generator.ts": "1b4269a4ca93ad35624e945f584479733203470bd8f1f58786deafb692673594",
+        "server/services/knowledge-generation.ts": "ad7c97b47e1f29c11e8f7168f9c0b67d087f37584301a2b482e3a148ac0ac20f",
+        "server/services/knowledge-generation-validation.ts": "6641f78910bf1fe14cd83e53e5895988f16bda5d68b39973db1244f4031901a5"
+      },
+      "knowledgeSnapshotSha256": "7c6fc9301472bc64f9c8eade473748ce3d86b39560bca443665d0a8684d7519a",
+      "generationCalls": 0
+    },
+    "postflight": {
+      "at": "2026-10-19T03:45:43.122Z",
+      "target": "vo_danh_phase5e1_test",
+      "readOnly": true,
+      "liveCalls": 2,
+      "maximum": 2,
+      "knowledgeUnchanged": true,
+      "protectedFilesUnchanged": true,
+      "logicalQuestions": 3,
+      "revisions": 4,
+      "approvedRevisions": 0,
+      "publishedPointers": 0,
+      "proposals": [
+        {
+          "id": "172742680763e1f310cb99aa0a3de43649a216a140f99302d9496fd100c15be7",
+          "status": "ready_for_review",
+          "version": 1,
+          "origin": "chat_question",
+          "hasDraft": false
+        },
+        {
+          "id": "6095362cca24782b5e1fedb7c344b354e227ed1c8e73e12414fba5711b6d12db",
+          "status": "ready_for_review",
+          "version": 1,
+          "origin": "document",
+          "hasDraft": false
+        }
+      ],
+      "testBudget": [
+        {
+          "_id": "generation:2026-10-18",
+          "calls": 2
+        },
+        {
+          "_id": "generation:2026-10-19",
+          "calls": 2
+        }
+      ]
+    },
+    "qualityEvaluation": [
+      {
+        "number": 1,
+        "originalOutputSha256": "b8bf129d825d3a57365b5a9cff831b4ebccf1d336016d03fcf6fd4a3544578c4",
+        "outputNotEdited": true,
+        "persistedContentMatchesOutput": true,
+        "fullSourceVerbatim": true,
+        "evidenceVerbatim": true,
+        "personaCorePreserved": true,
+        "personasUseAllowedDifferentFrames": true,
+        "draftValidation": {
+          "errors": [],
+          "warnings": [],
+          "persisted": false,
+          "placeholderIdUsedOnlyInMemory": true
+        },
+        "cachedPublishedDuplicates": {
+          "snapshotAt": "2026-10-16T10:24:15.969Z",
+          "availableCandidates": 50,
+          "liveProductionQueried": false,
+          "matches": [
+            {
+              "kind": "possible_duplicate",
+              "id": "cmtt45-q001",
+              "question": "Cách mạng tháng Tám năm 1945 là cuộc cách mạng gì?",
+              "revisionId": "cmtt45-q001:v4"
+            }
+          ]
+        },
+        "editorialAssessment": {
+          "historicalFidelity": "All source facts preserved verbatim; no additional date, place, event or historical-role claim observed. This is source fidelity, not independent historian approval.",
+          "personaDiversity": "Four different educational prefixes; identical factual body. Deliberately limited by extractive grounding, not rich dialogue variation.",
+          "aliasConcern": "The alias asking how events unfolded is broader than this overview source. Needs admin review.",
+          "coverage": "Both proposals repeat the same source core and local q001 answer; not new factual coverage.",
+          "draftEligible": "Source/schema validation passes, but admin must review historical content and duplicate handling. No Draft conversion executed.",
+          "testDuplicates": 0
+        }
+      },
+      {
+        "number": 2,
+        "originalOutputSha256": "bb0e844a0a5ce8b9baf039b582d5f138ff8516578ccd0a38a372256e5cbf01a7",
+        "outputNotEdited": true,
+        "persistedContentMatchesOutput": true,
+        "fullSourceVerbatim": true,
+        "evidenceVerbatim": true,
+        "personaCorePreserved": true,
+        "personasUseAllowedDifferentFrames": true,
+        "draftValidation": {
+          "errors": [],
+          "warnings": [],
+          "persisted": false,
+          "placeholderIdUsedOnlyInMemory": true
+        },
+        "cachedPublishedDuplicates": {
+          "snapshotAt": "2026-10-16T10:24:15.969Z",
+          "availableCandidates": 50,
+          "liveProductionQueried": false,
+          "matches": [
+            {
+              "kind": "possible_duplicate",
+              "id": "cmtt45-q001",
+              "question": "Cách mạng tháng Tám năm 1945 là cuộc cách mạng gì?",
+              "revisionId": "cmtt45-q001:v4"
+            }
+          ]
+        },
+        "editorialAssessment": {
+          "historicalFidelity": "All source facts preserved verbatim; no additional date, place, event or historical-role claim observed. This is source fidelity, not independent historian approval.",
+          "personaDiversity": "Four different educational prefixes; identical factual body. Deliberately limited by extractive grounding, not rich dialogue variation.",
+          "aliasConcern": null,
+          "coverage": "Both proposals repeat the same source core and local q001 answer; not new factual coverage.",
+          "draftEligible": "Source/schema validation passes, but admin must review historical content and duplicate handling. No Draft conversion executed.",
+          "testDuplicates": 2
+        }
+      }
+    ],
+    "rawOutputArtifacts": [
+      {
+        "number": 1,
+        "providerResponse": ".local/chat-phase-5e1-live/call-1-provider-response.json",
+        "output": ".local/chat-phase-5e1-live/call-1-output.txt",
+        "proposal": ".local/chat-phase-5e1-live/call-1-proposal.json"
+      },
+      {
+        "number": 2,
+        "providerResponse": ".local/chat-phase-5e1-live/call-2-provider-response.json",
+        "output": ".local/chat-phase-5e1-live/call-2-output.txt",
+        "proposal": ".local/chat-phase-5e1-live/call-2-proposal.json"
+      }
+    ],
+    "outputEdited": false,
+    "proposalsConvertedToDraft": 0,
+    "approvedOrPublished": 0,
+    "ledgerArtifact": ".local/chat-phase-5e1-live/generation-ledger.json",
+    "ledgerReset": false,
+    "priorExecutionBlock": {
+      "action": "Live preflight",
+      "reason": "Automatic approval review could not run due to tool usage limit; command not executed",
+      "resolved": "User continued on 2026-10-19; same preflight was approved and passed; no bypass or generation occurred during the block"
+    }
+  },
+  "regression": {
+    "finalUnitTests": {
+      "total": 192,
+      "passed": 192,
+      "failed": 0,
+      "exitCode": 0,
+      "generationCalls": 0,
+      "networkBlocked": true
+    },
+    "extractionTests": {
+      "passed": 11,
+      "total": 11,
+      "failed": 0,
+      "liveGenerationCalls": 0,
+      "warning": "PDF standard font data warning; all extraction tests passed"
+    },
+    "realVietnamesePdfFullText": {
+      "passed": 2,
+      "normalization": "NFC and whitespace only; no rewritten content"
+    },
+    "typescript": "passed",
+    "eslintChangedScope": "passed",
+    "productionBuild": {
+      "exitCode": 0,
+      "isolatedWorkspace": true,
+      "copiedEnvLocal": false,
+      "finalAuditFixIncluded": true,
+      "generationCalls": 0,
+      "status": "passed",
+      "finalUiErrorRecoveryFixIncluded": true,
+      "artifact": ".local/chat-phase-5e1/build.log",
+      "ranPwaAssetGeneration": false,
+      "warnings": [
+        "multiple lockfiles",
+        "experimental JSON modules"
+      ]
+    },
+    "liveGenerationCalls": 0
+  },
+  "fixes": [
+    {
+      "evidence": "Source inspection found conversion audit.before.status hardcoded to draft; provenance previously derived from the version number.",
+      "change": "Read the actual previous revision in the transaction; use its status and ID in audit/provenance; reject existing logical questions with no revision.",
+      "verification": "Offline regression covers draft, pending_review, approved and rejected preceding states and unchanged Published pointer.",
+      "files": [
+        "server/repositories/knowledge-generation.ts",
+        "server/services/knowledge-generation.ts",
+        "tests/knowledge-generation.test.mjs"
+      ]
+    },
+    {
+      "evidence": "Successful list refresh did not clear previous error state",
+      "change": "Clear error only after the active list/context request succeeds",
+      "file": "features/knowledge/knowledge-generation.tsx",
+      "verification": "Browser mock 503 -> real refresh -> list visible and .knowledge-error absent; lint/TS/build pass"
+    }
+  ],
+  "changedFiles": [
+    "features/knowledge/knowledge-generation.tsx",
+    "scripts/knowledge-generation-test-env.mjs",
+    "scripts/preflight-knowledge-generation-test.mjs",
+    "scripts/check-knowledge-generation-mongo.mjs",
+    "scripts/check-knowledge-generation-browser.mjs",
+    "scripts/inspect-knowledge-generation-test.mjs",
+    "docs/chatbot-phase-5e1.md",
+    "docs/chatbot-phase-5e1-test-report.json",
+    "scripts/check-knowledge-generation-live.mjs",
+    "docs/chatbot-phase-5e1-live-evaluation.md"
+  ],
+  "productionSafety": {
+    "databaseConnections": 0,
+    "databaseWrites": 0,
+    "approvedOrPublishedRecords": 0,
+    "publishedKnowledgeEdited": false,
+    "quotaLedgersReset": false,
+    "billingChanged": false,
+    "deployed": false,
+    "phase5c4Or5d1Started": false
+  },
+  "limitations": [
+    "Only two successful calls on one short historical chunk; not an availability, throughput or complex historical accuracy benchmark.",
+    "Live calls used real services and provider via CLI; not a fresh browser/Next HTTP E2E with real provider.",
+    "Persona variation is confined to four supported educational prefixes; factual body is identical.",
+    "Both proposals overlap q001; first proposal has an overly broad how-did-events-unfold alias. Requires admin editorial review, not auto-approval.",
+    "Published duplicate comparison used 50 cached candidates from 2026-10-16 plus local 59-question v4 snapshot; current production database was never queried.",
+    "Project Free Tier is based on owner confirmation plus official pricing; actual remaining Google quota/billing not independently queried.",
+    "No live Draft conversion performed. In-memory Draft validation passed; baseline mock E2E already covered admin edit/conversion.",
+    "New proposals remain version 1 ready_for_review. Published data, previous ledgers and environment configuration remain untouched."
+  ],
+  "deploymentReadiness": "technical_phase_complete; owner_review_required; no_production_deploy_performed_or_authorized",
+  "nextSteps": [
+    "Owner inspects both untouched outputs and proposals",
+    "Review duplicate q001 and overly broad alias; decide discard vs revise existing question",
+    "Any Draft conversion or publish remains a separate explicit admin action",
+    "Additional live tests need a new budget; no more calls in this run"
+  ],
+  "liveRegression": {
+    "date": "2026-10-19",
+    "unitTests": {
+      "total": 192,
+      "passed": 192,
+      "failed": 0,
+      "exitCode": 0,
+      "generationCalls": 0,
+      "networkBlocked": true
+    },
+    "transportMockTests": {
+      "passed": 3,
+      "mockedRequests": 3,
+      "realGenerationCalls": 0,
+      "retries": 0
+    },
+    "typescript": "passed",
+    "eslintChangedScope": "passed",
+    "productionBuild": "not_rerun_no_runtime_change; previous final runtime build passed",
+    "runtimeFilesChanged": false
+  },
+  "databaseAfterLive": {
+    "at": "2026-10-19T03:45:43.122Z",
+    "target": "vo_danh_phase5e1_test",
+    "readOnly": true,
+    "liveCalls": 2,
+    "maximum": 2,
+    "knowledgeUnchanged": true,
+    "protectedFilesUnchanged": true,
+    "logicalQuestions": 3,
+    "revisions": 4,
+    "approvedRevisions": 0,
+    "publishedPointers": 0,
+    "proposals": [
+      {
+        "id": "172742680763e1f310cb99aa0a3de43649a216a140f99302d9496fd100c15be7",
+        "status": "ready_for_review",
+        "version": 1,
+        "origin": "chat_question",
+        "hasDraft": false
+      },
+      {
+        "id": "6095362cca24782b5e1fedb7c344b354e227ed1c8e73e12414fba5711b6d12db",
+        "status": "ready_for_review",
+        "version": 1,
+        "origin": "document",
+        "hasDraft": false
+      }
+    ],
+    "testBudget": [
+      {
+        "_id": "generation:2026-10-18",
+        "calls": 2
+      },
+      {
+        "_id": "generation:2026-10-19",
+        "calls": 2
+      }
+    ]
+  }
+}

@@ -37,6 +37,9 @@ yarn-error.log*
 !.env.example
 !.env.tts.example
 !.env.chat.example
+!.env.gemini.example
+!.env.chat-history.example
+!.env.knowledge-generation.example
 
 # vercel
 .vercel

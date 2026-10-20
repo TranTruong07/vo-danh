@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { loader } from './support/load-typescript.mjs';
+import { historyMemory } from './support/chat-history-memory.mjs';
 
 const load = loader();
 const { validateChatInput, ChatError } = load('@/server/domain/chat');
@@ -84,6 +85,9 @@ test('missing player cookie maps existing GameError to unauthenticated chat', as
 function chatFixture({ entries = [row], answer = true, character = 'vo-nguyen-giap' } = {}) {
   const calls = [];
   const service = loader({
+    '@/server/repositories/chat-history': historyMemory(),
+    // Baseline tests must never use a real provider, even when the shell exports an API key.
+    './chat-ai-config': { chatAiConfig: () => ({ enabled: false }) },
     './chat-session': { chatPlayerHash: async () => hash, resolveChatSession: async (id, owner) => { assert.equal(id, sid); assert.equal(owner, hash); return { characterId: character }; } },
     './chat-rate-limit': { limitChatRequests: async owner => { calls.push(['limit', owner]); } },
     '@/server/repositories/chat-knowledge': { readPublishedChatIndex: async () => entries, readPublishedChatAnswer: async (...args) => { calls.push(args); return answer ? { ...row, answer: `Nguyên văn ${character}`, source: { document: 'Nguồn.docx', sectionId: 'IV' } } : null; } },
@@ -105,17 +109,19 @@ test('suggestions never read answers; selecting suggestion revalidates session/q
   assert.equal((await service.selectChatAnswer({ sessionId: sid, questionId: row.questionId })).status, 'answered');
   assert.deepEqual(service.calls[2], [row.questionId, 'vo-nguyen-giap', undefined]);
 });
-test('empty knowledge, unrelated input, revoked publication and unavailable selection use refusal', async () => {
+test('empty knowledge asks for clarification; unrelated input and unavailable answers use refusal', async () => {
+  const empty = await chatFixture({ entries: [] }).sendChatMessage({ sessionId: sid, message: row.canonicalQuestion });
+  assert.equal(empty.status, 'suggest'); assert.equal(empty.reason, 'clarify'); assert.deepEqual(empty.suggestions, []);
   for (const [service, mode, input] of [
-    [chatFixture({ entries: [] }), 'sendChatMessage', { message: row.canonicalQuestion }],
     [chatFixture(), 'sendChatMessage', { message: 'Cách nấu phở bò ngon' }],
     [chatFixture({ answer: false }), 'sendChatMessage', { message: row.canonicalQuestion }],
-    [chatFixture({ answer: false }), 'selectChatAnswer', { questionId: 'cmtt45-q999' }],
   ]) {
     const result = await service[mode]({ sessionId: sid, ...input });
     assert.deepEqual(result, { status: 'out_of_scope', characterId: 'vo-nguyen-giap', answer: CHAT_PERSONAS['vo-nguyen-giap'].refusalText });
   }
   const service = chatFixture();
+  await assert.rejects(service.selectChatAnswer({ sessionId: sid, questionId: 'cmtt45-q999' }), errorCode('INVALID_SUGGESTION'));
+  service.calls.length = 0;
   await assert.rejects(service.sendChatMessage({ sessionId: sid, message: 'hi', characterId: 'le-duan' }), errorCode('INVALID_INPUT'));
   assert.equal(service.calls.length, 0);
 });

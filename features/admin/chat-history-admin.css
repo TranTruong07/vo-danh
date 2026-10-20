@@ -1,0 +1,16 @@
+.chat-history-filters { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; align-items:end; }
+.chat-history-filters small { grid-column:1/-1; color:#607392; }
+.chat-history-columns { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.chat-history-bar { display:flex; align-items:center; gap:12px; margin:14px 0; font-size:.9rem; }
+.chat-history-bar meter { flex:1; min-width:40px; }
+.chat-review-question { text-align:left; border:0; padding:0; background:none; font:inherit; font-weight:600; color:#173052; cursor:pointer; overflow-wrap:anywhere; }
+.chat-review-question:hover { color:#3475ef; text-decoration:underline; }
+.chat-review-editor { display:grid; gap:18px; margin:24px 0; }
+.chat-history-table { overflow:auto; margin:18px 0; }
+.chat-history-table table { width:100%; border-collapse:collapse; font-size:.85rem; }
+.chat-history-table th,.chat-history-table td { text-align:left; padding:12px; border-bottom:1px solid #e2e9f7; min-width:130px; max-width:360px; overflow-wrap:anywhere; vertical-align:top; }
+.chat-history-detail { margin-top:28px; scroll-margin-top:90px; }
+.chat-history-detail h2:focus { outline:2px solid #3475ef; outline-offset:4px; }
+.chat-history-delete { padding-top:22px; margin-top:20px; border-top:1px solid #e2e9f7; }
+.chat-history-page .btn-row { flex-wrap:wrap; align-items:center; }
+@media(max-width:800px) { .chat-history-filters,.chat-history-columns { grid-template-columns:1fr; } }

@@ -1,0 +1,23 @@
+.generation-page { display: grid; gap: 22px; }
+.generation-page .card { padding: 24px; min-width: 0; }
+.generation-page .btn-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.generation-page .btn { margin: 4px 8px 4px 0; }
+.generation-page label { display: grid; gap: 8px; font-weight: 500; }
+.generation-page input:not([type=checkbox]), .generation-page textarea, .generation-page select { max-width: 100%; width: 100%; padding: 12px; border: 1px solid #c8d5e8; border-radius: 8px; background: #fff; color: #203456; font: inherit; }
+.generation-page textarea { resize: vertical; }
+.generation-source-row { display: flex; gap: 16px; align-items: center; justify-content: space-between; border-bottom: 1px solid #e3eaf4; padding: 14px 0; overflow-wrap: anywhere; }
+.generation-chunks { max-height: 60dvh; overflow: auto; padding-right: 12px; margin-bottom: 20px; }
+.generation-chunks article { border-bottom: 1px solid #dce4ef; padding: 12px 0; }
+.generation-page .knowledge-text { white-space: pre-wrap; overflow-wrap: anywhere; }
+.generation-editor { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.generation-editor > * { min-width: 0; overflow-wrap: anywhere; }
+.generation-page .btn { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+.generation-page summary { overflow-wrap: anywhere; }
+.generation-page blockquote { margin: 12px 0; padding: 16px; border-left: 3px solid #5179bb; background: #f2f6fd; }
+.generation-page .generation-check { display: flex; align-items: flex-start; gap: 10px; }
+.generation-page input[type=checkbox] { width: 18px; height: 18px; flex-shrink: 0; }
+@media(max-width: 640px) { .generation-source-row { align-items: flex-start; flex-direction: column; } .generation-page .card { padding: 16px; } }
+.generation-alias { display: flex; align-items: end; gap: 12px; margin-bottom: 12px; }
+.generation-alias label { flex: 1; min-width: 0; }
+.generation-editor fieldset { border: 1px solid var(--border, #dce4f5); padding: 16px; border-radius: 8px; min-width: 0; }
+.generation-editor legend { padding: 0 8px; }

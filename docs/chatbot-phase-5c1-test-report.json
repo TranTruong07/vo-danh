@@ -1,0 +1,135 @@
+{
+  "phase": "5C.1",
+  "reportDate": "2026-10-16",
+  "timezone": "Asia/Bangkok",
+  "status": "live_generation_structured_matching_and_local_e2e_verified",
+  "sdk": { "name": "@google/genai", "version": "2.30.0", "upgraded": false },
+  "apiVersion": "v1beta",
+  "model": "gemini-3.5-flash-lite",
+  "keyPresent": true,
+  "modelsList": { "httpStatus": 200, "generateContentModels": 46, "selectedModelListed": true },
+  "freeTier": {
+    "officialPricingListsFreeTier": true,
+    "generationAccessVerified": true,
+    "actualProjectBillingTierVerified": false,
+    "billingOrPlanChanged": false,
+    "pricingSource": "https://ai.google.dev/gemini-api/docs/pricing#gemini-3.5-flash-lite"
+  },
+  "previousFailures": [
+    { "model": "gemini-2.5-flash-lite", "evidence": "provider_404", "rootCause": "Model did not serve the generation request; precise account/model lifecycle reason unknown", "retried": false },
+    { "model": "gemini-3.5-flash-lite", "evidence": "error_fallback at 4484 ms", "rootCause": null, "reproduced": false },
+    { "model": "gemini-3.5-flash-lite", "evidence": "generation unavailable at 9698 ms", "rootCause": null, "reproduced": false }
+  ],
+  "generationBudget": {
+    "maximum": 5,
+    "actual": 5,
+    "stages": ["basic", "structured", "matching", "e2e", "e2e"],
+    "automaticRetries": 0,
+    "budgetExhausted": true,
+    "ledger": ".local/chat-phase-5c1/generation-ledger.json"
+  },
+  "liveCalls": [
+    {
+      "number": 1, "stage": "basic", "httpStatus": 200, "latencyMs": 1156,
+      "finishReason": "STOP", "nonemptyText": true, "basicGenerationVerified": true,
+      "literalOkAssertion": false, "originalArtifactStatus": "unexpected_output",
+      "note": "Initial assertion required literal OK. Nonempty text confirms generation, not exact instruction following. Raw text was not retained. Artifact preserved; no rerun."
+    },
+    { "number": 2, "stage": "structured", "httpStatus": 200, "latencyMs": 841, "finishReason": "STOP", "schemaValid": true, "validatedOutput": { "ok": true } },
+    {
+      "number": 3, "stage": "matching", "httpStatus": 200,
+      "latencyToHeadersMs": 1275, "stageTotalIncludingMongoMs": 2689,
+      "candidateIds": ["cmtt45-q017", "cmtt45-q018", "cmtt45-q019"],
+      "decision": "match", "questionId": "cmtt45-q017", "schemaValid": true, "publishedAnswerRechecked": true
+    },
+    { "number": 4, "stage": "e2e_match", "httpStatus": 200, "latencyMs": 1364, "finishReason": "STOP", "decision": "match", "questionId": "cmtt45-q017", "apiResult": "suggest", "storedAnswerAfterClickVerified": true },
+    { "number": 5, "stage": "e2e_no_match", "httpStatus": 200, "latencyMs": 1387, "finishReason": "STOP", "decision": "no_match", "noGeneratedAnswer": true }
+  ],
+  "requestSchema": {
+    "method": "models.generateContent",
+    "matchingInput": ["question", "candidates.questionId", "candidates.canonicalQuestion", "candidates.aliases"],
+    "responseMimeType": "application/json",
+    "responseJsonSchema": {
+      "type": "object", "additionalProperties": false,
+      "required": ["decision", "questionId", "confidence", "reason"],
+      "properties": {
+        "decision": { "type": "string", "enum": ["match", "no_match"] },
+        "questionId": { "type": ["string", "null"] },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "reason": { "type": "string", "maxLength": 200 }
+      }
+    },
+    "maxOutputTokens": 256,
+    "temperature": 0,
+    "sdkAttempts": 1,
+    "abortSignal": true,
+    "diagnosticTimeoutMs": 15000,
+    "appDefaultTimeoutMs": 5000
+  },
+  "checks": {
+    "typescript": { "status": "passed", "command": "rtk proxy npx tsc --noEmit" },
+    "changedFilesEslint": { "status": "passed" },
+    "productionBuild": { "status": "passed", "deployed": false },
+    "chatTests": { "passed": 59, "failed": 0, "skipped": 0, "newErrorTestGroups": 2, "artifact": ".local/chat-phase-5c1/unit-tests.tap", "artifactEncoding": "utf16le" },
+    "liveBrowser": {
+      "passedGroups": 11, "failedGroups": 0, "browser": "Edge headless",
+      "viewports": ["1440x900", "390x844"],
+      "personas": ["truong-chinh", "le-duan", "pham-van-dong", "vo-nguyen-giap"],
+      "exactAndAliasBypassAllFour": true,
+      "paraphraseSuggestOnly": true,
+      "hanoiNotHue": true,
+      "storedPersonaAnswerAfterClickAllFour": true,
+      "threeOtherPersonasReuseSharedCache": true,
+      "unrelatedOutOfScopeWithoutGeneration": true,
+      "multiIntentLiveNoMatch": true,
+      "applicationQuotaFallbackWithoutSixthCall": true,
+      "quizUnchanged": true,
+      "sourceUiHidden": true,
+      "artifact": ".local/chat-phase-5c1/e2e.json",
+      "screenshot": ".local/chat-phase-5c1/e2e-desktop.png"
+    },
+    "timeoutFallback": { "status": "passed", "method": "unit mock and hanging SDK abort test", "liveProviderTimeoutInduced": false },
+    "provider429Fallback": { "status": "passed", "method": "unit mock", "liveGoogleQuotaExhaustionInduced": false },
+    "mongoTestIntegration": { "status": "not_run", "reason": "No separate MONGODB_TEST_URI configured" },
+    "fullRepositoryLintAndTests": { "status": "not_rerun", "baselineReference": "docs/chatbot-phase-5c-test-report.json" }
+  },
+  "knowledgeIntegrity": {
+    "database": "vo_danh", "logicalQuestions": 59, "revisions": 74,
+    "revisionStatuses": { "approved": 60, "draft": 14 },
+    "publishedPointers": 59, "runtimeReadableQuestions": 59, "auditRecords": 134,
+    "orphans": 0, "brokenPublishedPointers": 0,
+    "unchangedCountAndContentSha256": {
+      "knowledge_questions": "b9381833a8305e8281350ecfe8cf6e6473d30cc349859e806e860558e1b6c2df",
+      "knowledge_question_revisions": "a2585b2088f2679d02543b8988525ea8e5ac55c67b125a0bd0507ccd5b61c077",
+      "knowledge_audit": "10769b8de42e0ef1f05a32e9effa54bf71a5aecb9f72aef9362860fcb300a9e3"
+    },
+    "operationalWrites": "Normal chat sessions/bindings, cache and quota only; not reset or deleted after test"
+  },
+  "temporaryEnablement": {
+    "ownerApproved": true, "origin": "http://localhost:3013",
+    "processOnly": true, "environmentFileChanged": false,
+    "serverStopped": true, "portClosureVerified": true,
+    "persistentFeatureFlagEnabled": false,
+    "persistentModelOverrideConfigured": false,
+    "modelDefaultAfterChange": "gemini-3.5-flash-lite"
+  },
+  "environmentVariables": ["GEMINI_API_KEY", "GEMINI_MODEL", "CHAT_AI_MATCHING_ENABLED", "CHAT_AI_AUTO_ANSWER", "CHAT_AI_TIMEOUT_MS", "CHAT_AI_MAX_CANDIDATES", "CHAT_AI_CALLS_PER_MINUTE", "CHAT_AI_CALLS_PER_DAY", "CHAT_AI_CACHE_TTL_SECONDS", "CHAT_AI_NO_MATCH_TTL_SECONDS"],
+  "remainingUnverified": [
+    "Precise root causes of two previous 3.5 errors",
+    "Actual account billing tier and provider quota in AI Studio",
+    "Full 120-question live benchmark; no quality generalization from two live cases",
+    "Real iOS keyboard/camera and production concurrency",
+    "Separate MongoDB test-database integration"
+  ],
+  "scope": {
+    "publishedDataChanged": false, "matchingThresholdChanged": false,
+    "chatApiSchemaChanged": false, "sessionSecurityChanged": false,
+    "quizQrTtsPwaPaymentChanged": false, "adminWorkflowChanged": false,
+    "productionDeployed": false, "phase5DOr5EStarted": false
+  },
+  "officialReferences": [
+    "https://ai.google.dev/gemini-api/docs/models",
+    "https://ai.google.dev/gemini-api/docs/pricing#gemini-3.5-flash-lite",
+    "https://ai.google.dev/gemini-api/docs/structured-output"
+  ]
+}

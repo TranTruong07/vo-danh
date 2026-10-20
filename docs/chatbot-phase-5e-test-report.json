@@ -1,0 +1,91 @@
+{
+  "phase": "5E",
+  "date": "2026-10-18",
+  "timezone": "Asia/Bangkok",
+  "implementation": "implemented_with_offline_verification",
+  "tests": {
+    "unitAndRegression": {
+      "command": "rtk proxy node scripts/check-knowledge-generation.mjs test",
+      "total": 191,
+      "passed": 191,
+      "failed": 0,
+      "artifact": ".local/chat-phase-5e/tests.tap"
+    },
+    "extraction": {
+      "command": "rtk proxy node --conditions=react-server --import tsx tests/knowledge-generation-extraction.ts",
+      "total": 11,
+      "passed": 11,
+      "failed": 0,
+      "fixtures": "Synthetic DOCX/PDF, not historical knowledge",
+      "warning": "PDF standard font data warning; synthetic text extraction succeeded"
+    },
+    "typescript": { "status": "passed" },
+    "phaseFilesLint": { "status": "passed" },
+    "sourceLint": {
+      "command": "rtk proxy npx eslint . --ignore-pattern .local/**",
+      "status": "failed_existing_issues",
+      "errors": 5,
+      "warnings": 1,
+      "errorRule": "@next/next/no-assign-module-variable",
+      "errorFiles": [
+        "tests/character-images.test.mjs",
+        "tests/character-questions.test.mjs",
+        "tests/history-game.test.mjs",
+        "tests/orders.test.mjs",
+        "tests/support/load-typescript.mjs"
+      ],
+      "warningFile": "app/author/page.tsx"
+    },
+    "productionBuild": {
+      "status": "passed",
+      "command": "rtk proxy node scripts/check-knowledge-generation.mjs build",
+      "artifact": ".local/chat-phase-5e/build.log",
+      "isolatedWorkspace": true,
+      "copiedEnvLocal": false,
+      "ranPwaAssetGeneration": false,
+      "warnings": ["multiple lockfiles", "experimental JSON modules", "build-tool network retries"],
+      "guardScope": "Global fetch and MongoClient.connect disabled; not an operating-system network firewall"
+    }
+  },
+  "verifiedWithMocks": [
+    "admin authorization before generation",
+    "server-side original chat question lookup",
+    "request idempotency without provider retries",
+    "generation disabled and quota gates",
+    "sanitized provider failures",
+    "real source/chunk/quote checks and computed offsets",
+    "unsupported neutral or persona facts remain insufficient",
+    "four persona factual cores preserved",
+    "exact/possible/batch duplicate flags",
+    "duplicate check repeated before Draft",
+    "source confirmation and editor acknowledgements required",
+    "Draft has real actor and no reviewer/approval metadata",
+    "Published pointer preserved in conversion plan",
+    "confirmed uploaded source resolves through existing review workflow",
+    "existing chatbot/session/Published/history/admin regression suites"
+  ],
+  "notVerified": [
+    "Live Gemini generation and provider acceptance of the new prompt/schema",
+    "MongoDB GridFS, transactions, indexes, concurrent mutations on a separate test database",
+    "Browser interaction and desktop/mobile screenshots",
+    "PDF layouts/fonts outside the synthetic extraction fixtures",
+    "Semantic accuracy of generated historical questions",
+    "Duplicate heuristic precision/recall on a labeled benchmark"
+  ],
+  "generationCalls": 0,
+  "projectDatabaseWrites": 0,
+  "automaticApprovals": 0,
+  "automaticPublications": 0,
+  "productionDeployment": false,
+  "environmentChanged": false,
+  "generationEnabledByThisPhase": false,
+  "constraints": {
+    "singleChunkPerProposal": true,
+    "neutralAnswerMustBeExtractive": true,
+    "personaFramingMustBeSupported": true,
+    "manualHistoricalReviewRequired": true,
+    "generatorTimeoutMs": 30000,
+    "matchingTimeoutUnchanged": true,
+    "defaultApplicationGenerationCallsPerUtcDay": 5
+  }
+}

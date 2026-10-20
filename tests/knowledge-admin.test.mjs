@@ -102,7 +102,7 @@ test('service ignores no actor metadata, uses actual currentAccount for mutation
   let result;
   const service = loader({ './account-session': { currentAccount: async () => testActor },
     '@/server/repositories/knowledge-source': { readKnowledgeManifest: async () => manifest },
-    '@/server/repositories/knowledge-admin': { mutateKnowledge: async (id, expected, planner) => { assert.equal(id, questionId); assert.equal(expected, 0); result = planner(fixtureState()); return { revisionId: result.audit.revisionId }; } },
+    '@/server/repositories/knowledge-admin': { readKnowledgeState: async () => fixtureState(), mutateKnowledge: async (id, expected, planner) => { assert.equal(id, questionId); assert.equal(expected, 0); result = planner(fixtureState()); return { revisionId: result.audit.revisionId }; } },
   })('@/server/services/knowledge-admin');
   await service.adminKnowledgeMutation(questionId, command('approve'));
   assert.equal(result.review.reviewedBy, testActor.userId); assert.equal(result.publication, undefined);
