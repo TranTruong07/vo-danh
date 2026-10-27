@@ -23,7 +23,7 @@ PWA chỉ đăng ký trong production, tránh lưu các chunk HMR thay đổi li
 - Bộ câu hỏi **cố ý bao gồm đáp án đúng** để thiết bị tự chấm offline. Đây là dữ liệu học tập công khai, không phù hợp giữ bí mật đáp án cho thi có thưởng. Kết quả offline không ghi thành điểm tin cậy trên server và không đồng bộ vào tài khoản.
 - Chỉ dữ liệu tải thành công trước lúc mất mạng mới có thể dùng. Nhân vật mới tạo sau đó cần cập nhật khi có mạng. Nếu người dùng xóa dữ liệu trang hoặc trình duyệt thu hồi bộ nhớ thì phải tải lại. Bản dữ liệu lưu được dùng cho tới lần cập nhật hoàn chỉnh tiếp theo.
 - Ảnh R2 được lưu trực tiếp bằng request không mang cookie. Ảnh khác domain dùng opaque response vì không phải bucket nào cũng bật CORS; trình duyệt vẫn hiển thị ảnh đã cache. File ảnh R2 nên có URL bất biến khi sửa ảnh (luồng upload hiện tại tạo key mới).
-- Âm thanh Google TTS đã được admin tạo cũng được tải cùng bộ dữ liệu, gồm lời mở đầu, câu hỏi/đáp án và phản hồi đúng/sai. Các file `/audio/<hash>` hỗ trợ byte range khi offline. Xem [cấu hình và tạo âm thanh](google-tts.md).
+- PWA vẫn hỗ trợ playlist MP3 đã có trong bộ dữ liệu và byte range cho `/audio/<hash>`. Phase TTS-0 đã gỡ cơ chế tạo/tìm âm thanh theo nhà cung cấp cũ; bộ dữ liệu tải mới có thể không có playlist. Khi chưa có URL âm thanh, quiz vẫn hoạt động và nút nghe bị vô hiệu hóa. File R2 và dữ liệu cũ không bị xóa. Xem [báo cáo cleanup](tts-phase-0-cleanup.md).
 
 ## Kiểm thử
 

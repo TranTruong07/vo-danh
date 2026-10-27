@@ -6,7 +6,6 @@ import { saveCharacterAction } from "@/actions/characters";
 import type { CharacterRecord } from "@/server/domain/character";
 import { IMAGE_CONTENT_TYPES, MAX_IMAGE_BYTES, MAX_IMAGE_LABEL } from "@/server/domain/image";
 import CharacterImageField from "./character-image-field";
-import VoicePicker from "./voice-picker";
 
 export default function CharacterForm({ character: editing = null }: { character?: CharacterRecord | null }) {
   const router = useRouter();
@@ -44,7 +43,6 @@ export default function CharacterForm({ character: editing = null }: { character
             <CharacterImageField field="backgroundImage" label="Ảnh nền" current={editing?.backgroundImage} />
             <CharacterImageField field="image" label="Ảnh nhân vật" current={editing?.image} />
           </div>
-          <VoicePicker initialValue={editing?.voiceName} />
           <div className="btn-row"><button className="btn primary" type="submit">{pending ? "Đang lưu…" : "Lưu nhân vật"}</button><button type="button" className="btn" onClick={() => router.push(cancelHref)}>Hủy</button></div>
         </fieldset>
       </form>

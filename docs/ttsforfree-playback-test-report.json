@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-26",
+  "status": "PASS",
+  "unitRegression": { "passed": 79, "failed": 0 },
+  "browser": {
+    "passed": 12,
+    "failed": 0,
+    "viewports": ["1440x900", "390x844", "375x667"],
+    "scope": "Actual GamePlayer/NarrationPlayer and local grading, mocked transport and HTMLMediaElement.play",
+    "artifact": ".local/quiz-audio-playback/browser-report.json"
+  },
+  "typescript": "PASS",
+  "scopedEslint": "PASS",
+  "isolatedProductionBuild": "PASS",
+  "buildArtifact": ".local/quiz-audio-playback/build.json",
+  "liveReadOnly": {
+    "questionCount": 2,
+    "questionsWithAudio": 1,
+    "readySegmentsMatchingText": 7,
+    "screenshotQuestionHasAudio": false,
+    "actualOfflineServicePlaylist": { "prompt": 5, "correct": 1, "incorrect": 1 },
+    "actualAudioRoute": { "status": 206, "bytes": 4, "contentType": "audio/mpeg" },
+    "artifacts": [".local/playback-inspection.json", ".local/playback-live-read.json"]
+  },
+  "providerGenerationCalls": 0,
+  "databaseWrites": 0,
+  "r2Writes": 0,
+  "deployed": false,
+  "limitations": ["No real iOS speaker/autoplay test", "Screenshot question still requires its own generated audio", "Offline audio requires a completed pack sync"]
+}

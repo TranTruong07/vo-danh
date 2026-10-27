@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-26",
+  "timezone": "Asia/Bangkok",
+  "feature": "TTSForFree question audio with persistent Cloudflare R2 copy",
+  "status": "IMPLEMENTED_MOCK_VERIFIED_LIVE_CONFIGURATION_PENDING",
+  "storageChoice": "User confirmed TTSForFree generation, copy MP3 to R2, persist R2 URL",
+  "checks": {
+    "unitAndRegression": {
+      "passed": 84,
+      "failed": 0,
+      "files": [
+        "tests/quiz-audio.test.mjs",
+        "tests/fpt-legacy-audio.test.mjs",
+        "tests/tts-cleanup.test.mjs",
+        "tests/history-game.test.mjs",
+        "tests/pwa.test.mjs",
+        "tests/character-questions.test.mjs",
+        "tests/orders.test.mjs",
+        "tests/chat.test.mjs",
+        "tests/chat-repositories.test.mjs",
+        "tests/chat-dialogue.test.mjs"
+      ],
+      "coverage": ["seven segments", "configured voices", "server-only key", "admin and origin", "server-sourced text", "no duplicate synthesis for ready assets", "persist job before polling", "bounded GET polling", "429 and terminal ERROR", "content and voice invalidation", "R2 prerequisite", "R2 download/upload resume", "CDN allowlist and MP3 validation", "atomic lease and provider namespaces", "quiz/PWA/chat/payment regressions"]
+    },
+    "typescript": "PASS: tsc --noEmit; final production build TypeScript also passed",
+    "eslint": "PASS: scoped changed TS/TSX and test/harness files",
+    "browser": {
+      "passed": 18,
+      "failed": 0,
+      "viewports": ["1440x900", "390x844", "375x667"],
+      "engine": "headless Chrome / Playwright",
+      "transport": "Mock API responses; real QuestionForm, QuestionAudio and CSS in isolated source copy",
+      "artifact": ".local/ttsforfree/browser-report.json",
+      "screenshots": [".local/ttsforfree/1440x900-audio.png", ".local/ttsforfree/390x844-audio.png", ".local/ttsforfree/375x667-audio.png"],
+      "visualReview": "Desktop and 390px mobile screenshots inspected; no horizontal clipping",
+      "limitations": "No real provider MP3 decoding, iOS device playback, or production authentication/browser integration"
+    },
+    "productionBuild": {
+      "status": "PASS",
+      "exitCode": 0,
+      "isolated": true,
+      "artifact": ".local/ttsforfree/build.json",
+      "warning": "Next.js multiple lockfiles/workspace root inference in isolated nested copy"
+    }
+  },
+  "externalEffects": {"ttsForFreeLiveCalls": 0, "fptLiveCalls": 0, "databaseConnections": 0, "r2Writes": 0, "envLocalChanged": false, "deployed": false},
+  "unverified": ["API key and actual voice entitlement", "actual provider credits/quota", "real provider CDN response and audio quality", "MongoDB and R2 live persistence", "automatic playback of new audio in player and offline caching are outside this change"],
+  "configurationTemplate": ".env.ttsforfree.example",
+  "documentation": "docs/ttsforfree-setup.md"
+}

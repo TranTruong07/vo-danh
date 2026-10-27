@@ -1,0 +1,348 @@
+{
+  "phase": "TTS-1",
+  "date": "2026-10-25",
+  "status": "IMPLEMENTED_MOCK_VERIFIED_AWAITING_OWNER_REVIEW_AND_LIVE_APPROVAL",
+  "scope": "One configured quiz question; admin generation/preview only",
+  "codeFiles": [
+    ".gitignore",
+    ".env.fpt-tts.example",
+    "server/domain/quiz-audio.ts",
+    "server/domain/quiz-audio-hash.ts",
+    "server/models/quiz-audio.ts",
+    "server/services/quiz-audio.ts",
+    "server/services/quiz-audio-config.ts",
+    "server/infrastructure/fpt-tts.ts",
+    "server/infrastructure/quiz-audio-http.ts",
+    "server/repositories/speech.ts",
+    "app/api/admin/quiz-questions/[id]/audio/route.ts",
+    "app/api/admin/quiz-questions/[id]/audio/generate/route.ts",
+    "features/questions/question-audio.tsx",
+    "features/questions/question-form.tsx",
+    "app/admin/questions/questions.css",
+    "tests/quiz-audio.test.mjs",
+    "tests/tts-cleanup.test.mjs",
+    "scripts/check-quiz-audio.mjs"
+  ],
+  "documentation": [
+    "docs/tts-phase-1.md",
+    "docs/tts-phase-1-test-report.json",
+    "docs/tts-phase-1-setup.md"
+  ],
+  "api": [
+    {
+      "method": "GET",
+      "path": "/api/admin/quiz-questions/[id]/audio",
+      "adminOnly": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/quiz-questions/[id]/audio/generate",
+      "adminOnly": true,
+      "sameOrigin": true,
+      "explicitConfirmation": true
+    }
+  ],
+  "configuration": {
+    "method": "Read-only environment presence check; no values/URIs printed",
+    "fptApiKeyConfigured": false,
+    "fptEnabled": false,
+    "defaultVoice": "leminh",
+    "defaultSpeed": 0,
+    "pilotQuestionConfigured": false,
+    "remainingSegmentsAllowed": false,
+    "r2ConfigurationPresent": true,
+    "r2PermissionsVerified": false,
+    "actualPilotCharacterEstimate": null,
+    "estimateMethod": "Unicode code-point count of stored text; answer segments add the explicit answer-letter prefix"
+  },
+  "verification": {
+    "unitAndRegression": {
+      "exitCode": 0,
+      "total": 239,
+      "passed": 239,
+      "failed": 0,
+      "providerCalls": 0,
+      "databaseConnections": 0,
+      "tests": [
+        "tests/quiz-audio.test.mjs",
+        "tests/tts-cleanup.test.mjs",
+        "tests/pwa.test.mjs",
+        "tests/history-game.test.mjs",
+        "tests/character-questions.test.mjs",
+        "tests/character-images.test.mjs",
+        "tests/chat.test.mjs",
+        "tests/chat-repositories.test.mjs",
+        "tests/chat-demo.test.mjs",
+        "tests/chat-ai.test.mjs",
+        "tests/chat-ai-errors.test.mjs",
+        "tests/chat-fallback.test.mjs",
+        "tests/chat-history.test.mjs",
+        "tests/knowledge-generation.test.mjs"
+      ],
+      "tts1Tests": 23,
+      "artifact": ".local/tts-phase-1/unit.tap"
+    },
+    "typescript": {
+      "status": "PASS",
+      "standaloneCommand": "npx tsc --noEmit",
+      "finalBuildTypecheck": "PASS"
+    },
+    "lint": {
+      "changedFiles": "PASS; zero errors/warnings",
+      "wholeSource": "FAIL_ON_EXISTING_BASELINE",
+      "existingErrors": 5,
+      "existingWarnings": 1,
+      "findings": [
+        {
+          "file": "app/author/page.tsx",
+          "errors": 0,
+          "warnings": 1,
+          "rules": [
+            "@next/next/no-img-element"
+          ]
+        },
+        {
+          "file": "tests/character-images.test.mjs",
+          "errors": 1,
+          "warnings": 0,
+          "rules": [
+            "@next/next/no-assign-module-variable"
+          ]
+        },
+        {
+          "file": "tests/character-questions.test.mjs",
+          "errors": 1,
+          "warnings": 0,
+          "rules": [
+            "@next/next/no-assign-module-variable"
+          ]
+        },
+        {
+          "file": "tests/history-game.test.mjs",
+          "errors": 1,
+          "warnings": 0,
+          "rules": [
+            "@next/next/no-assign-module-variable"
+          ]
+        },
+        {
+          "file": "tests/orders.test.mjs",
+          "errors": 1,
+          "warnings": 0,
+          "rules": [
+            "@next/next/no-assign-module-variable"
+          ]
+        },
+        {
+          "file": "tests/support/load-typescript.mjs",
+          "errors": 1,
+          "warnings": 0,
+          "rules": [
+            "@next/next/no-assign-module-variable"
+          ]
+        }
+      ]
+    },
+    "browser": {
+      "checks": [
+        {
+          "name": "1440x900: seven segments and verified voice dropdown; open/change never generates",
+          "status": "pass"
+        },
+        {
+          "name": "1440x900: explicit confirmation, loading/double-submit guard, ready preview",
+          "status": "pass"
+        },
+        {
+          "name": "1440x900: failure visible; ready segment retained; no automatic retry",
+          "status": "pass"
+        },
+        {
+          "name": "1440x900: load failure and manual refresh; disabled configuration and pilot gate",
+          "status": "pass"
+        },
+        {
+          "name": "1440x900: no horizontal overflow; unsaved edits block generation; new form requires save",
+          "status": "pass"
+        },
+        {
+          "name": "390x844: seven segments and verified voice dropdown; open/change never generates",
+          "status": "pass"
+        },
+        {
+          "name": "390x844: explicit confirmation, loading/double-submit guard, ready preview",
+          "status": "pass"
+        },
+        {
+          "name": "390x844: failure visible; ready segment retained; no automatic retry",
+          "status": "pass"
+        },
+        {
+          "name": "390x844: load failure and manual refresh; disabled configuration and pilot gate",
+          "status": "pass"
+        },
+        {
+          "name": "390x844: no horizontal overflow; unsaved edits block generation; new form requires save",
+          "status": "pass"
+        },
+        {
+          "name": "375x667: seven segments and verified voice dropdown; open/change never generates",
+          "status": "pass"
+        },
+        {
+          "name": "375x667: explicit confirmation, loading/double-submit guard, ready preview",
+          "status": "pass"
+        },
+        {
+          "name": "375x667: failure visible; ready segment retained; no automatic retry",
+          "status": "pass"
+        },
+        {
+          "name": "375x667: load failure and manual refresh; disabled configuration and pilot gate",
+          "status": "pass"
+        },
+        {
+          "name": "375x667: no horizontal overflow; unsaved edits block generation; new form requires save",
+          "status": "pass"
+        }
+      ],
+      "screenshots": [
+        "1440x900-audio.png",
+        "390x844-audio.png",
+        "375x667-audio.png"
+      ],
+      "providerCalls": 0,
+      "databaseConnections": 0,
+      "transport": "mock API responses in isolated source copy; actual form/audio component/CSS",
+      "passed": 15,
+      "failed": 0,
+      "viewports": [
+        "1440x900",
+        "390x844",
+        "375x667"
+      ],
+      "screenshotFolder": ".local/tts-phase-1",
+      "visualReview": [
+        "1440x900",
+        "390x844"
+      ],
+      "limitations": [
+        "API responses mocked; no real admin login/session database",
+        "Preview controls and URL verified, not decoded audible MP3 playback",
+        "No physical mobile device or iOS media testing"
+      ]
+    },
+    "build": {
+      "exitCode": 0,
+      "script": "npm run build (isolated source copy)",
+      "staticPages": 44,
+      "pwaAssetsInCopy": 84,
+      "artifact": ".local/tts-phase-1/build.log",
+      "warnings": [
+        "Workspace root inferred from multiple lockfiles in isolated copy"
+      ]
+    },
+    "mongoIntegration": {
+      "status": "MOCK_ONLY",
+      "checks": [
+        "speech_assets namespace",
+        "atomic _id mutex filter",
+        "duplicate-key conflict",
+        "owner/lease fencing",
+        "metadata lifecycle through service",
+        "pending URL persistence",
+        "idempotency",
+        "concurrent generation refusal",
+        "no question field mutation"
+      ],
+      "realDatabase": "NOT_RUN"
+    },
+    "r2Integration": {
+      "status": "MOCK_ONLY",
+      "checks": [
+        "existing R2 client/bucket reuse",
+        "PutObjectCommand audio/mpeg",
+        "no delete command",
+        "old reference retained on regeneration failure",
+        "public preview URL only when ready"
+      ]
+    },
+    "fptIntegration": {
+      "status": "MOCK_ONLY",
+      "liveCalls": 0,
+      "checks": [
+        "official api_key header and UTF-8 text",
+        "error/async parsing",
+        "verified HTTPS bucket/path",
+        "redirect refusal",
+        "bounded streaming response",
+        "MPEG frame validation",
+        "timeout/429/JSON failures without POST retry",
+        "six-GET polling limit",
+        "resume URL without re-synthesis"
+      ]
+    }
+  },
+  "safety": {
+    "fptLiveCalls": 0,
+    "geminiLiveCalls": 0,
+    "r2LiveReads": 0,
+    "r2LiveWrites": 0,
+    "r2Deletes": 0,
+    "mongoConnections": 0,
+    "mongoWrites": 0,
+    "envLocalEdited": false,
+    "newDependencies": 0,
+    "productionDeployment": false,
+    "playerQuizFlowChanged": false,
+    "knowledgeChanged": false,
+    "pwaRuntimeChanged": false,
+    "preexistingTts0ChangesPreserved": true
+  },
+  "limitations": [
+    "FPT live response/host/MIME/voice access/quota not yet verified",
+    "R2 credential presence does not prove bucket permissions or public playback",
+    "No real MongoDB metadata integration in this task",
+    "Provider acceptance followed by network failure can consume characters without returning a URL; inspect Console before manual retry",
+    "Audio source URLs retained server-side on failures; no background polling worker",
+    "Metadata failure after upload may leave an unreferenced object; no automatic deletion",
+    "Existing quiz/player/PWA do not consume newly generated pilot MP3s",
+    "Actual pilot ID and character count await owner selection"
+  ],
+  "nextStep": "Owner reviews code, configures key and exactly one question ID, then separately authorizes one real question-segment smoke test; keep remaining-segment flag false.",
+  "rollback": "Set FPT_TTS_ENABLED=false and restart to block new generations; revert only TTS-1 files/hunks, preserving TTS-0 and storage records. Do not reset workspace or delete R2/MongoDB data.",
+  "references": [
+    "https://docs.fpt.ai/docs/en/speech/api/text-to-speech/",
+    "https://docs.fpt.ai/docs/en/speech/tutorials/text-to-speech/"
+  ],
+  "audioUrlHotfix": {
+    "date": "2026-10-25",
+    "cause": "Original allowlist accepted only the legacy S3 v4 sample; FPT-owned v5 audio host was unsupported",
+    "actualFailedRequestUrl": "Not available: rejected before persistence by old code; user supplied curl rather than async response",
+    "changes": [
+      "Exact file01.fpt.ai host with dated v5 short/long paths",
+      "Persist async URL privately before download trust check",
+      "Untrusted URLs never fetched; retries reuse pending URL without another synthesis POST"
+    ],
+    "tests": {
+      "exitCode": 0,
+      "total": 34,
+      "passed": 34,
+      "failed": 0,
+      "fptGenerationCalls": 0,
+      "databaseWrites": 0,
+      "r2Writes": 0
+    },
+    "typescript": "PASS",
+    "scopedLint": "PASS",
+    "liveGenerationCalls": 0,
+    "publicProviderAssetHead": {
+      "host": "file01.fpt.ai",
+      "path": "/public/tts/loichao_banmaiace_02.mp3",
+      "status": 200,
+      "contentType": "audio/mpeg"
+    },
+    "liveGenerationAfterFix": "NOT_RUN",
+    "legacyFailedAttemptRecovery": "Old rejected URL was not saved; a new manually confirmed synthesis may consume characters"
+  }
+}

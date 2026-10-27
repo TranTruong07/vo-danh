@@ -5,12 +5,14 @@ import { useRouter } from "next/navigation";
 import type { CharacterQuestionRecord, QuestionCharacterChoice } from "@/server/domain/character-question";
 import { saveQuestionAction } from "@/actions/character-questions";
 import CharacterPicker from "./character-picker";
+import QuestionAudio from "./question-audio";
 
 
 export default function QuestionForm({ question, choices, characterId = "" }: { question?: CharacterQuestionRecord | null; choices: QuestionCharacterChoice[]; characterId?: string }) {
   const router = useRouter();
   const [correct, setCorrect] = useState(question?.correctIndex ?? -1);
   const [message, setMessage] = useState("");
+  const [dirty, setDirty] = useState(false);
   const [pending, startTransition] = useTransition();
   const [selectedCharacter, setSelectedCharacter] = useState(question?.characterId || characterId);
   function save(event: React.FormEvent<HTMLFormElement>) {
@@ -25,7 +27,7 @@ export default function QuestionForm({ question, choices, characterId = "" }: { 
       } catch { setMessage("Không thể kết nối. Nội dung đã nhập vẫn được giữ lại, hãy thử lưu lại."); }
     });
   }
-  return <form className="question-editor" onSubmit={save}>
+  return <form className="question-editor" onSubmit={save} onChangeCapture={event => { if (!(event.target as HTMLElement).closest("[data-question-audio]")) setDirty(true); }}>
     <fieldset disabled={pending}>
       <section className="card"><div className="question-step"><span>1</span><div><h2>Nhân vật & câu hỏi</h2><p>Chọn nhân vật và nhập câu hỏi ngắn gọn, rõ ràng.</p></div></div>
         <CharacterPicker choices={choices} value={selectedCharacter} onChange={setSelectedCharacter} required />
@@ -42,6 +44,7 @@ export default function QuestionForm({ question, choices, characterId = "" }: { 
         <div className="question-feedback-grid"><label className="question-feedback-correct"><span id="correct-feedback-label">Khi trả lời đúng</span><textarea name="correctFeedback" aria-labelledby="correct-feedback-label" defaultValue={question?.correctFeedback} required maxLength={1200} rows={4} placeholder="Chính xác! Hãy bổ sung lời giải để người chơi ghi nhớ…" /></label>
           <label className="question-feedback-incorrect"><span id="incorrect-feedback-label">Khi trả lời sai</span><textarea name="incorrectFeedback" aria-labelledby="incorrect-feedback-label" defaultValue={question?.incorrectFeedback} required maxLength={1200} rows={4} placeholder="Chưa đúng rồi. Hãy giải thích đáp án để người chơi hiểu hơn…" /></label></div>
       </section>
+      <QuestionAudio questionId={question?.id} dirty={dirty || pending} />
       <div className="question-editor-actions"><button className="btn" type="button" onClick={() => router.push(`/admin/questions${selectedCharacter ? `?characterId=${selectedCharacter}` : ""}`)}>Hủy</button><button className="btn primary" type="submit">{pending ? "Đang lưu…" : "Lưu câu hỏi"}</button></div>
     </fieldset>
     {message && <p className="msg error" role="alert">{message}</p>}

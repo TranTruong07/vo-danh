@@ -62,9 +62,6 @@ function questionKey(question: string) { return createHash("sha256").update(norm
 export async function existingQuestionTexts(characterId: string, excludeId?: string | null) {
   return (await collection()).find({ characterId, ...(excludeId ? { _id: { $ne: new ObjectId(excludeId) } } : {}) }, { projection: { question: 1 } }).toArray();
 }
-export async function questionsForSpeech(characterId: string) {
-  return (await (await collection()).find({ characterId }).sort({ _id: 1 }).toArray()).map(questionRecord);
-}
 
 /** Atomic insert-only upserts also protect against concurrent/repeated imports. */
 export async function importCharacterQuestions(inputs: CharacterQuestionInput[]): Promise<Set<number>> {

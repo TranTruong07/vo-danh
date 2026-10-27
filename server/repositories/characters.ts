@@ -3,7 +3,6 @@ import { ObjectId } from "mongodb";
 import { getDatabase } from "@/lib/db/client";
 import type { CharacterModel } from "@/server/models/character";
 import { DEFAULT_CHARACTER_BACKGROUND, isCharacterId, type CharacterInput, type CharacterRecord, type PublicCharacter } from "@/server/domain/character";
-import { DEFAULT_VOICE } from "@/server/domain/speech";
 
 const state = globalThis as typeof globalThis & { characterIndexes?: Promise<unknown> };
 async function collection() {
@@ -16,7 +15,7 @@ export function characterRecord(row: CharacterModel): CharacterRecord {
   return { ...publicCharacter(row), updatedAt: row.updatedAt.toISOString() };
 }
 export function publicCharacter(row: CharacterModel): PublicCharacter {
-  return { id: row._id.toHexString(), name: row.name, image: row.image, openingLine: row.openingLine || "", backgroundImage: row.backgroundImage || DEFAULT_CHARACTER_BACKGROUND, voiceName: row.voiceName || DEFAULT_VOICE };
+  return { id: row._id.toHexString(), name: row.name, image: row.image, openingLine: row.openingLine || "", backgroundImage: row.backgroundImage || DEFAULT_CHARACTER_BACKGROUND };
 }
 export async function listCharacters(page: number, search: string) {
   const rows = await collection();

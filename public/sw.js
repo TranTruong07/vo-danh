@@ -4,6 +4,7 @@ const CONTROL = 'history-pwa-control-v1';
 const POINTER = '/__offline/active';
 const PACK = '/__offline/pack';
 let syncing;
+const audioPath = path => ['/audio/winner-sound.mp3', '/audio/wrong-answer.mp3'].includes(path) || /^\/audio\/[a-f0-9]{64}$/.test(path) || /^\/audio\/quiz\/[a-f0-9]{24}\/[a-f0-9]{24}\/(?:question|option[A-D]|correctFeedback|incorrectFeedback)\/[a-f0-9]{64}$/.test(path);
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', event => event.waitUntil(self.clients.claim()));
 async function activeCache() {
@@ -33,7 +34,7 @@ async function sync() {
     staging = name;
     const target = await caches.open(name);
     const images = pack.characters.flatMap(character => [character.image, character.backgroundImage]).filter(Boolean);
-    const audio = pack.questions.flatMap(question => question.audio ? [...question.audio.prompt, ...question.audio.correct, ...question.audio.incorrect] : []).filter(url => /^\/audio\/[a-f0-9]{64}$/.test(url));
+    const audio = pack.questions.flatMap(question => question.audio ? [...question.audio.prompt, ...question.audio.correct, ...question.audio.incorrect] : []).filter(audioPath);
     const assets = [...new Set([...manifest.assets, ...images, ...audio])];
     let completed = 0;
     // Bounded concurrency avoids overwhelming the connection on mobile.
@@ -98,7 +99,7 @@ self.addEventListener('fetch', event => {
     if (saved) {
       // Safari and other media players request byte ranges, including while offline.
       const range = request.headers.get('range');
-      if (range && /^\/audio\/[a-f0-9]{64}$/.test(url.pathname)) {
+      if (range && url.origin === self.location.origin && audioPath(url.pathname)) {
         const bytes = await saved.arrayBuffer(), length = bytes.byteLength;
         const match = range.match(/^bytes=(\d*)-(\d*)$/);
         const start = match?.[1] ? Number(match[1]) : match?.[2] ? Math.max(0, length - Number(match[2])) : NaN;

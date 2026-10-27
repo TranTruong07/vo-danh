@@ -50,3 +50,13 @@ export function gradeLocalQuestion(question: CharacterQuestionRecord, selectedIn
 export function matchSavedQuestion(pack: OfflinePack, characterId: string, question: PublicQuestion) {
   return pack.questions.find(item => item.characterId === characterId && item.question === question.question && item.answers.every((answer, index) => answer === question.options[index]));
 }
+
+/** Refresh audio without replacing the already-drawn quiz or its grading snapshot. */
+export function refreshLocalAudio(snapshot: CharacterQuestionRecord, fresh: CharacterQuestionRecord): CharacterQuestionRecord {
+  if (!fresh.audio || snapshot.id !== fresh.id || snapshot.characterId !== fresh.characterId || snapshot.question !== fresh.question || snapshot.answers.some((answer, index) => answer !== fresh.answers[index])) return snapshot;
+  return { ...snapshot, audio: {
+    prompt: fresh.audio?.prompt || [],
+    correct: snapshot.correctFeedback === fresh.correctFeedback ? fresh.audio?.correct || [] : [],
+    incorrect: snapshot.incorrectFeedback === fresh.incorrectFeedback ? fresh.audio?.incorrect || [] : [],
+  } };
+}

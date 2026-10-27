@@ -68,7 +68,6 @@ function fixture() {
     },
   };
   const load = loader({
-    './speech': { cachedNarration: async () => [] },
     'next/headers': { cookies: async () => ({ get: key => jar.has(key) ? { value: jar.get(key) } : undefined, set: (key, value) => jar.set(key, value) }) },
     '@/server/repositories/characters': { findCharacter: async () => available ? character : null },
     '@/server/repositories/question-cycles': { drawCharacterQuestion: async () => { calls++; return emptyBank ? null : { _id: { toHexString: () => 'a'.repeat(24) }, question: generated.question, answers: generated.options, correctIndex: generated.correctIndex, correctFeedback: 'Phản hồi đúng đã lưu', incorrectFeedback: 'Phản hồi sai đã lưu' }; } },

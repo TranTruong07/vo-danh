@@ -6,7 +6,7 @@ import { readFile } from 'node:fs/promises';
 
 test('offline pack contains only public character/question records, filters orphans and versions content changes', async () => {
   let text = 'Câu hỏi thứ nhất';
-  const { offlineGamePack } = loader({ './speech': { attachOfflineSpeech: async (_, questions) => questions }, '@/server/repositories/offline-game': { readOfflineGame: async () => ({ characters: [{ id: 'one', name: 'Name' }], questions: [{ id: 'q', characterId: 'one', question: text }, { id: 'orphan', characterId: 'deleted' }] }) } })('@/server/services/offline-game');
+  const { offlineGamePack } = loader({ '@/server/repositories/offline-game': { readOfflineGame: async () => ({ characters: [{ id: 'one', name: 'Name' }], questions: [{ id: 'q', characterId: 'one', question: text }, { id: 'orphan', characterId: 'deleted' }] }) } })('@/server/services/offline-game');
   const first = await offlineGamePack();
   assert.equal(first.questions.length, 1); assert.equal(first.schema, 1);
   assert.equal((await offlineGamePack()).version, first.version);
@@ -36,12 +36,13 @@ test('service worker commits complete packs only, keeps the previous pack on dow
     keys: async () => [...stores.keys()], delete: async name => stores.delete(name),
   };
   let version = 'one', fail = false;
+  const quizAudio = `/audio/quiz/${'b'.repeat(24)}/${'c'.repeat(24)}/question/${'d'.repeat(64)}`;
   const context = vm.createContext({
     URL, Response, AbortSignal, caches,
     self: { location: { origin: 'https://example.test' }, addEventListener: (name, callback) => handlers.set(name, callback), clients: { matchAll: async () => [{ postMessage: message => messages.push(message) }], claim: async () => {} }, skipWaiting: () => {} },
     fetch: async url => {
-      if (url === '/pwa-assets.json') return Response.json({ build: 'build', assets: ['/offline', '/offline-home', '/image.webp'] });
-      if (url === '/api/offline/pack') return Response.json({ schema: 1, version, characters: [], questions: [{ audio: { prompt: ['/audio/' + 'a'.repeat(64)], correct: [], incorrect: [] } }] });
+      if (url === '/pwa-assets.json') return Response.json({ build: 'build', assets: ['/offline', '/offline-home', '/image.webp', '/audio/winner-sound.mp3', '/audio/wrong-answer.mp3'] });
+      if (url === '/api/offline/pack') return Response.json({ schema: 1, version, characters: [], questions: [{ audio: { prompt: ['/audio/' + 'a'.repeat(64), quizAudio], correct: [], incorrect: [] } }] });
       if (fail && url === '/image.webp') return new Response('', { status: 503 });
       return new Response('asset');
     },
@@ -63,6 +64,18 @@ test('service worker commits complete packs only, keeps the previous pack on dow
   const audio = await ranged;
   assert.equal(audio.status, 206); assert.equal(await audio.text(), 'sse');
   assert.equal(audio.headers.get('Content-Range'), 'bytes 1-3/5');
+  listener({ request: { url: key(quizAudio), method: 'GET', mode: 'cors', headers: new Headers({ range: 'bytes=1-3' }) }, respondWith: promise => { ranged = promise; } });
+  const quizRange = await ranged;
+  assert.equal(quizRange.status, 206); assert.equal(await quizRange.text(), 'sse');
+  // Both static effects must be available from the completed cache, including
+  // Safari byte ranges, when every network request subsequently fails.
+  context.fetch = async () => { throw new Error('offline'); };
+  for (const effect of ['/audio/winner-sound.mp3', '/audio/wrong-answer.mp3']) {
+    listener({ request: { url: key(effect), method: 'GET', mode: 'cors', headers: new Headers() }, respondWith: promise => { ranged = promise; } });
+    assert.equal(await (await ranged).text(), 'asset');
+    listener({ request: { url: key(effect), method: 'GET', mode: 'cors', headers: new Headers({range:'bytes=1-3'}) }, respondWith: promise => { ranged = promise; } });
+    const response = await ranged; assert.equal(response.status,206);assert.equal(await response.text(),'sse');
+  }
   for (const [url, method, mode, headers] of [
     ['/admin', 'GET', 'navigate', new Headers()], ['/orders', 'GET', 'navigate', new Headers()],
     ['/?auth=reset&token=secret', 'GET', 'navigate', new Headers()],

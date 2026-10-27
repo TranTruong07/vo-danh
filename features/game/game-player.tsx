@@ -8,7 +8,7 @@ import { startQuizAction, answerQuizAction } from "@/actions/quiz";
 import type { PublicCharacter } from "@/server/domain/character";
 import type { PublicQuestion, AnswerResult } from "@/server/domain/quiz";
 import { usePwa } from "@/features/pwa/pwa-provider";
-import { drawLocalQuestion, gradeLocalQuestion, localPublicQuestion, matchSavedQuestion, readPack, rememberLocalQuestion } from "@/features/pwa/local-game";
+import { drawLocalQuestion, gradeLocalQuestion, localPublicQuestion, matchSavedQuestion, readPack, rememberLocalQuestion, refreshLocalAudio } from "@/features/pwa/local-game";
 import type { CharacterQuestionRecord } from "@/server/domain/character-question";
 import type { OpenChatSessionAction } from "@/server/domain/chat";
 
@@ -50,9 +50,21 @@ function QuestionRound({ character, active, openChatSessionAction }: { character
   useEffect(() => {
     // A server round may arrive before the initial download finishes. Save its
     // grading snapshot and mark it seen before drawing from the offline bank.
-    if (!pack || !question || localQuestion.current) return;
+    if (!pack || !question) return;
     const snapshot = matchSavedQuestion(pack, character.id, question);
-    if (snapshot) { localQuestion.current = snapshot; void rememberLocalQuestion(snapshot); }
+    if (!snapshot) return;
+    if (!localQuestion.current) { localQuestion.current = snapshot; void rememberLocalQuestion(snapshot); }
+    else localQuestion.current = refreshLocalAudio(localQuestion.current, snapshot);
+    if (!question.id.startsWith("offline:")) return; // Do not replace a fresh server playlist with an older local pack.
+    // A newer pack may contain MP3s made after this round was drawn. Update only
+    // its playlists; never redraw a question or change a selected/graded answer.
+    const audio = localQuestion.current.audio;
+    setQuestion(previous => previous && previous.id === question.id && JSON.stringify(previous.narration || []) !== JSON.stringify(audio?.prompt || []) ? { ...previous, narration: audio?.prompt || [] } : previous);
+    setSubmission(previous => {
+      if (!previous || previous.questionId !== question.id || previous.serverRecorded) return previous;
+      const narration = (previous.result.correct ? audio?.correct : audio?.incorrect) || [];
+      return JSON.stringify(previous.result.narration || []) === JSON.stringify(narration) ? previous : { ...previous, result: { ...previous.result, narration } };
+    });
   }, [pack, question, character.id]);
   async function generate() {
     if (inFlight.current || question) return;
@@ -116,7 +128,7 @@ function QuestionRound({ character, active, openChatSessionAction }: { character
       {question && <><fieldset className="answer-options" aria-labelledby="scene-question-title" disabled={submitting || !!answer}><legend className="sr-only">Chọn một đáp án</legend>{question.options.map((option, index) => <label key={index} className={`answer-option ${selected === index ? "chosen" : ""} ${answer?.correctIndex === index ? "correct" : ""} ${answer && selected === index && !answer.correct ? "incorrect" : ""}`}><input type="radio" name="answer" value={index} checked={selected === index} onChange={() => setSelected(index)} /><span className="answer-letter">{"ABCD"[index]}</span><span>{option}</span>{answer?.correctIndex === index && <strong aria-label="Đáp án đúng">✓</strong>}</label>)}</fieldset>
         {!answer && <button className="game-button primary confirm-answer" disabled={selected === null || submitting} onClick={submit}>{submitting ? "Đang kiểm tra…" : "Chốt đáp án →"}</button>}
       </>}
-      {question && <NarrationPlayer urls={answer ? answer.narration : question.narration} feedback={!!answer} active={active} />}
+      {question && <NarrationPlayer urls={answer ? answer.narration : question.narration} feedback={!!answer} active={active} leadIn={answer ? answer.correct ? "/audio/winner-sound.mp3" : "/audio/wrong-answer.mp3" : undefined} />}
       {error && <div className="game-message error" role="alert"><p>{error}</p>{!loading && !question && <button className="game-button" onClick={generate}>Thử tải lại câu hỏi</button>}</div>}
       {answer && <div className={`answer-feedback ${answer.correct ? "success" : "wrong"}`} role="status"><h3>{answer.correct ? "Chính xác! Bạn đã ghi thêm một dấu chân." : `Chưa đúng rồi! Đáp án đúng là ${"ABCD"[answer.correctIndex]}.`}</h3><p>{answer.explanation}</p>{answer.fact && <details><summary>Xem dữ kiện lịch sử</summary><blockquote>{answer.fact}</blockquote>{answer.sources && <p className="fact-source">Nguồn: {answer.sources}</p>}</details>}<p className="next-hint">Mỗi lượt quét chỉ có một câu hỏi. Để nhận câu hỏi tiếp theo, bấm “Quét nhân vật tiếp” và quét lại mã QR.</p></div>}
     </section>

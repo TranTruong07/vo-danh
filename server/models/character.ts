@@ -7,6 +7,8 @@ export interface CharacterModel extends Omit<CharacterInput, "openingLine" | "ba
   _id: ObjectId; createdAt: Date; updatedAt: Date;
   openingLine?: string;
   backgroundImage?: string;
+  /** Legacy metadata retained in storage; no longer used to select a provider. */
+  voiceName?: string;
 }
 export interface QuizAttemptModel {
   _id: string;

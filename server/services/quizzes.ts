@@ -6,27 +6,26 @@ import { GameError, isCharacterId } from "@/server/domain/character";
 import type { AnswerResult, PublicQuestion } from "@/server/domain/quiz";
 import type { QuizAttemptModel } from "@/server/models/character";
 import { drawCharacterQuestion } from "@/server/repositories/question-cycles";
-import { cachedNarration } from "./speech";
-import { DEFAULT_VOICE, questionSpeech } from "@/server/domain/speech";
+import { quizAttemptAudio } from "./quiz-audio-playback";
 
 const validRequest = (id: unknown): id is string => typeof id === "string" && /^[a-f0-9-]{36}$/.test(id);
 export function publicQuestion(attempt: QuizAttemptModel): PublicQuestion {
   if (attempt.state !== "ready" || !attempt.question) throw new GameError(attempt.state === "generating" ? "Câu hỏi đang được tạo. Vui lòng thử lại sau ít giây." : "Chưa tạo được câu hỏi. Vui lòng thử lại.");
   return { id: attempt._id, question: attempt.question.question, options: attempt.question.options, expiresAt: attempt.expiresAt.toISOString() };
 }
+async function questionWithAudio(attempt: QuizAttemptModel): Promise<PublicQuestion> {
+  const question = publicQuestion(attempt);
+  return { ...question, narration: (await quizAttemptAudio(attempt)).prompt };
+}
 export async function startQuiz(characterId: string, requestId: string): Promise<PublicQuestion> {
   if (!isCharacterId(characterId) || !validRequest(requestId)) throw new GameError("Mã nhân vật hoặc lượt chơi không hợp lệ.");
   const character = await findCharacter(characterId);
   if (!character) throw new GameError("Nhân vật không tồn tại. Hãy quét mã khác.");
-  const withAudio = async (attempt: QuizAttemptModel) => {
-    const question = publicQuestion(attempt);
-    return { ...question, narration: await cachedNarration(character.voiceName || DEFAULT_VOICE, [character.openingLine || "", questionSpeech(question.question, question.options)]).catch(() => []) };
-  };
   const ownerHash = await playerSession(true);
   const existing = await repository.getQuiz(requestId, ownerHash);
   if (existing) {
     if (existing.characterId !== characterId) throw new GameError("Lượt chơi không khớp nhân vật.");
-    return withAudio(existing);
+    return questionWithAudio(existing);
   }
   await repository.limitQuizGeneration(ownerHash);
   const now = new Date();
@@ -37,7 +36,7 @@ export async function startQuiz(characterId: string, requestId: string): Promise
     const question = { question: savedQuestion.question, options: savedQuestion.answers, correctIndex: savedQuestion.correctIndex, explanation: savedQuestion.correctFeedback, correctFeedback: savedQuestion.correctFeedback, incorrectFeedback: savedQuestion.incorrectFeedback };
     const saved = await repository.finishQuiz(requestId, question, "", "", savedQuestion._id.toHexString());
     if (!saved) throw new GameError("Không thể lưu câu hỏi. Hãy thử lại.");
-    return withAudio(saved);
+    return questionWithAudio(saved);
   } catch (error) { await repository.failQuiz(requestId); throw error; }
 }
 export async function answerQuiz(id: string, selectedIndex: number): Promise<AnswerResult> {
@@ -52,5 +51,6 @@ export async function answerQuiz(id: string, selectedIndex: number): Promise<Ans
   const correct = attempt.selectedIndex === attempt.question.correctIndex;
   const feedback = correct ? attempt.question.correctFeedback : attempt.question.incorrectFeedback;
   const explanation = feedback || attempt.question.explanation;
-  return { selectedIndex: attempt.selectedIndex, correctIndex: attempt.question.correctIndex, correct, explanation, fact: attempt.fact || "", sources: attempt.sources || "", narration: await cachedNarration(character.voiceName || DEFAULT_VOICE, [explanation]).catch(() => []) };
+  const audio = await quizAttemptAudio(attempt);
+  return { selectedIndex: attempt.selectedIndex, correctIndex: attempt.question.correctIndex, correct, explanation, fact: attempt.fact || "", sources: attempt.sources || "", narration: correct ? audio.correct : audio.incorrect };
 }

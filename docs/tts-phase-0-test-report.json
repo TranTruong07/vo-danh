@@ -1,0 +1,280 @@
+{
+  "phase": "TTS-0",
+  "status": "COMPLETED_PENDING_OWNER_REVIEW",
+  "completedOn": "2026-10-25",
+  "timezone": "Asia/Bangkok",
+  "scope": "Remove legacy Google Cloud TTS only; preserve reusable MP3 playback and storage; no FPT.AI integration",
+  "files": {
+    "deleted": [
+      ".env.tts.example",
+      "actions/speech.ts",
+      "docs/google-tts.md",
+      "features/characters/prepare-speech.tsx",
+      "features/characters/voice-picker.tsx",
+      "server/infrastructure/google-tts.ts",
+      "server/services/speech.ts",
+      "tests/speech.browser.mjs",
+      "tests/speech.test.mjs"
+    ],
+    "modified": [
+      "app/admin/characters/[id]/page.tsx",
+      "app/admin/characters/characters.css",
+      "docs/pwa.md",
+      "features/characters/character-form.tsx",
+      "package-lock.json",
+      "package.json",
+      "scripts/check-game-chat-access.mjs",
+      "server/domain/character.ts",
+      "server/domain/speech.ts",
+      "server/models/character.ts",
+      "server/repositories/character-questions.ts",
+      "server/repositories/characters.ts",
+      "server/repositories/speech.ts",
+      "server/services/characters.ts",
+      "server/services/offline-game.ts",
+      "server/services/quizzes.ts",
+      "tests/history-game.test.mjs",
+      "tests/pwa.test.mjs"
+    ],
+    "created": [
+      "tests/tts-cleanup.test.mjs",
+      "docs/tts-phase-0-cleanup.md",
+      "docs/tts-phase-0-test-report.json"
+    ]
+  },
+  "dependencies": {
+    "removedDirect": "google-auth-library@11.3.0",
+    "removedOrphans": [
+      "gcp-metadata@9.2.0",
+      "google-logging-utils@2.1.0"
+    ],
+    "preserved": "@google/genai@2.30.0 -> google-auth-library@10.9.1",
+    "packageManager": "npm",
+    "newDependencies": 0
+  },
+  "obsoleteEnvironment": [
+    "GOOGLE_TTS_PROJECT_ID",
+    "GOOGLE_TTS_CLIENT_EMAIL",
+    "GOOGLE_TTS_PRIVATE_KEY",
+    "GOOGLE_TTS_USE_ADC"
+  ],
+  "conditionalEnvironmentCleanup": {
+    "name": "GOOGLE_APPLICATION_CREDENTIALS",
+    "condition": "Only remove manually if no other service uses ADC in that deployment"
+  },
+  "tests": {
+    "unit": {
+      "exitCode": 0,
+      "total": 216,
+      "passed": 216,
+      "providerCalls": 0,
+      "databaseConnections": 0
+    },
+    "browser": {
+      "passed": 21,
+      "failed": 0,
+      "transport": "mocked in isolated copy",
+      "checks": [
+        {
+          "name": "1440x900: absent MP3 disables listening without calling a provider",
+          "status": "pass"
+        },
+        {
+          "name": "1440x900: initial/selected/submitting locked; successful wrong answer unlocks without auto-open",
+          "status": "pass"
+        },
+        {
+          "name": "1440x900: open/send/close/reopen preserves quiz and conversation",
+          "status": "pass"
+        },
+        {
+          "name": "1440x900: failed submission remains locked; successful correct retry unlocks",
+          "status": "pass"
+        },
+        {
+          "name": "1440x900: new round aborts chat and ignores late chat response",
+          "status": "pass"
+        },
+        {
+          "name": "1440x900: late previous answer cannot unlock next question",
+          "status": "pass"
+        },
+        {
+          "name": "1440x900: all four characters unlock only after confirmation; local grading remains usable",
+          "status": "pass"
+        },
+        {
+          "name": "390x844: absent MP3 disables listening without calling a provider",
+          "status": "pass"
+        },
+        {
+          "name": "390x844: initial/selected/submitting locked; successful wrong answer unlocks without auto-open",
+          "status": "pass"
+        },
+        {
+          "name": "390x844: open/send/close/reopen preserves quiz and conversation",
+          "status": "pass"
+        },
+        {
+          "name": "390x844: failed submission remains locked; successful correct retry unlocks",
+          "status": "pass"
+        },
+        {
+          "name": "390x844: new round aborts chat and ignores late chat response",
+          "status": "pass"
+        },
+        {
+          "name": "390x844: late previous answer cannot unlock next question",
+          "status": "pass"
+        },
+        {
+          "name": "390x844: all four characters unlock only after confirmation; local grading remains usable",
+          "status": "pass"
+        },
+        {
+          "name": "375x667: absent MP3 disables listening without calling a provider",
+          "status": "pass"
+        },
+        {
+          "name": "375x667: initial/selected/submitting locked; successful wrong answer unlocks without auto-open",
+          "status": "pass"
+        },
+        {
+          "name": "375x667: open/send/close/reopen preserves quiz and conversation",
+          "status": "pass"
+        },
+        {
+          "name": "375x667: failed submission remains locked; successful correct retry unlocks",
+          "status": "pass"
+        },
+        {
+          "name": "375x667: new round aborts chat and ignores late chat response",
+          "status": "pass"
+        },
+        {
+          "name": "375x667: late previous answer cannot unlock next question",
+          "status": "pass"
+        },
+        {
+          "name": "375x667: all four characters unlock only after confirmation; local grading remains usable",
+          "status": "pass"
+        }
+      ],
+      "screenshots": [
+        ".local/tts-phase-0/1440x900-unlocked.png",
+        ".local/tts-phase-0/390x844-unlocked.png",
+        ".local/tts-phase-0/375x667-unlocked.png"
+      ]
+    },
+    "typescript": {
+      "command": "npx tsc --noEmit",
+      "exitCode": 0
+    },
+    "lint": {
+      "scopedRuntimeAndNewTests": "PASS",
+      "wholeSourceCommand": "npx eslint . --ignore-pattern .local/**",
+      "exitCode": 1,
+      "existingErrors": 5,
+      "existingWarnings": 1,
+      "baseline": [
+        {
+          "file": "app/author/page.tsx",
+          "errors": 0,
+          "warnings": 1,
+          "rules": [
+            "@next/next/no-img-element"
+          ]
+        },
+        {
+          "file": "tests/character-images.test.mjs",
+          "errors": 1,
+          "warnings": 0,
+          "rules": [
+            "@next/next/no-assign-module-variable"
+          ]
+        },
+        {
+          "file": "tests/character-questions.test.mjs",
+          "errors": 1,
+          "warnings": 0,
+          "rules": [
+            "@next/next/no-assign-module-variable"
+          ]
+        },
+        {
+          "file": "tests/history-game.test.mjs",
+          "errors": 1,
+          "warnings": 0,
+          "rules": [
+            "@next/next/no-assign-module-variable"
+          ]
+        },
+        {
+          "file": "tests/orders.test.mjs",
+          "errors": 1,
+          "warnings": 0,
+          "rules": [
+            "@next/next/no-assign-module-variable"
+          ]
+        },
+        {
+          "file": "tests/support/load-typescript.mjs",
+          "errors": 1,
+          "warnings": 0,
+          "rules": [
+            "@next/next/no-assign-module-variable"
+          ]
+        }
+      ]
+    },
+    "productionBuild": {
+      "command": "npm run build",
+      "exitCode": 0,
+      "isolated": true,
+      "envLocalCopied": false,
+      "staticPages": 44,
+      "pwaAssets": 84,
+      "warning": "Multiple lockfiles in isolated workspace"
+    }
+  },
+  "audit": {
+    "runtimeFilesScanned": 217,
+    "googleTtsFindings": [],
+    "removedActions": [
+      "voiceOptionsAction",
+      "previewVoiceAction",
+      "speechPlanAction",
+      "prepareSpeechAction"
+    ],
+    "preservedRoute": "GET /audio/[id]",
+    "browserSpeechSynthesisFound": false,
+    "remainingReferences": [
+      "Cleanup report and prevention tests",
+      "Historical sentence in docs/knowledge-pipeline.md",
+      "Ignored .local snapshots/build artifacts and Git history",
+      "google-auth-library transitive dependency required by Gemini"
+    ]
+  },
+  "safety": {
+    "ttsCalls": 0,
+    "geminiCalls": 0,
+    "productionDatabaseConnections": 0,
+    "databaseWrites": 0,
+    "r2Uploads": 0,
+    "r2Deletes": 0,
+    "mp3FilesCreated": 0,
+    "migrationsRun": 0,
+    "envLocalModified": false,
+    "billingChanged": false,
+    "deployed": false
+  },
+  "limitations": [
+    "New online rounds/packs do not resolve existing audio using the removed Google voice/content hash; existing URLs and older saved playlists remain playable. A later PWA sync may replace an old playlist with a new pack without audio.",
+    "speech_assets records, R2 objects and legacy characters.voiceName remain untouched; no production data inventory was performed.",
+    "Reusable storeSpeech helper remains but no current synthesis action calls it; future providers need a separately reviewed workflow.",
+    "Browser tests use real components with mocked transport and fixtures, not production data or actual R2 MP3 playback. No physical iPhone/audio device testing.",
+    "Whole-source ESLint has five existing loader errors and one existing image warning.",
+    "Old running processes/bundles were not restarted; owner must rebuild/restart after reviewing changes."
+  ],
+  "rollback": "Revert only TTS-0 changes and restore package.json/package-lock.json, npm ci, rebuild/restart prior version. No MongoDB/R2 rollback required."
+}
