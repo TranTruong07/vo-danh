@@ -33,7 +33,7 @@ function audioView(id: string, question: CharacterQuestionModel, manifest: QuizA
     const view: QuizAudioSegmentView = { segmentType, characters: [...text].length, status: "missing" };
     if (!text.trim()) view.status = "unavailable";
     else if (asset) {
-      const matches = asset.provider === PROVIDER && asset.textHash === ttsForFreeAudioHash(text, voice, config.pitch, question.characterId);
+      const matches = asset.provider === PROVIDER && asset.textHash === ttsForFreeAudioHash(text, voice, config.pitch, question.characterId, asset.cacheVersion);
       view.status = !matches ? "stale" : asset.status === "generating" && !busy ? "failed" : asset.status;
       if (view.status === "ready" && asset.r2Key && R2_PUBLIC_BASE_URL) {
         view.url = `${R2_PUBLIC_BASE_URL}/${asset.r2Key.split("/").map(encodeURIComponent).join("/")}`;
@@ -71,16 +71,18 @@ export async function generateQuizAudio(id: string, input: unknown): Promise<Qui
   if (!manifest) throw new QuizAudioError("Câu hỏi đang được tạo âm thanh ở một lượt khác. Chờ rồi cập nhật trạng thái.", 409);
   const started = Date.now();
   try {
+    if (Object.values(manifest.segments).some(asset => asset?.deletionPending)) throw new QuizAudioError("Lần xóa trước chưa hoàn tất. Hãy xóa audio lại trước khi tạo MP3 mới.", 409);
     for (const segment of segments) {
       if (Date.now() - started > 150000) break; // Leave room for poll + download + R2 within 300s.
       const text = texts[segment];
       if (!text.trim()) continue;
-      const hash = ttsForFreeAudioHash(text, voiceId, config.pitch, question.characterId), old = manifest.segments[segment];
+      const old = manifest.segments[segment], cacheVersion = old ? old.cacheVersion : randomUUID();
+      const hash = ttsForFreeAudioHash(text, voiceId, config.pitch, question.characterId, cacheVersion);
       if (old?.provider === PROVIDER && old.status === "ready" && old.r2Key && old.textHash === hash) continue;
       const current = await questionForAudio(id);
-      if (ttsForFreeAudioHash(quizAudioTexts(current)[segment], voiceId, config.pitch, current.characterId) !== hash) break;
+      if (ttsForFreeAudioHash(quizAudioTexts(current)[segment], voiceId, config.pitch, current.characterId, cacheVersion) !== hash) break;
       const asset: QuizAudioAsset = {
-        segmentType: segment, provider: PROVIDER, textHash: hash, voiceId, pitch: config.pitch,
+        segmentType: segment, provider: PROVIDER, textHash: hash, voiceId, pitch: config.pitch, cacheVersion,
         status: "generating", ...(old?.provider === PROVIDER && old.textHash === hash ? { jobId: old.jobId, providerUrl: old.providerUrl, failedJobId: old.failedJobId } : {}),
       };
       await media.saveQuizAudioSegment(id, owner, segment, asset, PROVIDER);
@@ -98,7 +100,7 @@ export async function generateQuizAudio(id: string, input: unknown): Promise<Qui
         const key = ttsForFreeAudioKey(question.characterId, id, segment, hash);
         await media.uploadQuizAudio(key, bytes);
         const ready: QuizAudioAsset = {
-          segmentType: segment, provider: PROVIDER, textHash: hash, voiceId, pitch: config.pitch, jobId: asset.jobId,
+          segmentType: segment, provider: PROVIDER, textHash: hash, voiceId, pitch: config.pitch, cacheVersion, jobId: asset.jobId,
           status: "ready", r2Key: key, url: `${R2_PUBLIC_BASE_URL}/${key}`, fileSize: bytes.length, contentType: "audio/mpeg", generatedAt: new Date(),
         };
         await media.saveQuizAudioSegment(id, owner, segment, ready, PROVIDER);
@@ -116,4 +118,34 @@ export async function generateQuizAudio(id: string, input: unknown): Promise<Qui
     }
   } finally { await media.releaseQuizAudio(id, owner, PROVIDER); }
   return loadQuizAudio(id, voiceId);
+}
+
+export async function deleteQuizAudio(id: string, input: unknown): Promise<QuizAudioView> {
+  await requireAdmin();
+  if (!input || typeof input !== "object" || Array.isArray(input) || Object.keys(input).length !== 1 || (input as { confirmed?: unknown }).confirmed !== true) throw new QuizAudioError("Vui lòng xác nhận xóa toàn bộ audio của câu hỏi.");
+  const question = await questionForAudio(id);
+  const existing = await media.readQuizAudio(id, PROVIDER);
+  if (!existing) return loadQuizAudio(id);
+  const owner = randomUUID(), manifest = await media.claimQuizAudio(id, owner, existing.voiceId, PROVIDER);
+  if (!manifest) throw new QuizAudioError("Âm thanh đang được xử lý ở lượt khác. Chờ rồi cập nhật trạng thái.", 409);
+  try {
+    // Validate every stored key before deleting anything; never accept keys from the client.
+    for (const segment of AUDIO_SEGMENTS) {
+      const asset = manifest.segments[segment];
+      if (asset?.r2Key && (asset.provider !== PROVIDER || asset.r2Key !== ttsForFreeAudioKey(question.characterId, id, segment, asset.textHash))) throw new QuizAudioError("Đường dẫn audio không thuộc câu hỏi này. Chưa xóa file.", 409);
+    }
+    if (Object.values(manifest.segments).some(asset => asset?.r2Key) && !isR2Configured()) throw new QuizAudioError("Chưa cấu hình R2 để xóa file âm thanh.", 409);
+    for (const segment of AUDIO_SEGMENTS) {
+      const asset = manifest.segments[segment];
+      if (!asset) continue;
+      // Retain the key until R2 confirms deletion, and prevent playback/re-generation on partial failure.
+      await media.saveQuizAudioSegment(id, owner, segment, { ...asset, status: "failed", deletionPending: true, lastError: "Đang xóa hoặc xóa chưa hoàn tất. Hãy xóa audio lại để tiếp tục." }, PROVIDER);
+      if (asset.r2Key) await media.deleteQuizAudioFile(asset.r2Key);
+      await media.clearQuizAudioSegment(id, owner, segment);
+    }
+  } catch (error) {
+    if (error instanceof QuizAudioError) throw error;
+    throw new QuizAudioError("Chưa xóa hết audio. Cập nhật trạng thái rồi xóa lại để tiếp tục; các file đã xóa sẽ không bị xử lý lại.", 503);
+  } finally { await media.releaseQuizAudio(id, owner, PROVIDER); }
+  return loadQuizAudio(id);
 }

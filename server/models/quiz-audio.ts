@@ -4,6 +4,8 @@ export interface QuizAudioAsset {
   segmentType: AudioSegment; status: "generating" | "ready" | "failed";
   textHash: string; voiceId: string; speed?: number; pitch?: number;
   provider?: "ttsforfree";
+  cacheVersion?: string;
+  deletionPending?: boolean;
   url?: string;
   // Saved before polling so a timeout never requires another synthesis.
   jobId?: string;

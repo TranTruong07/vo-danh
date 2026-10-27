@@ -1,5 +1,5 @@
 import "server-only";
-import { GetObjectCommand, PutObjectCommand } from "@aws-sdk/client-s3";
+import { DeleteObjectCommand, GetObjectCommand, PutObjectCommand } from "@aws-sdk/client-s3";
 import { getDatabase } from "@/lib/db/client";
 import { getR2Client, R2_BUCKET } from "@/server/infrastructure/r2";
 import { MongoServerError } from "mongodb";
@@ -44,6 +44,15 @@ export async function saveQuizAudioSegment(id: string, owner: string, segment: A
 }
 export async function releaseQuizAudio(id: string, owner: string, provider: QuizProvider = "legacy") {
   await (await quizCollection()).updateOne({ _id: quizId(id, provider), owner }, { $unset: { owner: "", leaseUntil: "" }, $set: { updatedAt: new Date() } });
+}
+export async function deleteQuizAudioFile(key: string) {
+  await getR2Client().send(new DeleteObjectCommand({ Bucket: R2_BUCKET, Key: key }), { abortSignal: AbortSignal.timeout(25000) });
+}
+export async function clearQuizAudioSegment(id: string, owner: string, segment: AudioSegment) {
+  const result = await (await quizCollection()).updateOne({ _id: quizId(id, "ttsforfree"), owner, leaseUntil: { $gt: new Date() } }, {
+    $unset: { [`segments.${segment}`]: "" }, $set: { updatedAt: new Date() },
+  });
+  if (result.matchedCount !== 1) throw new Error("Audio lease lost");
 }
 /** Reuses the same R2 client/bucket as legacy speech. Never deletes an earlier asset. */
 export async function uploadQuizAudio(key: string, bytes: Buffer) {

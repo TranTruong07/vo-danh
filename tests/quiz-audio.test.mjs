@@ -17,7 +17,7 @@ afterEach(()=>{globalThis.fetch=originalFetch;for(const [key,value] of Object.en
 const fixture=()=>({_id:new ObjectId(id),characterId,question:'Ai đang đặt câu hỏi?',answers:['Một','Hai','Ba','Bốn'],correctIndex:2,correctFeedback:'Đúng rồi bạn ơi.',incorrectFeedback:'Chưa đúng bạn nhé.',createdAt:new Date(),updatedAt:new Date()});
 function setup(options={}) {
   let question=fixture(),manifest=null;
-  const calls={create:0,poll:0,download:0,upload:0,writes:0,reads:0};
+  const calls={create:0,poll:0,download:0,upload:0,writes:0,reads:0,deleted:[]};
   const load=loader({
     './admin-auth':{requireAdmin:async()=>{if(options.denied)throw Error('Unauthorized');}},
     '@/server/repositories/character-questions':{findCharacterQuestion:async()=>{calls.reads++;return question;}},
@@ -28,6 +28,8 @@ function setup(options={}) {
       saveQuizAudioSegment:async(_,owner,segment,asset,provider)=>{assert.equal(provider,'ttsforfree');assert.equal(owner,manifest.owner);manifest.segments[segment]=structuredClone(asset);calls.writes++;},
       releaseQuizAudio:async(_,owner,provider)=>{assert.equal(provider,'ttsforfree');assert.equal(owner,manifest.owner);delete manifest.owner;delete manifest.leaseUntil;},
       uploadQuizAudio:async(key,bytes)=>{calls.upload++;assert.match(key,/^quiz-audio\/ttsforfree\//);assert.equal(bytes.length,834);if(options.uploadFailure)throw Error('secret upload failure');},
+      deleteQuizAudioFile:async key=>{if(options.deleteFailure)throw Error('private R2 error');calls.deleted.push(key);},
+      clearQuizAudioSegment:async(_,owner,segment)=>{assert.equal(owner,manifest.owner);delete manifest.segments[segment];},
     },
     '@/server/infrastructure/ttsforfree':{
       downloadTtsForFreeAudio:async value=>{calls.download++;assert.equal(value,url);if(options.downloadFailure)throw Error('secret download failure');return mp3();},
@@ -39,6 +41,47 @@ function setup(options={}) {
 }
 const request=(segments=['question'],voiceId='v1:one')=>({segments,voiceId,confirmed:true});
 const mp3=()=>{const bytes=Buffer.alloc(834);for(const at of [0,417])bytes.set([255,251,144,0],at);return bytes;};
+
+test('delete resets all seven segments without synthesis; recreation gets a fresh immutable URL',async()=>{
+  const run=setup();await run.service.generateQuizAudio(id,request(domain.AUDIO_SEGMENTS));
+  const old=run.manifest.segments.question.r2Key;
+  const result=await run.service.deleteQuizAudio(id,{confirmed:true});
+  assert.equal(result.status,'no_audio');assert.equal(run.calls.deleted.length,7);assert.equal(run.calls.create,7);assert.deepEqual(run.manifest.segments,{});
+  await run.service.deleteQuizAudio(id,{confirmed:true});assert.equal(run.calls.deleted.length,7);
+  await run.service.generateQuizAudio(id,request());assert.notEqual(run.manifest.segments.question.r2Key,old);
+  const playable=loader()('@/server/services/quiz-audio-playback').playableQuestionAudio(id,run.question,run.manifest);
+  assert.equal(playable.prompt.length,1);
+});
+
+test('deletion requires admin and confirmation and rejects foreign keys before deleting',async()=>{
+  const denied=setup({denied:true});await assert.rejects(()=>denied.service.deleteQuizAudio(id,{confirmed:true}),/Unauthorized/);assert.equal(denied.calls.reads,0);
+  const run=setup();for(const body of [null,{}, {confirmed:false},{confirmed:true,key:'injected'}])await assert.rejects(()=>run.service.deleteQuizAudio(id,body));
+  await run.service.generateQuizAudio(id,request(['question','optionA']));run.manifest.segments.optionA.r2Key='foreign.mp3';
+  await assert.rejects(()=>run.service.deleteQuizAudio(id,{confirmed:true}),/không thuộc/);assert.equal(run.calls.deleted.length,0);assert.equal(run.manifest.owner,undefined);
+});
+
+test('failed R2 deletion retains retry metadata, blocks generation and can be resumed safely',async()=>{
+  const run=setup();await run.service.generateQuizAudio(id,request());run.options.deleteFailure=true;
+  await assert.rejects(()=>run.service.deleteQuizAudio(id,{confirmed:true}),/Chưa xóa hết/);
+  assert.equal(run.manifest.segments.question.deletionPending,true);assert.equal(run.manifest.segments.question.status,'failed');assert.equal(run.manifest.owner,undefined);
+  await assert.rejects(()=>run.service.generateQuizAudio(id,request()),/xóa trước/);assert.equal(run.calls.create,1);
+  run.options.deleteFailure=false;await run.service.deleteQuizAudio(id,{confirmed:true});assert.deepEqual(run.manifest.segments,{});assert.equal(run.calls.deleted.length,1);
+});
+
+test('deletion cannot race a generating request',async()=>{
+  let release;const run=setup({hold:new Promise(resolve=>{release=resolve;})});const pending=run.service.generateQuizAudio(id,request());
+  while(!run.calls.create)await new Promise(resolve=>setImmediate(resolve));
+  await assert.rejects(()=>run.service.deleteQuizAudio(id,{confirmed:true}),/lượt khác/);assert.equal(run.calls.deleted.length,0);release();await pending;
+});
+
+test('DELETE audio endpoint rejects foreign origin and unauthenticated requests before running service',async()=>{
+  let authorized=true,runs=0;
+  const {quizAudioHttp}=loader({'@/server/services/admin-auth':{hasAdminSession:async()=>authorized}})('@/server/infrastructure/quiz-audio-http');
+  const run=async()=>{runs++;return {};};
+  for(const origin of ['', 'https://evil.test'])assert.equal((await quizAudioHttp(new Request('https://game.test/api/audio',{method:'DELETE',headers:{origin}}),run)).status,403);
+  authorized=false;assert.equal((await quizAudioHttp(new Request('https://game.test/api/audio',{method:'DELETE',headers:{origin:'https://game.test'}}),run)).status,403);assert.equal(runs,0);
+  authorized=true;assert.equal((await quizAudioHttp(new Request('https://game.test/api/audio',{method:'DELETE',headers:{origin:'https://game.test'}}),run)).status,200);assert.equal(runs,1);
+});
 
 test('seven segments preserve exact question/feedback and add only A–D labels',()=>{
   const q=fixture(),texts=domain.quizAudioTexts(q);assert.deepEqual(Object.keys(texts),domain.AUDIO_SEGMENTS);assert.equal(texts.question,q.question);assert.equal(texts.optionC,'Đáp án C. Ba');assert.equal(texts.correctFeedback,q.correctFeedback);q.answers[0]=' ';assert.equal(domain.quizAudioTexts(q).optionA,'');

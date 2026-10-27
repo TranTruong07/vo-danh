@@ -6,7 +6,7 @@ export async function quizAudioHttp(request: Request, run: () => Promise<unknown
   const headers = { "Cache-Control": "private, no-store" };
   try {
     if (!await hasAdminSession()) return Response.json({ message: "Vui lòng đăng nhập tài khoản admin." }, { status: 403, headers });
-    if (request.method === "POST" && request.headers.get("origin") !== new URL(request.url).origin) return Response.json({ message: "Nguồn yêu cầu không hợp lệ." }, { status: 403, headers });
+    if (!["GET", "HEAD"].includes(request.method) && request.headers.get("origin") !== new URL(request.url).origin) return Response.json({ message: "Nguồn yêu cầu không hợp lệ." }, { status: 403, headers });
     return Response.json(await run(), { headers });
   } catch (error) {
     return Response.json({ message: error instanceof QuizAudioError ? error.message : "Không tải hoặc lưu được âm thanh. Kiểm tra phiên admin và kết nối rồi thử lại." }, { status: error instanceof QuizAudioError ? error.status : 503, headers });

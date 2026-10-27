@@ -16,7 +16,7 @@ export function playableQuestionAudio(id: string, question: CharacterQuestionInp
   const urls = (segments: AudioSegment[]) => segments.flatMap(segment => {
     const asset = manifest.segments[segment];
     if (!asset || asset.provider !== "ttsforfree" || asset.status !== "ready" || asset.voiceId !== manifest.voiceId || asset.pitch !== 0 || !texts[segment].trim()) return [];
-    const hash = ttsForFreeAudioHash(texts[segment], asset.voiceId, asset.pitch, question.characterId);
+    const hash = ttsForFreeAudioHash(texts[segment], asset.voiceId, asset.pitch, question.characterId, asset.cacheVersion);
     const key = ttsForFreeAudioKey(question.characterId, id, segment, hash);
     if (asset.textHash !== hash || asset.r2Key !== key) return [];
     // Same-origin immutable URL gives offline range playback without R2 CORS setup.
