@@ -4,12 +4,15 @@ import { GameError, isCharacterId } from "@/server/domain/character";
 import { normalizeQuestion, validateCharacterQuestion } from "@/server/domain/character-question";
 import { findCharacter } from "@/server/repositories/characters";
 import * as repository from "@/server/repositories/character-questions";
+import { questionAudioSummaries } from "./question-audio-summary";
 
 export async function loadQuestionList(page: number, search: string, characterId: string) {
   await requireAdmin();
   if (characterId && !isCharacterId(characterId)) throw new GameError("Mã nhân vật không hợp lệ.");
   const [result, choices] = await Promise.all([repository.listCharacterQuestions(page, search, characterId), repository.questionCharacterChoices()]);
-  return { ...result, items: repository.withCharacterNames(result.items, choices), choices };
+  const items = repository.withCharacterNames(result.items, choices);
+  const audioCounts = await questionAudioSummaries(items);
+  return { ...result, items: items.map(item => ({ ...item, audioReadyCount: audioCounts[item.id] ?? null })), choices };
 }
 export async function loadQuestionEditor(id?: string) {
   await requireAdmin();

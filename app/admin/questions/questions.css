@@ -28,6 +28,11 @@
 .admin-shell .question-card h3>span{font-size:13px;color:#a8b8d2;font-weight:500;min-width:24px;padding-top:2px}
 .admin-shell .question-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:14px}
 .admin-shell .question-answer-summary{font-size:11px;color:#8092ad}
+.admin-shell .question-card-meta{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+.admin-shell .question-audio-badge{display:inline-block;max-width:100%;padding:5px 10px;border-radius:999px;font-size:12px;line-height:1.5;font-weight:600}
+.admin-shell .question-audio-badge.complete{background:#e6f7ee;color:#216c46}
+.admin-shell .question-audio-badge.partial{background:#fff3db;color:#85520e}
+.admin-shell .question-audio-badge.empty{background:#eef2f7;color:#52627a}
 .admin-shell .question-answer-summary i{font-style:normal;margin-inline:8px}
 .admin-shell .question-answer-summary strong{color:#279c81;background:#eaf8f3;border-radius:4px;padding:3px 7px}
 .admin-shell .question-card .btn{font-size:11px;padding:8px 13px}

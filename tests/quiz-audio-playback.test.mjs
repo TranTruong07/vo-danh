@@ -43,6 +43,22 @@ function sessionFixture(){
   })('@/server/services/quizzes');
   return {service};
 }
+
+test('admin list counts only current playable audio with one batch read and no private metadata',async()=>{
+  let rows=[manifest()],reads=0;
+  const {questionAudioSummaries}=loader({'@/server/repositories/speech':{readQuizAudioBatch:async ids=>{reads++;assert.deepEqual(ids,[id]);return rows;}}})('@/server/services/question-audio-summary');
+  assert.deepEqual(await questionAudioSummaries([]),{});assert.equal(reads,0);
+  assert.deepEqual(await questionAudioSummaries([question()]),{[id]:7});
+  assert.deepEqual(await questionAudioSummaries([{...question(),question:'Nội dung đã sửa'}]),{[id]:6});
+  rows[0].segments.optionA.status='generating';rows[0].segments.optionB.status='failed';delete rows[0].segments.optionC;
+  assert.deepEqual(await questionAudioSummaries([question()]),{[id]:4});
+  rows=[];assert.deepEqual(await questionAudioSummaries([question()]),{[id]:0});assert.equal(reads,4);
+});
+
+test('admin list distinguishes an unavailable lookup from zero audio files',async()=>{
+  const {questionAudioSummaries}=loader({'@/server/repositories/speech':{readQuizAudioBatch:async()=>{throw Error('offline');}}})('@/server/services/question-audio-summary');
+  assert.deepEqual(await questionAudioSummaries([question()]),{[id]:null});
+});
 test('online QR round and repeat load contain narration; only graded feedback is returned',async()=>{
   const {service}=sessionFixture();const result=await service.startQuiz(characterId,round);assert.equal(result.narration.length,5);assert.equal(result.correctIndex,undefined);assert.ok(!JSON.stringify(result).includes('Feedback'));
   assert.deepEqual(await service.startQuiz(characterId,round),result);assert.match((await service.answerQuiz(round,1)).narration[0],/correctFeedback/);
