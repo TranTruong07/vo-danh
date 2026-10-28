@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import SiteLogo from "@/components/site-logo";
 import { usePathname } from "next/navigation";
 import { useRef } from "react";
 import { logoutAdmin } from "@/actions/admin";
@@ -21,7 +22,7 @@ export default function AdminFrame({ email, children }: { email: string; childre
   const close = () => drawer.current?.close();
   function navigation() {
     return <>
-      <Link className="admin-brand" href="/admin" onClick={close}><span className="admin-brand-mark">✦</span><span>Dấu Chân<small>SỬ KÝ · ADMIN</small></span></Link>
+      <Link className="admin-brand" href="/admin" onClick={close}><SiteLogo /><span>Dấu Chân<small>SỬ KÝ · ADMIN</small></span></Link>
       <div className="sidebar-profile"><div className="admin-avatar">{email.slice(0, 1).toUpperCase()}</div><strong>Quản trị viên</strong><span title={email}>{email}</span><small><i /> Đang hoạt động</small></div>
       <p className="nav-caption">KHÔNG GIAN QUẢN TRỊ</p>
       <nav className="admin-navigation" aria-label="Menu quản trị">

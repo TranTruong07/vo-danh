@@ -1,5 +1,5 @@
 import { OfflineShellSignal } from "@/features/pwa/pwa-provider";
-import Image from "next/image";
+import HeroSlideshow from "./hero-slideshow";
 import Link from "next/link";
 import { SiteHeader, SiteFooter, Arrow, Icon, ProductSection } from "@/components/heritage/site";
 import type { AuthMode } from "@/server/domain/auth";
@@ -15,20 +15,14 @@ export default async function HomeView({ searchParams, offline = false }: { sear
         <section className="hero-section">
           <div className="hero-copy">
             <div className="eyebrow"><span /> MỘT CÁCH MỚI ĐỂ YÊU LỊCH SỬ</div>
-            <h1>Theo dấu chân xưa.<br />Viết tiếp <em>sử ký.</em></h1>
+            <h1 className="hero-headline">Đi từng bước -<br />Hiểu từng trang sử</h1>
             <p className="hero-description">Lịch sử không chỉ ở trong trang sách. Cùng Dấu Chân Sử Ký, biến mỗi lượt chơi thành một chuyến phiêu lưu về nguồn cội.</p>
             <div className="hero-actions">
               <Link className="heritage-button primary" href="/shop">Khám phá board game <Arrow /></Link>
               <Link className="heritage-button text-button" href="/play"><Icon name="qr" /> Quét thẻ để chơi <Arrow /></Link>
             </div>
-            <div className="hero-footnote"><span className="mini-seal">SỬ<br />KÝ</span><p>Dành cho thế hệ trẻ yêu khám phá<br /><strong>Học mà chơi — Chơi mà học</strong></p></div>
           </div>
-          <div className="hero-art">
-            <Image unoptimized={offline} src="/images/history-landscape.webp" alt="Tranh khắc đỏ son: con đường uốn qua núi sông và cổng thành Việt Nam" fill priority sizes="(max-width: 760px) 100vw, 52vw" />
-            <div className="art-topline"><span>ĐẤT VIỆT NGÀN NĂM</span><span>✦</span></div>
-            <div className="art-caption"><span>MỖI BƯỚC CHÂN, MỘT CÂU CHUYỆN.</span><span>01 — HÀNH TRÌNH BẮT ĐẦU</span></div>
-            <div className="round-stamp"><span>CHẠM VÀO</span><strong>Lịch sử</strong><span>THEO CÁCH CỦA BẠN</span></div>
-          </div>
+          <HeroSlideshow />
         </section>
         <div className="feature-ribbon"><div><Icon name="board" /><span>Chơi để khám phá</span></div><span className="ribbon-star">✦</span><div><Icon name="spark" /><span>Thử thách kiến thức</span></div><span className="ribbon-star">✦</span><div><Icon name="qr" /><span>Quét QR để kết nối</span></div></div>
         <section className="section-wrap about-section" id="cau-chuyen">

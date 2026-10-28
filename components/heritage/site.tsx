@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SiteLogo from "@/components/site-logo";
 import Link from "next/link";
 import { contact } from "@/lib/site-config";
 import { PurchaseButton } from "./purchase-button";
@@ -15,7 +16,7 @@ export function Icon({ name }: { name: "board" | "spark" | "qr" | "bag" }) {
   return <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>;
 }
 
-export function Brand() { return <Link href="/" className="brand" aria-label="Dấu Chân Sử Ký — Trang chủ"><span className="brand-seal">Dấu Chân<br />Sử Ký<span>✦</span></span><span className="brand-wordmark">Dấu Chân Sử Ký<small>CHƠI LỊCH SỬ · HIỂU CỘI NGUỒN</small></span></Link>; }
+export function Brand() { return <Link href="/" className="brand" aria-label="Dấu Chân Sử Ký — Trang chủ"><SiteLogo /><span className="brand-wordmark">Dấu Chân Sử Ký<small>ĐI TỪNG BƯỚC · HIỂU TỪNG TRANG SỬ</small></span></Link>; }
 
 export async function SiteHeader({ active, initialAuthMode, resetToken, publicOnly = false }: { publicOnly?: boolean; active?: "home" | "shop"; initialAuthMode?: AuthMode; resetToken?: string }) {
   const user = publicOnly ? null : await currentAccount().catch(() => null);

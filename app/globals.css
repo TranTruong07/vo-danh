@@ -3,6 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Keep existing component font tokens compatible while using one brand font. */
+  --font-geist-sans: var(--font-brand);
+  --font-geist-mono: var(--font-brand);
+  --font-heritage-serif: var(--font-brand);
+  --font-serif: var(--font-brand);
+  --font-home-headline: var(--font-brand);
+  font-synthesis: none;
 }
 
 @theme inline {
@@ -22,5 +29,12 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-brand), Arial, sans-serif;
 }
+button,input,textarea,select{font-family:inherit}
+
+.site-logo{display:block;width:64px;height:64px;object-fit:contain;border-radius:50%;flex-shrink:0}
+.admin-brand .site-logo{width:40px;height:40px}
+.game-header .game-brand{display:inline-flex;align-items:center;gap:10px}
+.game-brand .site-logo{width:38px;height:38px}
+@media(max-width:760px){.brand .site-logo{width:48px;height:48px}.game-brand .site-logo{width:30px;height:30px}}

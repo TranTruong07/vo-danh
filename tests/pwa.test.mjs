@@ -37,11 +37,12 @@ test('service worker commits complete packs only, keeps the previous pack on dow
   };
   let version = 'one', fail = false;
   const quizAudio = `/audio/quiz/${'b'.repeat(24)}/${'c'.repeat(24)}/question/${'d'.repeat(64)}`;
+  const branding = ['/images/logo_dauchansuky.jpg', ...[1,2,3,4].map(number=>`/images/anh_slide${number}.png`), '/_next/static/media/headline.woff2'];
   const context = vm.createContext({
     URL, Response, AbortSignal, caches,
     self: { location: { origin: 'https://example.test' }, addEventListener: (name, callback) => handlers.set(name, callback), clients: { matchAll: async () => [{ postMessage: message => messages.push(message) }], claim: async () => {} }, skipWaiting: () => {} },
     fetch: async url => {
-      if (url === '/pwa-assets.json') return Response.json({ build: 'build', assets: ['/offline', '/offline-home', '/image.webp', '/audio/winner-sound.mp3', '/audio/wrong-answer.mp3'] });
+      if (url === '/pwa-assets.json') return Response.json({ build: 'build', assets: ['/offline', '/offline-home', '/image.webp', '/audio/winner-sound.mp3', '/audio/wrong-answer.mp3', ...branding] });
       if (url === '/api/offline/pack') return Response.json({ schema: 1, version, characters: [], questions: [{ audio: { prompt: ['/audio/' + 'a'.repeat(64), quizAudio], correct: [], incorrect: [] } }] });
       if (fail && url === '/image.webp') return new Response('', { status: 503 });
       return new Response('asset');
@@ -70,6 +71,10 @@ test('service worker commits complete packs only, keeps the previous pack on dow
   // Both static effects must be available from the completed cache, including
   // Safari byte ranges, when every network request subsequently fails.
   context.fetch = async () => { throw new Error('offline'); };
+  for (const asset of branding) {
+    listener({ request: { url: key(asset), method: 'GET', mode: 'cors', headers: new Headers() }, respondWith: promise => { ranged = promise; } });
+    assert.equal(await (await ranged).text(), 'asset', asset);
+  }
   for (const effect of ['/audio/winner-sound.mp3', '/audio/wrong-answer.mp3']) {
     listener({ request: { url: key(effect), method: 'GET', mode: 'cors', headers: new Headers() }, respondWith: promise => { ranged = promise; } });
     assert.equal(await (await ranged).text(), 'asset');

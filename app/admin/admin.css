@@ -1,3 +1,11 @@
+.admin-typography {
+  --font-brand: var(--font-geist-sans);
+  --font-serif: var(--font-heritage-serif);
+  --font-home-headline: var(--font-geist-sans);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-synthesis: weight style;
+}
+
 .admin-shell {
   min-height: 100vh;
   color-scheme: light;
