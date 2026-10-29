@@ -1,11 +1,13 @@
 "use client";
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { placeOrderAction } from "@/actions/orders";
 import { money } from "@/server/domain/order";
+import { DEFAULT_PRODUCT, type CatalogProduct } from "@/server/domain/product";
 
 export default function CheckoutForm({ email, requestKey, product, payosEnabled }: {
-  email: string; requestKey: string; product: { name: string; price: number }; payosEnabled: boolean;
+  email: string; requestKey: string; product: Pick<CatalogProduct, "name" | "price" | "mainImage">; payosEnabled: boolean;
 }) {
   const router = useRouter(), [quantity, setQuantity] = useState(1), [error, setError] = useState(""), [pending, startTransition] = useTransition();
   const [checkoutKey] = useState(requestKey);
@@ -30,6 +32,6 @@ export default function CheckoutForm({ email, requestKey, product, payosEnabled 
       <label className="payment-option"><input type="radio" name="paymentMethod" value="cod" defaultChecked /><span><strong>Thanh toán khi nhận hàng (COD)</strong><small>Thanh toán cho người giao hàng. Đơn chờ cửa hàng xác nhận.</small></span></label>
       <label className={`payment-option ${!payosEnabled ? "unavailable" : ""}`}><input type="radio" name="paymentMethod" value="payos" disabled={!payosEnabled} /><span><strong>Chuyển khoản qua payOS</strong><small>{payosEnabled ? "Quét mã QR bằng ứng dụng ngân hàng. Xác nhận thanh toán tự động." : "Thanh toán online đang được thiết lập."}</small></span></label>
     </fieldset>
-    <aside className="commerce-card checkout-summary"><p className="commerce-kicker">HỘP SỬ KÝ CỦA BẠN</p><div className="checkout-art" /><h2>{product.name}</h2><p>Cùng chơi, cùng học, cùng nhớ những câu chuyện lịch sử.</p><label>Số lượng<input name="quantity" type="number" min={1} max={10} step={1} required value={quantity} disabled={pending} onChange={e => setQuantity(Math.max(1, Math.min(10, Math.floor(Number(e.target.value)) || 1)))} /></label><dl><div><dt>Đơn giá</dt><dd>{money(product.price)}</dd></div><div><dt>Tạm tính · {quantity} hộp</dt><dd>{money(product.price * quantity)}</dd></div><div className="commerce-total"><dt>Tổng thanh toán</dt><dd>{money(product.price * quantity)}</dd></div></dl><button className="commerce-button" disabled={pending}>{pending ? "Đang tạo đơn…" : "Đặt hàng →"}</button>{error && <p role="alert" className="commerce-error">{error}</p>}<small>Bạn có thể xem tiến trình đơn trong Lịch sử mua hàng.</small></aside>
+    <aside className="commerce-card checkout-summary"><p className="commerce-kicker">HỘP SỬ KÝ CỦA BẠN</p><div className="checkout-art"><Image src={product.mainImage || DEFAULT_PRODUCT.mainImage} alt={product.name} fill unoptimized sizes="(max-width:760px) 100vw, 400px" /></div><h2>{product.name}</h2><p>Cùng chơi, cùng học, cùng nhớ những câu chuyện lịch sử.</p><label>Số lượng<input name="quantity" type="number" min={1} max={10} step={1} required value={quantity} disabled={pending} onChange={e => setQuantity(Math.max(1, Math.min(10, Math.floor(Number(e.target.value)) || 1)))} /></label><dl><div><dt>Đơn giá</dt><dd>{money(product.price)}</dd></div><div><dt>Tạm tính · {quantity} hộp</dt><dd>{money(product.price * quantity)}</dd></div><div className="commerce-total"><dt>Tổng thanh toán</dt><dd>{money(product.price * quantity)}</dd></div></dl><button className="commerce-button" disabled={pending}>{pending ? "Đang tạo đơn…" : "Đặt hàng →"}</button>{error && <p role="alert" className="commerce-error">{error}</p>}<small>Bạn có thể xem tiến trình đơn trong Lịch sử mua hàng.</small></aside>
   </form>;
 }

@@ -6,7 +6,7 @@ import { readFile } from 'node:fs/promises';
 
 test('offline pack contains only public character/question records, filters orphans and versions content changes', async () => {
   let text = 'Câu hỏi thứ nhất';
-  const { offlineGamePack } = loader({ '@/server/repositories/offline-game': { readOfflineGame: async () => ({ characters: [{ id: 'one', name: 'Name' }], questions: [{ id: 'q', characterId: 'one', question: text }, { id: 'orphan', characterId: 'deleted' }] }) } })('@/server/services/offline-game');
+  const { offlineGamePack } = loader({ './catalog': { shopProduct: async () => null }, '@/server/repositories/offline-game': { readOfflineGame: async () => ({ characters: [{ id: 'one', name: 'Name' }], questions: [{ id: 'q', characterId: 'one', question: text }, { id: 'orphan', characterId: 'deleted' }] }) } })('@/server/services/offline-game');
   const first = await offlineGamePack();
   assert.equal(first.questions.length, 1); assert.equal(first.schema, 1);
   assert.equal((await offlineGamePack()).version, first.version);
@@ -35,7 +35,7 @@ test('service worker commits complete packs only, keeps the previous pack on dow
     },
     keys: async () => [...stores.keys()], delete: async name => stores.delete(name),
   };
-  let version = 'one', fail = false;
+  let version = 'one', fail = false, failProduct = false;
   const quizAudio = `/audio/quiz/${'b'.repeat(24)}/${'c'.repeat(24)}/question/${'d'.repeat(64)}`;
   const branding = ['/images/logo_dauchansuky.jpg', ...[1,2,3,4].map(number=>`/images/anh_slide${number}.png`), '/_next/static/media/headline.woff2'];
   const context = vm.createContext({
@@ -43,7 +43,8 @@ test('service worker commits complete packs only, keeps the previous pack on dow
     self: { location: { origin: 'https://example.test' }, addEventListener: (name, callback) => handlers.set(name, callback), clients: { matchAll: async () => [{ postMessage: message => messages.push(message) }], claim: async () => {} }, skipWaiting: () => {} },
     fetch: async url => {
       if (url === '/pwa-assets.json') return Response.json({ build: 'build', assets: ['/offline', '/offline-home', '/image.webp', '/audio/winner-sound.mp3', '/audio/wrong-answer.mp3', ...branding] });
-      if (url === '/api/offline/pack') return Response.json({ schema: 1, version, characters: [], questions: [{ audio: { prompt: ['/audio/' + 'a'.repeat(64), quizAudio], correct: [], incorrect: [] } }] });
+      if (url === '/api/offline/pack') return Response.json({ schema: 1, version, product: { mainImage: `/images/product-${version}.webp`, name: 'Product' }, characters: [], questions: [{ audio: { prompt: ['/audio/' + 'a'.repeat(64), quizAudio], correct: [], incorrect: [] } }] });
+      if (failProduct && url.startsWith('/images/product-')) return new Response('', { status: 503 });
       if (fail && url === '/image.webp') return new Response('', { status: 503 });
       return new Response('asset');
     },
@@ -59,6 +60,9 @@ test('service worker commits complete packs only, keeps the previous pack on dow
   fail = false; await sync(); assert.equal(await pointer(), 'history-pwa-v1-build-two');
   assert.equal(messages.at(-1).type, 'PWA_READY');
   await sync(); assert.equal(messages.at(-1).type, 'PWA_READY');
+  assert.equal((await (await (await caches.open(await pointer())).match('/__offline/pack')).json()).product.mainImage,'/images/product-two.webp');
+  version='three';failProduct=true;await sync();assert.equal(messages.at(-1).type,'PWA_READY');
+  assert.equal((await (await (await caches.open(await pointer())).match('/__offline/pack')).json()).product.mainImage,'/images/history-landscape.webp');
   const listener = handlers.get('fetch');
   let ranged;
   listener({ request: { url: key('/audio/' + 'a'.repeat(64)), method: 'GET', mode: 'cors', headers: new Headers({ range: 'bytes=1-3' }) }, respondWith: promise => { ranged = promise; } });

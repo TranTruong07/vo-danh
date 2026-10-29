@@ -7,7 +7,7 @@ import type { GameResult } from "@/server/domain/quiz";
 export async function saveSettingsAction(form: FormData): Promise<GameResult<ShopSettings>> {
   try {
     const data = await saveShopSettings(form);
-    for (const path of ["/admin/settings", "/", "/shop", "/checkout"]) revalidatePath(path);
+    for (const path of ["/admin/settings", "/admin/products", "/", "/shop", "/checkout", "/api/offline/pack"]) revalidatePath(path);
     return { ok: true, data };
   } catch (error) { return { ok: false, message: error instanceof SettingsError ? error.message : "Không lưu được thiết lập. Kiểm tra phiên admin và kết nối rồi thử lại." }; }
 }

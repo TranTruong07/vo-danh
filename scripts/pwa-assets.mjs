@@ -8,7 +8,7 @@ async function files(directory, prefix) {
     : /\.(js|css|woff2?|png|webp|svg|ico)$/.test(entry.name) ? [`${prefix}/${entry.name}`] : []))).flat();
 }
 const effects = ['/audio/winner-sound.mp3', '/audio/wrong-answer.mp3'];
-const branding = ['/images/logo_dauchansuky.jpg', ...[1, 2, 3, 4].map(number => `/images/anh_slide${number}.png`), '/favicon.ico'];
+const branding = ['/images/logo_dauchansuky.png', ...[1, 2, 3, 4].map(number => `/images/anh_slide${number}.png`), '/favicon.ico'];
 // Fail the build if a required effect is missing, instead of publishing an incomplete pack.
 await Promise.all([...effects, ...branding].map(url => readFile(`public${url}`)));
 const assets = [...await files('.next/static', '/_next/static'), '/images/history-landscape.webp', '/pwa/icon-192.png', '/pwa/icon-512.png', '/offline', '/offline-home', ...effects, ...branding];

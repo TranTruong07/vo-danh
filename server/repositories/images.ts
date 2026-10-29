@@ -4,7 +4,7 @@ import { PutObjectCommand, DeleteObjectCommand } from "@aws-sdk/client-s3";
 import { getR2Client, R2_BUCKET, R2_PUBLIC_BASE_URL } from "@/server/infrastructure/r2";
 import { GameError } from "@/server/domain/character";
 
-async function uploadImage(bytes: Buffer, folder: "characters" | "avatars") {
+async function uploadImage(bytes: Buffer, folder: "characters" | "avatars" | "products") {
   let base: URL;
   try { base = new URL(R2_PUBLIC_BASE_URL); }
   catch { throw new GameError("Chưa cấu hình R2_PUBLIC_BASE_URL cho ảnh."); }
@@ -24,6 +24,7 @@ async function uploadImage(bytes: Buffer, folder: "characters" | "avatars") {
 
 export const uploadCharacterImage = (bytes: Buffer) => uploadImage(bytes, "characters");
 export const uploadAvatarImage = (bytes: Buffer) => uploadImage(bytes, "avatars");
+export const uploadProductImage = (bytes: Buffer) => uploadImage(bytes, "products");
 
 // Only used to roll back a newly uploaded, unreferenced object after a failed save.
 export async function discardUncommittedImage(key: string) {

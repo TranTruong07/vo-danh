@@ -52,6 +52,13 @@ async function sync() {
       }
     }));
     if (downloads.some(result => result.status === 'rejected')) throw new Error('incomplete');
+    // Product media is optional: an unavailable shop image must not block offline quizzes.
+    if (pack.product?.mainImage) {
+      const url = pack.product.mainImage;
+      try {
+        if (!await target.match(url)) await target.put(url, await old?.match(url) || await download(url));
+      } catch { pack.product.mainImage = '/images/history-landscape.webp'; }
+    }
     await target.put(PACK, Response.json({ ...pack, savedAt: new Date().toISOString() }));
     // Commit only after every file is cached. A failed refresh keeps the last pack.
     await control.put(POINTER, new Response(name));

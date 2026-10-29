@@ -1,10 +1,10 @@
-import Image from "next/image";
+import ShopProduct from "@/features/products/shop-product";
 import SiteLogo from "@/components/site-logo";
+import HomeProduct from "@/features/products/home-product";
+import { DEFAULT_PRODUCT } from "@/server/domain/product";
 import Link from "next/link";
 import { contact } from "@/lib/site-config";
-import { PurchaseButton } from "./purchase-button";
 import { shopProduct } from "@/server/services/catalog";
-import { money } from "@/server/domain/order";
 import AuthControls from "@/features/auth/auth-controls";
 import { currentAccount } from "@/server/services/account-session";
 import type { AuthMode } from "@/server/domain/auth";
@@ -24,8 +24,10 @@ export async function SiteHeader({ active, initialAuthMode, resetToken, publicOn
 }
 
 export async function ProductSection({ shop = false, offline = false }: { shop?: boolean; offline?: boolean }) {
-  const product = offline ? { ready: false, price: 0 } : await shopProduct().catch(() => ({ ready: false, price: 0 }));
-  return <section className={`section-wrap product-section ${shop ? "shop-product" : ""}`} id="san-pham"><div className="product-visual"><span className="product-edition">DẤU CHÂN SỬ KÝ / BOARD GAME</span><div className="game-box"><div className="box-face"><Image unoptimized={offline} src="/images/history-landscape.webp" alt="Thiết kế minh họa hộp board game Dấu Chân Sử Ký với họa tiết núi sông đỏ son" fill sizes="(max-width: 760px) 75vw, 420px" /><div className="box-title"><span>HỌC MÀ CHƠI — CHƠI MÀ HỌC</span><strong>Dấu Chân<br />Sử Ký</strong><small>BOARD GAME LỊCH SỬ · MÃ QR</small></div></div><div className="box-spine">DẤU CHÂN SỬ KÝ <span>✦</span></div></div><span className="product-visual-caption">Hình ảnh minh họa ý tưởng sản phẩm</span><div className="product-seal">MỞ HỘP<br /><strong>MỞ LỊCH SỬ</strong><span>✦</span></div></div><div className="product-copy"><p className="eyebrow">MỘT HỘP NHỎ, CẢ HÀNH TRÌNH LỚN</p><h2>Mang lịch sử<br /><em>lên bàn chơi.</em></h2><h3>Board game Dấu Chân Sử Ký</h3><p>Cùng bạn bè khám phá câu chuyện của cha ông qua từng lượt chơi. Kết hợp trải nghiệm trên bàn, mã QR và câu hỏi về nhân vật để mỗi câu hỏi đều mở ra một điều thú vị.</p><div className="product-tags"><span>Học sinh THCS</span><span>Chơi cùng bạn bè</span><span>Tích hợp MÃ QR</span></div><div className="product-purchase"><div><span>GIÁ BÁN</span><strong>{product.ready ? money(product.price) : "Đang cập nhật"}</strong></div><PurchaseButton /></div><p className="product-note">Một món quà khơi gợi sự tò mò và tình yêu lịch sử.</p></div></section>;
+  const fallback = { ...DEFAULT_PRODUCT, ready: false, price: 0 };
+  const product = offline ? fallback : await shopProduct().catch(() => fallback);
+  if (!shop) return <HomeProduct initial={product} offline={offline} />;
+  return <ShopProduct product={product} />;
 }
 
 export function SiteFooter() {

@@ -25,6 +25,7 @@ test('wrong text/voice/owner/key or non-ready assets never become playable; miss
 test('offline pack queries audio once, changes version when audio becomes ready and preserves local grading',async()=>{
   let rows=[],reads=0;const q=question();
   const service=loader({
+    './catalog':{shopProduct:async()=>null},
     '@/server/repositories/offline-game':{readOfflineGame:async()=>({characters:[{id:characterId}],questions:[q]})},
     '@/server/repositories/speech':{readQuizAudioBatch:async ids=>{reads++;assert.deepEqual(ids,[id]);return rows;}},
   })('@/server/services/offline-game');
