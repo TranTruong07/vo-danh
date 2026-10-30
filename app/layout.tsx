@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import PwaProvider from "@/features/pwa/pwa-provider";
 import "@/features/pwa/pwa.css";
-import { Anton } from "next/font/google";
+import { Anton, Geist, Geist_Mono, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import "./heritage.css";
 import "./auth.css";
@@ -12,6 +12,9 @@ const brandFont = Anton({
   subsets: ["latin", "vietnamese"],
   display: "swap",
 });
+const bodyFont = Geist({ variable: "--font-geist-sans", subsets: ["latin", "vietnamese"], display: "swap" });
+const monoFont = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin", "vietnamese"], display: "swap" });
+const readingFont = Noto_Serif({ variable: "--font-reading-serif", subsets: ["latin", "vietnamese"], style: ["normal", "italic"], display: "swap" });
 
 export const metadata: Metadata = {
   appleWebApp: { capable: true, title: "Dấu Chân Sử Ký", statusBarStyle: "default" },
@@ -26,7 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="vi"
-      className={`${brandFont.variable} h-full antialiased`}
+      className={`${brandFont.variable} ${bodyFont.variable} ${monoFont.variable} ${readingFont.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col"><PwaProvider>{children}</PwaProvider></body>
     </html>

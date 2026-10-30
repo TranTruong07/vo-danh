@@ -3,9 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  /* Keep existing component font tokens compatible while using one brand font. */
-  --font-geist-sans: var(--font-brand);
-  --font-geist-mono: var(--font-brand);
+  /* Display typography is separate from the readable body and form fonts. */
   --font-heritage-serif: var(--font-brand);
   --font-serif: var(--font-brand);
   --font-home-headline: var(--font-brand);
@@ -29,7 +27,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-brand), Arial, sans-serif;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
 }
 button,input,textarea,select{font-family:inherit}
 
