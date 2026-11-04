@@ -1,0 +1,3994 @@
+{
+  "schemaVersion": 1,
+  "document": "Tong-hop-kien-thuc-moi.docx",
+  "sourceSha256": "fc0f492babe6407a2d9469b9e935f6ce6543916842d1d5e1de6c8a80e64c385e",
+  "locatorConvention": "zero-based; body offsets include tables; paragraphIndex includes table paragraphs",
+  "sections": [
+    {
+      "sectionId": "I",
+      "title": "BỐI CẢNH LỊCH SỬ"
+    },
+    {
+      "sectionId": "II",
+      "title": "QUÁ TRÌNH CHUẨN BỊ CHO CÁCH MẠNG THÁNG TÁM"
+    },
+    {
+      "sectionId": "III",
+      "title": "VAI TRÒ CỦA BỐN NHÂN VẬT TRONG QUÁ TRÌNH CHUẨN BỊ VÀ LÃNH ĐẠO CÁCH MẠNG"
+    },
+    {
+      "sectionId": "IV",
+      "title": "DIỄN BIẾN CỤ THỂ CỦA CÁCH MẠNG THÁNG TÁM NĂM 1945"
+    },
+    {
+      "sectionId": "V",
+      "title": "HOẠT ĐỘNG CỦA BỐN NHÂN VẬT SAU KHI CÁCH MẠNG THÁNG TÁM THẮNG LỢI"
+    },
+    {
+      "sectionId": "VII",
+      "title": "NGUYÊN NHÂN THẮNG LỢI"
+    },
+    {
+      "sectionId": "VIII",
+      "title": "Ý NGHĨA LỊCH SỬ"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "body/0",
+      "order": 0,
+      "kind": "paragraph",
+      "sectionId": "I",
+      "isHeading": true,
+      "text": "PHẦN I. BỐI CẢNH LỊCH SỬ",
+      "normalizedText": "PHẦN I. BỐI CẢNH LỊCH SỬ",
+      "paragraphIndex": 0
+    },
+    {
+      "id": "body/1",
+      "order": 1,
+      "kind": "paragraph",
+      "sectionId": "I.1",
+      "isHeading": true,
+      "text": "1. Tình hình thế giới",
+      "normalizedText": "1. Tình hình thế giới",
+      "paragraphIndex": 1
+    },
+    {
+      "id": "body/2",
+      "order": 2,
+      "kind": "paragraph",
+      "sectionId": "I.1",
+      "isHeading": false,
+      "text": "Đầu năm 1945, Chiến tranh thế giới thứ hai bước vào giai đoạn kết thúc. Chủ nghĩa phát xít liên tiếp thất bại trên các chiến trường.",
+      "normalizedText": "Đầu năm 1945, Chiến tranh thế giới thứ hai bước vào giai đoạn kết thúc. Chủ nghĩa phát xít liên tiếp thất bại trên các chiến trường.",
+      "paragraphIndex": 2
+    },
+    {
+      "id": "body/3",
+      "order": 3,
+      "kind": "paragraph",
+      "sectionId": "I.1",
+      "isHeading": false,
+      "text": "Các mốc quan trọng:",
+      "normalizedText": "Các mốc quan trọng:",
+      "paragraphIndex": 3
+    },
+    {
+      "id": "body/4",
+      "order": 4,
+      "kind": "paragraph",
+      "sectionId": "I.1",
+      "isHeading": false,
+      "text": "Ngày 9/5/1945: Phát xít Đức đầu hàng Đồng minh vô điều kiện, chiến tranh ở châu Âu kết thúc.",
+      "normalizedText": "Ngày 9/5/1945: Phát xít Đức đầu hàng Đồng minh vô điều kiện, chiến tranh ở châu Âu kết thúc.",
+      "paragraphIndex": 4
+    },
+    {
+      "id": "body/5",
+      "order": 5,
+      "kind": "paragraph",
+      "sectionId": "I.1",
+      "isHeading": false,
+      "text": "Ngày 8/8/1945: Liên Xô tuyên chiến với Nhật Bản.",
+      "normalizedText": "Ngày 8/8/1945: Liên Xô tuyên chiến với Nhật Bản.",
+      "paragraphIndex": 5
+    },
+    {
+      "id": "body/6",
+      "order": 6,
+      "kind": "paragraph",
+      "sectionId": "I.1",
+      "isHeading": false,
+      "text": "Ngày 9/8/1945: Hồng quân Liên Xô mở cuộc tiến công quân Nhật ở Đông Bắc Á.",
+      "normalizedText": "Ngày 9/8/1945: Hồng quân Liên Xô mở cuộc tiến công quân Nhật ở Đông Bắc Á.",
+      "paragraphIndex": 6
+    },
+    {
+      "id": "body/7",
+      "order": 7,
+      "kind": "paragraph",
+      "sectionId": "I.1",
+      "isHeading": false,
+      "text": "Ngày 6/8/1945: Mỹ ném bom nguyên tử xuống Hiroshima.",
+      "normalizedText": "Ngày 6/8/1945: Mỹ ném bom nguyên tử xuống Hiroshima.",
+      "paragraphIndex": 7
+    },
+    {
+      "id": "body/8",
+      "order": 8,
+      "kind": "paragraph",
+      "sectionId": "I.1",
+      "isHeading": false,
+      "text": "Ngày 9/8/1945: Mỹ ném bom nguyên tử xuống Nagasaki.",
+      "normalizedText": "Ngày 9/8/1945: Mỹ ném bom nguyên tử xuống Nagasaki.",
+      "paragraphIndex": 8
+    },
+    {
+      "id": "body/9",
+      "order": 9,
+      "kind": "paragraph",
+      "sectionId": "I.1",
+      "isHeading": false,
+      "text": "Ngày 14/8/1945: Nhật Bản chấp nhận các điều kiện đầu hàng của Đồng minh.",
+      "normalizedText": "Ngày 14/8/1945: Nhật Bản chấp nhận các điều kiện đầu hàng của Đồng minh.",
+      "paragraphIndex": 9
+    },
+    {
+      "id": "body/10",
+      "order": 10,
+      "kind": "paragraph",
+      "sectionId": "I.1",
+      "isHeading": false,
+      "text": "Ngày 15/8/1945: Nhật hoàng Hirohito phát thanh tuyên bố Nhật Bản chấp nhận đầu hàng.",
+      "normalizedText": "Ngày 15/8/1945: Nhật hoàng Hirohito phát thanh tuyên bố Nhật Bản chấp nhận đầu hàng.",
+      "paragraphIndex": 10
+    },
+    {
+      "id": "body/11",
+      "order": 11,
+      "kind": "paragraph",
+      "sectionId": "I.1",
+      "isHeading": false,
+      "text": "Những thất bại liên tiếp khiến Nhật Bản không còn khả năng duy trì chiến tranh. Quân đội Nhật tại Đông Dương mất tinh thần, bộ máy chính quyền thân Nhật rơi vào tình trạng hoang mang.",
+      "normalizedText": "Những thất bại liên tiếp khiến Nhật Bản không còn khả năng duy trì chiến tranh. Quân đội Nhật tại Đông Dương mất tinh thần, bộ máy chính quyền thân Nhật rơi vào tình trạng hoang mang.",
+      "paragraphIndex": 11
+    },
+    {
+      "id": "body/12",
+      "order": 12,
+      "kind": "paragraph",
+      "sectionId": "I.1",
+      "isHeading": false,
+      "text": "Đây là điều kiện quốc tế đặc biệt thuận lợi cho cách mạng Việt Nam.",
+      "normalizedText": "Đây là điều kiện quốc tế đặc biệt thuận lợi cho cách mạng Việt Nam.",
+      "paragraphIndex": 12
+    },
+    {
+      "id": "body/13",
+      "order": 13,
+      "kind": "paragraph",
+      "sectionId": "I.2",
+      "isHeading": true,
+      "text": "2. Tình hình Việt Nam trước Tổng khởi nghĩa",
+      "normalizedText": "2. Tình hình Việt Nam trước Tổng khởi nghĩa",
+      "paragraphIndex": 13
+    },
+    {
+      "id": "body/14",
+      "order": 14,
+      "kind": "paragraph",
+      "sectionId": "I.2",
+      "isHeading": false,
+      "text": "Trước tháng 8/1945, Việt Nam chịu sự thống trị của phát xít Nhật và thực dân Pháp. Sau cuộc đảo chính ngày 9/3/1945, Nhật loại bỏ bộ máy thống trị của Pháp và trực tiếp nắm quyền ở Đông Dương.",
+      "normalizedText": "Trước tháng 8/1945, Việt Nam chịu sự thống trị của phát xít Nhật và thực dân Pháp. Sau cuộc đảo chính ngày 9/3/1945, Nhật loại bỏ bộ máy thống trị của Pháp và trực tiếp nắm quyền ở Đông Dương.",
+      "paragraphIndex": 14
+    },
+    {
+      "id": "body/15",
+      "order": 15,
+      "kind": "paragraph",
+      "sectionId": "I.2",
+      "isHeading": false,
+      "text": "Chính phủ Trần Trọng Kim được thành lập dưới sự bảo trợ của Nhật nhưng không có thực quyền độc lập.",
+      "normalizedText": "Chính phủ Trần Trọng Kim được thành lập dưới sự bảo trợ của Nhật nhưng không có thực quyền độc lập.",
+      "paragraphIndex": 15
+    },
+    {
+      "id": "body/16",
+      "order": 16,
+      "kind": "paragraph",
+      "sectionId": "I.2",
+      "isHeading": false,
+      "text": "Trong khi đó, phong trào cách mạng do Đảng và Mặt trận Việt Minh lãnh đạo ngày càng phát triển.",
+      "normalizedText": "Trong khi đó, phong trào cách mạng do Đảng và Mặt trận Việt Minh lãnh đạo ngày càng phát triển.",
+      "paragraphIndex": 16
+    },
+    {
+      "id": "body/17",
+      "order": 17,
+      "kind": "paragraph",
+      "sectionId": "I.2",
+      "isHeading": false,
+      "text": "Đặc biệt, nạn đói năm 1944–1945 khiến hơn hai triệu đồng bào chết đói, làm cho mâu thuẫn giữa nhân dân Việt Nam với chế độ thống trị càng trở nên sâu sắc.",
+      "normalizedText": "Đặc biệt, nạn đói năm 1944–1945 khiến hơn hai triệu đồng bào chết đói, làm cho mâu thuẫn giữa nhân dân Việt Nam với chế độ thống trị càng trở nên sâu sắc.",
+      "paragraphIndex": 17
+    },
+    {
+      "id": "body/18",
+      "order": 18,
+      "kind": "paragraph",
+      "sectionId": "I.2",
+      "isHeading": false,
+      "text": "Khi Nhật đầu hàng Đồng minh, chính quyền tay sai mất chỗ dựa, tạo ra thời cơ thuận lợi để nhân dân đứng lên giành chính quyền.",
+      "normalizedText": "Khi Nhật đầu hàng Đồng minh, chính quyền tay sai mất chỗ dựa, tạo ra thời cơ thuận lợi để nhân dân đứng lên giành chính quyền.",
+      "paragraphIndex": 18
+    },
+    {
+      "id": "body/19",
+      "order": 19,
+      "kind": "paragraph",
+      "sectionId": "I.2",
+      "isHeading": false,
+      "text": "Tuy nhiên, thời cơ này có giới hạn vì theo sự phân công của Đồng minh, quân Trung Hoa Dân quốc sẽ vào miền Bắc Việt Nam, quân Anh vào miền Nam để giải giáp quân Nhật. Thực dân Pháp cũng tìm cách quay trở lại.",
+      "normalizedText": "Tuy nhiên, thời cơ này có giới hạn vì theo sự phân công của Đồng minh, quân Trung Hoa Dân quốc sẽ vào miền Bắc Việt Nam, quân Anh vào miền Nam để giải giáp quân Nhật. Thực dân Pháp cũng tìm cách quay trở lại.",
+      "paragraphIndex": 19
+    },
+    {
+      "id": "body/20",
+      "order": 20,
+      "kind": "paragraph",
+      "sectionId": "I.2",
+      "isHeading": false,
+      "text": "Do đó, yêu cầu cấp bách là phải giành chính quyền trước khi quân Đồng minh tiến vào Đông Dương.",
+      "normalizedText": "Do đó, yêu cầu cấp bách là phải giành chính quyền trước khi quân Đồng minh tiến vào Đông Dương.",
+      "paragraphIndex": 20
+    },
+    {
+      "id": "body/21",
+      "order": 21,
+      "kind": "paragraph",
+      "sectionId": "II",
+      "isHeading": true,
+      "text": "PHẦN II. QUÁ TRÌNH CHUẨN BỊ CHO CÁCH MẠNG THÁNG TÁM",
+      "normalizedText": "PHẦN II. QUÁ TRÌNH CHUẨN BỊ CHO CÁCH MẠNG THÁNG TÁM",
+      "paragraphIndex": 21
+    },
+    {
+      "id": "body/22",
+      "order": 22,
+      "kind": "paragraph",
+      "sectionId": "II",
+      "isHeading": false,
+      "text": "Cách mạng tháng Tám không phải là một cuộc nổi dậy tự phát. Thắng lợi này là kết quả của quá trình chuẩn bị lâu dài, liên tục qua nhiều năm.",
+      "normalizedText": "Cách mạng tháng Tám không phải là một cuộc nổi dậy tự phát. Thắng lợi này là kết quả của quá trình chuẩn bị lâu dài, liên tục qua nhiều năm.",
+      "paragraphIndex": 22
+    },
+    {
+      "id": "body/23",
+      "order": 23,
+      "kind": "paragraph",
+      "sectionId": "II.1",
+      "isHeading": true,
+      "text": "1. Năm 1941: Thành lập Mặt trận Việt Minh, xác định nhiệm vụ giải phóng dân tộc",
+      "normalizedText": "1. Năm 1941: Thành lập Mặt trận Việt Minh, xác định nhiệm vụ giải phóng dân tộc",
+      "paragraphIndex": 23
+    },
+    {
+      "id": "body/24",
+      "order": 24,
+      "kind": "paragraph",
+      "sectionId": "II.1",
+      "isHeading": false,
+      "text": "Ngày 28/1/1941: Nguyễn Ái Quốc trở về nước sau hơn 30 năm hoạt động ở nước ngoài.",
+      "normalizedText": "Ngày 28/1/1941: Nguyễn Ái Quốc trở về nước sau hơn 30 năm hoạt động ở nước ngoài.",
+      "paragraphIndex": 24
+    },
+    {
+      "id": "body/25",
+      "order": 25,
+      "kind": "paragraph",
+      "sectionId": "II.1",
+      "isHeading": false,
+      "text": "Từ ngày 10 đến 19/5/1941: Hội nghị Trung ương lần thứ 8 được tổ chức tại Pác Bó, Cao Bằng, do Nguyễn Ái Quốc chủ trì.",
+      "normalizedText": "Từ ngày 10 đến 19/5/1941: Hội nghị Trung ương lần thứ 8 được tổ chức tại Pác Bó, Cao Bằng, do Nguyễn Ái Quốc chủ trì.",
+      "paragraphIndex": 25
+    },
+    {
+      "id": "body/26",
+      "order": 26,
+      "kind": "paragraph",
+      "sectionId": "II.1",
+      "isHeading": false,
+      "text": "Những quyết định quan trọng:",
+      "normalizedText": "Những quyết định quan trọng:",
+      "paragraphIndex": 26
+    },
+    {
+      "id": "body/27",
+      "order": 27,
+      "kind": "paragraph",
+      "sectionId": "II.1",
+      "isHeading": false,
+      "text": "Đặt nhiệm vụ giải phóng dân tộc lên hàng đầu.",
+      "normalizedText": "Đặt nhiệm vụ giải phóng dân tộc lên hàng đầu.",
+      "paragraphIndex": 27
+    },
+    {
+      "id": "body/28",
+      "order": 28,
+      "kind": "paragraph",
+      "sectionId": "II.1",
+      "isHeading": false,
+      "text": "Tạm gác một số khẩu hiệu chưa phù hợp để tập trung vào nhiệm vụ độc lập dân tộc.",
+      "normalizedText": "Tạm gác một số khẩu hiệu chưa phù hợp để tập trung vào nhiệm vụ độc lập dân tộc.",
+      "paragraphIndex": 28
+    },
+    {
+      "id": "body/29",
+      "order": 29,
+      "kind": "paragraph",
+      "sectionId": "II.1",
+      "isHeading": false,
+      "text": "Thành lập Mặt trận Việt Nam Độc lập Đồng minh, gọi tắt là Việt Minh.",
+      "normalizedText": "Thành lập Mặt trận Việt Nam Độc lập Đồng minh, gọi tắt là Việt Minh.",
+      "paragraphIndex": 29
+    },
+    {
+      "id": "body/30",
+      "order": 30,
+      "kind": "paragraph",
+      "sectionId": "II.1",
+      "isHeading": false,
+      "text": "Xây dựng lực lượng chính trị rộng rãi trong quần chúng.",
+      "normalizedText": "Xây dựng lực lượng chính trị rộng rãi trong quần chúng.",
+      "paragraphIndex": 30
+    },
+    {
+      "id": "body/31",
+      "order": 31,
+      "kind": "paragraph",
+      "sectionId": "II.1",
+      "isHeading": false,
+      "text": "Chuẩn bị lực lượng vũ trang và căn cứ địa cách mạng.",
+      "normalizedText": "Chuẩn bị lực lượng vũ trang và căn cứ địa cách mạng.",
+      "paragraphIndex": 31
+    },
+    {
+      "id": "body/32",
+      "order": 32,
+      "kind": "paragraph",
+      "sectionId": "II.1",
+      "isHeading": false,
+      "text": "Xác định chuẩn bị khởi nghĩa vũ trang là nhiệm vụ trọng tâm.",
+      "normalizedText": "Xác định chuẩn bị khởi nghĩa vũ trang là nhiệm vụ trọng tâm.",
+      "paragraphIndex": 32
+    },
+    {
+      "id": "body/33",
+      "order": 33,
+      "kind": "paragraph",
+      "sectionId": "II.1",
+      "isHeading": false,
+      "text": "Hội nghị Trung ương lần thứ 8 có ý nghĩa quyết định trong việc hoàn chỉnh sự chuyển hướng chiến lược của cách mạng Việt Nam sang nhiệm vụ giải phóng dân tộc.",
+      "normalizedText": "Hội nghị Trung ương lần thứ 8 có ý nghĩa quyết định trong việc hoàn chỉnh sự chuyển hướng chiến lược của cách mạng Việt Nam sang nhiệm vụ giải phóng dân tộc.",
+      "paragraphIndex": 33
+    },
+    {
+      "id": "body/34",
+      "order": 34,
+      "kind": "paragraph",
+      "sectionId": "II.2",
+      "isHeading": true,
+      "text": "2. Năm 1944: Thành lập lực lượng vũ trang cách mạng",
+      "normalizedText": "2. Năm 1944: Thành lập lực lượng vũ trang cách mạng",
+      "paragraphIndex": 34
+    },
+    {
+      "id": "body/35",
+      "order": 35,
+      "kind": "paragraph",
+      "sectionId": "II.2",
+      "isHeading": false,
+      "text": "Ngày 22/12/1944: Đội Việt Nam Tuyên truyền Giải phóng quân được thành lập tại khu rừng Trần Hưng Đạo, Cao Bằng.",
+      "normalizedText": "Ngày 22/12/1944: Đội Việt Nam Tuyên truyền Giải phóng quân được thành lập tại khu rừng Trần Hưng Đạo, Cao Bằng.",
+      "paragraphIndex": 35
+    },
+    {
+      "id": "body/36",
+      "order": 36,
+      "kind": "paragraph",
+      "sectionId": "II.2",
+      "isHeading": false,
+      "text": "Người trực tiếp tổ chức và chỉ huy là Võ Nguyên Giáp.",
+      "normalizedText": "Người trực tiếp tổ chức và chỉ huy là Võ Nguyên Giáp.",
+      "paragraphIndex": 36
+    },
+    {
+      "id": "body/37",
+      "order": 37,
+      "kind": "paragraph",
+      "sectionId": "II.2",
+      "isHeading": false,
+      "text": "Đội ban đầu có 34 chiến sĩ, được trang bị vũ khí còn hạn chế nhưng có tinh thần chiến đấu cao.",
+      "normalizedText": "Đội ban đầu có 34 chiến sĩ, được trang bị vũ khí còn hạn chế nhưng có tinh thần chiến đấu cao.",
+      "paragraphIndex": 37
+    },
+    {
+      "id": "body/38",
+      "order": 38,
+      "kind": "paragraph",
+      "sectionId": "II.2",
+      "isHeading": false,
+      "text": "Đội nhanh chóng lập chiến công tại Phai Khắt và Nà Ngần vào ngày 25 và 26/12/1944.",
+      "normalizedText": "Đội nhanh chóng lập chiến công tại Phai Khắt và Nà Ngần vào ngày 25 và 26/12/1944.",
+      "paragraphIndex": 38
+    },
+    {
+      "id": "body/39",
+      "order": 39,
+      "kind": "paragraph",
+      "sectionId": "II.2",
+      "isHeading": false,
+      "text": "Ý nghĩa:",
+      "normalizedText": "Ý nghĩa:",
+      "paragraphIndex": 39
+    },
+    {
+      "id": "body/40",
+      "order": 40,
+      "kind": "paragraph",
+      "sectionId": "II.2",
+      "isHeading": false,
+      "text": "Xây dựng lực lượng vũ trang tập trung.",
+      "normalizedText": "Xây dựng lực lượng vũ trang tập trung.",
+      "paragraphIndex": 40
+    },
+    {
+      "id": "body/41",
+      "order": 41,
+      "kind": "paragraph",
+      "sectionId": "II.2",
+      "isHeading": false,
+      "text": "Tạo cơ sở cho việc phát triển quân đội cách mạng.",
+      "normalizedText": "Tạo cơ sở cho việc phát triển quân đội cách mạng.",
+      "paragraphIndex": 41
+    },
+    {
+      "id": "body/42",
+      "order": 42,
+      "kind": "paragraph",
+      "sectionId": "II.2",
+      "isHeading": false,
+      "text": "Góp phần chuẩn bị lực lượng quân sự cho Tổng khởi nghĩa.",
+      "normalizedText": "Góp phần chuẩn bị lực lượng quân sự cho Tổng khởi nghĩa.",
+      "paragraphIndex": 42
+    },
+    {
+      "id": "body/43",
+      "order": 43,
+      "kind": "paragraph",
+      "sectionId": "II.3",
+      "isHeading": true,
+      "text": "3. Ngày 9/3/1945: Nhật đảo chính Pháp",
+      "normalizedText": "3. Ngày 9/3/1945: Nhật đảo chính Pháp",
+      "paragraphIndex": 43
+    },
+    {
+      "id": "body/44",
+      "order": 44,
+      "kind": "paragraph",
+      "sectionId": "II.3",
+      "isHeading": false,
+      "text": "Đêm 9/3/1945, quân Nhật bất ngờ tiến công quân Pháp trên toàn Đông Dương.",
+      "normalizedText": "Đêm 9/3/1945, quân Nhật bất ngờ tiến công quân Pháp trên toàn Đông Dương.",
+      "paragraphIndex": 44
+    },
+    {
+      "id": "body/45",
+      "order": 45,
+      "kind": "paragraph",
+      "sectionId": "II.3",
+      "isHeading": false,
+      "text": "Bộ máy cai trị của Pháp bị đánh đổ. Nhật trở thành lực lượng thống trị duy nhất ở Đông Dương.",
+      "normalizedText": "Bộ máy cai trị của Pháp bị đánh đổ. Nhật trở thành lực lượng thống trị duy nhất ở Đông Dương.",
+      "paragraphIndex": 45
+    },
+    {
+      "id": "body/46",
+      "order": 46,
+      "kind": "paragraph",
+      "sectionId": "II.3",
+      "isHeading": false,
+      "text": "Sự kiện này làm thay đổi tình hình chính trị, quân sự trong nước.",
+      "normalizedText": "Sự kiện này làm thay đổi tình hình chính trị, quân sự trong nước.",
+      "paragraphIndex": 46
+    },
+    {
+      "id": "body/47",
+      "order": 47,
+      "kind": "paragraph",
+      "sectionId": "II.4",
+      "isHeading": true,
+      "text": "4. Ngày 12/3/1945: Ban hành Chỉ thị Nhật – Pháp bắn nhau và hành động của chúng ta",
+      "normalizedText": "4. Ngày 12/3/1945: Ban hành Chỉ thị Nhật – Pháp bắn nhau và hành động của chúng ta",
+      "paragraphIndex": 47
+    },
+    {
+      "id": "body/48",
+      "order": 48,
+      "kind": "paragraph",
+      "sectionId": "II.4",
+      "isHeading": false,
+      "text": "Sau khi Nhật đảo chính Pháp, Ban Thường vụ Trung ương Đảng ban hành Chỉ thị:",
+      "normalizedText": "Sau khi Nhật đảo chính Pháp, Ban Thường vụ Trung ương Đảng ban hành Chỉ thị:",
+      "paragraphIndex": 48
+    },
+    {
+      "id": "body/49",
+      "order": 49,
+      "kind": "paragraph",
+      "sectionId": "II.4",
+      "isHeading": false,
+      "text": "Nhật – Pháp bắn nhau và hành động của chúng ta.",
+      "normalizedText": "Nhật – Pháp bắn nhau và hành động của chúng ta.",
+      "paragraphIndex": 49
+    },
+    {
+      "id": "body/50",
+      "order": 50,
+      "kind": "paragraph",
+      "sectionId": "II.4",
+      "isHeading": false,
+      "text": "Nội dung chính:",
+      "normalizedText": "Nội dung chính:",
+      "paragraphIndex": 50
+    },
+    {
+      "id": "body/51",
+      "order": 51,
+      "kind": "paragraph",
+      "sectionId": "II.4",
+      "isHeading": false,
+      "text": "Xác định phát xít Nhật là kẻ thù chính, cụ thể trước mắt.",
+      "normalizedText": "Xác định phát xít Nhật là kẻ thù chính, cụ thể trước mắt.",
+      "paragraphIndex": 51
+    },
+    {
+      "id": "body/52",
+      "order": 52,
+      "kind": "paragraph",
+      "sectionId": "II.4",
+      "isHeading": false,
+      "text": "Thay đổi khẩu hiệu đấu tranh cho phù hợp với tình hình mới.",
+      "normalizedText": "Thay đổi khẩu hiệu đấu tranh cho phù hợp với tình hình mới.",
+      "paragraphIndex": 52
+    },
+    {
+      "id": "body/53",
+      "order": 53,
+      "kind": "paragraph",
+      "sectionId": "II.4",
+      "isHeading": false,
+      "text": "Phát động cao trào kháng Nhật cứu nước.",
+      "normalizedText": "Phát động cao trào kháng Nhật cứu nước.",
+      "paragraphIndex": 53
+    },
+    {
+      "id": "body/54",
+      "order": 54,
+      "kind": "paragraph",
+      "sectionId": "II.4",
+      "isHeading": false,
+      "text": "Đẩy mạnh đấu tranh chính trị kết hợp đấu tranh vũ trang.",
+      "normalizedText": "Đẩy mạnh đấu tranh chính trị kết hợp đấu tranh vũ trang.",
+      "paragraphIndex": 54
+    },
+    {
+      "id": "body/55",
+      "order": 55,
+      "kind": "paragraph",
+      "sectionId": "II.4",
+      "isHeading": false,
+      "text": "Phát triển lực lượng cách mạng và các tổ chức Việt Minh.",
+      "normalizedText": "Phát triển lực lượng cách mạng và các tổ chức Việt Minh.",
+      "paragraphIndex": 55
+    },
+    {
+      "id": "body/56",
+      "order": 56,
+      "kind": "paragraph",
+      "sectionId": "II.4",
+      "isHeading": false,
+      "text": "Chuẩn bị điều kiện để tiến tới tổng khởi nghĩa.",
+      "normalizedText": "Chuẩn bị điều kiện để tiến tới tổng khởi nghĩa.",
+      "paragraphIndex": 56
+    },
+    {
+      "id": "body/57",
+      "order": 57,
+      "kind": "paragraph",
+      "sectionId": "II.4",
+      "isHeading": false,
+      "text": "Chỉ thị này có ý nghĩa quan trọng vì đã xác định đúng đối tượng đấu tranh trực tiếp và phương hướng hành động trong tình hình mới.",
+      "normalizedText": "Chỉ thị này có ý nghĩa quan trọng vì đã xác định đúng đối tượng đấu tranh trực tiếp và phương hướng hành động trong tình hình mới.",
+      "paragraphIndex": 57
+    },
+    {
+      "id": "body/58",
+      "order": 58,
+      "kind": "paragraph",
+      "sectionId": "II.5",
+      "isHeading": true,
+      "text": "5. Tháng 4/1945: Hội nghị quân sự cách mạng Bắc Kỳ",
+      "normalizedText": "5. Tháng 4/1945: Hội nghị quân sự cách mạng Bắc Kỳ",
+      "paragraphIndex": 58
+    },
+    {
+      "id": "body/59",
+      "order": 59,
+      "kind": "paragraph",
+      "sectionId": "II.5",
+      "isHeading": false,
+      "text": "Hội nghị quân sự cách mạng Bắc Kỳ được tổ chức nhằm thống nhất các lực lượng vũ trang, phát triển căn cứ địa và chuẩn bị cho khởi nghĩa.",
+      "normalizedText": "Hội nghị quân sự cách mạng Bắc Kỳ được tổ chức nhằm thống nhất các lực lượng vũ trang, phát triển căn cứ địa và chuẩn bị cho khởi nghĩa.",
+      "paragraphIndex": 59
+    },
+    {
+      "id": "body/60",
+      "order": 60,
+      "kind": "paragraph",
+      "sectionId": "II.5",
+      "isHeading": false,
+      "text": "Những nhiệm vụ trọng tâm:",
+      "normalizedText": "Những nhiệm vụ trọng tâm:",
+      "paragraphIndex": 60
+    },
+    {
+      "id": "body/61",
+      "order": 61,
+      "kind": "paragraph",
+      "sectionId": "II.5",
+      "isHeading": false,
+      "text": "Phát triển lực lượng vũ trang.",
+      "normalizedText": "Phát triển lực lượng vũ trang.",
+      "paragraphIndex": 61
+    },
+    {
+      "id": "body/62",
+      "order": 62,
+      "kind": "paragraph",
+      "sectionId": "II.5",
+      "isHeading": false,
+      "text": "Xây dựng các đội tự vệ và du kích.",
+      "normalizedText": "Xây dựng các đội tự vệ và du kích.",
+      "paragraphIndex": 62
+    },
+    {
+      "id": "body/63",
+      "order": 63,
+      "kind": "paragraph",
+      "sectionId": "II.5",
+      "isHeading": false,
+      "text": "Tăng cường hoạt động quân sự.",
+      "normalizedText": "Tăng cường hoạt động quân sự.",
+      "paragraphIndex": 63
+    },
+    {
+      "id": "body/64",
+      "order": 64,
+      "kind": "paragraph",
+      "sectionId": "II.5",
+      "isHeading": false,
+      "text": "Chuẩn bị phương án giành chính quyền.",
+      "normalizedText": "Chuẩn bị phương án giành chính quyền.",
+      "paragraphIndex": 64
+    },
+    {
+      "id": "body/65",
+      "order": 65,
+      "kind": "paragraph",
+      "sectionId": "II.6",
+      "isHeading": true,
+      "text": "6. Ngày 4/6/1945: Thành lập Khu giải phóng Việt Bắc",
+      "normalizedText": "6. Ngày 4/6/1945: Thành lập Khu giải phóng Việt Bắc",
+      "paragraphIndex": 65
+    },
+    {
+      "id": "body/66",
+      "order": 66,
+      "kind": "paragraph",
+      "sectionId": "II.6",
+      "isHeading": false,
+      "text": "Khu giải phóng được thành lập với sáu tỉnh:",
+      "normalizedText": "Khu giải phóng được thành lập với sáu tỉnh:",
+      "paragraphIndex": 66
+    },
+    {
+      "id": "body/67",
+      "order": 67,
+      "kind": "paragraph",
+      "sectionId": "II.6",
+      "isHeading": false,
+      "text": "Cao Bằng.",
+      "normalizedText": "Cao Bằng.",
+      "paragraphIndex": 67
+    },
+    {
+      "id": "body/68",
+      "order": 68,
+      "kind": "paragraph",
+      "sectionId": "II.6",
+      "isHeading": false,
+      "text": "Bắc Kạn.",
+      "normalizedText": "Bắc Kạn.",
+      "paragraphIndex": 68
+    },
+    {
+      "id": "body/69",
+      "order": 69,
+      "kind": "paragraph",
+      "sectionId": "II.6",
+      "isHeading": false,
+      "text": "Lạng Sơn.",
+      "normalizedText": "Lạng Sơn.",
+      "paragraphIndex": 69
+    },
+    {
+      "id": "body/70",
+      "order": 70,
+      "kind": "paragraph",
+      "sectionId": "II.6",
+      "isHeading": false,
+      "text": "Hà Giang.",
+      "normalizedText": "Hà Giang.",
+      "paragraphIndex": 70
+    },
+    {
+      "id": "body/71",
+      "order": 71,
+      "kind": "paragraph",
+      "sectionId": "II.6",
+      "isHeading": false,
+      "text": "Tuyên Quang.",
+      "normalizedText": "Tuyên Quang.",
+      "paragraphIndex": 71
+    },
+    {
+      "id": "body/72",
+      "order": 72,
+      "kind": "paragraph",
+      "sectionId": "II.6",
+      "isHeading": false,
+      "text": "Thái Nguyên.",
+      "normalizedText": "Thái Nguyên.",
+      "paragraphIndex": 72
+    },
+    {
+      "id": "body/73",
+      "order": 73,
+      "kind": "paragraph",
+      "sectionId": "II.6",
+      "isHeading": false,
+      "text": "Tân Trào, Tuyên Quang trở thành trung tâm chỉ đạo cách mạng.",
+      "normalizedText": "Tân Trào, Tuyên Quang trở thành trung tâm chỉ đạo cách mạng.",
+      "paragraphIndex": 73
+    },
+    {
+      "id": "body/74",
+      "order": 74,
+      "kind": "paragraph",
+      "sectionId": "II.6",
+      "isHeading": false,
+      "text": "Võ Nguyên Giáp được giao nhiệm vụ thường trực trong Ủy ban Chỉ huy lâm thời Khu giải phóng, phụ trách quân sự.",
+      "normalizedText": "Võ Nguyên Giáp được giao nhiệm vụ thường trực trong Ủy ban Chỉ huy lâm thời Khu giải phóng, phụ trách quân sự.",
+      "paragraphIndex": 74
+    },
+    {
+      "id": "body/75",
+      "order": 75,
+      "kind": "paragraph",
+      "sectionId": "II.6",
+      "isHeading": false,
+      "text": "Các lực lượng cách mạng tiếp tục xây dựng chính quyền cách mạng ở cơ sở, tổ chức lực lượng vũ trang và chuẩn bị Tổng khởi nghĩa.",
+      "normalizedText": "Các lực lượng cách mạng tiếp tục xây dựng chính quyền cách mạng ở cơ sở, tổ chức lực lượng vũ trang và chuẩn bị Tổng khởi nghĩa.",
+      "paragraphIndex": 75
+    },
+    {
+      "id": "body/76",
+      "order": 76,
+      "kind": "paragraph",
+      "sectionId": "II.6",
+      "isHeading": false,
+      "text": "Thành ủy Hồ Chí Minh+3",
+      "normalizedText": "Thành ủy Hồ Chí Minh+3",
+      "paragraphIndex": 76
+    },
+    {
+      "id": "body/77",
+      "order": 77,
+      "kind": "paragraph",
+      "sectionId": "III",
+      "isHeading": true,
+      "text": "PHẦN III. VAI TRÒ CỦA BỐN NHÂN VẬT TRONG QUÁ TRÌNH CHUẨN BỊ VÀ LÃNH ĐẠO CÁCH MẠNG",
+      "normalizedText": "PHẦN III. VAI TRÒ CỦA BỐN NHÂN VẬT TRONG QUÁ TRÌNH CHUẨN BỊ VÀ LÃNH ĐẠO CÁCH MẠNG",
+      "paragraphIndex": 77
+    },
+    {
+      "id": "body/78",
+      "order": 78,
+      "kind": "paragraph",
+      "sectionId": "III.1",
+      "isHeading": true,
+      "text": "1. Trường Chinh – Tổng Bí thư, lãnh đạo về đường lối và tổ chức Tổng khởi nghĩa",
+      "normalizedText": "1. Trường Chinh – Tổng Bí thư, lãnh đạo về đường lối và tổ chức Tổng khởi nghĩa",
+      "paragraphIndex": 78
+    },
+    {
+      "id": "body/79",
+      "order": 79,
+      "kind": "paragraph",
+      "sectionId": "III.1",
+      "isHeading": false,
+      "text": "Vị trí: Tổng Bí thư Đảng Cộng sản Đông Dương trong giai đoạn trước và trong Cách mạng tháng Tám.",
+      "normalizedText": "Vị trí: Tổng Bí thư Đảng Cộng sản Đông Dương trong giai đoạn trước và trong Cách mạng tháng Tám.",
+      "paragraphIndex": 79
+    },
+    {
+      "id": "body/80",
+      "order": 80,
+      "kind": "paragraph",
+      "sectionId": "III.1",
+      "isHeading": false,
+      "text": "Những đóng góp chủ yếu:",
+      "normalizedText": "Những đóng góp chủ yếu:",
+      "paragraphIndex": 80
+    },
+    {
+      "id": "body/81",
+      "order": 81,
+      "kind": "paragraph",
+      "sectionId": "III.1",
+      "isHeading": false,
+      "text": "Tham gia lãnh đạo Đảng trong quá trình chuẩn bị lực lượng cách mạng.",
+      "normalizedText": "Tham gia lãnh đạo Đảng trong quá trình chuẩn bị lực lượng cách mạng.",
+      "paragraphIndex": 81
+    },
+    {
+      "id": "body/82",
+      "order": 82,
+      "kind": "paragraph",
+      "sectionId": "III.1",
+      "isHeading": false,
+      "text": "Cùng Trung ương Đảng chỉ đạo phong trào kháng Nhật cứu nước sau ngày 9/3/1945.",
+      "normalizedText": "Cùng Trung ương Đảng chỉ đạo phong trào kháng Nhật cứu nước sau ngày 9/3/1945.",
+      "paragraphIndex": 82
+    },
+    {
+      "id": "body/83",
+      "order": 83,
+      "kind": "paragraph",
+      "sectionId": "III.1",
+      "isHeading": false,
+      "text": "Tham gia Hội nghị toàn quốc của Đảng tại Tân Trào từ ngày 13 đến 15/8/1945.",
+      "normalizedText": "Tham gia Hội nghị toàn quốc của Đảng tại Tân Trào từ ngày 13 đến 15/8/1945.",
+      "paragraphIndex": 83
+    },
+    {
+      "id": "body/84",
+      "order": 84,
+      "kind": "paragraph",
+      "sectionId": "III.1",
+      "isHeading": false,
+      "text": "Nhấn mạnh yêu cầu phải hành động nhanh chóng, không bỏ lỡ thời cơ.",
+      "normalizedText": "Nhấn mạnh yêu cầu phải hành động nhanh chóng, không bỏ lỡ thời cơ.",
+      "paragraphIndex": 84
+    },
+    {
+      "id": "body/85",
+      "order": 85,
+      "kind": "paragraph",
+      "sectionId": "III.1",
+      "isHeading": false,
+      "text": "Tham gia lãnh đạo việc phát động Tổng khởi nghĩa trên cả nước.",
+      "normalizedText": "Tham gia lãnh đạo việc phát động Tổng khởi nghĩa trên cả nước.",
+      "paragraphIndex": 85
+    },
+    {
+      "id": "body/86",
+      "order": 86,
+      "kind": "paragraph",
+      "sectionId": "III.1",
+      "isHeading": false,
+      "text": "Trực tiếp phụ trách Ủy ban Khởi nghĩa toàn quốc.",
+      "normalizedText": "Trực tiếp phụ trách Ủy ban Khởi nghĩa toàn quốc.",
+      "paragraphIndex": 86
+    },
+    {
+      "id": "body/87",
+      "order": 87,
+      "kind": "paragraph",
+      "sectionId": "III.1",
+      "isHeading": false,
+      "text": "Vai trò của Trường Chinh đặc biệt quan trọng ở phương diện chính trị, đường lối và tổ chức.",
+      "normalizedText": "Vai trò của Trường Chinh đặc biệt quan trọng ở phương diện chính trị, đường lối và tổ chức.",
+      "paragraphIndex": 87
+    },
+    {
+      "id": "body/88",
+      "order": 88,
+      "kind": "paragraph",
+      "sectionId": "III.1",
+      "isHeading": false,
+      "text": "Ông góp phần chuyển những nhận định về tình hình quốc tế và trong nước thành chủ trương hành động cụ thể để giành chính quyền.",
+      "normalizedText": "Ông góp phần chuyển những nhận định về tình hình quốc tế và trong nước thành chủ trương hành động cụ thể để giành chính quyền.",
+      "paragraphIndex": 88
+    },
+    {
+      "id": "body/89",
+      "order": 89,
+      "kind": "paragraph",
+      "sectionId": "III.2",
+      "isHeading": true,
+      "text": "2. Võ Nguyên Giáp – Tổ chức và chỉ huy lực lượng vũ trang",
+      "normalizedText": "2. Võ Nguyên Giáp – Tổ chức và chỉ huy lực lượng vũ trang",
+      "paragraphIndex": 89
+    },
+    {
+      "id": "body/90",
+      "order": 90,
+      "kind": "paragraph",
+      "sectionId": "III.2",
+      "isHeading": false,
+      "text": "Vị trí: Cán bộ lãnh đạo quân sự của cách mạng.",
+      "normalizedText": "Vị trí: Cán bộ lãnh đạo quân sự của cách mạng.",
+      "paragraphIndex": 90
+    },
+    {
+      "id": "body/91",
+      "order": 91,
+      "kind": "paragraph",
+      "sectionId": "III.2",
+      "isHeading": false,
+      "text": "Những đóng góp:",
+      "normalizedText": "Những đóng góp:",
+      "paragraphIndex": 91
+    },
+    {
+      "id": "body/92",
+      "order": 92,
+      "kind": "paragraph",
+      "sectionId": "III.2",
+      "isHeading": false,
+      "text": "Trực tiếp tổ chức và chỉ huy Đội Việt Nam Tuyên truyền Giải phóng quân năm 1944.",
+      "normalizedText": "Trực tiếp tổ chức và chỉ huy Đội Việt Nam Tuyên truyền Giải phóng quân năm 1944.",
+      "paragraphIndex": 92
+    },
+    {
+      "id": "body/93",
+      "order": 93,
+      "kind": "paragraph",
+      "sectionId": "III.2",
+      "isHeading": false,
+      "text": "Tham gia xây dựng lực lượng vũ trang cách mạng.",
+      "normalizedText": "Tham gia xây dựng lực lượng vũ trang cách mạng.",
+      "paragraphIndex": 93
+    },
+    {
+      "id": "body/94",
+      "order": 94,
+      "kind": "paragraph",
+      "sectionId": "III.2",
+      "isHeading": false,
+      "text": "Được giao phụ trách quân sự trong Ủy ban Chỉ huy lâm thời Khu giải phóng.",
+      "normalizedText": "Được giao phụ trách quân sự trong Ủy ban Chỉ huy lâm thời Khu giải phóng.",
+      "paragraphIndex": 94
+    },
+    {
+      "id": "body/95",
+      "order": 95,
+      "kind": "paragraph",
+      "sectionId": "III.2",
+      "isHeading": false,
+      "text": "Tham gia tổ chức Trường Quân chính kháng Nhật để đào tạo cán bộ.",
+      "normalizedText": "Tham gia tổ chức Trường Quân chính kháng Nhật để đào tạo cán bộ.",
+      "paragraphIndex": 95
+    },
+    {
+      "id": "body/96",
+      "order": 96,
+      "kind": "paragraph",
+      "sectionId": "III.2",
+      "isHeading": false,
+      "text": "Tham gia Hội nghị toàn quốc của Đảng tháng 8/1945.",
+      "normalizedText": "Tham gia Hội nghị toàn quốc của Đảng tháng 8/1945.",
+      "paragraphIndex": 96
+    },
+    {
+      "id": "body/97",
+      "order": 97,
+      "kind": "paragraph",
+      "sectionId": "III.2",
+      "isHeading": false,
+      "text": "Là thành viên Ủy ban Khởi nghĩa toàn quốc.",
+      "normalizedText": "Là thành viên Ủy ban Khởi nghĩa toàn quốc.",
+      "paragraphIndex": 97
+    },
+    {
+      "id": "body/98",
+      "order": 98,
+      "kind": "paragraph",
+      "sectionId": "III.2",
+      "isHeading": false,
+      "text": "Thay mặt Ủy ban Khởi nghĩa toàn quốc ký Quân lệnh số 1 ngày 13/8/1945.",
+      "normalizedText": "Thay mặt Ủy ban Khởi nghĩa toàn quốc ký Quân lệnh số 1 ngày 13/8/1945.",
+      "paragraphIndex": 98
+    },
+    {
+      "id": "body/99",
+      "order": 99,
+      "kind": "paragraph",
+      "sectionId": "III.2",
+      "isHeading": false,
+      "text": "Chỉ huy lực lượng Giải phóng quân tiến về Thái Nguyên ngày 16/8/1945.",
+      "normalizedText": "Chỉ huy lực lượng Giải phóng quân tiến về Thái Nguyên ngày 16/8/1945.",
+      "paragraphIndex": 99
+    },
+    {
+      "id": "body/100",
+      "order": 100,
+      "kind": "paragraph",
+      "sectionId": "III.2",
+      "isHeading": false,
+      "text": "Đặc biệt, cần ghi nhớ: Võ Nguyên Giáp không chỉ xây dựng lực lượng quân sự mà còn tham gia cơ quan chỉ đạo Tổng khởi nghĩa ở cấp toàn quốc.",
+      "normalizedText": "Đặc biệt, cần ghi nhớ: Võ Nguyên Giáp không chỉ xây dựng lực lượng quân sự mà còn tham gia cơ quan chỉ đạo Tổng khởi nghĩa ở cấp toàn quốc.",
+      "paragraphIndex": 100
+    },
+    {
+      "id": "body/101",
+      "order": 101,
+      "kind": "paragraph",
+      "sectionId": "III.3",
+      "isHeading": true,
+      "text": "3. Phạm Văn Đồng – Tham gia xây dựng căn cứ, chuẩn bị cán bộ và cơ quan chính quyền cách mạng",
+      "normalizedText": "3. Phạm Văn Đồng – Tham gia xây dựng căn cứ, chuẩn bị cán bộ và cơ quan chính quyền cách mạng",
+      "paragraphIndex": 101
+    },
+    {
+      "id": "body/102",
+      "order": 102,
+      "kind": "paragraph",
+      "sectionId": "III.3",
+      "isHeading": false,
+      "text": "Vị trí: Cán bộ lãnh đạo cách mạng, hoạt động trong hệ thống lãnh đạo và tổ chức Việt Minh.",
+      "normalizedText": "Vị trí: Cán bộ lãnh đạo cách mạng, hoạt động trong hệ thống lãnh đạo và tổ chức Việt Minh.",
+      "paragraphIndex": 102
+    },
+    {
+      "id": "body/103",
+      "order": 103,
+      "kind": "paragraph",
+      "sectionId": "III.3",
+      "isHeading": false,
+      "text": "Những hoạt động quan trọng:",
+      "normalizedText": "Những hoạt động quan trọng:",
+      "paragraphIndex": 103
+    },
+    {
+      "id": "body/104",
+      "order": 104,
+      "kind": "paragraph",
+      "sectionId": "III.3",
+      "isHeading": false,
+      "text": "Hoạt động tại căn cứ cách mạng Tân Trào trong năm 1945.",
+      "normalizedText": "Hoạt động tại căn cứ cách mạng Tân Trào trong năm 1945.",
+      "paragraphIndex": 104
+    },
+    {
+      "id": "body/105",
+      "order": 105,
+      "kind": "paragraph",
+      "sectionId": "III.3",
+      "isHeading": false,
+      "text": "Tham gia xây dựng Khu giải phóng.",
+      "normalizedText": "Tham gia xây dựng Khu giải phóng.",
+      "paragraphIndex": 105
+    },
+    {
+      "id": "body/106",
+      "order": 106,
+      "kind": "paragraph",
+      "sectionId": "III.3",
+      "isHeading": false,
+      "text": "Tham gia công tác đào tạo cán bộ tại Trường Quân chính kháng Nhật.",
+      "normalizedText": "Tham gia công tác đào tạo cán bộ tại Trường Quân chính kháng Nhật.",
+      "paragraphIndex": 106
+    },
+    {
+      "id": "body/107",
+      "order": 107,
+      "kind": "paragraph",
+      "sectionId": "III.3",
+      "isHeading": false,
+      "text": "Tham dự Hội nghị toàn quốc của Đảng từ ngày 13 đến 15/8/1945.",
+      "normalizedText": "Tham dự Hội nghị toàn quốc của Đảng từ ngày 13 đến 15/8/1945.",
+      "paragraphIndex": 107
+    },
+    {
+      "id": "body/108",
+      "order": 108,
+      "kind": "paragraph",
+      "sectionId": "III.3",
+      "isHeading": false,
+      "text": "Tham dự Quốc dân Đại hội Tân Trào ngày 16–17/8/1945.",
+      "normalizedText": "Tham dự Quốc dân Đại hội Tân Trào ngày 16–17/8/1945.",
+      "paragraphIndex": 108
+    },
+    {
+      "id": "body/109",
+      "order": 109,
+      "kind": "paragraph",
+      "sectionId": "III.3",
+      "isHeading": false,
+      "text": "Tham gia Ủy ban Dân tộc giải phóng Việt Nam, được bầu vào Ban Thường trực.",
+      "normalizedText": "Tham gia Ủy ban Dân tộc giải phóng Việt Nam, được bầu vào Ban Thường trực.",
+      "paragraphIndex": 109
+    },
+    {
+      "id": "body/110",
+      "order": 110,
+      "kind": "paragraph",
+      "sectionId": "III.3",
+      "isHeading": false,
+      "text": "Sau khi cách mạng thắng lợi, tham gia Chính phủ lâm thời với chức vụ Bộ trưởng Bộ Tài chính.",
+      "normalizedText": "Sau khi cách mạng thắng lợi, tham gia Chính phủ lâm thời với chức vụ Bộ trưởng Bộ Tài chính.",
+      "paragraphIndex": 110
+    },
+    {
+      "id": "body/111",
+      "order": 111,
+      "kind": "paragraph",
+      "sectionId": "III.3",
+      "isHeading": false,
+      "text": "Vai trò của Phạm Văn Đồng thể hiện ở việc tham gia chuẩn bị lực lượng chính trị, đào tạo cán bộ và xây dựng cơ quan lãnh đạo, quản lý đất nước trong thời kỳ chuyển tiếp.",
+      "normalizedText": "Vai trò của Phạm Văn Đồng thể hiện ở việc tham gia chuẩn bị lực lượng chính trị, đào tạo cán bộ và xây dựng cơ quan lãnh đạo, quản lý đất nước trong thời kỳ chuyển tiếp.",
+      "paragraphIndex": 111
+    },
+    {
+      "id": "body/112",
+      "order": 112,
+      "kind": "paragraph",
+      "sectionId": "III.4",
+      "isHeading": true,
+      "text": "4. Hoàng Quốc Việt – Lãnh đạo công tác tổ chức, Mặt trận và chỉ đạo phong trào ở Nam Bộ",
+      "normalizedText": "4. Hoàng Quốc Việt – Lãnh đạo công tác tổ chức, Mặt trận và chỉ đạo phong trào ở Nam Bộ",
+      "paragraphIndex": 112
+    },
+    {
+      "id": "body/113",
+      "order": 113,
+      "kind": "paragraph",
+      "sectionId": "III.4",
+      "isHeading": false,
+      "text": "Vị trí: Ủy viên Thường vụ Trung ương Đảng, cán bộ lãnh đạo có nhiều kinh nghiệm trong công tác xây dựng Đảng và vận động quần chúng.",
+      "normalizedText": "Vị trí: Ủy viên Thường vụ Trung ương Đảng, cán bộ lãnh đạo có nhiều kinh nghiệm trong công tác xây dựng Đảng và vận động quần chúng.",
+      "paragraphIndex": 113
+    },
+    {
+      "id": "body/114",
+      "order": 114,
+      "kind": "paragraph",
+      "sectionId": "III.4",
+      "isHeading": false,
+      "text": "Những hoạt động quan trọng:",
+      "normalizedText": "Những hoạt động quan trọng:",
+      "paragraphIndex": 114
+    },
+    {
+      "id": "body/115",
+      "order": 115,
+      "kind": "paragraph",
+      "sectionId": "III.4",
+      "isHeading": false,
+      "text": "Năm 1937, được cử làm Bí thư Xứ ủy Bắc Kỳ.",
+      "normalizedText": "Năm 1937, được cử làm Bí thư Xứ ủy Bắc Kỳ.",
+      "paragraphIndex": 115
+    },
+    {
+      "id": "body/116",
+      "order": 116,
+      "kind": "paragraph",
+      "sectionId": "III.4",
+      "isHeading": false,
+      "text": "Tháng 5/1941, tham dự Hội nghị Trung ương lần thứ 8 và tham gia Ban Chấp hành Trung ương.",
+      "normalizedText": "Tháng 5/1941, tham dự Hội nghị Trung ương lần thứ 8 và tham gia Ban Chấp hành Trung ương.",
+      "paragraphIndex": 116
+    },
+    {
+      "id": "body/117",
+      "order": 117,
+      "kind": "paragraph",
+      "sectionId": "III.4",
+      "isHeading": false,
+      "text": "Năm 1943, được giao trọng trách quyền Bí thư Tổng bộ Việt Minh.",
+      "normalizedText": "Năm 1943, được giao trọng trách quyền Bí thư Tổng bộ Việt Minh.",
+      "paragraphIndex": 117
+    },
+    {
+      "id": "body/118",
+      "order": 118,
+      "kind": "paragraph",
+      "sectionId": "III.4",
+      "isHeading": false,
+      "text": "Tháng 8/1945, tại Hội nghị toàn quốc của Đảng, được bầu làm Ủy viên Thường vụ Trung ương.",
+      "normalizedText": "Tháng 8/1945, tại Hội nghị toàn quốc của Đảng, được bầu làm Ủy viên Thường vụ Trung ương.",
+      "paragraphIndex": 118
+    },
+    {
+      "id": "body/119",
+      "order": 119,
+      "kind": "paragraph",
+      "sectionId": "III.4",
+      "isHeading": false,
+      "text": "Cùng Trung ương Đảng tham gia lãnh đạo Tổng khởi nghĩa.",
+      "normalizedText": "Cùng Trung ương Đảng tham gia lãnh đạo Tổng khởi nghĩa.",
+      "paragraphIndex": 119
+    },
+    {
+      "id": "body/120",
+      "order": 120,
+      "kind": "paragraph",
+      "sectionId": "III.4",
+      "isHeading": false,
+      "text": "Được Trung ương và Hồ Chí Minh giao nhiệm vụ làm đặc phái viên vào Nam Bộ, kiểm tra và chỉ đạo phong trào giành chính quyền.",
+      "normalizedText": "Được Trung ương và Hồ Chí Minh giao nhiệm vụ làm đặc phái viên vào Nam Bộ, kiểm tra và chỉ đạo phong trào giành chính quyền.",
+      "paragraphIndex": 120
+    },
+    {
+      "id": "body/121",
+      "order": 121,
+      "kind": "paragraph",
+      "sectionId": "III.4",
+      "isHeading": false,
+      "text": "Sau khi cách mạng thắng lợi, giúp Xứ ủy Nam Bộ củng cố chính quyền, thống nhất các lực lượng cách mạng và mở rộng Mặt trận Dân tộc Thống nhất.",
+      "normalizedText": "Sau khi cách mạng thắng lợi, giúp Xứ ủy Nam Bộ củng cố chính quyền, thống nhất các lực lượng cách mạng và mở rộng Mặt trận Dân tộc Thống nhất.",
+      "paragraphIndex": 121
+    },
+    {
+      "id": "body/122",
+      "order": 122,
+      "kind": "paragraph",
+      "sectionId": "III.4",
+      "isHeading": false,
+      "text": "Điểm cần chú ý: Hoàng Quốc Việt có vai trò đặc biệt trong việc kết nối sự lãnh đạo của Trung ương với phong trào cách mạng Nam Bộ. Không nên chỉ xem ông là cán bộ tham gia phong trào chung, bởi ông được giao nhiệm vụ trực tiếp kiểm tra, chỉ đạo và xử lý những vấn đề tổ chức tại miền Nam.",
+      "normalizedText": "Điểm cần chú ý: Hoàng Quốc Việt có vai trò đặc biệt trong việc kết nối sự lãnh đạo của Trung ương với phong trào cách mạng Nam Bộ. Không nên chỉ xem ông là cán bộ tham gia phong trào chung, bởi ông được giao nhiệm vụ trực tiếp kiểm tra, chỉ đạo và xử lý những vấn đề tổ chức tại miền Nam.",
+      "paragraphIndex": 122
+    },
+    {
+      "id": "body/123",
+      "order": 123,
+      "kind": "paragraph",
+      "sectionId": "IV",
+      "isHeading": true,
+      "text": "PHẦN IV. DIỄN BIẾN CỤ THỂ CỦA CÁCH MẠNG THÁNG TÁM NĂM 1945",
+      "normalizedText": "PHẦN IV. DIỄN BIẾN CỤ THỂ CỦA CÁCH MẠNG THÁNG TÁM NĂM 1945",
+      "paragraphIndex": 123
+    },
+    {
+      "id": "body/124",
+      "order": 124,
+      "kind": "paragraph",
+      "sectionId": "IV",
+      "isHeading": false,
+      "text": "Đây là phần trọng tâm nhất. Các sự kiện được trình bày theo ngày, nêu rõ địa điểm, lực lượng tham gia, nội dung hành động và kết quả.",
+      "normalizedText": "Đây là phần trọng tâm nhất. Các sự kiện được trình bày theo ngày, nêu rõ địa điểm, lực lượng tham gia, nội dung hành động và kết quả.",
+      "paragraphIndex": 124
+    },
+    {
+      "id": "body/125",
+      "order": 125,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": true,
+      "text": "1. Ngày 13/8/1945: Thành lập Ủy ban Khởi nghĩa toàn quốc, phát lệnh Tổng khởi nghĩa",
+      "normalizedText": "1. Ngày 13/8/1945: Thành lập Ủy ban Khởi nghĩa toàn quốc, phát lệnh Tổng khởi nghĩa",
+      "paragraphIndex": 125
+    },
+    {
+      "id": "body/126",
+      "order": 126,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Trước tình hình Nhật Bản sắp đầu hàng Đồng minh, Trung ương Đảng nhận định thời cơ giành chính quyền đã xuất hiện.",
+      "normalizedText": "Trước tình hình Nhật Bản sắp đầu hàng Đồng minh, Trung ương Đảng nhận định thời cơ giành chính quyền đã xuất hiện.",
+      "paragraphIndex": 126
+    },
+    {
+      "id": "body/127",
+      "order": 127,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Ngày 13/8/1945, Ủy ban Khởi nghĩa toàn quốc được thành lập.",
+      "normalizedText": "Ngày 13/8/1945, Ủy ban Khởi nghĩa toàn quốc được thành lập.",
+      "paragraphIndex": 127
+    },
+    {
+      "id": "body/128",
+      "order": 128,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Các thành viên gồm:",
+      "normalizedText": "Các thành viên gồm:",
+      "paragraphIndex": 128
+    },
+    {
+      "id": "body/129",
+      "order": 129,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Trường Chinh.",
+      "normalizedText": "Trường Chinh.",
+      "paragraphIndex": 129
+    },
+    {
+      "id": "body/130",
+      "order": 130,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Võ Nguyên Giáp.",
+      "normalizedText": "Võ Nguyên Giáp.",
+      "paragraphIndex": 130
+    },
+    {
+      "id": "body/131",
+      "order": 131,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Trần Đăng Ninh.",
+      "normalizedText": "Trần Đăng Ninh.",
+      "paragraphIndex": 131
+    },
+    {
+      "id": "body/132",
+      "order": 132,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Lê Thanh Nghị.",
+      "normalizedText": "Lê Thanh Nghị.",
+      "paragraphIndex": 132
+    },
+    {
+      "id": "body/133",
+      "order": 133,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Chu Văn Tấn.",
+      "normalizedText": "Chu Văn Tấn.",
+      "paragraphIndex": 133
+    },
+    {
+      "id": "body/134",
+      "order": 134,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Trường Chinh trực tiếp phụ trách Ủy ban.",
+      "normalizedText": "Trường Chinh trực tiếp phụ trách Ủy ban.",
+      "paragraphIndex": 134
+    },
+    {
+      "id": "body/135",
+      "order": 135,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Đêm 13/8/1945, Ủy ban Khởi nghĩa toàn quốc ban bố Quân lệnh số 1.",
+      "normalizedText": "Đêm 13/8/1945, Ủy ban Khởi nghĩa toàn quốc ban bố Quân lệnh số 1.",
+      "paragraphIndex": 135
+    },
+    {
+      "id": "body/136",
+      "order": 136,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Đây là văn kiện chính thức phát lệnh Tổng khởi nghĩa, kêu gọi toàn dân đứng lên giành chính quyền.",
+      "normalizedText": "Đây là văn kiện chính thức phát lệnh Tổng khởi nghĩa, kêu gọi toàn dân đứng lên giành chính quyền.",
+      "paragraphIndex": 136
+    },
+    {
+      "id": "body/137",
+      "order": 137,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Nội dung chủ yếu:",
+      "normalizedText": "Nội dung chủ yếu:",
+      "paragraphIndex": 137
+    },
+    {
+      "id": "body/138",
+      "order": 138,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Khẳng định thời cơ giành độc lập đã đến.",
+      "normalizedText": "Khẳng định thời cơ giành độc lập đã đến.",
+      "paragraphIndex": 138
+    },
+    {
+      "id": "body/139",
+      "order": 139,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Kêu gọi quân và dân cả nước đứng lên khởi nghĩa.",
+      "normalizedText": "Kêu gọi quân và dân cả nước đứng lên khởi nghĩa.",
+      "paragraphIndex": 139
+    },
+    {
+      "id": "body/140",
+      "order": 140,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Yêu cầu các địa phương nhanh chóng tổ chức lực lượng.",
+      "normalizedText": "Yêu cầu các địa phương nhanh chóng tổ chức lực lượng.",
+      "paragraphIndex": 140
+    },
+    {
+      "id": "body/141",
+      "order": 141,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Kết hợp đấu tranh chính trị với đấu tranh vũ trang.",
+      "normalizedText": "Kết hợp đấu tranh chính trị với đấu tranh vũ trang.",
+      "paragraphIndex": 141
+    },
+    {
+      "id": "body/142",
+      "order": 142,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Hành động khẩn trương, kiên quyết để giành chính quyền trước khi quân Đồng minh vào Đông Dương.",
+      "normalizedText": "Hành động khẩn trương, kiên quyết để giành chính quyền trước khi quân Đồng minh vào Đông Dương.",
+      "paragraphIndex": 142
+    },
+    {
+      "id": "body/143",
+      "order": 143,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Vai trò của Võ Nguyên Giáp: Ông thay mặt Ủy ban Khởi nghĩa toàn quốc ký Quân lệnh số 1. Văn bản do Trần Huy Liệu soạn thảo.",
+      "normalizedText": "Vai trò của Võ Nguyên Giáp: Ông thay mặt Ủy ban Khởi nghĩa toàn quốc ký Quân lệnh số 1. Văn bản do Trần Huy Liệu soạn thảo.",
+      "paragraphIndex": 143
+    },
+    {
+      "id": "body/144",
+      "order": 144,
+      "kind": "paragraph",
+      "sectionId": "IV.1",
+      "isHeading": false,
+      "text": "Đây là một chi tiết quan trọng cần ghi đúng, bởi người soạn thảo và người ký văn kiện không phải cùng một người.",
+      "normalizedText": "Đây là một chi tiết quan trọng cần ghi đúng, bởi người soạn thảo và người ký văn kiện không phải cùng một người.",
+      "paragraphIndex": 144
+    },
+    {
+      "id": "body/145",
+      "order": 145,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": true,
+      "text": "2. Ngày 13–15/8/1945: Hội nghị toàn quốc của Đảng tại Tân Trào",
+      "normalizedText": "2. Ngày 13–15/8/1945: Hội nghị toàn quốc của Đảng tại Tân Trào",
+      "paragraphIndex": 145
+    },
+    {
+      "id": "body/146",
+      "order": 146,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Hội nghị được tổ chức tại Tân Trào, Tuyên Quang.",
+      "normalizedText": "Hội nghị được tổ chức tại Tân Trào, Tuyên Quang.",
+      "paragraphIndex": 146
+    },
+    {
+      "id": "body/147",
+      "order": 147,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Thành phần tham dự là đại biểu các tổ chức Đảng trong cả nước.",
+      "normalizedText": "Thành phần tham dự là đại biểu các tổ chức Đảng trong cả nước.",
+      "paragraphIndex": 147
+    },
+    {
+      "id": "body/148",
+      "order": 148,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Những nội dung được thảo luận và quyết định:",
+      "normalizedText": "Những nội dung được thảo luận và quyết định:",
+      "paragraphIndex": 148
+    },
+    {
+      "id": "body/149",
+      "order": 149,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Thứ nhất, đánh giá tình hình thế giới và trong nước.",
+      "normalizedText": "Thứ nhất, đánh giá tình hình thế giới và trong nước.",
+      "paragraphIndex": 149
+    },
+    {
+      "id": "body/150",
+      "order": 150,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Nhật Bản đang đứng trước thất bại hoàn toàn. Bộ máy cai trị ở Đông Dương suy yếu, tạo điều kiện thuận lợi cho cách mạng.",
+      "normalizedText": "Nhật Bản đang đứng trước thất bại hoàn toàn. Bộ máy cai trị ở Đông Dương suy yếu, tạo điều kiện thuận lợi cho cách mạng.",
+      "paragraphIndex": 150
+    },
+    {
+      "id": "body/151",
+      "order": 151,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Thứ hai, quyết định phát động Tổng khởi nghĩa.",
+      "normalizedText": "Thứ hai, quyết định phát động Tổng khởi nghĩa.",
+      "paragraphIndex": 151
+    },
+    {
+      "id": "body/152",
+      "order": 152,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Hội nghị xác định phải nhanh chóng huy động lực lượng toàn dân, giành chính quyền trước khi quân Đồng minh tiến vào.",
+      "normalizedText": "Hội nghị xác định phải nhanh chóng huy động lực lượng toàn dân, giành chính quyền trước khi quân Đồng minh tiến vào.",
+      "paragraphIndex": 152
+    },
+    {
+      "id": "body/153",
+      "order": 153,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Thứ ba, xác định nguyên tắc hành động.",
+      "normalizedText": "Thứ ba, xác định nguyên tắc hành động.",
+      "paragraphIndex": 153
+    },
+    {
+      "id": "body/154",
+      "order": 154,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Ba nguyên tắc được đề ra là:",
+      "normalizedText": "Ba nguyên tắc được đề ra là:",
+      "paragraphIndex": 154
+    },
+    {
+      "id": "body/155",
+      "order": 155,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Tập trung: tập trung lực lượng vào những nhiệm vụ chính.",
+      "normalizedText": "Tập trung: tập trung lực lượng vào những nhiệm vụ chính.",
+      "paragraphIndex": 155
+    },
+    {
+      "id": "body/156",
+      "order": 156,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Thống nhất: thống nhất về chính trị, quân sự, hành động và chỉ huy.",
+      "normalizedText": "Thống nhất: thống nhất về chính trị, quân sự, hành động và chỉ huy.",
+      "paragraphIndex": 156
+    },
+    {
+      "id": "body/157",
+      "order": 157,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Kịp thời: hành động nhanh chóng, không bỏ lỡ thời cơ.",
+      "normalizedText": "Kịp thời: hành động nhanh chóng, không bỏ lỡ thời cơ.",
+      "paragraphIndex": 157
+    },
+    {
+      "id": "body/158",
+      "order": 158,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Thứ tư, đề ra nhiệm vụ cho các địa phương.",
+      "normalizedText": "Thứ tư, đề ra nhiệm vụ cho các địa phương.",
+      "paragraphIndex": 158
+    },
+    {
+      "id": "body/159",
+      "order": 159,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Các tổ chức Đảng, Việt Minh và lực lượng vũ trang được yêu cầu chủ động tổ chức khởi nghĩa phù hợp với tình hình thực tế.",
+      "normalizedText": "Các tổ chức Đảng, Việt Minh và lực lượng vũ trang được yêu cầu chủ động tổ chức khởi nghĩa phù hợp với tình hình thực tế.",
+      "paragraphIndex": 159
+    },
+    {
+      "id": "body/160",
+      "order": 160,
+      "kind": "paragraph",
+      "sectionId": "IV.2",
+      "isHeading": false,
+      "text": "Tại Hội nghị, Trường Chinh thể hiện vai trò nổi bật trong việc lãnh đạo về đường lối và tổ chức Tổng khởi nghĩa. Hoàng Quốc Việt được bầu vào Thường vụ Trung ương. Võ Nguyên Giáp được bầu bổ sung vào Ban Chấp hành Trung ương.",
+      "normalizedText": "Tại Hội nghị, Trường Chinh thể hiện vai trò nổi bật trong việc lãnh đạo về đường lối và tổ chức Tổng khởi nghĩa. Hoàng Quốc Việt được bầu vào Thường vụ Trung ương. Võ Nguyên Giáp được bầu bổ sung vào Ban Chấp hành Trung ương.",
+      "paragraphIndex": 160
+    },
+    {
+      "id": "body/161",
+      "order": 161,
+      "kind": "paragraph",
+      "sectionId": "IV.3",
+      "isHeading": true,
+      "text": "3. Ngày 14–15/8/1945: Nhật đầu hàng, phong trào khởi nghĩa phát triển",
+      "normalizedText": "3. Ngày 14–15/8/1945: Nhật đầu hàng, phong trào khởi nghĩa phát triển",
+      "paragraphIndex": 161
+    },
+    {
+      "id": "body/162",
+      "order": 162,
+      "kind": "paragraph",
+      "sectionId": "IV.3",
+      "isHeading": false,
+      "text": "Ngày 14/8, Nhật chấp nhận đầu hàng Đồng minh. Ngày 15/8, quyết định đầu hàng được Nhật hoàng công bố.",
+      "normalizedText": "Ngày 14/8, Nhật chấp nhận đầu hàng Đồng minh. Ngày 15/8, quyết định đầu hàng được Nhật hoàng công bố.",
+      "paragraphIndex": 162
+    },
+    {
+      "id": "body/163",
+      "order": 163,
+      "kind": "paragraph",
+      "sectionId": "IV.3",
+      "isHeading": false,
+      "text": "Thông tin này nhanh chóng lan rộng, khiến bộ máy chính quyền thân Nhật ở Việt Nam rơi vào tình trạng hoang mang.",
+      "normalizedText": "Thông tin này nhanh chóng lan rộng, khiến bộ máy chính quyền thân Nhật ở Việt Nam rơi vào tình trạng hoang mang.",
+      "paragraphIndex": 163
+    },
+    {
+      "id": "body/164",
+      "order": 164,
+      "kind": "paragraph",
+      "sectionId": "IV.3",
+      "isHeading": false,
+      "text": "Ở nhiều địa phương, các tổ chức Việt Minh chủ động phát động nhân dân nổi dậy, không chờ đợi mệnh lệnh trực tiếp từ Trung ương nếu điều kiện đã chín muồi.",
+      "normalizedText": "Ở nhiều địa phương, các tổ chức Việt Minh chủ động phát động nhân dân nổi dậy, không chờ đợi mệnh lệnh trực tiếp từ Trung ương nếu điều kiện đã chín muồi.",
+      "paragraphIndex": 164
+    },
+    {
+      "id": "body/165",
+      "order": 165,
+      "kind": "paragraph",
+      "sectionId": "IV.3",
+      "isHeading": false,
+      "text": "Các hoạt động bao gồm:",
+      "normalizedText": "Các hoạt động bao gồm:",
+      "paragraphIndex": 165
+    },
+    {
+      "id": "body/166",
+      "order": 166,
+      "kind": "paragraph",
+      "sectionId": "IV.3",
+      "isHeading": false,
+      "text": "Tổ chức biểu tình và mít tinh.",
+      "normalizedText": "Tổ chức biểu tình và mít tinh.",
+      "paragraphIndex": 166
+    },
+    {
+      "id": "body/167",
+      "order": 167,
+      "kind": "paragraph",
+      "sectionId": "IV.3",
+      "isHeading": false,
+      "text": "Vận động binh lính Nhật và lực lượng bảo an không chống lại nhân dân.",
+      "normalizedText": "Vận động binh lính Nhật và lực lượng bảo an không chống lại nhân dân.",
+      "paragraphIndex": 167
+    },
+    {
+      "id": "body/168",
+      "order": 168,
+      "kind": "paragraph",
+      "sectionId": "IV.3",
+      "isHeading": false,
+      "text": "Chiếm các cơ quan chính quyền địa phương.",
+      "normalizedText": "Chiếm các cơ quan chính quyền địa phương.",
+      "paragraphIndex": 168
+    },
+    {
+      "id": "body/169",
+      "order": 169,
+      "kind": "paragraph",
+      "sectionId": "IV.3",
+      "isHeading": false,
+      "text": "Giải tán bộ máy tay sai.",
+      "normalizedText": "Giải tán bộ máy tay sai.",
+      "paragraphIndex": 169
+    },
+    {
+      "id": "body/170",
+      "order": 170,
+      "kind": "paragraph",
+      "sectionId": "IV.3",
+      "isHeading": false,
+      "text": "Thành lập chính quyền cách mạng.",
+      "normalizedText": "Thành lập chính quyền cách mạng.",
+      "paragraphIndex": 170
+    },
+    {
+      "id": "body/171",
+      "order": 171,
+      "kind": "paragraph",
+      "sectionId": "IV.3",
+      "isHeading": false,
+      "text": "Đây là thời kỳ các cuộc khởi nghĩa từng phần phát triển thành cao trào trên phạm vi cả nước.",
+      "normalizedText": "Đây là thời kỳ các cuộc khởi nghĩa từng phần phát triển thành cao trào trên phạm vi cả nước.",
+      "paragraphIndex": 171
+    },
+    {
+      "id": "body/172",
+      "order": 172,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": true,
+      "text": "4. Ngày 16/8/1945: Quốc dân Đại hội tại Tân Trào và xuất quân tiến về Thái Nguyên",
+      "normalizedText": "4. Ngày 16/8/1945: Quốc dân Đại hội tại Tân Trào và xuất quân tiến về Thái Nguyên",
+      "paragraphIndex": 172
+    },
+    {
+      "id": "body/173",
+      "order": 173,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Quốc dân Đại hội được tổ chức tại đình Tân Trào, Tuyên Quang.",
+      "normalizedText": "Quốc dân Đại hội được tổ chức tại đình Tân Trào, Tuyên Quang.",
+      "paragraphIndex": 173
+    },
+    {
+      "id": "body/174",
+      "order": 174,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Có hơn 60 đại biểu đại diện cho các giới, các đoàn thể, các dân tộc, tôn giáo và ba miền đất nước tham dự.",
+      "normalizedText": "Có hơn 60 đại biểu đại diện cho các giới, các đoàn thể, các dân tộc, tôn giáo và ba miền đất nước tham dự.",
+      "paragraphIndex": 174
+    },
+    {
+      "id": "body/175",
+      "order": 175,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Những quyết định quan trọng:",
+      "normalizedText": "Những quyết định quan trọng:",
+      "paragraphIndex": 175
+    },
+    {
+      "id": "body/176",
+      "order": 176,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Tán thành chủ trương Tổng khởi nghĩa của Đảng.",
+      "normalizedText": "Tán thành chủ trương Tổng khởi nghĩa của Đảng.",
+      "paragraphIndex": 176
+    },
+    {
+      "id": "body/177",
+      "order": 177,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Thông qua 10 chính sách lớn của Việt Minh.",
+      "normalizedText": "Thông qua 10 chính sách lớn của Việt Minh.",
+      "paragraphIndex": 177
+    },
+    {
+      "id": "body/178",
+      "order": 178,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Quyết định thành lập Ủy ban Dân tộc giải phóng Việt Nam.",
+      "normalizedText": "Quyết định thành lập Ủy ban Dân tộc giải phóng Việt Nam.",
+      "paragraphIndex": 178
+    },
+    {
+      "id": "body/179",
+      "order": 179,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Bầu Hồ Chí Minh làm Chủ tịch Ủy ban.",
+      "normalizedText": "Bầu Hồ Chí Minh làm Chủ tịch Ủy ban.",
+      "paragraphIndex": 179
+    },
+    {
+      "id": "body/180",
+      "order": 180,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Quy định Quốc kỳ là cờ đỏ sao vàng năm cánh.",
+      "normalizedText": "Quy định Quốc kỳ là cờ đỏ sao vàng năm cánh.",
+      "paragraphIndex": 180
+    },
+    {
+      "id": "body/181",
+      "order": 181,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Chọn bài Tiến quân ca của Văn Cao làm Quốc ca.",
+      "normalizedText": "Chọn bài Tiến quân ca của Văn Cao làm Quốc ca.",
+      "paragraphIndex": 181
+    },
+    {
+      "id": "body/182",
+      "order": 182,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Đại hội thể hiện sự thống nhất ý chí của toàn dân tộc trong cuộc đấu tranh giành độc lập.",
+      "normalizedText": "Đại hội thể hiện sự thống nhất ý chí của toàn dân tộc trong cuộc đấu tranh giành độc lập.",
+      "paragraphIndex": 182
+    },
+    {
+      "id": "body/183",
+      "order": 183,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Cùng ngày 16/8/1945, Võ Nguyên Giáp chỉ huy một đơn vị Giải phóng quân xuất phát từ Tân Trào tiến về Thái Nguyên.",
+      "normalizedText": "Cùng ngày 16/8/1945, Võ Nguyên Giáp chỉ huy một đơn vị Giải phóng quân xuất phát từ Tân Trào tiến về Thái Nguyên.",
+      "paragraphIndex": 183
+    },
+    {
+      "id": "body/184",
+      "order": 184,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Lực lượng này có nhiệm vụ phối hợp với phong trào cách mạng địa phương, tiến công các vị trí quân sự và chính quyền Nhật – tay sai, hỗ trợ việc giành chính quyền.",
+      "normalizedText": "Lực lượng này có nhiệm vụ phối hợp với phong trào cách mạng địa phương, tiến công các vị trí quân sự và chính quyền Nhật – tay sai, hỗ trợ việc giành chính quyền.",
+      "paragraphIndex": 184
+    },
+    {
+      "id": "body/185",
+      "order": 185,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Cần phân biệt hai mốc:",
+      "normalizedText": "Cần phân biệt hai mốc:",
+      "paragraphIndex": 185
+    },
+    {
+      "id": "body/186",
+      "order": 186,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Ngày 16/8: đơn vị xuất quân từ Tân Trào.",
+      "normalizedText": "Ngày 16/8: đơn vị xuất quân từ Tân Trào.",
+      "paragraphIndex": 186
+    },
+    {
+      "id": "body/187",
+      "order": 187,
+      "kind": "paragraph",
+      "sectionId": "IV.4",
+      "isHeading": false,
+      "text": "Rạng sáng 20/8: lực lượng cách mạng tiến công và giành thắng lợi tại thị xã Thái Nguyên.",
+      "normalizedText": "Rạng sáng 20/8: lực lượng cách mạng tiến công và giành thắng lợi tại thị xã Thái Nguyên.",
+      "paragraphIndex": 187
+    },
+    {
+      "id": "body/188",
+      "order": 188,
+      "kind": "paragraph",
+      "sectionId": "IV.5",
+      "isHeading": true,
+      "text": "5. Ngày 17/8/1945: Ủy ban Dân tộc giải phóng ra mắt",
+      "normalizedText": "5. Ngày 17/8/1945: Ủy ban Dân tộc giải phóng ra mắt",
+      "paragraphIndex": 188
+    },
+    {
+      "id": "body/189",
+      "order": 189,
+      "kind": "paragraph",
+      "sectionId": "IV.5",
+      "isHeading": false,
+      "text": "Ủy ban Dân tộc giải phóng Việt Nam chính thức ra mắt tại Tân Trào.",
+      "normalizedText": "Ủy ban Dân tộc giải phóng Việt Nam chính thức ra mắt tại Tân Trào.",
+      "paragraphIndex": 189
+    },
+    {
+      "id": "body/190",
+      "order": 190,
+      "kind": "paragraph",
+      "sectionId": "IV.5",
+      "isHeading": false,
+      "text": "Hồ Chí Minh giữ chức Chủ tịch.",
+      "normalizedText": "Hồ Chí Minh giữ chức Chủ tịch.",
+      "paragraphIndex": 190
+    },
+    {
+      "id": "body/191",
+      "order": 191,
+      "kind": "paragraph",
+      "sectionId": "IV.5",
+      "isHeading": false,
+      "text": "Ủy ban có 15 thành viên, đóng vai trò như một chính phủ lâm thời của cách mạng.",
+      "normalizedText": "Ủy ban có 15 thành viên, đóng vai trò như một chính phủ lâm thời của cách mạng.",
+      "paragraphIndex": 191
+    },
+    {
+      "id": "body/192",
+      "order": 192,
+      "kind": "paragraph",
+      "sectionId": "IV.5",
+      "isHeading": false,
+      "text": "Phạm Văn Đồng tham gia cơ quan này và được bầu vào Ban Thường trực.",
+      "normalizedText": "Phạm Văn Đồng tham gia cơ quan này và được bầu vào Ban Thường trực.",
+      "paragraphIndex": 192
+    },
+    {
+      "id": "body/193",
+      "order": 193,
+      "kind": "paragraph",
+      "sectionId": "IV.5",
+      "isHeading": false,
+      "text": "Sau đó, Hồ Chí Minh gửi thư kêu gọi đồng bào cả nước đứng lên giành độc lập.",
+      "normalizedText": "Sau đó, Hồ Chí Minh gửi thư kêu gọi đồng bào cả nước đứng lên giành độc lập.",
+      "paragraphIndex": 193
+    },
+    {
+      "id": "body/194",
+      "order": 194,
+      "kind": "paragraph",
+      "sectionId": "IV.5",
+      "isHeading": false,
+      "text": "Lời hiệu triệu có nội dung nổi bật:",
+      "normalizedText": "Lời hiệu triệu có nội dung nổi bật:",
+      "paragraphIndex": 194
+    },
+    {
+      "id": "body/195",
+      "order": 195,
+      "kind": "paragraph",
+      "sectionId": "IV.5",
+      "isHeading": false,
+      "text": "Giờ quyết định cho vận mệnh dân tộc ta đã đến. Toàn quốc đồng bào hãy đứng dậy đem sức ta mà tự giải phóng cho ta.",
+      "normalizedText": "Giờ quyết định cho vận mệnh dân tộc ta đã đến. Toàn quốc đồng bào hãy đứng dậy đem sức ta mà tự giải phóng cho ta.",
+      "paragraphIndex": 195
+    },
+    {
+      "id": "body/196",
+      "order": 196,
+      "kind": "paragraph",
+      "sectionId": "IV.5",
+      "isHeading": false,
+      "text": "Lời kêu gọi thể hiện tinh thần tự lực, tự cường, quyết tâm giành độc lập bằng sức mạnh của toàn dân tộc.",
+      "normalizedText": "Lời kêu gọi thể hiện tinh thần tự lực, tự cường, quyết tâm giành độc lập bằng sức mạnh của toàn dân tộc.",
+      "paragraphIndex": 196
+    },
+    {
+      "id": "body/197",
+      "order": 197,
+      "kind": "paragraph",
+      "sectionId": "IV.6",
+      "isHeading": true,
+      "text": "6. Ngày 18/8/1945: Bốn tỉnh giành chính quyền ở tỉnh lỵ sớm nhất",
+      "normalizedText": "6. Ngày 18/8/1945: Bốn tỉnh giành chính quyền ở tỉnh lỵ sớm nhất",
+      "paragraphIndex": 197
+    },
+    {
+      "id": "body/198",
+      "order": 198,
+      "kind": "paragraph",
+      "sectionId": "IV.6",
+      "isHeading": false,
+      "text": "Bốn tỉnh gồm:",
+      "normalizedText": "Bốn tỉnh gồm:",
+      "paragraphIndex": 198
+    },
+    {
+      "id": "body/199",
+      "order": 199,
+      "kind": "paragraph",
+      "sectionId": "IV.6",
+      "isHeading": false,
+      "text": "Bắc Giang.",
+      "normalizedText": "Bắc Giang.",
+      "paragraphIndex": 199
+    },
+    {
+      "id": "body/200",
+      "order": 200,
+      "kind": "paragraph",
+      "sectionId": "IV.6",
+      "isHeading": false,
+      "text": "Hải Dương.",
+      "normalizedText": "Hải Dương.",
+      "paragraphIndex": 200
+    },
+    {
+      "id": "body/201",
+      "order": 201,
+      "kind": "paragraph",
+      "sectionId": "IV.6",
+      "isHeading": false,
+      "text": "Hà Tĩnh.",
+      "normalizedText": "Hà Tĩnh.",
+      "paragraphIndex": 201
+    },
+    {
+      "id": "body/202",
+      "order": 202,
+      "kind": "paragraph",
+      "sectionId": "IV.6",
+      "isHeading": false,
+      "text": "Quảng Nam.",
+      "normalizedText": "Quảng Nam.",
+      "paragraphIndex": 202
+    },
+    {
+      "id": "body/203",
+      "order": 203,
+      "kind": "paragraph",
+      "sectionId": "IV.6",
+      "isHeading": false,
+      "text": "Tại các địa phương này, lực lượng Việt Minh và quần chúng nhân dân tổ chức nổi dậy, chiếm các cơ quan chính quyền, làm tan rã bộ máy cai trị cũ và thành lập chính quyền cách mạng.",
+      "normalizedText": "Tại các địa phương này, lực lượng Việt Minh và quần chúng nhân dân tổ chức nổi dậy, chiếm các cơ quan chính quyền, làm tan rã bộ máy cai trị cũ và thành lập chính quyền cách mạng.",
+      "paragraphIndex": 203
+    },
+    {
+      "id": "body/204",
+      "order": 204,
+      "kind": "paragraph",
+      "sectionId": "IV.6",
+      "isHeading": false,
+      "text": "Đây là những thắng lợi sớm, có tác dụng cổ vũ mạnh mẽ phong trào khởi nghĩa trên cả nước.",
+      "normalizedText": "Đây là những thắng lợi sớm, có tác dụng cổ vũ mạnh mẽ phong trào khởi nghĩa trên cả nước.",
+      "paragraphIndex": 204
+    },
+    {
+      "id": "body/205",
+      "order": 205,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": true,
+      "text": "7. Ngày 19/8/1945: Khởi nghĩa giành chính quyền thắng lợi tại Hà Nội",
+      "normalizedText": "7. Ngày 19/8/1945: Khởi nghĩa giành chính quyền thắng lợi tại Hà Nội",
+      "paragraphIndex": 205
+    },
+    {
+      "id": "body/206",
+      "order": 206,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Đây là sự kiện có ý nghĩa đặc biệt quan trọng trong toàn bộ Cách mạng tháng Tám.",
+      "normalizedText": "Đây là sự kiện có ý nghĩa đặc biệt quan trọng trong toàn bộ Cách mạng tháng Tám.",
+      "paragraphIndex": 206
+    },
+    {
+      "id": "body/207",
+      "order": 207,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Trước đó, Hà Nội là trung tâm chính trị, hành chính của chính quyền Nhật và chính phủ Trần Trọng Kim ở Bắc Kỳ.",
+      "normalizedText": "Trước đó, Hà Nội là trung tâm chính trị, hành chính của chính quyền Nhật và chính phủ Trần Trọng Kim ở Bắc Kỳ.",
+      "paragraphIndex": 207
+    },
+    {
+      "id": "body/208",
+      "order": 208,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Lực lượng cách mạng đã tích cực chuẩn bị để tổ chức khởi nghĩa.",
+      "normalizedText": "Lực lượng cách mạng đã tích cực chuẩn bị để tổ chức khởi nghĩa.",
+      "paragraphIndex": 208
+    },
+    {
+      "id": "body/209",
+      "order": 209,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Diễn biến cụ thể",
+      "normalizedText": "Diễn biến cụ thể",
+      "paragraphIndex": 209
+    },
+    {
+      "id": "body/210",
+      "order": 210,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Ngày 17/8/1945:",
+      "normalizedText": "Ngày 17/8/1945:",
+      "paragraphIndex": 210
+    },
+    {
+      "id": "body/211",
+      "order": 211,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Tại Nhà hát Lớn Hà Nội, chính quyền thân Nhật tổ chức một cuộc mít tinh.",
+      "normalizedText": "Tại Nhà hát Lớn Hà Nội, chính quyền thân Nhật tổ chức một cuộc mít tinh.",
+      "paragraphIndex": 211
+    },
+    {
+      "id": "body/212",
+      "order": 212,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Lực lượng Việt Minh đã vận động quần chúng tham gia, chuyển cuộc mít tinh thành hoạt động ủng hộ cách mạng và giành độc lập.",
+      "normalizedText": "Lực lượng Việt Minh đã vận động quần chúng tham gia, chuyển cuộc mít tinh thành hoạt động ủng hộ cách mạng và giành độc lập.",
+      "paragraphIndex": 212
+    },
+    {
+      "id": "body/213",
+      "order": 213,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Sáng ngày 19/8/1945:",
+      "normalizedText": "Sáng ngày 19/8/1945:",
+      "paragraphIndex": 213
+    },
+    {
+      "id": "body/214",
+      "order": 214,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Hàng chục vạn nhân dân Hà Nội và các vùng ngoại thành tập trung tại nhiều địa điểm.",
+      "normalizedText": "Hàng chục vạn nhân dân Hà Nội và các vùng ngoại thành tập trung tại nhiều địa điểm.",
+      "paragraphIndex": 214
+    },
+    {
+      "id": "body/215",
+      "order": 215,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Các tầng lớp tham gia gồm:",
+      "normalizedText": "Các tầng lớp tham gia gồm:",
+      "paragraphIndex": 215
+    },
+    {
+      "id": "body/216",
+      "order": 216,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Công nhân.",
+      "normalizedText": "Công nhân.",
+      "paragraphIndex": 216
+    },
+    {
+      "id": "body/217",
+      "order": 217,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Nông dân.",
+      "normalizedText": "Nông dân.",
+      "paragraphIndex": 217
+    },
+    {
+      "id": "body/218",
+      "order": 218,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Thanh niên.",
+      "normalizedText": "Thanh niên.",
+      "paragraphIndex": 218
+    },
+    {
+      "id": "body/219",
+      "order": 219,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Học sinh, sinh viên.",
+      "normalizedText": "Học sinh, sinh viên.",
+      "paragraphIndex": 219
+    },
+    {
+      "id": "body/220",
+      "order": 220,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Tiểu thương.",
+      "normalizedText": "Tiểu thương.",
+      "paragraphIndex": 220
+    },
+    {
+      "id": "body/221",
+      "order": 221,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Trí thức.",
+      "normalizedText": "Trí thức.",
+      "paragraphIndex": 221
+    },
+    {
+      "id": "body/222",
+      "order": 222,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Các tầng lớp lao động và nhân dân yêu nước.",
+      "normalizedText": "Các tầng lớp lao động và nhân dân yêu nước.",
+      "paragraphIndex": 222
+    },
+    {
+      "id": "body/223",
+      "order": 223,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Đoàn người mang cờ đỏ sao vàng, biểu ngữ cách mạng và tiến về khu vực trung tâm.",
+      "normalizedText": "Đoàn người mang cờ đỏ sao vàng, biểu ngữ cách mạng và tiến về khu vực trung tâm.",
+      "paragraphIndex": 223
+    },
+    {
+      "id": "body/224",
+      "order": 224,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Khoảng 10 giờ sáng:",
+      "normalizedText": "Khoảng 10 giờ sáng:",
+      "paragraphIndex": 224
+    },
+    {
+      "id": "body/225",
+      "order": 225,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Cuộc mít tinh lớn được tổ chức tại Quảng trường Nhà hát Lớn.",
+      "normalizedText": "Cuộc mít tinh lớn được tổ chức tại Quảng trường Nhà hát Lớn.",
+      "paragraphIndex": 225
+    },
+    {
+      "id": "body/226",
+      "order": 226,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Đại diện Việt Minh tuyên bố mục tiêu giành chính quyền và kêu gọi nhân dân đứng lên.",
+      "normalizedText": "Đại diện Việt Minh tuyên bố mục tiêu giành chính quyền và kêu gọi nhân dân đứng lên.",
+      "paragraphIndex": 226
+    },
+    {
+      "id": "body/227",
+      "order": 227,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Sau đó, cuộc mít tinh chuyển thành các đoàn biểu tình lớn.",
+      "normalizedText": "Sau đó, cuộc mít tinh chuyển thành các đoàn biểu tình lớn.",
+      "paragraphIndex": 227
+    },
+    {
+      "id": "body/228",
+      "order": 228,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Buổi trưa và chiều ngày 19/8:",
+      "normalizedText": "Buổi trưa và chiều ngày 19/8:",
+      "paragraphIndex": 228
+    },
+    {
+      "id": "body/229",
+      "order": 229,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Các đoàn biểu tình chia thành nhiều mũi, tiến đến những cơ quan quan trọng của chính quyền.",
+      "normalizedText": "Các đoàn biểu tình chia thành nhiều mũi, tiến đến những cơ quan quan trọng của chính quyền.",
+      "paragraphIndex": 229
+    },
+    {
+      "id": "body/230",
+      "order": 230,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Những địa điểm được tiếp quản gồm:",
+      "normalizedText": "Những địa điểm được tiếp quản gồm:",
+      "paragraphIndex": 230
+    },
+    {
+      "id": "body/231",
+      "order": 231,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Phủ Khâm sai Bắc Kỳ.",
+      "normalizedText": "Phủ Khâm sai Bắc Kỳ.",
+      "paragraphIndex": 231
+    },
+    {
+      "id": "body/232",
+      "order": 232,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Sở Cảnh sát.",
+      "normalizedText": "Sở Cảnh sát.",
+      "paragraphIndex": 232
+    },
+    {
+      "id": "body/233",
+      "order": 233,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Sở Bưu điện.",
+      "normalizedText": "Sở Bưu điện.",
+      "paragraphIndex": 233
+    },
+    {
+      "id": "body/234",
+      "order": 234,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Trại Bảo an binh.",
+      "normalizedText": "Trại Bảo an binh.",
+      "paragraphIndex": 234
+    },
+    {
+      "id": "body/235",
+      "order": 235,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Các cơ quan hành chính quan trọng khác.",
+      "normalizedText": "Các cơ quan hành chính quan trọng khác.",
+      "paragraphIndex": 235
+    },
+    {
+      "id": "body/236",
+      "order": 236,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Lực lượng cách mạng chủ yếu sử dụng sức mạnh chính trị của quần chúng, kết hợp với lực lượng vũ trang để hỗ trợ.",
+      "normalizedText": "Lực lượng cách mạng chủ yếu sử dụng sức mạnh chính trị của quần chúng, kết hợp với lực lượng vũ trang để hỗ trợ.",
+      "paragraphIndex": 236
+    },
+    {
+      "id": "body/237",
+      "order": 237,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Chính quyền Nhật và bộ máy thân Nhật không thể duy trì quyền kiểm soát.",
+      "normalizedText": "Chính quyền Nhật và bộ máy thân Nhật không thể duy trì quyền kiểm soát.",
+      "paragraphIndex": 237
+    },
+    {
+      "id": "body/238",
+      "order": 238,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Đến cuối ngày 19/8/1945:",
+      "normalizedText": "Đến cuối ngày 19/8/1945:",
+      "paragraphIndex": 238
+    },
+    {
+      "id": "body/239",
+      "order": 239,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Chính quyền ở Hà Nội về tay nhân dân.",
+      "normalizedText": "Chính quyền ở Hà Nội về tay nhân dân.",
+      "paragraphIndex": 239
+    },
+    {
+      "id": "body/240",
+      "order": 240,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Ý nghĩa",
+      "normalizedText": "Ý nghĩa",
+      "paragraphIndex": 240
+    },
+    {
+      "id": "body/241",
+      "order": 241,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Đánh dấu thắng lợi của cuộc khởi nghĩa tại trung tâm chính trị lớn nhất miền Bắc.",
+      "normalizedText": "Đánh dấu thắng lợi của cuộc khởi nghĩa tại trung tâm chính trị lớn nhất miền Bắc.",
+      "paragraphIndex": 241
+    },
+    {
+      "id": "body/242",
+      "order": 242,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Tạo tiếng vang lớn trên toàn quốc.",
+      "normalizedText": "Tạo tiếng vang lớn trên toàn quốc.",
+      "paragraphIndex": 242
+    },
+    {
+      "id": "body/243",
+      "order": 243,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Thúc đẩy các địa phương khác nhanh chóng giành chính quyền.",
+      "normalizedText": "Thúc đẩy các địa phương khác nhanh chóng giành chính quyền.",
+      "paragraphIndex": 243
+    },
+    {
+      "id": "body/244",
+      "order": 244,
+      "kind": "paragraph",
+      "sectionId": "IV.7",
+      "isHeading": false,
+      "text": "Góp phần quyết định vào thắng lợi của Tổng khởi nghĩa.",
+      "normalizedText": "Góp phần quyết định vào thắng lợi của Tổng khởi nghĩa.",
+      "paragraphIndex": 244
+    },
+    {
+      "id": "body/245",
+      "order": 245,
+      "kind": "paragraph",
+      "sectionId": "IV.8",
+      "isHeading": true,
+      "text": "8. Ngày 20/8/1945: Khởi nghĩa thắng lợi tại Thái Nguyên",
+      "normalizedText": "8. Ngày 20/8/1945: Khởi nghĩa thắng lợi tại Thái Nguyên",
+      "paragraphIndex": 245
+    },
+    {
+      "id": "body/246",
+      "order": 246,
+      "kind": "paragraph",
+      "sectionId": "IV.8",
+      "isHeading": false,
+      "text": "Sau khi xuất phát từ Tân Trào ngày 16/8, lực lượng Giải phóng quân do Võ Nguyên Giáp chỉ huy tiến về thị xã Thái Nguyên.",
+      "normalizedText": "Sau khi xuất phát từ Tân Trào ngày 16/8, lực lượng Giải phóng quân do Võ Nguyên Giáp chỉ huy tiến về thị xã Thái Nguyên.",
+      "paragraphIndex": 246
+    },
+    {
+      "id": "body/247",
+      "order": 247,
+      "kind": "paragraph",
+      "sectionId": "IV.8",
+      "isHeading": false,
+      "text": "Đến rạng sáng ngày 20/8, lực lượng cách mạng phối hợp với nhân dân địa phương tiến công và giành chính quyền tại thị xã.",
+      "normalizedText": "Đến rạng sáng ngày 20/8, lực lượng cách mạng phối hợp với nhân dân địa phương tiến công và giành chính quyền tại thị xã.",
+      "paragraphIndex": 247
+    },
+    {
+      "id": "body/248",
+      "order": 248,
+      "kind": "paragraph",
+      "sectionId": "IV.8",
+      "isHeading": false,
+      "text": "Thắng lợi này có ý nghĩa:",
+      "normalizedText": "Thắng lợi này có ý nghĩa:",
+      "paragraphIndex": 248
+    },
+    {
+      "id": "body/249",
+      "order": 249,
+      "kind": "paragraph",
+      "sectionId": "IV.8",
+      "isHeading": false,
+      "text": "Mở rộng địa bàn kiểm soát của chính quyền cách mạng.",
+      "normalizedText": "Mở rộng địa bàn kiểm soát của chính quyền cách mạng.",
+      "paragraphIndex": 249
+    },
+    {
+      "id": "body/250",
+      "order": 250,
+      "kind": "paragraph",
+      "sectionId": "IV.8",
+      "isHeading": false,
+      "text": "Củng cố vị trí chiến lược của Khu giải phóng Việt Bắc.",
+      "normalizedText": "Củng cố vị trí chiến lược của Khu giải phóng Việt Bắc.",
+      "paragraphIndex": 250
+    },
+    {
+      "id": "body/251",
+      "order": 251,
+      "kind": "paragraph",
+      "sectionId": "IV.8",
+      "isHeading": false,
+      "text": "Tạo điều kiện thuận lợi cho phong trào cách mạng tại các tỉnh lân cận.",
+      "normalizedText": "Tạo điều kiện thuận lợi cho phong trào cách mạng tại các tỉnh lân cận.",
+      "paragraphIndex": 251
+    },
+    {
+      "id": "body/252",
+      "order": 252,
+      "kind": "paragraph",
+      "sectionId": "IV.8",
+      "isHeading": false,
+      "text": "Vai trò của Võ Nguyên Giáp: Trực tiếp chỉ huy lực lượng quân sự xuất phát từ Tân Trào, tham gia hoạt động quân sự hỗ trợ Tổng khởi nghĩa.",
+      "normalizedText": "Vai trò của Võ Nguyên Giáp: Trực tiếp chỉ huy lực lượng quân sự xuất phát từ Tân Trào, tham gia hoạt động quân sự hỗ trợ Tổng khởi nghĩa.",
+      "paragraphIndex": 252
+    },
+    {
+      "id": "body/253",
+      "order": 253,
+      "kind": "paragraph",
+      "sectionId": "IV.9",
+      "isHeading": true,
+      "text": "9. Ngày 23/8/1945: Khởi nghĩa thắng lợi tại Huế",
+      "normalizedText": "9. Ngày 23/8/1945: Khởi nghĩa thắng lợi tại Huế",
+      "paragraphIndex": 253
+    },
+    {
+      "id": "body/254",
+      "order": 254,
+      "kind": "paragraph",
+      "sectionId": "IV.9",
+      "isHeading": false,
+      "text": "Huế là kinh đô của triều Nguyễn, nơi đặt bộ máy chính quyền quân chủ cuối cùng của Việt Nam.",
+      "normalizedText": "Huế là kinh đô của triều Nguyễn, nơi đặt bộ máy chính quyền quân chủ cuối cùng của Việt Nam.",
+      "paragraphIndex": 254
+    },
+    {
+      "id": "body/255",
+      "order": 255,
+      "kind": "paragraph",
+      "sectionId": "IV.9",
+      "isHeading": false,
+      "text": "Sau thắng lợi tại Hà Nội, phong trào cách mạng ở Thừa Thiên – Huế phát triển nhanh chóng.",
+      "normalizedText": "Sau thắng lợi tại Hà Nội, phong trào cách mạng ở Thừa Thiên – Huế phát triển nhanh chóng.",
+      "paragraphIndex": 255
+    },
+    {
+      "id": "body/256",
+      "order": 256,
+      "kind": "paragraph",
+      "sectionId": "IV.9",
+      "isHeading": false,
+      "text": "Các tổ chức Việt Minh vận động nhân dân, chuẩn bị lực lượng và phương án giành chính quyền.",
+      "normalizedText": "Các tổ chức Việt Minh vận động nhân dân, chuẩn bị lực lượng và phương án giành chính quyền.",
+      "paragraphIndex": 256
+    },
+    {
+      "id": "body/257",
+      "order": 257,
+      "kind": "paragraph",
+      "sectionId": "IV.9",
+      "isHeading": false,
+      "text": "Ngày 23/8/1945:",
+      "normalizedText": "Ngày 23/8/1945:",
+      "paragraphIndex": 257
+    },
+    {
+      "id": "body/258",
+      "order": 258,
+      "kind": "paragraph",
+      "sectionId": "IV.9",
+      "isHeading": false,
+      "text": "Hàng vạn nhân dân tập trung biểu tình, mít tinh.",
+      "normalizedText": "Hàng vạn nhân dân tập trung biểu tình, mít tinh.",
+      "paragraphIndex": 258
+    },
+    {
+      "id": "body/259",
+      "order": 259,
+      "kind": "paragraph",
+      "sectionId": "IV.9",
+      "isHeading": false,
+      "text": "Các đoàn quần chúng từ nhiều huyện tiến về trung tâm thành phố.",
+      "normalizedText": "Các đoàn quần chúng từ nhiều huyện tiến về trung tâm thành phố.",
+      "paragraphIndex": 259
+    },
+    {
+      "id": "body/260",
+      "order": 260,
+      "kind": "paragraph",
+      "sectionId": "IV.9",
+      "isHeading": false,
+      "text": "Lực lượng cách mạng tổ chức chiếm các cơ quan hành chính.",
+      "normalizedText": "Lực lượng cách mạng tổ chức chiếm các cơ quan hành chính.",
+      "paragraphIndex": 260
+    },
+    {
+      "id": "body/261",
+      "order": 261,
+      "kind": "paragraph",
+      "sectionId": "IV.9",
+      "isHeading": false,
+      "text": "Bộ máy chính quyền cũ mất khả năng kiểm soát.",
+      "normalizedText": "Bộ máy chính quyền cũ mất khả năng kiểm soát.",
+      "paragraphIndex": 261
+    },
+    {
+      "id": "body/262",
+      "order": 262,
+      "kind": "paragraph",
+      "sectionId": "IV.9",
+      "isHeading": false,
+      "text": "Chính quyền cách mạng được thành lập.",
+      "normalizedText": "Chính quyền cách mạng được thành lập.",
+      "paragraphIndex": 262
+    },
+    {
+      "id": "body/263",
+      "order": 263,
+      "kind": "paragraph",
+      "sectionId": "IV.9",
+      "isHeading": false,
+      "text": "Thắng lợi ở Huế có ý nghĩa rất lớn vì làm suy sụp cơ sở chính trị của triều đình nhà Nguyễn.",
+      "normalizedText": "Thắng lợi ở Huế có ý nghĩa rất lớn vì làm suy sụp cơ sở chính trị của triều đình nhà Nguyễn.",
+      "paragraphIndex": 263
+    },
+    {
+      "id": "body/264",
+      "order": 264,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": true,
+      "text": "10. Ngày 25/8/1945: Khởi nghĩa thắng lợi tại Sài Gòn",
+      "normalizedText": "10. Ngày 25/8/1945: Khởi nghĩa thắng lợi tại Sài Gòn",
+      "paragraphIndex": 264
+    },
+    {
+      "id": "body/265",
+      "order": 265,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Sau Hà Nội và Huế, phong trào cách mạng tại Nam Bộ phát triển mạnh.",
+      "normalizedText": "Sau Hà Nội và Huế, phong trào cách mạng tại Nam Bộ phát triển mạnh.",
+      "paragraphIndex": 265
+    },
+    {
+      "id": "body/266",
+      "order": 266,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Xứ ủy Nam Kỳ, các tổ chức Việt Minh và lực lượng quần chúng đã tích cực chuẩn bị cho cuộc khởi nghĩa.",
+      "normalizedText": "Xứ ủy Nam Kỳ, các tổ chức Việt Minh và lực lượng quần chúng đã tích cực chuẩn bị cho cuộc khởi nghĩa.",
+      "paragraphIndex": 266
+    },
+    {
+      "id": "body/267",
+      "order": 267,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Ngày 25/8/1945, đông đảo nhân dân từ Sài Gòn, Chợ Lớn và các tỉnh lân cận tiến về trung tâm thành phố.",
+      "normalizedText": "Ngày 25/8/1945, đông đảo nhân dân từ Sài Gòn, Chợ Lớn và các tỉnh lân cận tiến về trung tâm thành phố.",
+      "paragraphIndex": 267
+    },
+    {
+      "id": "body/268",
+      "order": 268,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Các lực lượng tham gia gồm:",
+      "normalizedText": "Các lực lượng tham gia gồm:",
+      "paragraphIndex": 268
+    },
+    {
+      "id": "body/269",
+      "order": 269,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Công nhân.",
+      "normalizedText": "Công nhân.",
+      "paragraphIndex": 269
+    },
+    {
+      "id": "body/270",
+      "order": 270,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Nông dân.",
+      "normalizedText": "Nông dân.",
+      "paragraphIndex": 270
+    },
+    {
+      "id": "body/271",
+      "order": 271,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Thanh niên.",
+      "normalizedText": "Thanh niên.",
+      "paragraphIndex": 271
+    },
+    {
+      "id": "body/272",
+      "order": 272,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Học sinh, sinh viên.",
+      "normalizedText": "Học sinh, sinh viên.",
+      "paragraphIndex": 272
+    },
+    {
+      "id": "body/273",
+      "order": 273,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Các tổ chức đoàn thể.",
+      "normalizedText": "Các tổ chức đoàn thể.",
+      "paragraphIndex": 273
+    },
+    {
+      "id": "body/274",
+      "order": 274,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Các tầng lớp nhân dân yêu nước.",
+      "normalizedText": "Các tầng lớp nhân dân yêu nước.",
+      "paragraphIndex": 274
+    },
+    {
+      "id": "body/275",
+      "order": 275,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Nhân dân tổ chức biểu tình, chiếm các cơ quan quan trọng, tiếp quản bộ máy hành chính và thành lập chính quyền cách mạng.",
+      "normalizedText": "Nhân dân tổ chức biểu tình, chiếm các cơ quan quan trọng, tiếp quản bộ máy hành chính và thành lập chính quyền cách mạng.",
+      "paragraphIndex": 275
+    },
+    {
+      "id": "body/276",
+      "order": 276,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Những cơ quan được tiếp quản gồm các cơ sở cảnh sát, mật thám, hành chính và một số cơ sở hạ tầng quan trọng.",
+      "normalizedText": "Những cơ quan được tiếp quản gồm các cơ sở cảnh sát, mật thám, hành chính và một số cơ sở hạ tầng quan trọng.",
+      "paragraphIndex": 276
+    },
+    {
+      "id": "body/277",
+      "order": 277,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Đến cuối ngày 25/8, chính quyền ở Sài Gòn về tay nhân dân.",
+      "normalizedText": "Đến cuối ngày 25/8, chính quyền ở Sài Gòn về tay nhân dân.",
+      "paragraphIndex": 277
+    },
+    {
+      "id": "body/278",
+      "order": 278,
+      "kind": "paragraph",
+      "sectionId": "IV.10",
+      "isHeading": false,
+      "text": "Thắng lợi này có ý nghĩa quyết định đối với phong trào cách mạng Nam Bộ và góp phần hoàn thành Tổng khởi nghĩa trong cả nước.",
+      "normalizedText": "Thắng lợi này có ý nghĩa quyết định đối với phong trào cách mạng Nam Bộ và góp phần hoàn thành Tổng khởi nghĩa trong cả nước.",
+      "paragraphIndex": 278
+    },
+    {
+      "id": "body/279",
+      "order": 279,
+      "kind": "paragraph",
+      "sectionId": "IV.11",
+      "isHeading": true,
+      "text": "11. Ngày 26/8/1945: Trung ương Đảng họp tại Hà Nội",
+      "normalizedText": "11. Ngày 26/8/1945: Trung ương Đảng họp tại Hà Nội",
+      "paragraphIndex": 279
+    },
+    {
+      "id": "body/280",
+      "order": 280,
+      "kind": "paragraph",
+      "sectionId": "IV.11",
+      "isHeading": false,
+      "text": "Sau khi Hà Nội giành chính quyền, Hồ Chí Minh về Hà Nội và chủ trì cuộc họp của Ban Thường vụ Trung ương Đảng.",
+      "normalizedText": "Sau khi Hà Nội giành chính quyền, Hồ Chí Minh về Hà Nội và chủ trì cuộc họp của Ban Thường vụ Trung ương Đảng.",
+      "paragraphIndex": 280
+    },
+    {
+      "id": "body/281",
+      "order": 281,
+      "kind": "paragraph",
+      "sectionId": "IV.11",
+      "isHeading": false,
+      "text": "Cuộc họp bàn những nhiệm vụ cấp bách:",
+      "normalizedText": "Cuộc họp bàn những nhiệm vụ cấp bách:",
+      "paragraphIndex": 281
+    },
+    {
+      "id": "body/282",
+      "order": 282,
+      "kind": "paragraph",
+      "sectionId": "IV.11",
+      "isHeading": false,
+      "text": "Củng cố chính quyền cách mạng.",
+      "normalizedText": "Củng cố chính quyền cách mạng.",
+      "paragraphIndex": 282
+    },
+    {
+      "id": "body/283",
+      "order": 283,
+      "kind": "paragraph",
+      "sectionId": "IV.11",
+      "isHeading": false,
+      "text": "Thành lập Chính phủ lâm thời.",
+      "normalizedText": "Thành lập Chính phủ lâm thời.",
+      "paragraphIndex": 283
+    },
+    {
+      "id": "body/284",
+      "order": 284,
+      "kind": "paragraph",
+      "sectionId": "IV.11",
+      "isHeading": false,
+      "text": "Chuẩn bị Tuyên ngôn Độc lập.",
+      "normalizedText": "Chuẩn bị Tuyên ngôn Độc lập.",
+      "paragraphIndex": 284
+    },
+    {
+      "id": "body/285",
+      "order": 285,
+      "kind": "paragraph",
+      "sectionId": "IV.11",
+      "isHeading": false,
+      "text": "Chuẩn bị lễ tuyên bố độc lập.",
+      "normalizedText": "Chuẩn bị lễ tuyên bố độc lập.",
+      "paragraphIndex": 285
+    },
+    {
+      "id": "body/286",
+      "order": 286,
+      "kind": "paragraph",
+      "sectionId": "IV.11",
+      "isHeading": false,
+      "text": "Giải quyết các vấn đề đối nội và đối ngoại.",
+      "normalizedText": "Giải quyết các vấn đề đối nội và đối ngoại.",
+      "paragraphIndex": 286
+    },
+    {
+      "id": "body/287",
+      "order": 287,
+      "kind": "paragraph",
+      "sectionId": "IV.11",
+      "isHeading": false,
+      "text": "Bảo vệ thành quả cách mạng trước nguy cơ can thiệp từ bên ngoài.",
+      "normalizedText": "Bảo vệ thành quả cách mạng trước nguy cơ can thiệp từ bên ngoài.",
+      "paragraphIndex": 287
+    },
+    {
+      "id": "body/288",
+      "order": 288,
+      "kind": "paragraph",
+      "sectionId": "IV.11",
+      "isHeading": false,
+      "text": "Đây là bước chuyển quan trọng từ hoạt động lãnh đạo khởi nghĩa sang xây dựng nhà nước độc lập.",
+      "normalizedText": "Đây là bước chuyển quan trọng từ hoạt động lãnh đạo khởi nghĩa sang xây dựng nhà nước độc lập.",
+      "paragraphIndex": 288
+    },
+    {
+      "id": "body/289",
+      "order": 289,
+      "kind": "paragraph",
+      "sectionId": "IV.12",
+      "isHeading": true,
+      "text": "12. Ngày 27/8/1945: Thành lập Chính phủ lâm thời",
+      "normalizedText": "12. Ngày 27/8/1945: Thành lập Chính phủ lâm thời",
+      "paragraphIndex": 289
+    },
+    {
+      "id": "body/290",
+      "order": 290,
+      "kind": "paragraph",
+      "sectionId": "IV.12",
+      "isHeading": false,
+      "text": "Ủy ban Dân tộc giải phóng Việt Nam được cải tổ thành Chính phủ lâm thời nước Việt Nam Dân chủ Cộng hòa.",
+      "normalizedText": "Ủy ban Dân tộc giải phóng Việt Nam được cải tổ thành Chính phủ lâm thời nước Việt Nam Dân chủ Cộng hòa.",
+      "paragraphIndex": 290
+    },
+    {
+      "id": "body/291",
+      "order": 291,
+      "kind": "paragraph",
+      "sectionId": "IV.12",
+      "isHeading": false,
+      "text": "Hồ Chí Minh giữ chức Chủ tịch Chính phủ.",
+      "normalizedText": "Hồ Chí Minh giữ chức Chủ tịch Chính phủ.",
+      "paragraphIndex": 291
+    },
+    {
+      "id": "body/292",
+      "order": 292,
+      "kind": "paragraph",
+      "sectionId": "IV.12",
+      "isHeading": false,
+      "text": "Trong Chính phủ lâm thời:",
+      "normalizedText": "Trong Chính phủ lâm thời:",
+      "paragraphIndex": 292
+    },
+    {
+      "id": "body/293",
+      "order": 293,
+      "kind": "paragraph",
+      "sectionId": "IV.12",
+      "isHeading": false,
+      "text": "Phạm Văn Đồng giữ chức Bộ trưởng Bộ Tài chính.",
+      "normalizedText": "Phạm Văn Đồng giữ chức Bộ trưởng Bộ Tài chính.",
+      "paragraphIndex": 293
+    },
+    {
+      "id": "body/294",
+      "order": 294,
+      "kind": "paragraph",
+      "sectionId": "IV.12",
+      "isHeading": false,
+      "text": "Võ Nguyên Giáp giữ chức Bộ trưởng Bộ Nội vụ.",
+      "normalizedText": "Võ Nguyên Giáp giữ chức Bộ trưởng Bộ Nội vụ.",
+      "paragraphIndex": 294
+    },
+    {
+      "id": "body/295",
+      "order": 295,
+      "kind": "paragraph",
+      "sectionId": "IV.12",
+      "isHeading": false,
+      "text": "Chính phủ lâm thời có nhiệm vụ điều hành đất nước, tổ chức bộ máy chính quyền và chuẩn bị tuyên bố độc lập.",
+      "normalizedText": "Chính phủ lâm thời có nhiệm vụ điều hành đất nước, tổ chức bộ máy chính quyền và chuẩn bị tuyên bố độc lập.",
+      "paragraphIndex": 295
+    },
+    {
+      "id": "body/296",
+      "order": 296,
+      "kind": "paragraph",
+      "sectionId": "IV.13",
+      "isHeading": true,
+      "text": "13. Ngày 28/8/1945: Tổng khởi nghĩa thắng lợi trên phạm vi cả nước",
+      "normalizedText": "13. Ngày 28/8/1945: Tổng khởi nghĩa thắng lợi trên phạm vi cả nước",
+      "paragraphIndex": 296
+    },
+    {
+      "id": "body/297",
+      "order": 297,
+      "kind": "paragraph",
+      "sectionId": "IV.13",
+      "isHeading": false,
+      "text": "Đến ngày 28/8/1945, chính quyền về cơ bản đã thuộc về nhân dân trên cả nước.",
+      "normalizedText": "Đến ngày 28/8/1945, chính quyền về cơ bản đã thuộc về nhân dân trên cả nước.",
+      "paragraphIndex": 297
+    },
+    {
+      "id": "body/298",
+      "order": 298,
+      "kind": "paragraph",
+      "sectionId": "IV.13",
+      "isHeading": false,
+      "text": "Các cơ quan chính quyền cũ bị giải thể hoặc được tiếp quản.",
+      "normalizedText": "Các cơ quan chính quyền cũ bị giải thể hoặc được tiếp quản.",
+      "paragraphIndex": 298
+    },
+    {
+      "id": "body/299",
+      "order": 299,
+      "kind": "paragraph",
+      "sectionId": "IV.13",
+      "isHeading": false,
+      "text": "Các Ủy ban nhân dân cách mạng được thành lập tại nhiều địa phương.",
+      "normalizedText": "Các Ủy ban nhân dân cách mạng được thành lập tại nhiều địa phương.",
+      "paragraphIndex": 299
+    },
+    {
+      "id": "body/300",
+      "order": 300,
+      "kind": "paragraph",
+      "sectionId": "IV.13",
+      "isHeading": false,
+      "text": "Thắng lợi của Tổng khởi nghĩa đánh dấu sự sụp đổ của chính quyền thuộc địa, phong kiến và bộ máy tay sai thân Nhật.",
+      "normalizedText": "Thắng lợi của Tổng khởi nghĩa đánh dấu sự sụp đổ của chính quyền thuộc địa, phong kiến và bộ máy tay sai thân Nhật.",
+      "paragraphIndex": 300
+    },
+    {
+      "id": "body/301",
+      "order": 301,
+      "kind": "paragraph",
+      "sectionId": "IV.13",
+      "isHeading": false,
+      "text": "Đây là mốc hoàn thành cơ bản cuộc Tổng khởi nghĩa tháng Tám.",
+      "normalizedText": "Đây là mốc hoàn thành cơ bản cuộc Tổng khởi nghĩa tháng Tám.",
+      "paragraphIndex": 301
+    },
+    {
+      "id": "body/302",
+      "order": 302,
+      "kind": "paragraph",
+      "sectionId": "IV.14",
+      "isHeading": true,
+      "text": "14. Ngày 30/8/1945: Vua Bảo Đại thoái vị",
+      "normalizedText": "14. Ngày 30/8/1945: Vua Bảo Đại thoái vị",
+      "paragraphIndex": 302
+    },
+    {
+      "id": "body/303",
+      "order": 303,
+      "kind": "paragraph",
+      "sectionId": "IV.14",
+      "isHeading": false,
+      "text": "Tại Ngọ Môn, Huế, vua Bảo Đại tuyên bố thoái vị và trao ấn, kiếm cho đại diện Chính phủ lâm thời.",
+      "normalizedText": "Tại Ngọ Môn, Huế, vua Bảo Đại tuyên bố thoái vị và trao ấn, kiếm cho đại diện Chính phủ lâm thời.",
+      "paragraphIndex": 303
+    },
+    {
+      "id": "body/304",
+      "order": 304,
+      "kind": "paragraph",
+      "sectionId": "IV.14",
+      "isHeading": false,
+      "text": "Sự kiện này đánh dấu:",
+      "normalizedText": "Sự kiện này đánh dấu:",
+      "paragraphIndex": 304
+    },
+    {
+      "id": "body/305",
+      "order": 305,
+      "kind": "paragraph",
+      "sectionId": "IV.14",
+      "isHeading": false,
+      "text": "Chấm dứt chế độ quân chủ ở Việt Nam.",
+      "normalizedText": "Chấm dứt chế độ quân chủ ở Việt Nam.",
+      "paragraphIndex": 305
+    },
+    {
+      "id": "body/306",
+      "order": 306,
+      "kind": "paragraph",
+      "sectionId": "IV.14",
+      "isHeading": false,
+      "text": "Kết thúc triều Nguyễn.",
+      "normalizedText": "Kết thúc triều Nguyễn.",
+      "paragraphIndex": 306
+    },
+    {
+      "id": "body/307",
+      "order": 307,
+      "kind": "paragraph",
+      "sectionId": "IV.14",
+      "isHeading": false,
+      "text": "Hoàn thành sự sụp đổ của chế độ phong kiến.",
+      "normalizedText": "Hoàn thành sự sụp đổ của chế độ phong kiến.",
+      "paragraphIndex": 307
+    },
+    {
+      "id": "body/308",
+      "order": 308,
+      "kind": "paragraph",
+      "sectionId": "IV.14",
+      "isHeading": false,
+      "text": "Mở ra một thời kỳ mới trong lịch sử dân tộc.",
+      "normalizedText": "Mở ra một thời kỳ mới trong lịch sử dân tộc.",
+      "paragraphIndex": 308
+    },
+    {
+      "id": "body/309",
+      "order": 309,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": true,
+      "text": "15. Ngày 2/9/1945: Tuyên bố độc lập, khai sinh nước Việt Nam Dân chủ Cộng hòa",
+      "normalizedText": "15. Ngày 2/9/1945: Tuyên bố độc lập, khai sinh nước Việt Nam Dân chủ Cộng hòa",
+      "paragraphIndex": 309
+    },
+    {
+      "id": "body/310",
+      "order": 310,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "Ngày 2/9/1945, tại Quảng trường Ba Đình, Hà Nội, Chủ tịch Hồ Chí Minh thay mặt Chính phủ lâm thời đọc bản Tuyên ngôn Độc lập.",
+      "normalizedText": "Ngày 2/9/1945, tại Quảng trường Ba Đình, Hà Nội, Chủ tịch Hồ Chí Minh thay mặt Chính phủ lâm thời đọc bản Tuyên ngôn Độc lập.",
+      "paragraphIndex": 310
+    },
+    {
+      "id": "body/311",
+      "order": 311,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "Nội dung chính của Tuyên ngôn:",
+      "normalizedText": "Nội dung chính của Tuyên ngôn:",
+      "paragraphIndex": 311
+    },
+    {
+      "id": "body/312",
+      "order": 312,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "Khẳng định quyền bình đẳng, quyền sống, quyền tự do và quyền mưu cầu hạnh phúc của con người.",
+      "normalizedText": "Khẳng định quyền bình đẳng, quyền sống, quyền tự do và quyền mưu cầu hạnh phúc của con người.",
+      "paragraphIndex": 312
+    },
+    {
+      "id": "body/313",
+      "order": 313,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "Tố cáo tội ác của thực dân Pháp trong quá trình cai trị Việt Nam.",
+      "normalizedText": "Tố cáo tội ác của thực dân Pháp trong quá trình cai trị Việt Nam.",
+      "paragraphIndex": 313
+    },
+    {
+      "id": "body/314",
+      "order": 314,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "Tố cáo những hậu quả do phát xít Nhật gây ra.",
+      "normalizedText": "Tố cáo những hậu quả do phát xít Nhật gây ra.",
+      "paragraphIndex": 314
+    },
+    {
+      "id": "body/315",
+      "order": 315,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "Khẳng định nhân dân Việt Nam đã giành chính quyền từ tay phát xít Nhật và tay sai.",
+      "normalizedText": "Khẳng định nhân dân Việt Nam đã giành chính quyền từ tay phát xít Nhật và tay sai.",
+      "paragraphIndex": 315
+    },
+    {
+      "id": "body/316",
+      "order": 316,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "Tuyên bố chấm dứt chế độ thuộc địa và chế độ quân chủ.",
+      "normalizedText": "Tuyên bố chấm dứt chế độ thuộc địa và chế độ quân chủ.",
+      "paragraphIndex": 316
+    },
+    {
+      "id": "body/317",
+      "order": 317,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "Khẳng định quyền độc lập, tự do của nước Việt Nam.",
+      "normalizedText": "Khẳng định quyền độc lập, tự do của nước Việt Nam.",
+      "paragraphIndex": 317
+    },
+    {
+      "id": "body/318",
+      "order": 318,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "Thể hiện quyết tâm bảo vệ nền độc lập của toàn thể dân tộc.",
+      "normalizedText": "Thể hiện quyết tâm bảo vệ nền độc lập của toàn thể dân tộc.",
+      "paragraphIndex": 318
+    },
+    {
+      "id": "body/319",
+      "order": 319,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "Câu tuyên bố lịch sử:",
+      "normalizedText": "Câu tuyên bố lịch sử:",
+      "paragraphIndex": 319
+    },
+    {
+      "id": "body/320",
+      "order": 320,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "Nước Việt Nam có quyền hưởng tự do và độc lập, và sự thật đã thành một nước tự do độc lập.",
+      "normalizedText": "Nước Việt Nam có quyền hưởng tự do và độc lập, và sự thật đã thành một nước tự do độc lập.",
+      "paragraphIndex": 320
+    },
+    {
+      "id": "body/321",
+      "order": 321,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "Sự kiện ngày 2/9/1945 chính thức khai sinh nước Việt Nam Dân chủ Cộng hòa.",
+      "normalizedText": "Sự kiện ngày 2/9/1945 chính thức khai sinh nước Việt Nam Dân chủ Cộng hòa.",
+      "paragraphIndex": 321
+    },
+    {
+      "id": "body/322",
+      "order": 322,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "Đây là thành quả cao nhất của Cách mạng tháng Tám năm 1945.",
+      "normalizedText": "Đây là thành quả cao nhất của Cách mạng tháng Tám năm 1945.",
+      "paragraphIndex": 322
+    },
+    {
+      "id": "body/323",
+      "order": 323,
+      "kind": "paragraph",
+      "sectionId": "IV.15",
+      "isHeading": false,
+      "text": "baochinhphu.vn+6",
+      "normalizedText": "baochinhphu.vn+6",
+      "paragraphIndex": 323
+    },
+    {
+      "id": "body/324",
+      "order": 324,
+      "kind": "paragraph",
+      "sectionId": "V",
+      "isHeading": true,
+      "text": "PHẦN V. HOẠT ĐỘNG CỦA BỐN NHÂN VẬT SAU KHI CÁCH MẠNG THÁNG TÁM THẮNG LỢI",
+      "normalizedText": "PHẦN V. HOẠT ĐỘNG CỦA BỐN NHÂN VẬT SAU KHI CÁCH MẠNG THÁNG TÁM THẮNG LỢI",
+      "paragraphIndex": 324
+    },
+    {
+      "id": "body/325",
+      "order": 325,
+      "kind": "paragraph",
+      "sectionId": "V",
+      "isHeading": false,
+      "text": "Phần này giúp làm rõ đóng góp của từng người trong việc bảo vệ và củng cố thành quả cách mạng.",
+      "normalizedText": "Phần này giúp làm rõ đóng góp của từng người trong việc bảo vệ và củng cố thành quả cách mạng.",
+      "paragraphIndex": 325
+    },
+    {
+      "id": "body/326",
+      "order": 326,
+      "kind": "paragraph",
+      "sectionId": "V.1",
+      "isHeading": true,
+      "text": "1. Phạm Văn Đồng",
+      "normalizedText": "1. Phạm Văn Đồng",
+      "paragraphIndex": 326
+    },
+    {
+      "id": "body/327",
+      "order": 327,
+      "kind": "paragraph",
+      "sectionId": "V.1",
+      "isHeading": false,
+      "text": "Sau ngày 2/9/1945:",
+      "normalizedText": "Sau ngày 2/9/1945:",
+      "paragraphIndex": 327
+    },
+    {
+      "id": "body/328",
+      "order": 328,
+      "kind": "paragraph",
+      "sectionId": "V.1",
+      "isHeading": false,
+      "text": "Giữ chức Bộ trưởng Bộ Tài chính trong Chính phủ lâm thời.",
+      "normalizedText": "Giữ chức Bộ trưởng Bộ Tài chính trong Chính phủ lâm thời.",
+      "paragraphIndex": 328
+    },
+    {
+      "id": "body/329",
+      "order": 329,
+      "kind": "paragraph",
+      "sectionId": "V.1",
+      "isHeading": false,
+      "text": "Tham gia giải quyết những khó khăn tài chính của chính quyền mới.",
+      "normalizedText": "Tham gia giải quyết những khó khăn tài chính của chính quyền mới.",
+      "paragraphIndex": 329
+    },
+    {
+      "id": "body/330",
+      "order": 330,
+      "kind": "paragraph",
+      "sectionId": "V.1",
+      "isHeading": false,
+      "text": "Góp phần xây dựng nền tài chính độc lập.",
+      "normalizedText": "Góp phần xây dựng nền tài chính độc lập.",
+      "paragraphIndex": 330
+    },
+    {
+      "id": "body/331",
+      "order": 331,
+      "kind": "paragraph",
+      "sectionId": "V.1",
+      "isHeading": false,
+      "text": "Tham gia các hoạt động củng cố chính quyền cách mạng.",
+      "normalizedText": "Tham gia các hoạt động củng cố chính quyền cách mạng.",
+      "paragraphIndex": 331
+    },
+    {
+      "id": "body/332",
+      "order": 332,
+      "kind": "paragraph",
+      "sectionId": "V.1",
+      "isHeading": false,
+      "text": "Nhiệm vụ của ông gắn với việc xây dựng nền tảng kinh tế, tài chính cho nhà nước mới thành lập.",
+      "normalizedText": "Nhiệm vụ của ông gắn với việc xây dựng nền tảng kinh tế, tài chính cho nhà nước mới thành lập.",
+      "paragraphIndex": 332
+    },
+    {
+      "id": "body/333",
+      "order": 333,
+      "kind": "paragraph",
+      "sectionId": "V.2",
+      "isHeading": true,
+      "text": "2. Võ Nguyên Giáp",
+      "normalizedText": "2. Võ Nguyên Giáp",
+      "paragraphIndex": 333
+    },
+    {
+      "id": "body/334",
+      "order": 334,
+      "kind": "paragraph",
+      "sectionId": "V.2",
+      "isHeading": false,
+      "text": "Sau Cách mạng tháng Tám:",
+      "normalizedText": "Sau Cách mạng tháng Tám:",
+      "paragraphIndex": 334
+    },
+    {
+      "id": "body/335",
+      "order": 335,
+      "kind": "paragraph",
+      "sectionId": "V.2",
+      "isHeading": false,
+      "text": "Giữ chức Bộ trưởng Bộ Nội vụ.",
+      "normalizedText": "Giữ chức Bộ trưởng Bộ Nội vụ.",
+      "paragraphIndex": 335
+    },
+    {
+      "id": "body/336",
+      "order": 336,
+      "kind": "paragraph",
+      "sectionId": "V.2",
+      "isHeading": false,
+      "text": "Tham gia tổ chức bộ máy chính quyền.",
+      "normalizedText": "Tham gia tổ chức bộ máy chính quyền.",
+      "paragraphIndex": 336
+    },
+    {
+      "id": "body/337",
+      "order": 337,
+      "kind": "paragraph",
+      "sectionId": "V.2",
+      "isHeading": false,
+      "text": "Phụ trách các vấn đề an ninh, trật tự và nội chính.",
+      "normalizedText": "Phụ trách các vấn đề an ninh, trật tự và nội chính.",
+      "paragraphIndex": 337
+    },
+    {
+      "id": "body/338",
+      "order": 338,
+      "kind": "paragraph",
+      "sectionId": "V.2",
+      "isHeading": false,
+      "text": "Tham gia bảo vệ an toàn cho lễ tuyên bố độc lập ngày 2/9/1945.",
+      "normalizedText": "Tham gia bảo vệ an toàn cho lễ tuyên bố độc lập ngày 2/9/1945.",
+      "paragraphIndex": 338
+    },
+    {
+      "id": "body/339",
+      "order": 339,
+      "kind": "paragraph",
+      "sectionId": "V.2",
+      "isHeading": false,
+      "text": "Góp phần củng cố chính quyền cách mạng trong tình hình đất nước có nhiều khó khăn.",
+      "normalizedText": "Góp phần củng cố chính quyền cách mạng trong tình hình đất nước có nhiều khó khăn.",
+      "paragraphIndex": 339
+    },
+    {
+      "id": "body/340",
+      "order": 340,
+      "kind": "paragraph",
+      "sectionId": "V.3",
+      "isHeading": true,
+      "text": "3. Hoàng Quốc Việt",
+      "normalizedText": "3. Hoàng Quốc Việt",
+      "paragraphIndex": 340
+    },
+    {
+      "id": "body/341",
+      "order": 341,
+      "kind": "paragraph",
+      "sectionId": "V.3",
+      "isHeading": false,
+      "text": "Sau thắng lợi của Tổng khởi nghĩa, ông được Trung ương cử vào Nam Bộ làm đặc phái viên.",
+      "normalizedText": "Sau thắng lợi của Tổng khởi nghĩa, ông được Trung ương cử vào Nam Bộ làm đặc phái viên.",
+      "paragraphIndex": 341
+    },
+    {
+      "id": "body/342",
+      "order": 342,
+      "kind": "paragraph",
+      "sectionId": "V.3",
+      "isHeading": false,
+      "text": "Một số hoạt động quan trọng:",
+      "normalizedText": "Một số hoạt động quan trọng:",
+      "paragraphIndex": 342
+    },
+    {
+      "id": "body/343",
+      "order": 343,
+      "kind": "paragraph",
+      "sectionId": "V.3",
+      "isHeading": false,
+      "text": "Ngày 27/8/1945: Ông đến Sài Gòn, phối hợp với các tổ chức cách mạng tại Nam Bộ.",
+      "normalizedText": "Ngày 27/8/1945: Ông đến Sài Gòn, phối hợp với các tổ chức cách mạng tại Nam Bộ.",
+      "paragraphIndex": 343
+    },
+    {
+      "id": "body/344",
+      "order": 344,
+      "kind": "paragraph",
+      "sectionId": "V.3",
+      "isHeading": false,
+      "text": "Ngày 7/9/1945: Cùng Cao Hồng Lãnh chủ trì cuộc họp nhằm thống nhất các tổ chức cách mạng ở Nam Bộ.",
+      "normalizedText": "Ngày 7/9/1945: Cùng Cao Hồng Lãnh chủ trì cuộc họp nhằm thống nhất các tổ chức cách mạng ở Nam Bộ.",
+      "paragraphIndex": 344
+    },
+    {
+      "id": "body/345",
+      "order": 345,
+      "kind": "paragraph",
+      "sectionId": "V.3",
+      "isHeading": false,
+      "text": "Tham gia củng cố chính quyền cách mạng.",
+      "normalizedText": "Tham gia củng cố chính quyền cách mạng.",
+      "paragraphIndex": 345
+    },
+    {
+      "id": "body/346",
+      "order": 346,
+      "kind": "paragraph",
+      "sectionId": "V.3",
+      "isHeading": false,
+      "text": "Vận động các tổ chức chính trị, đoàn thể và tầng lớp nhân dân tham gia Mặt trận.",
+      "normalizedText": "Vận động các tổ chức chính trị, đoàn thể và tầng lớp nhân dân tham gia Mặt trận.",
+      "paragraphIndex": 346
+    },
+    {
+      "id": "body/347",
+      "order": 347,
+      "kind": "paragraph",
+      "sectionId": "V.3",
+      "isHeading": false,
+      "text": "Góp phần giải quyết tình trạng chia rẽ giữa các tổ chức cách mạng.",
+      "normalizedText": "Góp phần giải quyết tình trạng chia rẽ giữa các tổ chức cách mạng.",
+      "paragraphIndex": 347
+    },
+    {
+      "id": "body/348",
+      "order": 348,
+      "kind": "paragraph",
+      "sectionId": "V.3",
+      "isHeading": false,
+      "text": "Tham gia chỉ đạo các hoạt động nhằm bảo vệ chính quyền trước âm mưu quay trở lại xâm lược của thực dân Pháp.",
+      "normalizedText": "Tham gia chỉ đạo các hoạt động nhằm bảo vệ chính quyền trước âm mưu quay trở lại xâm lược của thực dân Pháp.",
+      "paragraphIndex": 348
+    },
+    {
+      "id": "body/349",
+      "order": 349,
+      "kind": "paragraph",
+      "sectionId": "V.3",
+      "isHeading": false,
+      "text": "Vai trò của Hoàng Quốc Việt rất đáng chú ý vì ông là cầu nối giữa Trung ương Đảng và phong trào cách mạng Nam Bộ trong giai đoạn đầu sau khi giành độc lập.",
+      "normalizedText": "Vai trò của Hoàng Quốc Việt rất đáng chú ý vì ông là cầu nối giữa Trung ương Đảng và phong trào cách mạng Nam Bộ trong giai đoạn đầu sau khi giành độc lập.",
+      "paragraphIndex": 349
+    },
+    {
+      "id": "body/350",
+      "order": 350,
+      "kind": "paragraph",
+      "sectionId": "V.4",
+      "isHeading": true,
+      "text": "4. Trường Chinh",
+      "normalizedText": "4. Trường Chinh",
+      "paragraphIndex": 350
+    },
+    {
+      "id": "body/351",
+      "order": 351,
+      "kind": "paragraph",
+      "sectionId": "V.4",
+      "isHeading": false,
+      "text": "Sau Cách mạng tháng Tám:",
+      "normalizedText": "Sau Cách mạng tháng Tám:",
+      "paragraphIndex": 351
+    },
+    {
+      "id": "body/352",
+      "order": 352,
+      "kind": "paragraph",
+      "sectionId": "V.4",
+      "isHeading": false,
+      "text": "Tiếp tục giữ vai trò lãnh đạo trong Đảng.",
+      "normalizedText": "Tiếp tục giữ vai trò lãnh đạo trong Đảng.",
+      "paragraphIndex": 352
+    },
+    {
+      "id": "body/353",
+      "order": 353,
+      "kind": "paragraph",
+      "sectionId": "V.4",
+      "isHeading": false,
+      "text": "Tham gia hoạch định đường lối chính trị.",
+      "normalizedText": "Tham gia hoạch định đường lối chính trị.",
+      "paragraphIndex": 353
+    },
+    {
+      "id": "body/354",
+      "order": 354,
+      "kind": "paragraph",
+      "sectionId": "V.4",
+      "isHeading": false,
+      "text": "Góp phần củng cố tổ chức Đảng và chính quyền cách mạng.",
+      "normalizedText": "Góp phần củng cố tổ chức Đảng và chính quyền cách mạng.",
+      "paragraphIndex": 354
+    },
+    {
+      "id": "body/355",
+      "order": 355,
+      "kind": "paragraph",
+      "sectionId": "V.4",
+      "isHeading": false,
+      "text": "Tham gia giải quyết những nhiệm vụ chính trị cấp bách của đất nước.",
+      "normalizedText": "Tham gia giải quyết những nhiệm vụ chính trị cấp bách của đất nước.",
+      "paragraphIndex": 355
+    },
+    {
+      "id": "body/356",
+      "order": 356,
+      "kind": "paragraph",
+      "sectionId": "V.4",
+      "isHeading": false,
+      "text": "Vai trò của Trường Chinh tiếp tục gắn với công tác lãnh đạo chính trị và xây dựng đường lối cách mạng.",
+      "normalizedText": "Vai trò của Trường Chinh tiếp tục gắn với công tác lãnh đạo chính trị và xây dựng đường lối cách mạng.",
+      "paragraphIndex": 356
+    },
+    {
+      "id": "body/357",
+      "order": 357,
+      "kind": "paragraph",
+      "sectionId": "VII",
+      "isHeading": true,
+      "text": "PHẦN VII. NGUYÊN NHÂN THẮNG LỢI",
+      "normalizedText": "PHẦN VII. NGUYÊN NHÂN THẮNG LỢI",
+      "paragraphIndex": 357
+    },
+    {
+      "id": "body/358",
+      "order": 358,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": true,
+      "text": "1. Nguyên nhân chủ quan",
+      "normalizedText": "1. Nguyên nhân chủ quan",
+      "paragraphIndex": 358
+    },
+    {
+      "id": "body/359",
+      "order": 359,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": false,
+      "text": "Sự lãnh đạo đúng đắn của Đảng và Chủ tịch Hồ Chí Minh",
+      "normalizedText": "Sự lãnh đạo đúng đắn của Đảng và Chủ tịch Hồ Chí Minh",
+      "paragraphIndex": 359
+    },
+    {
+      "id": "body/360",
+      "order": 360,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": false,
+      "text": "Đảng đã xác định đúng nhiệm vụ giải phóng dân tộc, xây dựng lực lượng và lựa chọn thời điểm phát động Tổng khởi nghĩa.",
+      "normalizedText": "Đảng đã xác định đúng nhiệm vụ giải phóng dân tộc, xây dựng lực lượng và lựa chọn thời điểm phát động Tổng khởi nghĩa.",
+      "paragraphIndex": 360
+    },
+    {
+      "id": "body/361",
+      "order": 361,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": false,
+      "text": "Quá trình chuẩn bị lâu dài, chu đáo",
+      "normalizedText": "Quá trình chuẩn bị lâu dài, chu đáo",
+      "paragraphIndex": 361
+    },
+    {
+      "id": "body/362",
+      "order": 362,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": false,
+      "text": "Trong nhiều năm, cách mạng đã xây dựng được:",
+      "normalizedText": "Trong nhiều năm, cách mạng đã xây dựng được:",
+      "paragraphIndex": 362
+    },
+    {
+      "id": "body/363",
+      "order": 363,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": false,
+      "text": "Lực lượng chính trị.",
+      "normalizedText": "Lực lượng chính trị.",
+      "paragraphIndex": 363
+    },
+    {
+      "id": "body/364",
+      "order": 364,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": false,
+      "text": "Lực lượng vũ trang.",
+      "normalizedText": "Lực lượng vũ trang.",
+      "paragraphIndex": 364
+    },
+    {
+      "id": "body/365",
+      "order": 365,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": false,
+      "text": "Căn cứ địa cách mạng.",
+      "normalizedText": "Căn cứ địa cách mạng.",
+      "paragraphIndex": 365
+    },
+    {
+      "id": "body/366",
+      "order": 366,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": false,
+      "text": "Mặt trận đoàn kết dân tộc.",
+      "normalizedText": "Mặt trận đoàn kết dân tộc.",
+      "paragraphIndex": 366
+    },
+    {
+      "id": "body/367",
+      "order": 367,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": false,
+      "text": "Hệ thống tổ chức Đảng và Việt Minh.",
+      "normalizedText": "Hệ thống tổ chức Đảng và Việt Minh.",
+      "paragraphIndex": 367
+    },
+    {
+      "id": "body/368",
+      "order": 368,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": false,
+      "text": "Tinh thần đoàn kết toàn dân tộc",
+      "normalizedText": "Tinh thần đoàn kết toàn dân tộc",
+      "paragraphIndex": 368
+    },
+    {
+      "id": "body/369",
+      "order": 369,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": false,
+      "text": "Nhân dân thuộc nhiều tầng lớp, ngành nghề, dân tộc và tôn giáo đã tham gia đấu tranh.",
+      "normalizedText": "Nhân dân thuộc nhiều tầng lớp, ngành nghề, dân tộc và tôn giáo đã tham gia đấu tranh.",
+      "paragraphIndex": 369
+    },
+    {
+      "id": "body/370",
+      "order": 370,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": false,
+      "text": "Sự kết hợp giữa đấu tranh chính trị và đấu tranh vũ trang",
+      "normalizedText": "Sự kết hợp giữa đấu tranh chính trị và đấu tranh vũ trang",
+      "paragraphIndex": 370
+    },
+    {
+      "id": "body/371",
+      "order": 371,
+      "kind": "paragraph",
+      "sectionId": "VII.1",
+      "isHeading": false,
+      "text": "Quần chúng chính trị giữ vai trò chủ yếu, lực lượng vũ trang giữ vai trò hỗ trợ, nòng cốt và bảo vệ phong trào.",
+      "normalizedText": "Quần chúng chính trị giữ vai trò chủ yếu, lực lượng vũ trang giữ vai trò hỗ trợ, nòng cốt và bảo vệ phong trào.",
+      "paragraphIndex": 371
+    },
+    {
+      "id": "body/372",
+      "order": 372,
+      "kind": "paragraph",
+      "sectionId": "VII.2",
+      "isHeading": true,
+      "text": "2. Nguyên nhân khách quan",
+      "normalizedText": "2. Nguyên nhân khách quan",
+      "paragraphIndex": 372
+    },
+    {
+      "id": "body/373",
+      "order": 373,
+      "kind": "paragraph",
+      "sectionId": "VII.2",
+      "isHeading": false,
+      "text": "Chiến tranh thế giới thứ hai kết thúc.",
+      "normalizedText": "Chiến tranh thế giới thứ hai kết thúc.",
+      "paragraphIndex": 373
+    },
+    {
+      "id": "body/374",
+      "order": 374,
+      "kind": "paragraph",
+      "sectionId": "VII.2",
+      "isHeading": false,
+      "text": "Phát xít Nhật đầu hàng Đồng minh.",
+      "normalizedText": "Phát xít Nhật đầu hàng Đồng minh.",
+      "paragraphIndex": 374
+    },
+    {
+      "id": "body/375",
+      "order": 375,
+      "kind": "paragraph",
+      "sectionId": "VII.2",
+      "isHeading": false,
+      "text": "Bộ máy thống trị Nhật và chính quyền tay sai suy yếu nghiêm trọng.",
+      "normalizedText": "Bộ máy thống trị Nhật và chính quyền tay sai suy yếu nghiêm trọng.",
+      "paragraphIndex": 375
+    },
+    {
+      "id": "body/376",
+      "order": 376,
+      "kind": "paragraph",
+      "sectionId": "VII.2",
+      "isHeading": false,
+      "text": "Quân Đồng minh chưa kịp tiến vào Đông Dương để giải giáp quân Nhật.",
+      "normalizedText": "Quân Đồng minh chưa kịp tiến vào Đông Dương để giải giáp quân Nhật.",
+      "paragraphIndex": 376
+    },
+    {
+      "id": "body/377",
+      "order": 377,
+      "kind": "paragraph",
+      "sectionId": "VII.2",
+      "isHeading": false,
+      "text": "Những yếu tố này tạo ra thời cơ thuận lợi để nhân dân Việt Nam giành chính quyền.",
+      "normalizedText": "Những yếu tố này tạo ra thời cơ thuận lợi để nhân dân Việt Nam giành chính quyền.",
+      "paragraphIndex": 377
+    },
+    {
+      "id": "body/378",
+      "order": 378,
+      "kind": "paragraph",
+      "sectionId": "VIII",
+      "isHeading": true,
+      "text": "PHẦN VIII. Ý NGHĨA LỊCH SỬ",
+      "normalizedText": "PHẦN VIII. Ý NGHĨA LỊCH SỬ",
+      "paragraphIndex": 378
+    },
+    {
+      "id": "body/379",
+      "order": 379,
+      "kind": "paragraph",
+      "sectionId": "VIII.1",
+      "isHeading": true,
+      "text": "1. Đối với Việt Nam",
+      "normalizedText": "1. Đối với Việt Nam",
+      "paragraphIndex": 379
+    },
+    {
+      "id": "body/380",
+      "order": 380,
+      "kind": "paragraph",
+      "sectionId": "VIII.1",
+      "isHeading": false,
+      "text": "Đập tan ách thống trị của phát xít Nhật và chính quyền tay sai.",
+      "normalizedText": "Đập tan ách thống trị của phát xít Nhật và chính quyền tay sai.",
+      "paragraphIndex": 380
+    },
+    {
+      "id": "body/381",
+      "order": 381,
+      "kind": "paragraph",
+      "sectionId": "VIII.1",
+      "isHeading": false,
+      "text": "Chấm dứt chế độ thuộc địa và chế độ quân chủ.",
+      "normalizedText": "Chấm dứt chế độ thuộc địa và chế độ quân chủ.",
+      "paragraphIndex": 381
+    },
+    {
+      "id": "body/382",
+      "order": 382,
+      "kind": "paragraph",
+      "sectionId": "VIII.1",
+      "isHeading": false,
+      "text": "Thành lập nước Việt Nam Dân chủ Cộng hòa.",
+      "normalizedText": "Thành lập nước Việt Nam Dân chủ Cộng hòa.",
+      "paragraphIndex": 382
+    },
+    {
+      "id": "body/383",
+      "order": 383,
+      "kind": "paragraph",
+      "sectionId": "VIII.1",
+      "isHeading": false,
+      "text": "Đưa nhân dân Việt Nam từ thân phận nô lệ trở thành người làm chủ đất nước.",
+      "normalizedText": "Đưa nhân dân Việt Nam từ thân phận nô lệ trở thành người làm chủ đất nước.",
+      "paragraphIndex": 383
+    },
+    {
+      "id": "body/384",
+      "order": 384,
+      "kind": "paragraph",
+      "sectionId": "VIII.1",
+      "isHeading": false,
+      "text": "Mở ra kỷ nguyên độc lập, tự do cho dân tộc.",
+      "normalizedText": "Mở ra kỷ nguyên độc lập, tự do cho dân tộc.",
+      "paragraphIndex": 384
+    },
+    {
+      "id": "body/385",
+      "order": 385,
+      "kind": "paragraph",
+      "sectionId": "VIII.1",
+      "isHeading": false,
+      "text": "Tạo cơ sở chính trị và pháp lý để xây dựng nhà nước mới.",
+      "normalizedText": "Tạo cơ sở chính trị và pháp lý để xây dựng nhà nước mới.",
+      "paragraphIndex": 385
+    },
+    {
+      "id": "body/386",
+      "order": 386,
+      "kind": "paragraph",
+      "sectionId": "VIII.2",
+      "isHeading": true,
+      "text": "2. Đối với thế giới",
+      "normalizedText": "2. Đối với thế giới",
+      "paragraphIndex": 386
+    },
+    {
+      "id": "body/387",
+      "order": 387,
+      "kind": "paragraph",
+      "sectionId": "VIII.2",
+      "isHeading": false,
+      "text": "Cổ vũ phong trào giải phóng dân tộc tại các nước thuộc địa.",
+      "normalizedText": "Cổ vũ phong trào giải phóng dân tộc tại các nước thuộc địa.",
+      "paragraphIndex": 387
+    },
+    {
+      "id": "body/388",
+      "order": 388,
+      "kind": "paragraph",
+      "sectionId": "VIII.2",
+      "isHeading": false,
+      "text": "Góp phần vào cuộc đấu tranh chống chủ nghĩa phát xít và chủ nghĩa thực dân.",
+      "normalizedText": "Góp phần vào cuộc đấu tranh chống chủ nghĩa phát xít và chủ nghĩa thực dân.",
+      "paragraphIndex": 388
+    },
+    {
+      "id": "body/389",
+      "order": 389,
+      "kind": "paragraph",
+      "sectionId": "VIII.2",
+      "isHeading": false,
+      "text": "Khẳng định sức mạnh của một dân tộc đoàn kết, có tổ chức và có đường lối lãnh đạo đúng đắn.",
+      "normalizedText": "Khẳng định sức mạnh của một dân tộc đoàn kết, có tổ chức và có đường lối lãnh đạo đúng đắn.",
+      "paragraphIndex": 389
+    },
+    {
+      "id": "body/390",
+      "order": 390,
+      "kind": "paragraph",
+      "sectionId": "VIII.2",
+      "isHeading": false,
+      "text": "KẾT LUẬN CHUNG",
+      "normalizedText": "KẾT LUẬN CHUNG",
+      "paragraphIndex": 390
+    },
+    {
+      "id": "body/391",
+      "order": 391,
+      "kind": "paragraph",
+      "sectionId": "VIII.2",
+      "isHeading": false,
+      "text": "Cách mạng tháng Tám năm 1945 là một bước ngoặt vĩ đại trong lịch sử dân tộc Việt Nam. Thắng lợi của cuộc cách mạng là kết quả của quá trình đấu tranh lâu dài, sự chuẩn bị toàn diện về chính trị, quân sự và tổ chức, cùng khả năng nắm bắt thời cơ kịp thời của Đảng và Chủ tịch Hồ Chí Minh.",
+      "normalizedText": "Cách mạng tháng Tám năm 1945 là một bước ngoặt vĩ đại trong lịch sử dân tộc Việt Nam. Thắng lợi của cuộc cách mạng là kết quả của quá trình đấu tranh lâu dài, sự chuẩn bị toàn diện về chính trị, quân sự và tổ chức, cùng khả năng nắm bắt thời cơ kịp thời của Đảng và Chủ tịch Hồ Chí Minh.",
+      "paragraphIndex": 391
+    },
+    {
+      "id": "body/392",
+      "order": 392,
+      "kind": "paragraph",
+      "sectionId": "VIII.2",
+      "isHeading": false,
+      "text": "Trong quá trình đó, Trường Chinh, Võ Nguyên Giáp, Phạm Văn Đồng và Hoàng Quốc Việt đã có những đóng góp quan trọng trên các lĩnh vực lãnh đạo chính trị, quân sự, tổ chức cách mạng, vận động quần chúng và xây dựng chính quyền.",
+      "normalizedText": "Trong quá trình đó, Trường Chinh, Võ Nguyên Giáp, Phạm Văn Đồng và Hoàng Quốc Việt đã có những đóng góp quan trọng trên các lĩnh vực lãnh đạo chính trị, quân sự, tổ chức cách mạng, vận động quần chúng và xây dựng chính quyền.",
+      "paragraphIndex": 392
+    },
+    {
+      "id": "body/393",
+      "order": 393,
+      "kind": "paragraph",
+      "sectionId": "VIII.2",
+      "isHeading": false,
+      "text": "Thắng lợi của Tổng khởi nghĩa tháng Tám đã chấm dứt chế độ thuộc địa, phong kiến, đưa nhân dân Việt Nam trở thành người làm chủ đất nước. Ngày 2/9/1945, nước Việt Nam Dân chủ Cộng hòa chính thức ra đời, mở ra kỷ nguyên độc lập, tự do và một thời kỳ phát triển mới của dân tộc.",
+      "normalizedText": "Thắng lợi của Tổng khởi nghĩa tháng Tám đã chấm dứt chế độ thuộc địa, phong kiến, đưa nhân dân Việt Nam trở thành người làm chủ đất nước. Ngày 2/9/1945, nước Việt Nam Dân chủ Cộng hòa chính thức ra đời, mở ra kỷ nguyên độc lập, tự do và một thời kỳ phát triển mới của dân tộc.",
+      "paragraphIndex": 393
+    },
+    {
+      "id": "body/394",
+      "order": 394,
+      "kind": "paragraph",
+      "sectionId": "VIII.2",
+      "isHeading": false,
+      "text": "",
+      "normalizedText": "",
+      "paragraphIndex": 394
+    }
+  ],
+  "warnings": [],
+  "counts": {
+    "paragraphs": 395,
+    "tables": 0,
+    "blocks": 395
+  }
+}

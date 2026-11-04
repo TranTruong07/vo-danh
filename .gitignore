@@ -58,3 +58,8 @@ next-env.d.ts
 /knowledge/*.json
 /knowledge/review-report*.md
 __pycache__/
+/docs/source/*.docx
+/knowledge/*.json
+# Cho phép đẩy 2 file nguồn chính thức lên server để admin đối chiếu:
+!/docs/source/Tong-hop-kien-thuc-moi.docx
+!/knowledge/new-source-manifest.json
