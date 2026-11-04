@@ -2,7 +2,7 @@ import 'server-only';
 import { randomUUID } from 'node:crypto';
 import { GridFSBucket, ObjectId, type ClientSession } from 'mongodb';
 import { getDatabase, getMongoClient } from '@/lib/db/client';
-import { KNOWLEDGE_TOPIC } from '@/server/domain/knowledge';
+import { KNOWLEDGE_TOPIC, nextKnowledgeQuestionId } from '@/server/domain/knowledge';
 import type { KnowledgeProposal, SourceChunk, SourceRecord } from '@/server/domain/knowledge-generation';
 import type { KnowledgeAuditModel, KnowledgeQuestionModel, KnowledgeRevisionModel } from '@/server/models/knowledge';
 import { generationError, type DuplicateCandidate } from '@/server/services/knowledge-generation-validation';
@@ -71,6 +71,19 @@ export async function generationBudget(maxDaily: number) {
   const used = budget?.calls || 0;
   return { day, used, limit: maxDaily, remaining: Math.max(0, maxDaily - used) };
 }
+async function consumeGenerationBudget(maxDaily: number, session: ClientSession) {
+  const key = `generation:${new Date().toISOString().slice(0,10)}`;
+  const budgets = (await getDatabase()).collection<{ _id: string; calls: number }>('knowledge_generation_budget');
+  const budget = await budgets.findOne({ _id: key }, { session });
+  if ((budget?.calls || 0) >= maxDaily) throw generationError('Đã dùng hết hạn mức tạo kiến thức hôm nay.', 'GENERATION_QUOTA', 429);
+  await budgets.updateOne({ _id: key }, { $inc: { calls: 1 } }, { upsert: true, session });
+}
+// Offline editorial CLI still consumes the shared daily allowance; no reviewer or source approval is fabricated.
+export async function reserveOfflineGenerationCall(maxDaily: number) {
+  const session = (await getMongoClient()).startSession();
+  try { await session.withTransaction(() => consumeGenerationBudget(maxDaily, session)); }
+  finally { await session.endSession(); }
+}
 export async function saveManualProposal(proposal: KnowledgeProposal) {
   await ensureGenerationIndexes();
   const db = await getDatabase(), session = (await getMongoClient()).startSession();
@@ -102,11 +115,7 @@ export async function reserveGeneration(proposal: KnowledgeProposal, maxDaily: n
       if (proposal.requestFingerprint && existing.requestFingerprint !== proposal.requestFingerprint) throw conflict();
       return { started: false, proposal: existing };
     }
-    const key = `generation:${new Date().toISOString().slice(0,10)}`;
-    const budgets = db.collection<{ _id: string; calls: number }>('knowledge_generation_budget');
-    const budget = await budgets.findOne({ _id: key }, { session });
-    if ((budget?.calls || 0) >= maxDaily) throw generationError('Đã dùng hết hạn mức tạo kiến thức hôm nay.', 'GENERATION_QUOTA', 429);
-    await budgets.updateOne({ _id: key }, { $inc: { calls: 1 } }, { upsert: true, session });
+    await consumeGenerationBudget(maxDaily, session);
     await db.collection<KnowledgeProposal>('knowledge_proposals').insertOne(proposal, { session });
     return { started: true, proposal };
   }); } finally { await session.endSession(); }
@@ -157,7 +166,9 @@ export async function convertProposal(id: string, expectedVersion: number, targe
     } else {
       const ids = await questions.find({ topicId: KNOWLEDGE_TOPIC }, { session, projection: { _id: 1 } }).limit(10001).toArray();
       if (ids.length > 10000) throw generationError('Kho câu hỏi vượt giới hạn cấp mã.', 'CATALOG_LIMIT', 503);
-      questionId = `cmtt45-q${String(1 + Math.max(0, ...ids.map(q => Number(q._id.match(/q(\d+)$/)?.[1]) || 0))).padStart(3, '0')}`; version = 1;
+      // Deleted knowledge IDs remain referenced by audit/history; never recycle them.
+      const historicalIds = await db.collection<KnowledgeAuditModel>('knowledge_audit').distinct('questionId', {}, { session });
+      questionId = nextKnowledgeQuestionId([...ids.map(q => q._id), ...historicalIds]); version = 1;
     }
     const change = plan(p, sources, await generationCandidates(session), questionId, version, previous, previousRevision);
     if (previous) await questions.updateOne({ _id: questionId }, { $inc: { managementVersion: 1 }, $set: { updatedAt: change.revision.createdAt } }, { session });

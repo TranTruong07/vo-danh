@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "generatedAt": "2026-11-04T01:56:27.000Z",
+  "sourceDocument": "Tong-hop-kien-thuc-moi.docx",
+  "sourceSha256": "fc0f492babe6407a2d9469b9e935f6ce6543916842d1d5e1de6c8a80e64c385e",
+  "schemaValidation": {
+    "valid": true,
+    "totalDrafts": 64,
+    "requiredFieldsPresent": true,
+    "extraFieldsDetected": false
+  },
+  "sourceGroundingValidation": {
+    "valid": true,
+    "verifiedExcerpts": 64,
+    "unverifiedExcerpts": 0,
+    "blockIdsOrdered": true,
+    "sectionsConsistent": true
+  },
+  "duplicateValidation": {
+    "valid": true,
+    "canonicalCollisions": 0,
+    "aliasCollisions": 0,
+    "collisions": []
+  },
+  "personaValidation": {
+    "valid": true,
+    "requiredCharacters": [
+      "pham-van-dong",
+      "hoang-quoc-viet",
+      "truong-chinh",
+      "vo-nguyen-giap"
+    ],
+    "allPersonasPresent": true,
+    "allPersonasDistinct": true,
+    "leDuanDetected": false
+  },
+  "coverageMetrics": {
+    "totalKnowledgeUnits": 68,
+    "coveredUnits": 64,
+    "heldUnits": 4,
+    "excludedUnits": 0,
+    "coreCoveragePercent": 100.0,
+    "importantCoveragePercent": 100.0,
+    "supplementaryCoveragePercent": 100.0,
+    "overallCoveragePercent": 94.11764705882352
+  }
+}

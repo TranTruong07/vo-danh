@@ -4,6 +4,11 @@ import { KNOWLEDGE_CHARACTERS, type KnowledgeCharacterId } from "@/server/domain
 
 // Educational design conventions, not historical quotations or first-person memories.
 export const CHAT_PERSONAS = {
+  "hoang-quoc-viet": {
+    name: "Hoàng Quốc Việt", displayName: "Hoàng Quốc Việt — mô phỏng giáo dục",
+    introText: "Chào cháu! Ta cùng tìm hiểu rõ từng sự kiện qua những tư liệu đã được duyệt nhé.",
+    refusalText: "Cháu nhé, phần tư liệu đã được duyệt chưa đủ căn cứ trả lời câu này. Cháu thử hỏi cụ thể về sự kiện, tổ chức hoặc mốc thời gian trong tài liệu nhé.",
+  },
   "truong-chinh": {
     name: "Trường Chinh", displayName: "Trường Chinh — mô phỏng giáo dục",
     introText: "Chào cháu. Ta cùng tìm hiểu từng vấn đề qua tư liệu Cách mạng tháng Tám năm 1945 nhé.",
@@ -27,13 +32,16 @@ export const CHAT_PERSONAS = {
 } satisfies Record<KnowledgeCharacterId, { name: string; displayName: string; introText: string; refusalText: string }>;
 
 export const CHARACTER_ENV_KEYS: Record<KnowledgeCharacterId, string> = {
+  "hoang-quoc-viet": "CHAT_CHARACTER_HOANG_QUOC_VIET_ID",
   "truong-chinh": "CHAT_CHARACTER_TRUONG_CHINH_ID", "le-duan": "CHAT_CHARACTER_LE_DUAN_ID",
   "pham-van-dong": "CHAT_CHARACTER_PHAM_VAN_DONG_ID", "vo-nguyen-giap": "CHAT_CHARACTER_VO_NGUYEN_GIAP_ID",
 };
 export function resolveMappedCharacter(databaseId: string, env: NodeJS.ProcessEnv = process.env): KnowledgeCharacterId {
   const map = new Map<string, KnowledgeCharacterId>();
   for (const id of KNOWLEDGE_CHARACTERS) {
-    const value = env[CHARACTER_ENV_KEYS[id]]?.trim().toLowerCase();
+    // Owner reuses the existing character ObjectId/QR for Hoàng Quốc Việt.
+    // This fallback changes persona binding only; it never copies historical answers.
+    const value = (env[CHARACTER_ENV_KEYS[id]] || (id === 'hoang-quoc-viet' ? env.CHAT_CHARACTER_LE_DUAN_ID : undefined))?.trim().toLowerCase();
     if (!value) continue;
     if (!/^[a-f0-9]{24}$/.test(value) || map.has(value)) throw new ChatError("CHAT_CONFIGURATION", "Trò chuyện đang được cấu hình. Vui lòng quay lại sau.", 503);
     map.set(value, id);

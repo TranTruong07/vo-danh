@@ -29,7 +29,7 @@ test('unsupported fact and omitted persona core remain insufficient, not approve
   for (const persona of KNOWLEDGE_CHARACTERS) { const p = content(); p.characterAnswers[persona] = 'Đã lược thông tin.'; assert.equal(parseProposal(p, [chunk]).insufficientEvidence, true); }
 });
 test('persona cannot append an unsupported fact while retaining the full core', () => {
-  const c = content(); c.characterAnswers['le-duan'] += ' Tôi trực tiếp chỉ huy sự kiện này.';
+  const c = content(); c.characterAnswers['hoang-quoc-viet'] += ' Tôi trực tiếp chỉ huy sự kiện này.';
   assert.equal(parseProposal(c, [chunk]).insufficientEvidence, true);
 });
 test('invalid shapes, extra approval fields and duplicate aliases are rejected', () => {

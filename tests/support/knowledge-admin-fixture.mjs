@@ -8,7 +8,7 @@ export function fixtureState() {
   return { question: { _id: questionId, topicId: 'cach-mang-thang-tam-1945', createdAt: now, updatedAt: now }, revisions: [{
     _id: `${questionId}:v3`, questionId, version: 3, canonicalQuestion: 'Câu hỏi thử nghiệm?', aliases: ['Cách hỏi thử nghiệm một?', 'Cách hỏi thử nghiệm hai?'],
     normalizedPhrases: ['câu hỏi thử nghiệm', 'cách hỏi thử nghiệm một', 'cách hỏi thử nghiệm hai'],
-    approvedAnswer: 'Đáp án trung tính thử nghiệm.', characterAnswers: { 'truong-chinh': 'Lời đáp fixture một.', 'le-duan': 'Lời đáp fixture hai.', 'pham-van-dong': 'Lời đáp fixture ba.', 'vo-nguyen-giap': 'Lời đáp fixture bốn.' },
+    approvedAnswer: 'Đáp án trung tính thử nghiệm.', characterAnswers: { 'truong-chinh': 'Lời đáp fixture một.', 'hoang-quoc-viet': 'Lời đáp fixture hai.', 'pham-van-dong': 'Lời đáp fixture ba.', 'vo-nguyen-giap': 'Lời đáp fixture bốn.' },
     source: { document: manifest.document, sectionId: 'I', excerpt: manifest.blocks[0].text, sourceSha256: manifest.sourceSha256, blockIds: ['body/1'], paragraphIndex: 0 },
     status: 'draft', createdAt: now, updatedAt: now, reviewNotes: [], importBatchId: 'synthetic-only',
   }] };

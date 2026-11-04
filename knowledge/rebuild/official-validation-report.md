@@ -1,0 +1,2996 @@
+# Báo cáo kiểm tra dữ liệu chatbot
+
+Tổng: 64 bản hợp lệ về cấu trúc; 0 lỗi; 19 cảnh báo.
+
+Tất cả lời đáp là mô phỏng giáo dục, không phải phát ngôn nguyên văn của nhân vật. Đây là dữ liệu CHƯA ĐƯỢC DUYỆT. Trường approvedAnswer chỉ là tên schema. Không có dữ liệu nào được approve/publish bằng validator.
+
+Máy chỉ kiểm tra cấu trúc, nguồn và một số dấu hiệu cần xem xét; không xác minh toàn bộ sự thật lịch sử hoặc nghĩa tương đương của alias. Người quản trị phải đọc toàn bộ từng mục.
+
+## Lỗi và cảnh báo
+
+- cmtt45-q062 — DATES_REVIEW: Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện.
+- cmtt45-q066 — CAUSES: Duyệt nghĩa aliases, phân biệt nguyên nhân chủ quan và khách quan.
+- cmtt45-q089 — QUAN_LENH: Đối chiếu riêng người soạn, người ký, thời điểm ban bố và việc đọc Quân lệnh số 1; không suy diễn vai trò hoặc mốc thời gian ngoài nguồn mới.
+- cmtt45-q090 — QUAN_LENH: Đối chiếu riêng người soạn, người ký, thời điểm ban bố và việc đọc Quân lệnh số 1; không suy diễn vai trò hoặc mốc thời gian ngoài nguồn mới.
+- cmtt45-q091 — QUAN_LENH: Đối chiếu riêng người soạn, người ký, thời điểm ban bố và việc đọc Quân lệnh số 1; không suy diễn vai trò hoặc mốc thời gian ngoài nguồn mới.
+- cmtt45-q102 — DATES_REVIEW: Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện.
+- cmtt45-q103 — DATES_REVIEW: Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện.
+- cmtt45-q104 — DATES_REVIEW: Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện.
+- cmtt45-q106 — DATES_REVIEW: Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện.
+- cmtt45-q107 — DATES_REVIEW: Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện.
+- cmtt45-q108 — DATES_REVIEW: Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện.
+- cmtt45-q113 — DATES_REVIEW: Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện.
+- cmtt45-q114 — DATES_REVIEW: Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện.
+- cmtt45-q115 — DATES_REVIEW: Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện.
+- cmtt45-q116 — DATES_REVIEW: Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện.
+- cmtt45-q118 — CAUSES: Duyệt nghĩa aliases, phân biệt nguyên nhân chủ quan và khách quan.
+- cmtt45-q119 — CAUSES: Duyệt nghĩa aliases, phân biệt nguyên nhân chủ quan và khách quan.
+- cmtt45-q120 — CAUSES: Duyệt nghĩa aliases, phân biệt nguyên nhân chủ quan và khách quan.
+- cmtt45-q122 — CAUSES: Duyệt nghĩa aliases, phân biệt nguyên nhân chủ quan và khách quan.
+
+## Đối chiếu mâu thuẫn hoặc điểm dễ hiểu nhầm trong nguồn
+
+Giữ nguyên các đoạn dưới đây từ tài liệu; cần người quản trị đọc mô tả ở V.2/bảng V.5 cùng đính chính sau bảng và IX.4. Công cụ không dùng nguồn ngoài để sửa nội dung, không coi việc trích đúng chữ là xác nhận lịch sử.
+
+**V.2 — body/334:**
+
+Sau Cách mạng tháng Tám:
+
+**V.2 — body/335:**
+
+Giữ chức Bộ trưởng Bộ Nội vụ.
+
+**V.2 — body/336:**
+
+Tham gia tổ chức bộ máy chính quyền.
+
+**V.2 — body/337:**
+
+Phụ trách các vấn đề an ninh, trật tự và nội chính.
+
+**V.2 — body/338:**
+
+Tham gia bảo vệ an toàn cho lễ tuyên bố độc lập ngày 2/9/1945.
+
+**V.2 — body/339:**
+
+Góp phần củng cố chính quyền cách mạng trong tình hình đất nước có nhiều khó khăn.
+
+Lời đáp nhân vật là đề xuất biên tập cho mô phỏng giáo dục. Phong cách hội thoại không phải kết luận về cách nói có thật của nhân vật. Người quản trị cần đối chiếu từng mệnh đề với nguồn và duyệt riêng cả bốn phiên bản.
+
+## cmtt45-q061 — revision 1 — draft
+
+**Câu hỏi:** Ngày 28/1/1941 diễn ra sự kiện gì liên quan đến Nguyễn Ái Quốc?
+
+**Aliases:**
+
+- Vào ngày 28/1/1941, Nguyễn Ái Quốc đã làm gì?
+- Sự kiện ngày 28/1/1941 gắn liền với Nguyễn Ái Quốc là gì?
+
+**Đáp án trung tính:**
+
+Ngày 28/1/1941: Nguyễn Ái Quốc trở về nước sau hơn 30 năm hoạt động ở nước ngoài.
+
+**pham-van-dong:**
+
+Để bạn dễ theo dõi, tài liệu nêu: Ngày 28/1/1941: Nguyễn Ái Quốc trở về nước sau hơn 30 năm hoạt động ở nước ngoài.
+
+**hoang-quoc-viet:**
+
+Cháu cùng bác nắm rõ điều này nhé: Ngày 28/1/1941: Nguyễn Ái Quốc trở về nước sau hơn 30 năm hoạt động ở nước ngoài.
+
+**truong-chinh:**
+
+Bạn hãy chú ý điểm cốt lõi này: Ngày 28/1/1941: Nguyễn Ái Quốc trở về nước sau hơn 30 năm hoạt động ở nước ngoài.
+
+**vo-nguyen-giap:**
+
+Cháu cùng xem đoạn tư liệu này nhé: Ngày 28/1/1941: Nguyễn Ái Quốc trở về nước sau hơn 30 năm hoạt động ở nước ngoài.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — II.1 — body/24
+
+Ngày 28/1/1941: Nguyễn Ái Quốc trở về nước sau hơn 30 năm hoạt động ở nước ngoài.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q062 — revision 1 — draft
+
+**Câu hỏi:** Ngày 2/9/1945, tại đâu, Chủ tịch Hồ Chí Minh thay mặt Chính phủ lâm thời đọc bản Tuyên ngôn Độc lập?
+
+**Aliases:**
+
+- Ngày 2/9/1945, tại địa điểm nào, Chủ tịch Hồ Chí Minh thay mặt Chính phủ lâm thời đọc bản Tuyên ngôn Độc lập?
+- Vào ngày 2/9/1945, Chủ tịch Hồ Chí Minh đọc bản Tuyên ngôn Độc lập thay mặt Chính phủ lâm thời ở đâu?
+
+**Đáp án trung tính:**
+
+Ngày 2/9/1945, tại Quảng trường Ba Đình, Hà Nội, Chủ tịch Hồ Chí Minh thay mặt Chính phủ lâm thời đọc bản Tuyên ngôn Độc lập.
+
+**pham-van-dong:**
+
+Để bạn dễ theo dõi, tài liệu nêu: Ngày 2/9/1945, tại Quảng trường Ba Đình, Hà Nội, Chủ tịch Hồ Chí Minh thay mặt Chính phủ lâm thời đọc bản Tuyên ngôn Độc lập.
+
+**hoang-quoc-viet:**
+
+Cháu cùng bác nắm rõ điều này nhé: Ngày 2/9/1945, tại Quảng trường Ba Đình, Hà Nội, Chủ tịch Hồ Chí Minh thay mặt Chính phủ lâm thời đọc bản Tuyên ngôn Độc lập.
+
+**truong-chinh:**
+
+Bạn hãy chú ý điểm cốt lõi này: Ngày 2/9/1945, tại Quảng trường Ba Đình, Hà Nội, Chủ tịch Hồ Chí Minh thay mặt Chính phủ lâm thời đọc bản Tuyên ngôn Độc lập.
+
+**vo-nguyen-giap:**
+
+Cháu cùng xem đoạn tư liệu này nhé: Ngày 2/9/1945, tại Quảng trường Ba Đình, Hà Nội, Chủ tịch Hồ Chí Minh thay mặt Chính phủ lâm thời đọc bản Tuyên ngôn Độc lập.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.15 — body/310
+
+Ngày 2/9/1945, tại Quảng trường Ba Đình, Hà Nội, Chủ tịch Hồ Chí Minh thay mặt Chính phủ lâm thời đọc bản Tuyên ngôn Độc lập.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q063 — revision 1 — draft
+
+**Câu hỏi:** Phát xít Đức đầu hàng Đồng minh vào ngày nào và sự kiện này dẫn tới kết quả gì?
+
+**Aliases:**
+
+- Đức đầu hàng Đồng minh vô điều kiện vào thời gian nào?
+- Ngày phát xít Đức ký văn kiện đầu hàng Đồng minh là ngày nào?
+- Chiến tranh ở châu Âu kết thúc vào ngày nào gắn với sự kiện Đức đầu hàng?
+
+**Đáp án trung tính:**
+
+Ngày 9/5/1945, phát xít Đức đầu hàng Đồng minh vô điều kiện, đánh dấu chiến tranh ở châu Âu chính thức kết thúc.
+
+**pham-van-dong:**
+
+Theo ghi chép lịch sử, vào ngày 9/5/1945, phát xít Đức đã buộc phải đầu hàng Đồng minh vô điều kiện. Sự kiện trọng đại này đánh dấu chiến tranh kết thúc tại châu Âu, mở ra bước ngoặt quyết định cho cục diện toàn thế giới.
+
+**hoang-quoc-viet:**
+
+Bà con và anh em cần nhớ rõ mốc lịch sử này: ngày 9/5/1945, phát xít Đức đầu hàng Đồng minh vô điều kiện, chiến tranh tại châu Âu chấm dứt. Sào huyệt phát xít tan rã đã cổ vũ mạnh mẽ phong trào đấu tranh của quần chúng lao khổ khắp nơi.
+
+**truong-chinh:**
+
+Về mặt diễn biến chiến lược, ngày 9/5/1945 phát xít Đức đầu hàng Đồng minh vô điều kiện, chiến tranh ở châu Âu kết thúc. Sự sụp đổ hoàn toàn của chủ nghĩa phát xít ở phương Tây đã trực tiếp đẩy phe Trục vào thế cô lập, tạo tiền đề cho thời cơ cách mạng ở phương Đông.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ quân sự toàn cầu, mốc then chốt là ngày 9/5/1945: phát xít Đức đầu hàng Đồng minh vô điều kiện, chiến tranh ở châu Âu kết thúc. Trung tâm phát xít bị đập tan, thế trận phe Trục sụp đổ, tạo điều kiện thuận lợi lớn cho chiến trường châu Á.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — I.1 — body/4
+
+Ngày 9/5/1945: Phát xít Đức đầu hàng Đồng minh vô điều kiện, chiến tranh ở châu Âu kết thúc.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q064 — revision 1 — draft
+
+**Câu hỏi:** Liên Xô có những hành động quân sự nào đối với phát xít Nhật vào ngày 8 và 9/8/1945?
+
+**Aliases:**
+
+- Hồng quân Liên Xô tuyên chiến và tiến công quân Nhật vào thời gian nào?
+- Ngày 8 và 9/8/1945 diễn ra sự kiện gì giữa Liên Xô và Nhật Bản?
+- Liên Xô mở cuộc tiến công quân đội Nhật Bản ở Đông Bắc Á vào ngày nào?
+
+**Đáp án trung tính:**
+
+Ngày 8/8/1945, Liên Xô tuyên chiến với Nhật Bản. Tiếp đó, ngày 9/8/1945, Hồng quân Liên Xô mở cuộc tiến công quân Nhật ở Đông Bắc Á.
+
+**pham-van-dong:**
+
+Tài liệu ghi nhận rất rõ ràng hai bước đi liên tiếp: ngày 8/8/1945, Liên Xô chính thức tuyên chiến với Nhật Bản; ngay hôm sau, 9/8/1945, Hồng quân Liên Xô mở cuộc tiến công quân Nhật ở Đông Bắc Á, đẩy nhanh sự sụp đổ của quân phiệt Nhật.
+
+**hoang-quoc-viet:**
+
+Hai ngày liên tiếp ghi dấu hành động dứt khoát: ngày 8/8/1945 Liên Xô tuyên chiến với Nhật Bản, rồi ngày 9/8/1945 Hồng quân Liên Xô mở cuộc tiến công quân Nhật ở Đông Bắc Á, giáng đòn sấm sét vào lực lượng quân phiệt đang chiếm đóng.
+
+**truong-chinh:**
+
+Phân tích theo trình tự thời gian và bối cảnh: ngày 8/8/1945 Liên Xô tuyên chiến với Nhật Bản, và sang ngày 9/8/1945 Hồng quân Liên Xô mở cuộc tiến công quân Nhật ở Đông Bắc Á. Đòn tiến công chiến lược này làm thay đổi mau lẹ tương quan lực lượng, đẩy kẻ thù vào tình thế tuyệt vọng.
+
+**vo-nguyen-giap:**
+
+Về mặt tác chiến chiến lược: ngày 8/8/1945 Liên Xô tuyên chiến với Nhật Bản; tiếp đó ngày 9/8/1945, Hồng quân Liên Xô mở cuộc tiến công quân Nhật ở Đông Bắc Á, đánh sập tập đoàn quân Quan Đông và làm tê liệt thế phòng ngự của quân phiệt Nhật.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — I.1 — body/5, body/6
+
+Ngày 8/8/1945: Liên Xô tuyên chiến với Nhật Bản.
+Ngày 9/8/1945: Hồng quân Liên Xô mở cuộc tiến công quân Nhật ở Đông Bắc Á.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q065 — revision 1 — draft
+
+**Câu hỏi:** Mỹ đã ném bom nguyên tử xuống hai thành phố nào của Nhật Bản vào những ngày nào trong tháng 8/1945?
+
+**Aliases:**
+
+- Hai thành phố Hiroshima và Nagasaki của Nhật Bản bị ném bom nguyên tử vào các ngày nào?
+- Mỹ ném bom nguyên tử xuống Hiroshima và Nagasaki vào thời gian nào?
+- Mốc thời gian Mỹ ném bom nguyên tử xuống hai thành phố của Nhật Bản là khi nào?
+
+**Đáp án trung tính:**
+
+Ngày 6/8/1945, Mỹ ném bom nguyên tử xuống Hiroshima; tiếp đó, ngày 9/8/1945, Mỹ ném bom nguyên tử xuống Nagasaki.
+
+**pham-van-dong:**
+
+Theo tư liệu lịch sử được ghi nhận: ngày 6/8/1945, Mỹ ném bom nguyên tử xuống Hiroshima; sau đó đến ngày 9/8/1945, Mỹ tiếp tục ném bom nguyên tử xuống Nagasaki. Những sự kiện này đã giáng đòn hủy diệt vào chính quốc Nhật Bản.
+
+**hoang-quoc-viet:**
+
+Bà con cần ghi nhớ hai mốc ngày tàn khốc này: ngày 6/8/1945 Mỹ ném bom nguyên tử xuống thành phố Hiroshima, và đến ngày 9/8/1945 thì ném bom nguyên tử xuống thành phố Nagasaki của Nhật Bản.
+
+**truong-chinh:**
+
+Về diễn biến quốc tế tác động đến cuộc chiến: ngày 6/8/1945 Mỹ ném bom nguyên tử xuống Hiroshima, và ngày 9/8/1945 ném bom nguyên tử xuống Nagasaki. Sự kiện dồn dập này đẩy nội bộ giới cầm quyền phát xít Nhật rơi vào khủng hoảng toàn diện.
+
+**vo-nguyen-giap:**
+
+Trên phương diện hỏa lực và chiến tranh hiện đại: ngày 6/8/1945 Mỹ ném bom nguyên tử xuống Hiroshima, và ngày 9/8/1945 Mỹ ném bom nguyên tử xuống Nagasaki, làm tê liệt khả năng kháng cự và đẩy nhanh sự đầu hàng của đế quốc Nhật.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — I.1 — body/7, body/8
+
+Ngày 6/8/1945: Mỹ ném bom nguyên tử xuống Hiroshima.
+Ngày 9/8/1945: Mỹ ném bom nguyên tử xuống Nagasaki.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q066 — revision 1 — draft
+
+**Câu hỏi:** Ngày 14 và 15/8/1945 đánh dấu những bước ngoặt nào trong việc phát xít Nhật đầu hàng Đồng minh?
+
+**Aliases:**
+
+- Nhật Bản chấp nhận đầu hàng và Nhật hoàng tuyên bố đầu hàng vào các ngày nào?
+- Hai mốc ngày 14/8 và 15/8/1945 phản ánh diễn biến gì về sự đầu hàng của Nhật Bản?
+- Quân phiệt Nhật chấp nhận và công bố đầu hàng Đồng minh vào thời điểm nào?
+
+**Đáp án trung tính:**
+
+Ngày 14/8/1945, Nhật Bản chấp nhận các điều kiện đầu hàng của Đồng minh; ngày 15/8/1945, Nhật hoàng Hirohito phát thanh tuyên bố chấp nhận đầu hàng. Sự kiện này khiến quân Nhật tại Đông Dương rệu rã, chính quyền thân Nhật hoang mang, tạo điều kiện quốc tế đặc biệt thuận lợi cho cách mạng Việt Nam.
+
+**pham-van-dong:**
+
+Tài liệu phân định rất rành mạch: ngày 14/8/1945 Nhật Bản chấp nhận điều kiện đầu hàng của Đồng minh, và ngày 15/8/1945 Nhật hoàng Hirohito phát thanh tuyên bố chính thức. Quân đội Nhật ở Đông Dương mất tinh thần, chính quyền thân Nhật hoang mang, mở ra thời cơ đặc biệt thuận lợi cho cách mạng nước ta.
+
+**hoang-quoc-viet:**
+
+Đây là thời khắc bước ngoặt lịch sử: ngày 14/8/1945 Nhật Bản chấp nhận đầu hàng, rồi ngày 15/8/1945 Nhật hoàng lên đài phát thanh tuyên bố đầu hàng. Quân địch mất hết tinh thần chiến đấu, bộ máy tay sai rệu rã, chính là thời cơ bằng vàng để nhân dân ta nhất tề đứng dậy.
+
+**truong-chinh:**
+
+Cần phân tích rõ hai mốc liên tiếp: ngày 14/8/1945 Nhật Bản chấp nhận các điều kiện đầu hàng của Đồng minh, và ngày 15/8/1945 Nhật hoàng Hirohito phát thanh tuyên bố chấp nhận đầu hàng. Quân Nhật ở Đông Dương tê liệt, chính quyền tay sai khủng hoảng sâu sắc, tạo điều kiện quốc tế khách quan đặc biệt thuận lợi để phát động Tổng khởi nghĩa.
+
+**vo-nguyen-giap:**
+
+Về mặt tình thế và thời cơ tác chiến: ngày 14/8/1945 Nhật Bản chấp nhận các điều kiện đầu hàng, và ngày 15/8/1945 Nhật hoàng Hirohito phát thanh tuyên bố đầu hàng. Lực lượng chiếm đóng Nhật tại Đông Dương hoang mang cực độ, phòng tuyến đối phương suy sụp, tạo thời cơ thuận lợi nhất để toàn quân và toàn dân đồng loạt hành động.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — I.1 — body/9, body/10, body/11, body/12
+
+Ngày 14/8/1945: Nhật Bản chấp nhận các điều kiện đầu hàng của Đồng minh.
+Ngày 15/8/1945: Nhật hoàng Hirohito phát thanh tuyên bố Nhật Bản chấp nhận đầu hàng.
+Những thất bại liên tiếp khiến Nhật Bản không còn khả năng duy trì chiến tranh. Quân đội Nhật tại Đông Dương mất tinh thần, bộ máy chính quyền thân Nhật rơi vào tình trạng hoang mang.
+Đây là điều kiện quốc tế đặc biệt thuận lợi cho cách mạng Việt Nam.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q067 — revision 1 — draft
+
+**Câu hỏi:** Cuộc đảo chính ngày 9/3/1945 của Nhật đã làm thay đổi tình hình cai trị ở Đông Dương như thế nào?
+
+**Aliases:**
+
+- Sau cuộc đảo chính ngày 9/3/1945, quyền thống trị ở Đông Dương thuộc về ai?
+- Nhật đảo chính Pháp đêm 9/3/1945 dẫn tới chuyển biến chính trị gì tại Việt Nam?
+- Tình thế cai trị ở Đông Dương thay đổi ra sao sau ngày 9/3/1945?
+
+**Đáp án trung tính:**
+
+Trước tháng 8/1945, Việt Nam chịu sự thống trị của cả phát xít Nhật và thực dân Pháp. Sau cuộc đảo chính ngày 9/3/1945, Nhật loại bỏ bộ máy thống trị của Pháp và trực tiếp nắm quyền ở Đông Dương.
+
+**pham-van-dong:**
+
+Về chuyển biến cai trị trước Tổng khởi nghĩa, tư liệu chỉ rõ: trước đó nước ta chịu sự thống trị của cả Nhật và Pháp. Đến cuộc đảo chính ngày 9/3/1945, phát xít Nhật đã gạt bỏ bộ máy của Pháp để trực tiếp nắm trọn quyền lực tại Đông Dương.
+
+**hoang-quoc-viet:**
+
+Bà con ta trước tháng 8/1945 phải chịu cảnh áp bức của cả Pháp lẫn Nhật. Sau cuộc đảo chính ngày 9/3/1945, giặc Nhật hất cẳng thực dân Pháp, trực tiếp đứng ra nắm quyền cai trị Đông Dương.
+
+**truong-chinh:**
+
+Phân tích mâu thuẫn giữa hai kẻ cướp nước: trước tháng 8/1945 tồn tại tình trạng hai tầng thống trị Pháp - Nhật. Đêm 9/3/1945, phát xít Nhật nổ súng đảo chính, loại bỏ hoàn toàn bộ máy của Pháp để độc chiếm quyền cai trị Đông Dương, làm thay đổi căn bản tình hình và đòi hỏi Đảng phải chuyển hướng hành động ngay.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ chiến trường và tương quan thế lực: trước tháng 8/1945 ta phải đối phó với cả Pháp và Nhật. Cuộc đảo chính ngày 9/3/1945 khiến bộ máy Pháp sụp đổ nhanh chóng, Nhật trực tiếp nắm quyền quân sự và hành chính tại Đông Dương.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — I.2 — body/14
+
+Trước tháng 8/1945, Việt Nam chịu sự thống trị của phát xít Nhật và thực dân Pháp. Sau cuộc đảo chính ngày 9/3/1945, Nhật loại bỏ bộ máy thống trị của Pháp và trực tiếp nắm quyền ở Đông Dương.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q068 — revision 1 — draft
+
+**Câu hỏi:** Chính phủ Trần Trọng Kim có vị thế và thực quyền như thế nào dưới sự bảo trợ của phát xít Nhật?
+
+**Aliases:**
+
+- Chính phủ Trần Trọng Kim được thành lập như thế nào và có thực quyền không?
+- Bản chất quyền lực của chính phủ Trần Trọng Kim dưới thời Nhật chiếm đóng là gì?
+- Chính quyền Trần Trọng Kim hoạt động dưới sự bảo trợ của ai và có địa vị ra sao?
+
+**Đáp án trung tính:**
+
+Chính phủ Trần Trọng Kim được thành lập dưới sự bảo trợ của Nhật nhưng không có thực quyền độc lập.
+
+**pham-van-dong:**
+
+Tài liệu ghi nhận rất rõ ràng và chuẩn xác: chính phủ Trần Trọng Kim tuy được thành lập dưới sự bảo trợ của phát xít Nhật, song trên thực tế hoàn toàn không có thực quyền độc lập đối với vận mệnh quốc gia.
+
+**hoang-quoc-viet:**
+
+Bản chất của chính quyền này rất dễ thấy: chính phủ Trần Trọng Kim ra đời dưới sự bảo trợ của giặc Nhật, chỉ là bộ máy bù nhìn và hoàn toàn không có thực quyền độc lập gì để bảo vệ dân tộc.
+
+**truong-chinh:**
+
+Đánh giá về tính chất giai cấp và chính trị: chính phủ Trần Trọng Kim được dựng lên dưới sự bảo trợ của phát xít Nhật; về bản chất, đó là chính phủ bù nhìn không có thực quyền độc lập, chỉ phục vụ cho mưu đồ thống trị của Nhật.
+
+**vo-nguyen-giap:**
+
+Trên thực tế kiểm soát bộ máy: chính phủ Trần Trọng Kim được thành lập dưới sự bảo trợ của quân đội Nhật nhưng không hề có thực quyền độc lập, hoàn toàn bất lực trước làn sóng cách mạng của quần chúng.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — I.2 — body/15
+
+Chính phủ Trần Trọng Kim được thành lập dưới sự bảo trợ của Nhật nhưng không có thực quyền độc lập.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q069 — revision 1 — draft
+
+**Câu hỏi:** Nạn đói năm 1944–1945 đã gây ra hậu quả gì và làm mâu thuẫn xã hội ở Việt Nam chuyển biến ra sao?
+
+**Aliases:**
+
+- Hậu quả của nạn đói 1944–1945 tác động như thế nào đến mâu thuẫn giữa nhân dân và chế độ thống trị?
+- Nạn đói cuối năm 1944 đầu năm 1945 cướp đi sinh mạng bao nhiêu người và dẫn tới hệ quả gì?
+- Nạn đói 1944–1945 đã làm sâu sắc thêm mâu thuẫn xã hội tại Việt Nam như thế nào?
+
+**Đáp án trung tính:**
+
+Nạn đói năm 1944–1945 khiến hơn hai triệu đồng bào chết đói, làm cho mâu thuẫn giữa nhân dân Việt Nam với chế độ thống trị càng trở nên sâu sắc.
+
+**pham-van-dong:**
+
+Đây là nỗi đau thương vô hạn của non sông: nạn đói năm 1944–1945 đã khiến hơn hai triệu đồng bào chết đói, làm cho mâu thuẫn giữa nhân dân Việt Nam với chế độ thống trị càng trở nên sâu sắc và gay gắt tột cùng.
+
+**hoang-quoc-viet:**
+
+Bà con không bao giờ quên tội ác tột cùng của quân cướp nước: nạn đói 1944–1945 làm hơn hai triệu đồng bào ta chết đói. Chính thảm cảnh ấy đã làm cho mâu thuẫn giữa nhân dân và chế độ thống trị bùng lên dữ dội, thúc giục mọi người xốc tới phá kho thóc cứu đói.
+
+**truong-chinh:**
+
+Về mặt cơ sở mâu thuẫn giai cấp và dân tộc: nạn đói năm 1944–1945 khiến hơn hai triệu đồng bào chết đói, làm cho mâu thuẫn giữa nhân dân Việt Nam với chế độ thống trị càng trở nên sâu sắc, đẩy nhanh tiến trình khủng hoảng của chính quyền thực dân - phát xít.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ động viên lực lượng quần chúng: nạn đói năm 1944–1945 làm hơn hai triệu đồng bào chết đói, đẩy mâu thuẫn giữa nhân dân với chế độ thống trị lên đỉnh điểm sâu sắc, biến lòng căm thù thành sức mạnh khởi nghĩa quật khởi.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — I.2 — body/17
+
+Đặc biệt, nạn đói năm 1944–1945 khiến hơn hai triệu đồng bào chết đói, làm cho mâu thuẫn giữa nhân dân Việt Nam với chế độ thống trị càng trở nên sâu sắc.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q070 — revision 1 — draft
+
+**Câu hỏi:** Vì sao cách mạng Việt Nam phải cấp bách giành chính quyền trước khi quân Đồng minh tiến vào Đông Dương?
+
+**Aliases:**
+
+- Tại sao ta cần giành chính quyền trước lúc quân đội Đồng minh vào Việt Nam giải giáp quân Nhật?
+- Yêu cầu cấp bách phải giành chính quyền trước khi quân Đồng minh vào Đông Dương xuất phát từ nguyên nhân nào?
+- Thời cơ có giới hạn của Cách mạng tháng Tám trước khi quân Đồng minh kéo vào được giải thích ra sao?
+
+**Đáp án trung tính:**
+
+Khi Nhật đầu hàng Đồng minh, chính quyền tay sai mất chỗ dựa, tạo ra thời cơ thuận lợi để nhân dân giành chính quyền. Tuy nhiên thời cơ có hạn vì theo phân công, quân Trung Hoa Dân quốc sẽ vào miền Bắc, quân Anh vào miền Nam để giải giáp quân Nhật, và thực dân Pháp tìm cách quay lại. Do đó, yêu cầu cấp bách là phải giành chính quyền trước khi quân Đồng minh tiến vào Đông Dương.
+
+**pham-van-dong:**
+
+Tư liệu giải thích rất thấu đáo: khi Nhật đầu hàng, chính quyền tay sai mất chỗ dựa tạo thời cơ thuận lợi. Nhưng thời cơ này có giới hạn vì quân Trung Hoa Dân quốc sẽ vào miền Bắc, quân Anh vào miền Nam giải giáp quân Nhật, còn thực dân Pháp tìm cách quay lại. Yêu cầu cấp bách lúc đó là phải giành chính quyền trước khi quân Đồng minh đặt chân vào Đông Dương.
+
+**hoang-quoc-viet:**
+
+Bà con và anh em cần hiểu rõ tình thế ngàn cân treo sợi tóc: giặc Nhật đầu hàng khiến tay sai rệu rã, mở ra thời cơ lớn. Nhưng thời cơ rất ngắn ngủi vì quân Trung Hoa Dân quốc sắp vào Bắc, quân Anh sắp vào Nam, lại thêm thực dân Pháp nhăm nhe quay lại cướp nước. Chúng ta phải vùng lên giành chính quyền thật mau lẹ trước khi quân Đồng minh kéo vào.
+
+**truong-chinh:**
+
+Phân tích khoa học về thời cơ cách mạng: phát xít Nhật đầu hàng khiến chính quyền bù nhìn mất chỗ dựa, tạo thời cơ thuận lợi. Song thời cơ ấy có giới hạn vì theo hiệp ước quốc tế, quân Trung Hoa Dân quốc vào miền Bắc, quân Anh vào miền Nam giải giáp quân Nhật, Pháp cũng toan tính phục hồi ách thống trị. Mệnh lệnh của Đảng là phải cấp bách hành động giành chính quyền trước khi quân Đồng minh tiến vào Đông Dương.
+
+**vo-nguyen-giap:**
+
+Về mặt chiến lược thời gian và bố phòng: Nhật đầu hàng làm tê liệt tay sai, thời cơ xuất hiện nhưng chỉ tồn tại trong thời gian ngắn. Quân Trung Hoa Dân quốc chuẩn bị vào miền Bắc, quân Anh vào miền Nam giải giáp quân Nhật, còn Pháp tìm cách quay lại. Quân dân ta phải thần tốc phát động Tổng khởi nghĩa giành quyền làm chủ trước khi quân Đồng minh tiến vào Đông Dương.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — I.2 — body/18, body/19, body/20
+
+Khi Nhật đầu hàng Đồng minh, chính quyền tay sai mất chỗ dựa, tạo ra thời cơ thuận lợi để nhân dân đứng lên giành chính quyền.
+Tuy nhiên, thời cơ này có giới hạn vì theo sự phân công của Đồng minh, quân Trung Hoa Dân quốc sẽ vào miền Bắc Việt Nam, quân Anh vào miền Nam để giải giáp quân Nhật. Thực dân Pháp cũng tìm cách quay trở lại.
+Do đó, yêu cầu cấp bách là phải giành chính quyền trước khi quân Đồng minh tiến vào Đông Dương.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q071 — revision 1 — draft
+
+**Câu hỏi:** Hội nghị Trung ương lần thứ 8 của Đảng diễn ra vào thời gian nào, ở đâu và do ai chủ trì?
+
+**Aliases:**
+
+- Hội nghị Trung ương 8 được tổ chức khi nào, tại địa điểm nào và ai là người chủ trì?
+- Thời gian, địa điểm và người chủ trì Hội nghị Trung ương lần thứ 8 năm 1941 là gì?
+- Nguyễn Ái Quốc chủ trì Hội nghị Trung ương lần thứ 8 vào thời gian nào và ở đâu?
+
+**Đáp án trung tính:**
+
+Từ ngày 10 đến 19/5/1941, Hội nghị Trung ương lần thứ 8 được tổ chức tại Pác Bó, Cao Bằng, do Nguyễn Ái Quốc chủ trì.
+
+**pham-van-dong:**
+
+Theo biên niên tư liệu của Đảng: từ ngày 10 đến 19/5/1941, Hội nghị Trung ương lần thứ 8 đã được long trọng tổ chức tại Pác Bó, Cao Bằng, dưới sự chủ trì trực tiếp của đồng chí Nguyễn Ái Quốc.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí cần nhớ rõ sự kiện lịch sử này: từ ngày 10 đến 19/5/1941, Hội nghị Trung ương lần thứ 8 họp tại Pác Bó, Cao Bằng, do Bác Hồ kính yêu khi ấy là Nguyễn Ái Quốc chủ trì.
+
+**truong-chinh:**
+
+Về mặt cột mốc tổ chức và đường lối: từ ngày 10 đến 19/5/1941, Hội nghị Ban Chấp hành Trung ương lần thứ 8 được tổ chức tại Pác Bó, Cao Bằng, do đồng chí Nguyễn Ái Quốc chủ trì, mở ra giai đoạn quyết định cho phong trào giải phóng dân tộc.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ chuẩn bị địa bàn chiến lược: từ ngày 10 đến 19/5/1941, Hội nghị Trung ương lần thứ 8 được tổ chức tại Pác Bó, Cao Bằng, do Nguyễn Ái Quốc chủ trì, đặt nền móng vững chắc cho căn cứ địa cách mạng.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — II.1 — body/25
+
+Từ ngày 10 đến 19/5/1941: Hội nghị Trung ương lần thứ 8 được tổ chức tại Pác Bó, Cao Bằng, do Nguyễn Ái Quốc chủ trì.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q072 — revision 1 — draft
+
+**Câu hỏi:** Hội nghị Trung ương lần thứ 8 tháng 5/1941 đã thông qua những quyết định quan trọng nào để hoàn chỉnh chuyển hướng chiến lược?
+
+**Aliases:**
+
+- Những nội dung quyết định chủ yếu của Hội nghị Trung ương lần thứ 8 năm 1941 là gì?
+- Hội nghị Trung ương 8 đặt ra những nhiệm vụ chiến lược nào cho cách mạng Việt Nam?
+- Quyết định của Hội nghị Pác Bó tháng 5/1941 có ý nghĩa như thế nào đối với nhiệm vụ giải phóng dân tộc?
+
+**Đáp án trung tính:**
+
+Hội nghị Trung ương lần thứ 8 đặt nhiệm vụ giải phóng dân tộc lên hàng đầu, tạm gác một số khẩu hiệu chưa phù hợp, thành lập Mặt trận Việt Nam Độc lập Đồng minh (Việt Minh), xây dựng lực lượng chính trị, chuẩn bị lực lượng vũ trang và căn cứ địa, xác định chuẩn bị khởi nghĩa vũ trang là nhiệm vụ trọng tâm. Hội nghị có ý nghĩa quyết định trong việc hoàn chỉnh sự chuyển hướng chiến lược sang nhiệm vụ giải phóng dân tộc.
+
+**pham-van-dong:**
+
+Tư liệu làm nổi bật những quyết sách lịch sử của Hội nghị Trung ương 8: đặt nhiệm vụ giải phóng dân tộc lên hàng đầu, tạm gác các khẩu hiệu chưa phù hợp, thành lập Mặt trận Việt Minh, xây dựng lực lượng chính trị và căn cứ địa, coi chuẩn bị khởi nghĩa vũ trang là nhiệm vụ trọng tâm. Hội nghị có ý nghĩa quyết định hoàn chỉnh chuyển hướng chiến lược của cách mạng nước ta.
+
+**hoang-quoc-viet:**
+
+Nội dung Hội nghị Trung ương 8 thể hiện ý chí đại đoàn kết sắt đá: đặt quyền lợi giải phóng dân tộc lên trên hết, tạm gác khẩu hiệu chưa thích hợp để lập Mặt trận Việt Minh quy tụ muôn người như một, xây dựng căn cứ và lực lượng vũ trang, chuẩn bị khởi nghĩa vũ trang làm trọng tâm. Đó là ngọn cờ tập hợp toàn dân đánh đuổi phát xít - thực dân.
+
+**truong-chinh:**
+
+Về mặt lý luận và cương lĩnh chiến lược: Hội nghị Trung ương lần thứ 8 quyết định đặt nhiệm vụ giải phóng dân tộc lên hàng đầu, tạm gác một số khẩu hiệu chưa phù hợp, thành lập Mặt trận Việt Minh, phát triển lực lượng chính trị quần chúng, chuẩn bị lực lượng vũ trang và căn cứ địa, xác định chuẩn bị khởi nghĩa vũ trang là nhiệm vụ trọng tâm. Hội nghị có ý nghĩa quyết định trong việc hoàn chỉnh sự chuyển hướng chiến lược của cách mạng Việt Nam.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ tổ chức khởi nghĩa vũ trang: Hội nghị Trung ương lần thứ 8 đặt giải phóng dân tộc lên hàng đầu, lập Mặt trận Việt Minh, quyết định xây dựng căn cứ địa và lực lượng vũ trang cách mạng, xác định chuẩn bị khởi nghĩa vũ trang là nhiệm vụ trọng tâm. Đây là định hướng chiến lược hoàn chỉnh để toàn Đảng, toàn quân chuẩn bị Tổng khởi nghĩa.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — II.1 — body/25, body/26, body/27, body/28, body/29, body/30, body/31, body/32, body/33
+
+Những quyết định quan trọng:
+Đặt nhiệm vụ giải phóng dân tộc lên hàng đầu.
+Tạm gác một số khẩu hiệu chưa phù hợp để tập trung vào nhiệm vụ độc lập dân tộc.
+Thành lập Mặt trận Việt Nam Độc lập Đồng minh, gọi tắt là Việt Minh.
+Xây dựng lực lượng chính trị rộng rãi trong quần chúng.
+Chuẩn bị lực lượng vũ trang và căn cứ địa cách mạng.
+Xác định chuẩn bị khởi nghĩa vũ trang là nhiệm vụ trọng tâm.
+Hội nghị Trung ương lần thứ 8 có ý nghĩa quyết định trong việc hoàn chỉnh sự chuyển hướng chiến lược của cách mạng Việt Nam sang nhiệm vụ giải phóng dân tộc.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q073 — revision 1 — draft
+
+**Câu hỏi:** Đội Việt Nam Tuyên truyền Giải phóng quân được thành lập vào ngày nào, ở đâu, do ai chỉ huy và ban đầu có bao nhiêu chiến sĩ?
+
+**Aliases:**
+
+- Hoàn cảnh và quy mô thành lập Đội Việt Nam Tuyên truyền Giải phóng quân năm 1944 là gì?
+- Đội Việt Nam Tuyên truyền Giải phóng quân ra đời ở đâu, khi nào và có bao nhiêu người?
+- Ai là người trực tiếp tổ chức và chỉ huy Đội Việt Nam Tuyên truyền Giải phóng quân ngày 22/12/1944?
+
+**Đáp án trung tính:**
+
+Ngày 22/12/1944, Đội Việt Nam Tuyên truyền Giải phóng quân được thành lập tại khu rừng Trần Hưng Đạo, Cao Bằng. Người trực tiếp tổ chức và chỉ huy là Võ Nguyên Giáp. Đội ban đầu có 34 chiến sĩ, được trang bị vũ khí còn hạn chế nhưng có tinh thần chiến đấu cao.
+
+**pham-van-dong:**
+
+Tài liệu ghi lại thời khắc thiêng liêng: ngày 22/12/1944, Đội Việt Nam Tuyên truyền Giải phóng quân được thành lập tại khu rừng Trần Hưng Đạo, Cao Bằng. Đồng chí Võ Nguyên Giáp trực tiếp tổ chức và chỉ huy. Đội ban đầu gồm 34 chiến sĩ, vũ khí trang bị còn hạn chế nhưng tinh thần chiến đấu vô cùng quả cảm.
+
+**hoang-quoc-viet:**
+
+Bà con hãy ghi nhớ hình ảnh 34 chiến sĩ đầu tiên: ngày 22/12/1944, Đội Việt Nam Tuyên truyền Giải phóng quân thành lập tại khu rừng Trần Hưng Đạo thuộc tỉnh Cao Bằng, do đồng chí Võ Nguyên Giáp trực tiếp tổ chức và chỉ huy. Tuy vũ khí còn thô sơ thiếu thốn nhưng ý chí cách mạng của các đồng chí thì sắt đá ngút trời.
+
+**truong-chinh:**
+
+Về bước phát triển của lực lượng vũ trang cách mạng: ngày 22/12/1944, Đội Việt Nam Tuyên truyền Giải phóng quân được thành lập tại khu rừng Trần Hưng Đạo, Cao Bằng. Đồng chí Võ Nguyên Giáp là người trực tiếp tổ chức và chỉ huy. Lực lượng ban đầu có 34 chiến sĩ, trang bị còn hạn chế nhưng sở hữu tinh thần chiến đấu tuyệt vời.
+
+**vo-nguyen-giap:**
+
+Theo tư liệu lịch sử: ngày 22/12/1944, Đội Việt Nam Tuyên truyền Giải phóng quân được thành lập tại khu rừng Trần Hưng Đạo, Cao Bằng, do tôi trực tiếp nhận nhiệm vụ tổ chức và chỉ huy. Đội ban đầu có 34 chiến sĩ, trang bị vũ khí còn hạn chế nhưng anh em mang trong mình tinh thần chiến đấu rất cao.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — II.2 — body/35, body/36, body/37
+
+Ngày 22/12/1944: Đội Việt Nam Tuyên truyền Giải phóng quân được thành lập tại khu rừng Trần Hưng Đạo, Cao Bằng.
+Người trực tiếp tổ chức và chỉ huy là Võ Nguyên Giáp.
+Đội ban đầu có 34 chiến sĩ, được trang bị vũ khí còn hạn chế nhưng có tinh thần chiến đấu cao.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q074 — revision 1 — draft
+
+**Câu hỏi:** Những chiến công đầu tiên của Đội Việt Nam Tuyên truyền Giải phóng quân diễn ra tại đâu và vào những ngày nào?
+
+**Aliases:**
+
+- Hai trận đánh đầu tiên của Đội Việt Nam Tuyên truyền Giải phóng quân là ở đâu và khi nào?
+- Chiến thắng Phai Khắt và Nà Ngần diễn ra vào thời gian nào?
+- Đội Việt Nam Tuyên truyền Giải phóng quân lập những chiến công đầu tiên vào ngày nào tháng 12/1944?
+
+**Đáp án trung tính:**
+
+Đội Việt Nam Tuyên truyền Giải phóng quân nhanh chóng lập chiến công đầu tiên tại Phai Khắt và Nà Ngần vào ngày 25 và 26/12/1944.
+
+**pham-van-dong:**
+
+Tư liệu ghi nhận những chiến công đầu tiên rất oanh liệt: chỉ ít ngày sau khi thành lập, Đội Việt Nam Tuyên truyền Giải phóng quân đã nhanh chóng lập chiến công tại Phai Khắt và Nà Ngần vào ngày 25 và 26/12/1944.
+
+**hoang-quoc-viet:**
+
+Tin vui chiến thắng bay về làm nức lòng đồng bào: Đội Việt Nam Tuyên truyền Giải phóng quân đã nhanh chóng đánh thắng hai trận giòn giã tại Phai Khắt và Nà Ngần vào ngày 25 và 26/12/1944, mở đầu truyền thống bách chiến bách thắng.
+
+**truong-chinh:**
+
+Về mặt hiệu quả thực tiễn của lực lượng mới lập: Đội Việt Nam Tuyên truyền Giải phóng quân nhanh chóng lập chiến công tại Phai Khắt và Nà Ngần vào ngày 25 và 26/12/1944, chứng minh sự đúng đắn của chủ trương xây dựng lực lượng vũ trang cách mạng.
+
+**vo-nguyen-giap:**
+
+Theo nhật ký tác chiến lịch sử: ngay sau lễ thành lập, Đội Việt Nam Tuyên truyền Giải phóng quân đã nhanh chóng lập chiến công tại Phai Khắt và Nà Ngần vào ngày 25 và 26/12/1944, thực hiện xuất sắc chỉ thị đánh thắng trận đầu.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — II.2 — body/35, body/36, body/37, body/38
+
+Đội nhanh chóng lập chiến công tại Phai Khắt và Nà Ngần vào ngày 25 và 26/12/1944.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q075 — revision 1 — draft
+
+**Câu hỏi:** Việc thành lập lực lượng vũ trang cách mạng năm 1944 có ý nghĩa lịch sử như thế nào?
+
+**Aliases:**
+
+- Ý nghĩa của việc thành lập Đội Việt Nam Tuyên truyền Giải phóng quân năm 1944 là gì?
+- Thành lập lực lượng vũ trang cách mạng năm 1944 đóng góp gì cho sự nghiệp giải phóng dân tộc?
+- Vai trò và ý nghĩa của Đội Việt Nam Tuyên truyền Giải phóng quân đối với Tổng khởi nghĩa ra sao?
+
+**Đáp án trung tính:**
+
+Ý nghĩa của việc thành lập lực lượng vũ trang cách mạng năm 1944 gồm: xây dựng lực lượng vũ trang tập trung, tạo cơ sở cho việc phát triển quân đội cách mạng, và góp phần chuẩn bị lực lượng quân sự cho Tổng khởi nghĩa.
+
+**pham-van-dong:**
+
+Tài liệu đúc kết ý nghĩa rất sâu sắc trên ba khía cạnh: xây dựng lực lượng vũ trang tập trung, tạo cơ sở cho việc phát triển quân đội cách mạng về sau, và trực tiếp góp phần chuẩn bị lực lượng quân sự cho ngày Tổng khởi nghĩa.
+
+**hoang-quoc-viet:**
+
+Bà con ta thấy rõ: thành lập đội quân cách mạng năm 1944 có ý nghĩa xây dựng lực lượng vũ trang tập trung của nhân dân, tạo nền móng vững bền phát triển quân đội cách mạng và chuẩn bị thực lực quân sự cho toàn dân đứng lên Tổng khởi nghĩa.
+
+**truong-chinh:**
+
+Về mặt xây dựng lực lượng cách mạng: sự kiện năm 1944 mang ý nghĩa chiến lược sâu sắc, đó là đặt nền móng xây dựng lực lượng vũ trang tập trung, tạo cơ sở cho sự phát triển quân đội cách mạng, đồng thời góp phần quyết định chuẩn bị lực lượng quân sự cho Tổng khởi nghĩa giành chính quyền.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ tổ chức quân sự cách mạng: việc thành lập lực lượng vũ trang năm 1944 mang ý nghĩa then chốt: xây dựng lực lượng vũ trang tập trung đầu tiên, tạo cơ sở vững chắc cho việc phát triển quân đội cách mạng, và chuẩn bị lực lượng nòng cốt cho Tổng khởi nghĩa.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — II.2 — body/34, body/35, body/36, body/37, body/38, body/39, body/40, body/41, body/42
+
+Ý nghĩa:
+Xây dựng lực lượng vũ trang tập trung.
+Tạo cơ sở cho việc phát triển quân đội cách mạng.
+Góp phần chuẩn bị lực lượng quân sự cho Tổng khởi nghĩa.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q076 — revision 1 — draft
+
+**Câu hỏi:** Chỉ thị 'Nhật – Pháp bắn nhau và hành động của chúng ta' được cơ quan nào ban hành và vào thời gian nào?
+
+**Aliases:**
+
+- Chỉ thị Nhật – Pháp bắn nhau và hành động của chúng ta ra đời khi nào và do ai ban hành?
+- Ban Thường vụ Trung ương Đảng ra Chỉ thị Nhật – Pháp bắn nhau và hành động của chúng ta vào ngày nào?
+- Thời điểm và cơ quan ban hành bản Chỉ thị lịch sử ngày 12/3/1945 là gì?
+
+**Đáp án trung tính:**
+
+Sau khi Nhật đảo chính Pháp, ngày 12/3/1945, Ban Thường vụ Trung ương Đảng ban hành Chỉ thị 'Nhật – Pháp bắn nhau và hành động của chúng ta'.
+
+**pham-van-dong:**
+
+Tư liệu xác nhận rất chuẩn xác: ngay sau cuộc đảo chính Nhật - Pháp, vào ngày 12/3/1945, Ban Thường vụ Trung ương Đảng đã kịp thời ban hành bản Chỉ thị lịch sử 'Nhật – Pháp bắn nhau và hành động của chúng ta'.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí chú ý mốc thời gian này: ngày 12/3/1945, ngay sau khi giặc Nhật đảo chính quân Pháp, Ban Thường vụ Trung ương Đảng đã ban hành Chỉ thị 'Nhật – Pháp bắn nhau và hành động của chúng ta' để chỉ rõ đường đi nước bước cho toàn dân.
+
+**truong-chinh:**
+
+Về sự lãnh đạo nhạy bén của Trung ương Đảng: ngay sau biến cố đảo chính ngày 9/3, đến ngày 12/3/1945, Ban Thường vụ Trung ương Đảng đã ban hành Chỉ thị 'Nhật – Pháp bắn nhau và hành động của chúng ta', kịp thời định hướng phương châm hành động cách mạng.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ chỉ đạo tác chiến và tình hình chính trị: ngày 12/3/1945, sau khi Nhật đảo chính Pháp, Ban Thường vụ Trung ương Đảng đã ban hành Chỉ thị 'Nhật – Pháp bắn nhau và hành động của chúng ta', vạch rõ mục tiêu đấu tranh cụ thể trước mắt.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — II.4 — body/47, body/48, body/49
+
+4. Ngày 12/3/1945: Ban hành Chỉ thị Nhật – Pháp bắn nhau và hành động của chúng ta
+Sau khi Nhật đảo chính Pháp, Ban Thường vụ Trung ương Đảng ban hành Chỉ thị:
+Nhật – Pháp bắn nhau và hành động của chúng ta.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q077 — revision 1 — draft
+
+**Câu hỏi:** Chỉ thị ngày 12/3/1945 xác định kẻ thù trước mắt, khẩu hiệu và các phương hướng hành động chính như thế nào?
+
+**Aliases:**
+
+- Nội dung chính và ý nghĩa của Chỉ thị Nhật – Pháp bắn nhau và hành động của chúng ta là gì?
+- Chỉ thị 12/3/1945 của Ban Thường vụ Trung ương Đảng đề ra những chủ trương gì?
+- Kẻ thù chính và phương hướng hành động được xác định trong Chỉ thị ngày 12/3/1945 ra sao?
+
+**Đáp án trung tính:**
+
+Chỉ thị ngày 12/3/1945 xác định phát xít Nhật là kẻ thù chính, cụ thể trước mắt; thay đổi khẩu hiệu đấu tranh cho phù hợp; phát động cao trào kháng Nhật cứu nước; đẩy mạnh đấu tranh chính trị kết hợp vũ trang; phát triển lực lượng cách mạng và Việt Minh; chuẩn bị điều kiện tiến tới tổng khởi nghĩa. Chỉ thị có ý nghĩa quan trọng vì xác định đúng đối tượng đấu tranh trực tiếp và phương hướng hành động trong tình hình mới.
+
+**pham-van-dong:**
+
+Tài liệu giải thích rất đầy đủ: Chỉ thị ngày 12/3/1945 xác định phát xít Nhật là kẻ thù chính cụ thể trước mắt, đổi khẩu hiệu phù hợp, phát động cao trào kháng Nhật cứu nước, kết hợp chính trị với vũ trang, mở rộng Việt Minh và chuẩn bị tiến tới tổng khởi nghĩa. Bản chỉ thị có ý nghĩa then chốt vì xác định đúng đối tượng đấu tranh trực tiếp và phương hướng hành động.
+
+**hoang-quoc-viet:**
+
+Bản Chỉ thị đã soi đường sáng rõ cho quần chúng: chỉ thẳng giặc Nhật là kẻ thù chính trước mắt, đổi khẩu hiệu đấu tranh, phát động cao trào kháng Nhật cứu nước rộng khắp, kết hợp đấu tranh chính trị với vũ trang, củng cố Mặt trận Việt Minh và chuẩn bị tiến lên tổng khởi nghĩa. Nhờ xác định đúng kẻ thù trực tiếp mà phong trào quần chúng phát triển cuồn cuộn.
+
+**truong-chinh:**
+
+Về mặt đường lối và cương lĩnh hành động trong tình thế mới: Chỉ thị ngày 12/3/1945 chỉ rõ phát xít Nhật là kẻ thù chính, cụ thể trước mắt; chuyển hướng khẩu hiệu cho thích hợp; phát động cao trào kháng Nhật cứu nước; kết hợp chặt chẽ đấu tranh chính trị với vũ trang; phát triển tổ chức Việt Minh và chuẩn bị điều kiện tiến tới tổng khởi nghĩa. Chỉ thị có ý nghĩa chiến lược vì xác định trúng đối tượng đấu tranh trực tiếp và phương hướng cách mạng.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ chỉ đạo phương thức tác chiến và tổ chức: Chỉ thị ngày 12/3/1945 xác định quân phát xít Nhật là kẻ thù chính cụ thể trước mắt, đổi khẩu hiệu đấu tranh, phát động cao trào kháng Nhật cứu nước, đẩy mạnh kết hợp đấu tranh chính trị và quân sự vũ trang, phát triển tổ chức cách mạng để chuẩn bị tổng khởi nghĩa. Đây là định hướng quyết định phương thức chuẩn bị tiến công của ta.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — II.4 — body/47, body/48, body/49, body/50, body/51, body/52, body/53, body/54, body/55, body/56, body/57
+
+Nội dung chính:
+Xác định phát xít Nhật là kẻ thù chính, cụ thể trước mắt.
+Thay đổi khẩu hiệu đấu tranh cho phù hợp với tình hình mới.
+Phát động cao trào kháng Nhật cứu nước.
+Đẩy mạnh đấu tranh chính trị kết hợp đấu tranh vũ trang.
+Phát triển lực lượng cách mạng và các tổ chức Việt Minh.
+Chuẩn bị điều kiện để tiến tới tổng khởi nghĩa.
+Chỉ thị này có ý nghĩa quan trọng vì đã xác định đúng đối tượng đấu tranh trực tiếp và phương hướng hành động trong tình hình mới.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q078 — revision 1 — draft
+
+**Câu hỏi:** Hội nghị quân sự cách mạng Bắc Kỳ tháng 4/1945 được tổ chức nhằm mục đích gì và đề ra những nhiệm vụ trọng tâm nào?
+
+**Aliases:**
+
+- Mục tiêu và các nhiệm vụ trọng tâm của Hội nghị quân sự cách mạng Bắc Kỳ tháng 4/1945 là gì?
+- Hội nghị quân sự cách mạng Bắc Kỳ tháng 4/1945 quyết định những việc gì để chuẩn bị khởi nghĩa?
+- Nội dung chuẩn bị khởi nghĩa của Hội nghị quân sự cách mạng Bắc Kỳ gồm những gì?
+
+**Đáp án trung tính:**
+
+Hội nghị quân sự cách mạng Bắc Kỳ tháng 4/1945 được tổ chức nhằm thống nhất các lực lượng vũ trang, phát triển căn cứ địa và chuẩn bị cho khởi nghĩa. Những nhiệm vụ trọng tâm gồm: phát triển lực lượng vũ trang, xây dựng các đội tự vệ và du kích, tăng cường hoạt động quân sự, chuẩn bị phương án giành chính quyền.
+
+**pham-van-dong:**
+
+Theo tư liệu ghi nhận: Hội nghị quân sự cách mạng Bắc Kỳ tổ chức vào tháng 4/1945 nhằm mục đích thống nhất các lực lượng vũ trang, phát triển căn cứ địa và chuẩn bị cho khởi nghĩa. Các nhiệm vụ trọng tâm bao gồm phát triển lực lượng vũ trang, xây dựng đội tự vệ và du kích, tăng cường quân sự và chuẩn bị phương án giành chính quyền.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí thấy rõ bước chuẩn bị thiết thực: Hội nghị tháng 4/1945 họp nhằm thống nhất lực lượng vũ trang, mở rộng căn cứ địa cách mạng và chuẩn bị khởi nghĩa. Hội nghị đề ra việc xây dựng tự vệ, du kích rộng khắp trong quần chúng lao động, tăng cường đánh giặc và chuẩn bị sẵn kế hoạch giành chính quyền về tay nhân dân.
+
+**truong-chinh:**
+
+Về mặt chuẩn bị thực lực cho Tổng khởi nghĩa: Hội nghị quân sự cách mạng Bắc Kỳ tháng 4/1945 được tổ chức nhằm thống nhất các lực lượng vũ trang, phát triển căn cứ địa và chuẩn bị cho khởi nghĩa. Nhiệm vụ trọng tâm đặt ra là phát triển lực lượng vũ trang, xây dựng mạng lưới tự vệ và du kích, tăng cường hoạt động quân sự và hoàn thiện phương án giành chính quyền.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ tổ chức bộ máy chỉ huy quân sự: Hội nghị quân sự cách mạng Bắc Kỳ tháng 4/1945 nhằm mục tiêu thống nhất các lực lượng vũ trang, mở rộng căn cứ địa và chuẩn bị tác chiến khởi nghĩa. Trọng tâm là phát triển lực lượng vũ trang tập trung, xây dựng các đội tự vệ du kích địa phương, đẩy mạnh hoạt động vũ trang và chuẩn bị phương án giành chính quyền.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — II.5 — body/58, body/59, body/60, body/61, body/62, body/63, body/64
+
+5. Tháng 4/1945: Hội nghị quân sự cách mạng Bắc Kỳ
+Hội nghị quân sự cách mạng Bắc Kỳ được tổ chức nhằm thống nhất các lực lượng vũ trang, phát triển căn cứ địa và chuẩn bị cho khởi nghĩa.
+Những nhiệm vụ trọng tâm:
+Phát triển lực lượng vũ trang.
+Xây dựng các đội tự vệ và du kích.
+Tăng cường hoạt động quân sự.
+Chuẩn bị phương án giành chính quyền.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q079 — revision 1 — draft
+
+**Câu hỏi:** Khu giải phóng Việt Bắc được thành lập vào ngày nào, bao gồm những tỉnh nào và nơi nào là trung tâm chỉ đạo cách mạng?
+
+**Aliases:**
+
+- Ngày thành lập, phạm vi sáu tỉnh và trung tâm chỉ đạo của Khu giải phóng Việt Bắc là gì?
+- Khu giải phóng Việt Bắc ra đời khi nào, gồm các tỉnh nào và đóng trung tâm ở đâu?
+- Sáu tỉnh thuộc Khu giải phóng Việt Bắc thành lập ngày 4/6/1945 gồm những tỉnh nào?
+
+**Đáp án trung tính:**
+
+Khu giải phóng Việt Bắc được thành lập ngày 4/6/1945 với sáu tỉnh: Cao Bằng, Bắc Kạn, Lạng Sơn, Hà Giang, Tuyên Quang, Thái Nguyên. Tân Trào, Tuyên Quang trở thành trung tâm chỉ đạo cách mạng.
+
+**pham-van-dong:**
+
+Tài liệu ghi lại rất rõ ràng địa bàn căn cứ thiêng liêng: ngày 4/6/1945 thành lập Khu giải phóng Việt Bắc gồm sáu tỉnh: Cao Bằng, Bắc Kạn, Lạng Sơn, Hà Giang, Tuyên Quang, Thái Nguyên. Trong đó, Tân Trào thuộc tỉnh Tuyên Quang được chọn làm trung tâm chỉ đạo cách mạng.
+
+**hoang-quoc-viet:**
+
+Bà con hãy nhớ mảnh đất cội nguồn cách mạng: Khu giải phóng được thành lập ngày 4/6/1945 gồm sáu tỉnh Cao Bằng, Bắc Kạn, Lạng Sơn, Hà Giang, Tuyên Quang, Thái Nguyên. Đồng bào các dân tộc Việt Bắc một lòng theo Đảng, lấy Tân Trào, Tuyên Quang làm trung tâm chỉ đạo cách mạng.
+
+**truong-chinh:**
+
+Về mặt xây dựng căn cứ địa đầu não: ngày 4/6/1945 chính thức thành lập Khu giải phóng Việt Bắc gồm sáu tỉnh: Cao Bằng, Bắc Kạn, Lạng Sơn, Hà Giang, Tuyên Quang và Thái Nguyên. Địa bàn Tân Trào, Tuyên Quang trở thành trung tâm chỉ đạo cách mạng của cả nước.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ địa bàn tác chiến và căn cứ kháng chiến: ngày 4/6/1945 thành lập Khu giải phóng Việt Bắc bao gồm sáu tỉnh chiến lược: Cao Bằng, Bắc Kạn, Lạng Sơn, Hà Giang, Tuyên Quang, Thái Nguyên. Tân Trào, Tuyên Quang là trung tâm chỉ đạo cách mạng để chỉ huy các hướng tiến công.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — II.6 — body/65, body/66, body/67, body/68, body/69, body/70, body/71, body/72, body/73
+
+6. Ngày 4/6/1945: Thành lập Khu giải phóng Việt Bắc
+Khu giải phóng được thành lập với sáu tỉnh:
+Cao Bằng.
+Bắc Kạn.
+Lạng Sơn.
+Hà Giang.
+Tuyên Quang.
+Thái Nguyên.
+Tân Trào, Tuyên Quang trở thành trung tâm chỉ đạo cách mạng.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q080 — revision 1 — draft
+
+**Câu hỏi:** Võ Nguyên Giáp được giao nhiệm vụ gì trong Khu giải phóng Việt Bắc và các lực lượng cách mạng đã triển khai những hoạt động gì?
+
+**Aliases:**
+
+- Nhiệm vụ của Võ Nguyên Giáp trong Ủy ban Chỉ huy lâm thời Khu giải phóng Việt Bắc là gì?
+- Võ Nguyên Giáp phụ trách công tác gì khi thành lập Khu giải phóng Việt Bắc?
+- Vai trò phụ trách quân sự của Võ Nguyên Giáp tại Khu giải phóng Việt Bắc được ghi nhận thế nào?
+
+**Đáp án trung tính:**
+
+Võ Nguyên Giáp được giao nhiệm vụ thường trực trong Ủy ban Chỉ huy lâm thời Khu giải phóng, phụ trách quân sự. Các lực lượng cách mạng tiếp tục xây dựng chính quyền cách mạng ở cơ sở, tổ chức lực lượng vũ trang và chuẩn bị Tổng khởi nghĩa.
+
+**pham-van-dong:**
+
+Theo phân công của tổ chức: đồng chí Võ Nguyên Giáp được giao nhiệm vụ thường trực trong Ủy ban Chỉ huy lâm thời Khu giải phóng, phụ trách quân sự. Dưới sự lãnh đạo đó, các lực lượng cách mạng tiếp tục xây dựng chính quyền cách mạng ở cơ sở, tổ chức lực lượng vũ trang và tích cực chuẩn bị Tổng khởi nghĩa.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí nắm rõ sự phân công lúc bấy giờ: đồng chí Võ Nguyên Giáp được giao nhiệm vụ thường trực trong Ủy ban Chỉ huy lâm thời Khu giải phóng, trực tiếp phụ trách quân sự. Các lực lượng cách mạng vừa xây dựng chính quyền cơ sở cùng nhân dân, vừa củng cố lực lượng vũ trang để chuẩn bị Tổng khởi nghĩa.
+
+**truong-chinh:**
+
+Về việc kiện toàn tổ chức lãnh đạo Khu giải phóng: đồng chí Võ Nguyên Giáp được giao nhiệm vụ thường trực trong Ủy ban Chỉ huy lâm thời Khu giải phóng, phụ trách quân sự. Trên địa bàn căn cứ, các lực lượng cách mạng khẩn trương xây dựng chính quyền cách mạng cơ sở, phát triển lực lượng vũ trang và chuẩn bị điều kiện cho Tổng khởi nghĩa.
+
+**vo-nguyen-giap:**
+
+Tài liệu ghi nhận đúng chức trách được Đảng phân công: tôi được giao nhiệm vụ thường trực trong Ủy ban Chỉ huy lâm thời Khu giải phóng, phụ trách quân sự. Lực lượng của ta đã liên tục củng cố chính quyền cách mạng cơ sở, huấn luyện lực lượng vũ trang và chuẩn bị sẵn sàng cho Tổng khởi nghĩa.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — II.6 — body/65, body/66, body/67, body/68, body/69, body/70, body/71, body/72, body/73, body/74, body/75
+
+Võ Nguyên Giáp được giao nhiệm vụ thường trực trong Ủy ban Chỉ huy lâm thời Khu giải phóng, phụ trách quân sự.
+Các lực lượng cách mạng tiếp tục xây dựng chính quyền cách mạng ở cơ sở, tổ chức lực lượng vũ trang và chuẩn bị Tổng khởi nghĩa.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q081 — revision 1 — draft
+
+**Câu hỏi:** Vai trò chính trị, đường lối và tổ chức của Trường Chinh trong quá trình chuẩn bị Tổng khởi nghĩa được thể hiện như thế nào?
+
+**Aliases:**
+
+- Những đóng góp chủ yếu của Tổng Bí thư Trường Chinh trước và trong Cách mạng tháng Tám là gì?
+- Trường Chinh có vai trò gì trong việc lãnh đạo đường lối và tổ chức Tổng khởi nghĩa?
+- Vị trí và nhiệm vụ của Trường Chinh trong Ủy ban Khởi nghĩa toàn quốc là gì?
+
+**Đáp án trung tính:**
+
+Trường Chinh là Tổng Bí thư Đảng Cộng sản Đông Dương trong giai đoạn trước và trong Cách mạng tháng Tám. Ông tham gia lãnh đạo Đảng chuẩn bị lực lượng, chỉ đạo phong trào kháng Nhật cứu nước sau ngày 9/3/1945, tham gia Hội nghị toàn quốc của Đảng tại Tân Trào (13–15/8/1945), nhấn mạnh yêu cầu hành động nhanh chóng không bỏ lỡ thời cơ, tham gia lãnh đạo phát động Tổng khởi nghĩa và trực tiếp phụ trách Ủy ban Khởi nghĩa toàn quốc. Ông có vai trò đặc biệt quan trọng ở phương diện chính trị, đường lối và tổ chức, chuyển nhận định tình hình thành chủ trương hành động cụ thể.
+
+**pham-van-dong:**
+
+Tài liệu khắc họa rất sâu sắc vai trò của đồng chí Trường Chinh: trên cương vị Tổng Bí thư, đồng chí lãnh đạo Đảng chuẩn bị lực lượng, chỉ đạo phong trào kháng Nhật sau ngày 9/3/1945, dự Hội nghị Tân Trào, nhấn mạnh không bỏ lỡ thời cơ, tham gia phát động Tổng khởi nghĩa và trực tiếp phụ trách Ủy ban Khởi nghĩa toàn quốc. Vai trò của đồng chí đặc biệt quan trọng ở phương diện chính trị, đường lối và tổ chức.
+
+**hoang-quoc-viet:**
+
+Anh em và đồng bào đều ghi nhận công lao của đồng chí Tổng Bí thư Trường Chinh: đồng chí cùng Trung ương lãnh đạo chuẩn bị lực lượng, chỉ đạo cao trào kháng Nhật sau đảo chính 9/3, dự Hội nghị Tân Trào, kiên quyết chủ trương hành động nhanh không lỡ thời cơ, trực tiếp phụ trách Ủy ban Khởi nghĩa toàn quốc. Đó là người chỉ huy mẫu mực trên mặt trận chính trị và đường lối.
+
+**truong-chinh:**
+
+Tư liệu lịch sử phản ánh trung thực trọng trách của tôi trước Đảng và dân tộc: với trách nhiệm Tổng Bí thư Đảng Cộng sản Đông Dương, tôi cùng Trung ương lãnh đạo chuẩn bị lực lượng cách mạng, chỉ đạo phong trào kháng Nhật sau ngày 9/3/1945, dự Hội nghị Tân Trào từ 13 đến 15/8/1945, quán triệt nguyên tắc hành động khẩn trương không bỏ lỡ thời cơ, và trực tiếp phụ trách Ủy ban Khởi nghĩa toàn quốc để chuyển hóa nhận định chiến lược thành chủ trương hành động giành chính quyền.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ phối hợp chiến lược: đồng chí Tổng Bí thư Trường Chinh giữ vai trò lãnh đạo tối cao về chính trị, đường lối và tổ chức Tổng khởi nghĩa. Đồng chí chỉ đạo phong trào sau ngày 9/3/1945, dự Hội nghị Tân Trào, yêu cầu hành động kịp thời, trực tiếp phụ trách Ủy ban Khởi nghĩa toàn quốc và cùng Trung ương chỉ đạo phát động Tổng khởi nghĩa trên toàn quốc.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — III.1 — body/78, body/79, body/80, body/81, body/82, body/83, body/84, body/85, body/86, body/87, body/88
+
+Vị trí: Tổng Bí thư Đảng Cộng sản Đông Dương trong giai đoạn trước và trong Cách mạng tháng Tám.
+Những đóng góp chủ yếu:
+Tham gia lãnh đạo Đảng trong quá trình chuẩn bị lực lượng cách mạng.
+Cùng Trung ương Đảng chỉ đạo phong trào kháng Nhật cứu nước sau ngày 9/3/1945.
+Tham gia Hội nghị toàn quốc của Đảng tại Tân Trào từ ngày 13 đến 15/8/1945.
+Nhấn mạnh yêu cầu phải hành động nhanh chóng, không bỏ lỡ thời cơ.
+Tham gia lãnh đạo việc phát động Tổng khởi nghĩa trên cả nước.
+Trực tiếp phụ trách Ủy ban Khởi nghĩa toàn quốc.
+Vai trò của Trường Chinh đặc biệt quan trọng ở phương diện chính trị, đường lối và tổ chức.
+Ông góp phần chuyển những nhận định về tình hình quốc tế và trong nước thành chủ trương hành động cụ thể để giành chính quyền.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q082 — revision 1 — draft
+
+**Câu hỏi:** Võ Nguyên Giáp đã có những đóng góp gì trong công tác xây dựng lực lượng vũ trang và đào tạo cán bộ trước Tổng khởi nghĩa?
+
+**Aliases:**
+
+- Vai trò của Võ Nguyên Giáp trong đào tạo cán bộ tại Trường Quân chính kháng Nhật là gì?
+- Võ Nguyên Giáp tham gia công tác quân sự và huấn luyện cán bộ trước Cách mạng tháng Tám ra sao?
+- Những đóng góp quân sự của Võ Nguyên Giáp trong giai đoạn chuẩn bị Tổng khởi nghĩa gồm những gì?
+
+**Đáp án trung tính:**
+
+Võ Nguyên Giáp là cán bộ lãnh đạo quân sự của cách mạng. Những đóng góp của ông gồm: trực tiếp tổ chức và chỉ huy Đội Việt Nam Tuyên truyền Giải phóng quân năm 1944, tham gia xây dựng lực lượng vũ trang cách mạng, được giao phụ trách quân sự trong Ủy ban Chỉ huy lâm thời Khu giải phóng, và tham gia tổ chức Trường Quân chính kháng Nhật để đào tạo cán bộ.
+
+**pham-van-dong:**
+
+Tư liệu ghi nhận những cống hiến nền tảng của đồng chí Võ Nguyên Giáp: với vai trò cán bộ lãnh đạo quân sự, đồng chí trực tiếp tổ chức và chỉ huy Đội Việt Nam Tuyên truyền Giải phóng quân năm 1944, xây dựng lực lượng vũ trang, phụ trách quân sự trong Ủy ban Chỉ huy lâm thời Khu giải phóng, và tham gia tổ chức Trường Quân chính kháng Nhật để đào tạo đội ngũ cán bộ cách mạng.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí thấy rõ tâm huyết của anh Văn: đồng chí Võ Nguyên Giáp trực tiếp lập và chỉ huy Đội Việt Nam Tuyên truyền Giải phóng quân năm 1944, xây dựng lực lượng vũ trang từ nhân dân, phụ trách quân sự Khu giải phóng, và đặc biệt tham gia mở Trường Quân chính kháng Nhật để rèn luyện cán bộ cho phong trào khởi nghĩa.
+
+**truong-chinh:**
+
+Về mặt xây dựng lực lượng nòng cốt cho khởi nghĩa vũ trang: đồng chí Võ Nguyên Giáp giữ vai trò cán bộ lãnh đạo quân sự của cách mạng, trực tiếp tổ chức và chỉ huy Đội Việt Nam Tuyên truyền Giải phóng quân năm 1944, phụ trách quân sự trong Ủy ban Chỉ huy lâm thời Khu giải phóng và tham gia tổ chức Trường Quân chính kháng Nhật nhằm đào tạo đội ngũ cán bộ chỉ huy thực tiễn.
+
+**vo-nguyen-giap:**
+
+Theo phân công của Trung ương và Bác Hồ: với tư cách cán bộ lãnh đạo quân sự, tôi trực tiếp tổ chức và chỉ huy Đội Việt Nam Tuyên truyền Giải phóng quân năm 1944, tham gia xây dựng lực lượng vũ trang, phụ trách quân sự trong Ủy ban Chỉ huy lâm thời Khu giải phóng và tham gia tổ chức Trường Quân chính kháng Nhật để đào tạo cán bộ đáp ứng yêu cầu tác chiến.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — III.2 — body/89, body/90, body/91, body/92, body/93, body/94, body/95
+
+Vị trí: Cán bộ lãnh đạo quân sự của cách mạng.
+Những đóng góp:
+Trực tiếp tổ chức và chỉ huy Đội Việt Nam Tuyên truyền Giải phóng quân năm 1944.
+Tham gia xây dựng lực lượng vũ trang cách mạng.
+Được giao phụ trách quân sự trong Ủy ban Chỉ huy lâm thời Khu giải phóng.
+Tham gia tổ chức Trường Quân chính kháng Nhật để đào tạo cán bộ.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q083 — revision 1 — draft
+
+**Câu hỏi:** Phạm Văn Đồng đã tham gia những hoạt động chuẩn bị căn cứ và cán bộ nào trong năm 1945 trước Tổng khởi nghĩa?
+
+**Aliases:**
+
+- Những hoạt động của Phạm Văn Đồng tại căn cứ Tân Trào năm 1945 là gì?
+- Phạm Văn Đồng đóng góp gì vào việc xây dựng Khu giải phóng và đào tạo cán bộ năm 1945?
+- Vai trò của Phạm Văn Đồng trước Cách mạng tháng Tám được tài liệu ghi nhận thế nào?
+
+**Đáp án trung tính:**
+
+Phạm Văn Đồng là cán bộ lãnh đạo cách mạng, hoạt động trong hệ thống lãnh đạo và tổ chức Việt Minh. Những hoạt động quan trọng trong năm 1945 gồm: hoạt động tại căn cứ cách mạng Tân Trào, tham gia xây dựng Khu giải phóng, tham gia công tác đào tạo cán bộ tại Trường Quân chính kháng Nhật, và tham dự Hội nghị toàn quốc của Đảng từ ngày 13 đến 15/8/1945.
+
+**pham-van-dong:**
+
+Theo tư liệu ghi chép lại: trên cương vị cán bộ lãnh đạo cách mạng hoạt động trong hệ thống Mặt trận Việt Minh, trong năm 1945 tôi hoạt động tại căn cứ Tân Trào, cùng các đồng chí tham gia xây dựng Khu giải phóng, tham gia đào tạo cán bộ tại Trường Quân chính kháng Nhật và dự Hội nghị toàn quốc của Đảng từ ngày 13 đến 15/8/1945.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí cùng nhớ lại những ngày ở căn cứ: đồng chí Phạm Văn Đồng là cán bộ lãnh đạo hoạt động trong Mặt trận Việt Minh, bám sát căn cứ Tân Trào năm 1945, tham gia dựng xây Khu giải phóng, bồi dưỡng cán bộ tại Trường Quân chính kháng Nhật và dự Hội nghị toàn quốc của Đảng từ 13 đến 15/8/1945.
+
+**truong-chinh:**
+
+Về mặt chuẩn bị nhân sự và tổ chức cơ quan lãnh đạo: đồng chí Phạm Văn Đồng hoạt động trong hệ thống lãnh đạo và tổ chức Việt Minh, bám trụ căn cứ Tân Trào trong năm 1945, tích cực tham gia xây dựng Khu giải phóng, giảng dạy đào tạo cán bộ tại Trường Quân chính kháng Nhật và tham dự Hội nghị toàn quốc của Đảng từ 13 đến 15/8/1945.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ phối hợp tại chiến khu Tân Trào: đồng chí Phạm Văn Đồng hoạt động trong hệ thống lãnh đạo Việt Minh, sát cánh cùng chúng tôi xây dựng Khu giải phóng năm 1945, tham gia công tác đào tạo cán bộ tại Trường Quân chính kháng Nhật và tham dự Hội nghị toàn quốc của Đảng từ ngày 13 đến 15/8/1945.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — III.3 — body/101, body/102, body/103, body/104, body/105, body/106, body/107
+
+Vị trí: Cán bộ lãnh đạo cách mạng, hoạt động trong hệ thống lãnh đạo và tổ chức Việt Minh.
+Những hoạt động quan trọng:
+Hoạt động tại căn cứ cách mạng Tân Trào trong năm 1945.
+Tham gia xây dựng Khu giải phóng.
+Tham gia công tác đào tạo cán bộ tại Trường Quân chính kháng Nhật.
+Tham dự Hội nghị toàn quốc của Đảng từ ngày 13 đến 15/8/1945.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q084 — revision 1 — draft
+
+**Câu hỏi:** Hoàng Quốc Việt được cử giữ chức vụ gì vào năm 1937 trong tiến trình hoạt động cách mạng?
+
+**Aliases:**
+
+- Năm 1937, Hoàng Quốc Việt được Đảng giao đảm nhiệm trọng trách nào?
+- Vào năm 1937, chức vụ của Hoàng Quốc Việt là gì?
+- Hoàng Quốc Việt được cử làm Bí thư Xứ ủy Bắc Kỳ vào năm nào?
+
+**Đáp án trung tính:**
+
+Năm 1937, Hoàng Quốc Việt được cử làm Bí thư Xứ ủy Bắc Kỳ.
+
+**pham-van-dong:**
+
+Tư liệu lịch sử ghi nhận mốc hoạt động phong trào: vào năm 1937, đồng chí Hoàng Quốc Việt đã được Đảng tin cậy cử làm Bí thư Xứ ủy Bắc Kỳ, trực tiếp lãnh đạo phong trào đấu tranh của quần chúng.
+
+**hoang-quoc-viet:**
+
+Theo tư liệu ghi nhận về quá trình hoạt động của tôi: vào năm 1937, tôi được tổ chức Đảng tín nhiệm cử làm Bí thư Xứ ủy Bắc Kỳ để cùng anh em gây dựng phong trào cách mạng trong công nhân và quần chúng lao động.
+
+**truong-chinh:**
+
+Về mặt bố trí cán bộ lãnh đạo địa bàn trọng yếu: năm 1937, đồng chí Hoàng Quốc Việt được cử làm Bí thư Xứ ủy Bắc Kỳ, đóng góp tích cực vào công tác xây dựng tổ chức Đảng và vận động quần chúng ở miền Bắc.
+
+**vo-nguyen-giap:**
+
+Theo biên niên hoạt động cách mạng: năm 1937, đồng chí Hoàng Quốc Việt được Đảng cử làm Bí thư Xứ ủy Bắc Kỳ, phụ trách phong trào quần chúng và củng cố cơ sở cách mạng thời kỳ Mặt trận Dân chủ.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — III.4 — body/112, body/113, body/114, body/115
+
+Năm 1937, được cử làm Bí thư Xứ ủy Bắc Kỳ.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q085 — revision 1 — draft
+
+**Câu hỏi:** Hoàng Quốc Việt đã tham gia hoạt động nào tại Hội nghị Trung ương tháng 5/1941?
+
+**Aliases:**
+
+- Tại Hội nghị Trung ương lần thứ 8 tháng 5/1941, Hoàng Quốc Việt có vai trò gì?
+- Tháng 5/1941, Hoàng Quốc Việt tham gia cơ quan lãnh đạo nào của Đảng?
+- Sự kiện Hoàng Quốc Việt tham gia Ban Chấp hành Trung ương diễn ra vào thời gian nào?
+
+**Đáp án trung tính:**
+
+Tháng 5/1941, Hoàng Quốc Việt tham dự Hội nghị Trung ương lần thứ 8 và tham gia Ban Chấp hành Trung ương.
+
+**pham-van-dong:**
+
+Tài liệu ghi lại dấu mốc quan trọng: vào tháng 5/1941, đồng chí Hoàng Quốc Việt đã tham dự Hội nghị Trung ương lần thứ 8 và được bầu tham gia Ban Chấp hành Trung ương Đảng.
+
+**hoang-quoc-viet:**
+
+Theo ghi chép của tài liệu lịch sử: vào tháng 5/1941, tôi vinh dự tham dự Hội nghị Trung ương lần thứ 8 tại Pác Bó và tham gia Ban Chấp hành Trung ương Đảng để gánh vác nhiệm vụ cách mạng.
+
+**truong-chinh:**
+
+Về việc kiện toàn cơ quan lãnh đạo cao nhất của Đảng tại Hội nghị Trung ương 8: tháng 5/1941, đồng chí Hoàng Quốc Việt tham dự Hội nghị Trung ương lần thứ 8 và tham gia Ban Chấp hành Trung ương, cùng Trung ương hoạch định đường lối giải phóng dân tộc.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ tổ chức lãnh đạo tại căn cứ Cao Bằng: tháng 5/1941, đồng chí Hoàng Quốc Việt tham dự Hội nghị Trung ương lần thứ 8 và tham gia Ban Chấp hành Trung ương Đảng để chỉ đạo phong trào cả nước.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — III.4 — body/112, body/113, body/114, body/115, body/116
+
+Tháng 5/1941, tham dự Hội nghị Trung ương lần thứ 8 và tham gia Ban Chấp hành Trung ương.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q086 — revision 1 — draft
+
+**Câu hỏi:** Hoàng Quốc Việt được giao trọng trách nào trong Tổng bộ Việt Minh vào năm 1943?
+
+**Aliases:**
+
+- Năm 1943, Hoàng Quốc Việt giữ chức vụ gì trong Tổng bộ Việt Minh?
+- Ai được giao trọng trách quyền Bí thư Tổng bộ Việt Minh vào năm 1943?
+- Vào năm 1943, Hoàng Quốc Việt đảm nhận chức vụ lãnh đạo nào của Mặt trận Việt Minh?
+
+**Đáp án trung tính:**
+
+Năm 1943, Hoàng Quốc Việt được giao trọng trách quyền Bí thư Tổng bộ Việt Minh.
+
+**pham-van-dong:**
+
+Theo tư liệu ghi chép về công tác Mặt trận: vào năm 1943, đồng chí Hoàng Quốc Việt đã được giao trọng trách quyền Bí thư Tổng bộ Việt Minh, chỉ đạo công tác tập hợp lực lượng đại đoàn kết.
+
+**hoang-quoc-viet:**
+
+Theo tư liệu ghi nhận nhiệm vụ của tôi lúc bấy giờ: năm 1943, tôi được Đảng và Mặt trận giao trọng trách quyền Bí thư Tổng bộ Việt Minh để lo việc vận động các đoàn thể cứu quốc.
+
+**truong-chinh:**
+
+Về mặt tăng cường vai trò lãnh đạo Mặt trận: năm 1943, đồng chí Hoàng Quốc Việt được giao trọng trách quyền Bí thư Tổng bộ Việt Minh, trực tiếp đôn đốc công tác phát triển các hội Cứu quốc trong quần chúng.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ xây dựng thực lực chính trị cho Tổng khởi nghĩa: năm 1943, đồng chí Hoàng Quốc Việt được giao trọng trách quyền Bí thư Tổng bộ Việt Minh, giữ vai trò quan trọng trong việc mở rộng mạng lưới cơ sở Việt Minh.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — III.4 — body/112, body/113, body/114, body/115, body/116, body/117
+
+Năm 1943, được giao trọng trách quyền Bí thư Tổng bộ Việt Minh.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q087 — revision 1 — draft
+
+**Câu hỏi:** Tại Hội nghị toàn quốc của Đảng tháng 8/1945, Hoàng Quốc Việt được bầu vào cơ quan nào và cùng Trung ương làm nhiệm vụ gì?
+
+**Aliases:**
+
+- Hoàng Quốc Việt được bầu làm Ủy viên Thường vụ Trung ương vào thời điểm nào?
+- Tháng 8/1945, Hoàng Quốc Việt đảm nhận chức vụ gì tại Hội nghị toàn quốc của Đảng?
+- Cơ quan lãnh đạo mà Hoàng Quốc Việt được bầu vào tháng 8/1945 là cơ quan nào?
+
+**Đáp án trung tính:**
+
+Tháng 8/1945, tại Hội nghị toàn quốc của Đảng, Hoàng Quốc Việt được bầu làm Ủy viên Thường vụ Trung ương, cùng Trung ương Đảng tham gia lãnh đạo Tổng khởi nghĩa.
+
+**pham-van-dong:**
+
+Tài liệu ghi lại bước kiện toàn cơ quan đầu não: tháng 8/1945, tại Hội nghị toàn quốc của Đảng, đồng chí Hoàng Quốc Việt được bầu làm Ủy viên Thường vụ Trung ương, cùng Trung ương Đảng tham gia lãnh đạo Tổng khởi nghĩa thắng lợi.
+
+**hoang-quoc-viet:**
+
+Theo tư liệu lịch sử ghi nhận: vào tháng 8/1945, tại Hội nghị toàn quốc của Đảng họp ở Tân Trào, tôi được bầu làm Ủy viên Thường vụ Trung ương, cùng các đồng chí trong Trung ương Đảng gánh vác trọng trách lãnh đạo Tổng khởi nghĩa trên cả nước.
+
+**truong-chinh:**
+
+Về mặt củng cố Thường vụ Trung ương để lãnh đạo khởi nghĩa: tháng 8/1945, tại Hội nghị toàn quốc của Đảng ở Tân Trào, đồng chí Hoàng Quốc Việt được bầu làm Ủy viên Thường vụ Trung ương, cùng tập thể Trung ương trực tiếp chỉ đạo Tổng khởi nghĩa giành chính quyền.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ cơ quan chỉ đạo tác chiến và khởi nghĩa toàn quốc: tháng 8/1945, tại Hội nghị toàn quốc của Đảng, đồng chí Hoàng Quốc Việt được bầu làm Ủy viên Thường vụ Trung ương, cùng Trung ương Đảng tham gia lãnh đạo Tổng khởi nghĩa thần tốc.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — III.4 — body/112, body/113, body/114, body/115, body/116, body/117, body/118, body/119
+
+Tháng 8/1945, tại Hội nghị toàn quốc của Đảng, được bầu làm Ủy viên Thường vụ Trung ương.
+Cùng Trung ương Đảng tham gia lãnh đạo Tổng khởi nghĩa.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q088 — revision 1 — draft
+
+**Câu hỏi:** Ủy ban Khởi nghĩa toàn quốc được thành lập vào ngày nào, gồm những ai và do ai trực tiếp phụ trách?
+
+**Aliases:**
+
+- Thành phần và người phụ trách Ủy ban Khởi nghĩa toàn quốc ngày 13/8/1945 là ai?
+- Ủy ban Khởi nghĩa toàn quốc ra đời khi nào và gồm các thành viên nào?
+- Ai trực tiếp phụ trách Ủy ban Khởi nghĩa toàn quốc thành lập ngày 13/8/1945?
+
+**Đáp án trung tính:**
+
+Ngày 13/8/1945, Ủy ban Khởi nghĩa toàn quốc được thành lập. Các thành viên gồm: Trường Chinh, Võ Nguyên Giáp, Trần Đăng Ninh, Lê Thanh Nghị, Chu Văn Tấn. Trường Chinh trực tiếp phụ trách Ủy ban.
+
+**pham-van-dong:**
+
+Tài liệu ghi lại cơ quan chỉ huy tối cao của cuộc khởi nghĩa: ngày 13/8/1945, Ủy ban Khởi nghĩa toàn quốc được thành lập. Các thành viên gồm Trường Chinh, Võ Nguyên Giáp, Trần Đăng Ninh, Lê Thanh Nghị, Chu Văn Tấn, và đồng chí Trường Chinh trực tiếp phụ trách Ủy ban.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí ghi nhớ bộ chỉ huy của phong trào: ngày 13/8/1945, Ủy ban Khởi nghĩa toàn quốc được thành lập gồm các đồng chí Trường Chinh, Võ Nguyên Giáp, Trần Đăng Ninh, Lê Thanh Nghị, Chu Văn Tấn, do đồng chí Trường Chinh trực tiếp phụ trách.
+
+**truong-chinh:**
+
+Về mặt tổ chức cơ quan lãnh đạo Tổng khởi nghĩa: ngày 13/8/1945, Ủy ban Khởi nghĩa toàn quốc được thành lập nhằm kịp thời chớp thời cơ. Thành viên gồm Trường Chinh, Võ Nguyên Giáp, Trần Đăng Ninh, Lê Thanh Nghị và Chu Văn Tấn; tôi được Đảng phân công trực tiếp phụ trách Ủy ban.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ tổ chức bộ chỉ huy quân sự - chính trị toàn quốc: ngày 13/8/1945, Ủy ban Khởi nghĩa toàn quốc được thành lập gồm các đồng chí Trường Chinh, Võ Nguyên Giáp, Trần Đăng Ninh, Lê Thanh Nghị và Chu Văn Tấn, do đồng chí Trường Chinh trực tiếp phụ trách chỉ đạo.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.1 — body/125, body/126, body/127, body/128, body/129, body/130, body/131, body/132, body/133, body/134
+
+Ngày 13/8/1945, Ủy ban Khởi nghĩa toàn quốc được thành lập.
+Các thành viên gồm:
+Trường Chinh.
+Võ Nguyên Giáp.
+Trần Đăng Ninh.
+Lê Thanh Nghị.
+Chu Văn Tấn.
+Trường Chinh trực tiếp phụ trách Ủy ban.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q089 — revision 1 — draft
+
+**Câu hỏi:** Quân lệnh số 1 được cơ quan nào ban bố và vào thời điểm nào?
+
+**Aliases:**
+
+- Thời điểm ban bố Quân lệnh số 1 phát động Tổng khởi nghĩa là khi nào?
+- Quân lệnh số 1 do cơ quan nào ban bố đêm 13/8/1945?
+- Văn kiện chính thức phát lệnh Tổng khởi nghĩa được ban bố vào ngày giờ nào?
+
+**Đáp án trung tính:**
+
+Đêm 13/8/1945, Ủy ban Khởi nghĩa toàn quốc ban bố Quân lệnh số 1. Đây là văn kiện chính thức phát lệnh Tổng khởi nghĩa, kêu gọi toàn dân đứng lên giành chính quyền.
+
+**pham-van-dong:**
+
+Theo tư liệu lịch sử, thời khắc quyết định của non sông diễn ra vào đêm 13/8/1945, khi Ủy ban Khởi nghĩa toàn quốc ban bố Quân lệnh số 1. Đây là văn kiện chính thức phát lệnh Tổng khởi nghĩa, kêu gọi toàn dân đứng lên giành chính quyền.
+
+**hoang-quoc-viet:**
+
+Bà con hãy nhớ hiệu lệnh thiêng liêng này: đêm 13/8/1945, Ủy ban Khởi nghĩa toàn quốc ban bố Quân lệnh số 1, chính thức phát lệnh Tổng khởi nghĩa, kêu gọi đồng bào cả nước đứng lên giành chính quyền về tay nhân dân.
+
+**truong-chinh:**
+
+Về mặt văn kiện phát động Tổng khởi nghĩa: đêm 13/8/1945, Ủy ban Khởi nghĩa toàn quốc ban bố Quân lệnh số 1. Đây là văn kiện chính thức phát lệnh Tổng khởi nghĩa, kêu gọi toàn dân đứng lên giành chính quyền kịp thời nắm bắt thời cơ ngàn năm có một.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ mệnh lệnh tác chiến của cách mạng: đêm 13/8/1945, Ủy ban Khởi nghĩa toàn quốc ban bố Quân lệnh số 1, chính thức phát lệnh Tổng khởi nghĩa trên toàn quốc, kêu gọi quân và dân đồng loạt tiến công giành chính quyền.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.1 — body/135, body/136
+
+Đêm 13/8/1945, Ủy ban Khởi nghĩa toàn quốc ban bố Quân lệnh số 1.
+Đây là văn kiện chính thức phát lệnh Tổng khởi nghĩa, kêu gọi toàn dân đứng lên giành chính quyền.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+- Ghi chú: QUAN_LENH: Đối chiếu riêng người soạn, người ký, thời điểm ban bố và việc đọc Quân lệnh số 1; không suy diễn vai trò hoặc mốc thời gian ngoài nguồn mới.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q090 — revision 1 — draft
+
+**Câu hỏi:** Quân lệnh số 1 ban bố đêm 13/8/1945 có những nội dung chủ yếu nào?
+
+**Aliases:**
+
+- Nội dung cốt lõi của Quân lệnh số 1 là gì?
+- Ủy ban Khởi nghĩa toàn quốc yêu cầu quân và dân làm gì trong Quân lệnh số 1?
+- Các điểm chính được nêu trong bản Quân lệnh số 1 gồm những gì?
+
+**Đáp án trung tính:**
+
+Nội dung chủ yếu của Quân lệnh số 1: khẳng định thời cơ giành độc lập đã đến; kêu gọi quân và dân cả nước đứng lên khởi nghĩa; yêu cầu các địa phương nhanh chóng tổ chức lực lượng; kết hợp đấu tranh chính trị với đấu tranh vũ trang; hành động khẩn trương, kiên quyết để giành chính quyền trước khi quân Đồng minh vào Đông Dương.
+
+**pham-van-dong:**
+
+Tư liệu tóm lược các nội dung cốt lõi của bản quân lệnh: khẳng định thời cơ giành độc lập đã đến, kêu gọi toàn dân đứng lên, yêu cầu địa phương tổ chức lực lượng, kết hợp đấu tranh chính trị với vũ trang, hành động khẩn trương và kiên quyết giành chính quyền trước khi quân Đồng minh vào Đông Dương.
+
+**hoang-quoc-viet:**
+
+Bản Quân lệnh số 1 truyền đi lời hiệu triệu đanh thép: báo rõ thời cơ độc lập đã điểm, kêu gọi đồng bào cả nước khởi nghĩa, thúc giục các địa phương gấp rút gom góp lực lượng, kết hợp đấu tranh chính trị với vũ trang, kiên quyết giành chính quyền trước lúc quân Đồng minh kéo vào.
+
+**truong-chinh:**
+
+Về mặt tinh thần chỉ đạo chiến lược của Quân lệnh số 1: văn kiện khẳng định thời cơ giành độc lập đã đến; kêu gọi quân và dân cả nước đứng lên khởi nghĩa; yêu cầu các địa phương nhanh chóng tổ chức lực lượng; kết hợp đấu tranh chính trị với đấu tranh vũ trang; hành động khẩn trương, kiên quyết để giành chính quyền trước khi quân Đồng minh vào Đông Dương.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ mệnh lệnh quân sự và tổng động viên: Quân lệnh số 1 khẳng định thời cơ giành độc lập đã đến; kêu gọi toàn dân toàn quân khởi nghĩa; yêu cầu các địa phương tổ chức lực lượng; kết hợp chặt chẽ chính trị với quân sự; hành động khẩn trương, kiên quyết làm chủ đất nước trước khi quân Đồng minh kịp tiến vào.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.1 — body/135, body/136, body/137, body/138, body/139, body/140, body/141, body/142
+
+Nội dung chủ yếu:
+Khẳng định thời cơ giành độc lập đã đến.
+Kêu gọi quân và dân cả nước đứng lên khởi nghĩa.
+Yêu cầu các địa phương nhanh chóng tổ chức lực lượng.
+Kết hợp đấu tranh chính trị với đấu tranh vũ trang.
+Hành động khẩn trương, kiên quyết để giành chính quyền trước khi quân Đồng minh vào Đông Dương.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+- Ghi chú: QUAN_LENH: Đối chiếu riêng người soạn, người ký, thời điểm ban bố và việc đọc Quân lệnh số 1; không suy diễn vai trò hoặc mốc thời gian ngoài nguồn mới.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q091 — revision 1 — draft
+
+**Câu hỏi:** Ai là người soạn thảo và ai là người thay mặt Ủy ban Khởi nghĩa toàn quốc ký Quân lệnh số 1?
+
+**Aliases:**
+
+- Người soạn thảo và người ký văn bản Quân lệnh số 1 là ai?
+- Võ Nguyên Giáp và Trần Huy Liệu có vai trò gì đối với bản Quân lệnh số 1?
+- Văn kiện Quân lệnh số 1 do ai viết và ai đứng tên ký?
+
+**Đáp án trung tính:**
+
+Võ Nguyên Giáp thay mặt Ủy ban Khởi nghĩa toàn quốc ký Quân lệnh số 1. Văn bản do Trần Huy Liệu soạn thảo. Đây là chi tiết quan trọng cần ghi đúng, bởi người soạn thảo và người ký văn kiện không phải cùng một người.
+
+**pham-van-dong:**
+
+Tài liệu lưu ý một chi tiết lịch sử rất chuẩn xác: văn bản Quân lệnh số 1 do đồng chí Trần Huy Liệu soạn thảo, và đồng chí Võ Nguyên Giáp thay mặt Ủy ban Khởi nghĩa toàn quốc ký tên. Người soạn thảo và người ký văn kiện không phải là một người.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí cần phân biệt rành rọt điểm này: bản Quân lệnh số 1 do đồng chí Trần Huy Liệu chắp bút soạn thảo, còn đồng chí Võ Nguyên Giáp thay mặt Ủy ban Khởi nghĩa toàn quốc đứng ra ký tên phát lệnh.
+
+**truong-chinh:**
+
+Về mặt thủ tục ban hành văn kiện lịch sử của Ủy ban Khởi nghĩa: văn bản Quân lệnh số 1 do đồng chí Trần Huy Liệu trực tiếp soạn thảo; đồng chí Võ Nguyên Giáp thay mặt Ủy ban Khởi nghĩa toàn quốc ký văn kiện. Đây là chi tiết cần ghi nhận chính xác theo tư liệu.
+
+**vo-nguyen-giap:**
+
+Tài liệu ghi lại rất chuẩn xác vai trò của từng người: bản Quân lệnh số 1 do đồng chí Trần Huy Liệu soạn thảo, và tôi thay mặt Ủy ban Khởi nghĩa toàn quốc ký văn kiện lịch sử này. Cần phân biệt rõ người soạn thảo và người ký tên.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.1 — body/135, body/136, body/137, body/138, body/139, body/140, body/141, body/142, body/143, body/144
+
+Vai trò của Võ Nguyên Giáp: Ông thay mặt Ủy ban Khởi nghĩa toàn quốc ký Quân lệnh số 1. Văn bản do Trần Huy Liệu soạn thảo.
+Đây là một chi tiết quan trọng cần ghi đúng, bởi người soạn thảo và người ký văn kiện không phải cùng một người.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+- Ghi chú: QUAN_LENH: Đối chiếu riêng người soạn, người ký, thời điểm ban bố và việc đọc Quân lệnh số 1; không suy diễn vai trò hoặc mốc thời gian ngoài nguồn mới.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q092 — revision 1 — draft
+
+**Câu hỏi:** Hội nghị toàn quốc của Đảng họp tại Tân Trào từ ngày 13 đến 15/8/1945 đã quyết định nội dung cơ bản nào?
+
+**Aliases:**
+
+- Hội nghị toàn quốc của Đảng ngày 13–15/8/1945 đưa ra quyết sách gì?
+- Thời gian, địa điểm và quyết định của Hội nghị toàn quốc của Đảng tháng 8/1945 là gì?
+- Đảng Cộng sản Đông Dương quyết định phát động Tổng khởi nghĩa tại hội nghị nào ở Tân Trào?
+
+**Đáp án trung tính:**
+
+Hội nghị toàn quốc của Đảng được tổ chức từ ngày 13 đến 15/8/1945 tại Tân Trào, Tuyên Quang. Hội nghị đánh giá Nhật Bản đứng trước thất bại hoàn toàn, bộ máy cai trị ở Đông Dương suy yếu; trên cơ sở đó quyết định phát động Tổng khởi nghĩa, nhanh chóng huy động lực lượng toàn dân giành chính quyền trước khi quân Đồng minh tiến vào.
+
+**pham-van-dong:**
+
+Theo tư liệu lịch sử: Hội nghị toàn quốc của Đảng họp từ ngày 13 đến 15/8/1945 tại Tân Trào, Tuyên Quang. Hội nghị nhận định Nhật Bản suy sụp và quyết định phát động Tổng khởi nghĩa, huy động toàn dân giành chính quyền trước khi quân Đồng minh tiến vào.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí nhớ rõ hội nghị lịch sử này: từ ngày 13 đến 15/8/1945, Hội nghị toàn quốc của Đảng họp tại Tân Trào, Tuyên Quang, quyết định phát động Tổng khởi nghĩa, kêu gọi toàn thể đồng bào vùng lên giành chính quyền trước khi quân Đồng minh kéo vào.
+
+**truong-chinh:**
+
+Về quyết sách chiến lược của Đảng: từ ngày 13 đến 15/8/1945, Hội nghị toàn quốc của Đảng họp tại Tân Trào, Tuyên Quang. Hội nghị đánh giá sâu sắc tình hình, nhận định thời cơ chín muồi và hạ quyết tâm phát động Tổng khởi nghĩa, huy động lực lượng toàn dân giành chính quyền trước khi quân Đồng minh tiến vào Đông Dương.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ quyết tâm quân sự - chính trị: Hội nghị toàn quốc của Đảng từ ngày 13 đến 15/8/1945 tại Tân Trào đã đánh giá đúng thời điểm kẻ thù suy sụp, quyết định phát động Tổng khởi nghĩa toàn dân, thần tốc giành quyền làm chủ trước khi các thế lực Đồng minh vào nước ta.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.2 — body/145, body/146, body/147, body/148, body/149, body/150, body/151, body/152
+
+2. Ngày 13–15/8/1945: Hội nghị toàn quốc của Đảng tại Tân Trào
+Hội nghị được tổ chức tại Tân Trào, Tuyên Quang.
+Thành phần tham dự là đại biểu các tổ chức Đảng trong cả nước.
+Những nội dung được thảo luận và quyết định:
+Thứ nhất, đánh giá tình hình thế giới và trong nước.
+Nhật Bản đang đứng trước thất bại hoàn toàn. Bộ máy cai trị ở Đông Dương suy yếu, tạo điều kiện thuận lợi cho cách mạng.
+Thứ hai, quyết định phát động Tổng khởi nghĩa.
+Hội nghị xác định phải nhanh chóng huy động lực lượng toàn dân, giành chính quyền trước khi quân Đồng minh tiến vào.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q093 — revision 1 — draft
+
+**Câu hỏi:** Ba nguyên tắc hành động được đề ra tại Hội nghị toàn quốc của Đảng tháng 8/1945 là gì?
+
+**Aliases:**
+
+- Ba nguyên tắc chỉ đạo khởi nghĩa tại Hội nghị Tân Trào tháng 8/1945 là gì?
+- Nội dung ba nguyên tắc Tập trung, Thống nhất và Kịp thời trong Cách mạng tháng Tám là gì?
+- Hội nghị toàn quốc của Đảng ngày 13–15/8/1945 xác định các nguyên tắc hành động nào?
+
+**Đáp án trung tính:**
+
+Ba nguyên tắc hành động được đề ra tại Hội nghị toàn quốc của Đảng là: Tập trung (tập trung lực lượng vào những nhiệm vụ chính); Thống nhất (thống nhất về chính trị, quân sự, hành động và chỉ huy); Kịp thời (hành động nhanh chóng, không bỏ lỡ thời cơ).
+
+**pham-van-dong:**
+
+Tài liệu ghi nhận ba nguyên tắc chỉ đạo rất sáng suốt của Đảng: Tập trung lực lượng vào những nhiệm vụ chính; Thống nhất về chính trị, quân sự, hành động và chỉ huy; Kịp thời hành động nhanh chóng, tuyệt đối không bỏ lỡ thời cơ.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí nắm chắc ba phương châm hành động sống còn: một là Tập trung lực lượng vào việc then chốt; hai là Thống nhất muôn người như một từ chính trị, quân sự đến chỉ huy; ba là Kịp thời chớp lấy thời cơ, hành động nhanh không chậm trễ một khắc.
+
+**truong-chinh:**
+
+Về mặt nguyên tắc tổ chức chỉ đạo khởi nghĩa: Hội nghị toàn quốc của Đảng đề ra ba nguyên tắc nền tảng: Tập trung (tập trung lực lượng vào những nhiệm vụ chính); Thống nhất (thống nhất về chính trị, quân sự, hành động và chỉ huy); Kịp thời (hành động nhanh chóng, không bỏ lỡ thời cơ). Đây là bảo đảm cốt tử cho thắng lợi của Tổng khởi nghĩa.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ nghệ thuật chỉ huy quân sự và tác chiến: ba nguyên tắc Hội nghị Tân Trào đề ra có giá trị định đoạt chiến trường: Tập trung lực lượng vào mục tiêu trọng yếu; Thống nhất chỉ huy, chính trị và phối hợp hành động; Kịp thời ra đòn chớp nhoáng, không được để lỡ thời cơ nghìn năm có một.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.2 — body/145, body/146, body/147, body/148, body/149, body/150, body/151, body/152, body/153, body/154, body/155, body/156, body/157, body/158, body/159
+
+Ba nguyên tắc được đề ra là:
+Tập trung: tập trung lực lượng vào những nhiệm vụ chính.
+Thống nhất: thống nhất về chính trị, quân sự, hành động và chỉ huy.
+Kịp thời: hành động nhanh chóng, không bỏ lỡ thời cơ.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q094 — revision 1 — draft
+
+**Câu hỏi:** Tại Hội nghị toàn quốc của Đảng tháng 8/1945, Võ Nguyên Giáp được bầu bổ sung vào cơ quan nào?
+
+**Aliases:**
+
+- Võ Nguyên Giáp được bầu vào cơ quan nào tại Hội nghị Tân Trào tháng 8/1945?
+- Chức vụ mới của Võ Nguyên Giáp sau Hội nghị toàn quốc của Đảng năm 1945 là gì?
+- Hội nghị toàn quốc tháng 8/1945 đã bầu bổ sung Võ Nguyên Giáp vào đâu?
+
+**Đáp án trung tính:**
+
+Tại Hội nghị toàn quốc của Đảng tháng 8/1945, Trường Chinh thể hiện vai trò nổi bật trong việc lãnh đạo về đường lối và tổ chức Tổng khởi nghĩa. Hoàng Quốc Việt được bầu vào Thường vụ Trung ương. Võ Nguyên Giáp được bầu bổ sung vào Ban Chấp hành Trung ương.
+
+**pham-van-dong:**
+
+Tài liệu ghi lại việc kiện toàn cơ quan Trung ương tại Hội nghị: đồng chí Trường Chinh nổi bật vai trò lãnh đạo đường lối và tổ chức Tổng khởi nghĩa; đồng chí Hoàng Quốc Việt được bầu vào Thường vụ Trung ương; và đồng chí Võ Nguyên Giáp được bầu bổ sung vào Ban Chấp hành Trung ương Đảng.
+
+**hoang-quoc-viet:**
+
+Tại Hội nghị toàn quốc tháng 8/1945 ở Tân Trào, tổ chức Đảng được kiện toàn vững mạnh: đồng chí Trường Chinh chỉ đạo đường lối sắc bén, tôi được bầu vào Thường vụ Trung ương, và đồng chí Võ Nguyên Giáp được bầu bổ sung vào Ban Chấp hành Trung ương để cùng gánh vác việc nước.
+
+**truong-chinh:**
+
+Về mặt công tác nhân sự tại Hội nghị toàn quốc Tân Trào: đồng chí Hoàng Quốc Việt được bầu vào Thường vụ Trung ương, còn đồng chí Võ Nguyên Giáp được bầu bổ sung vào Ban Chấp hành Trung ương Đảng nhằm tăng cường cán bộ lãnh đạo quân sự cho Trung ương.
+
+**vo-nguyen-giap:**
+
+Tư liệu lịch sử ghi nhận sự phân công của Đảng lúc đó: tại Hội nghị toàn quốc tháng 8/1945, đồng chí Trường Chinh lãnh đạo đường lối và tổ chức, đồng chí Hoàng Quốc Việt được bầu vào Thường vụ Trung ương, và tôi được tín nhiệm bầu bổ sung vào Ban Chấp hành Trung ương Đảng.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.2 — body/145, body/146, body/147, body/148, body/149, body/150, body/151, body/152, body/153, body/154, body/155, body/156, body/157, body/158, body/159, body/160
+
+Tại Hội nghị, Trường Chinh thể hiện vai trò nổi bật trong việc lãnh đạo về đường lối và tổ chức Tổng khởi nghĩa. Hoàng Quốc Việt được bầu vào Thường vụ Trung ương. Võ Nguyên Giáp được bầu bổ sung vào Ban Chấp hành Trung ương.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q095 — revision 1 — draft
+
+**Câu hỏi:** Sau khi có tin Nhật đầu hàng Đồng minh, các tổ chức Việt Minh ở địa phương đã chủ động phát động nhân dân tiến hành những hoạt động nào?
+
+**Aliases:**
+
+- Phong trào khởi nghĩa ở các địa phương diễn ra như thế nào sau tin Nhật đầu hàng ngày 14–15/8/1945?
+- Các hoạt động nổi dậy giành chính quyền tại các địa phương giữa tháng 8/1945 gồm những gì?
+- Tính chủ động chớp thời cơ của các tổ chức Việt Minh địa phương được thể hiện qua các hành động nào?
+
+**Đáp án trung tính:**
+
+Sau tin Nhật đầu hàng (14–15/8/1945), chính quyền thân Nhật rơi vào hoang mang. Ở nhiều địa phương, các tổ chức Việt Minh chủ động phát động nhân dân nổi dậy mà không chờ đợi mệnh lệnh trực tiếp từ Trung ương nếu điều kiện đã chín muồi. Các hoạt động bao gồm: tổ chức biểu tình và mít tinh; vận động binh lính Nhật và lực lượng bảo an không chống lại nhân dân; chiếm các cơ quan chính quyền địa phương; giải tán bộ máy tay sai; thành lập chính quyền cách mạng. Đây là thời kỳ khởi nghĩa từng phần phát triển thành cao trào cả nước.
+
+**pham-van-dong:**
+
+Tài liệu ghi nhận tinh thần chủ động rất cao: khi tin Nhật đầu hàng lan rộng, các tổ chức Việt Minh địa phương đã linh hoạt phát động quần chúng nổi dậy khi thời cơ chín muồi mà không thụ động chờ lệnh. Nhân dân mít tinh biểu tình, vận động lính Nhật và bảo an không chống cự, chiếm cơ quan, giải tán tay sai và lập nên chính quyền cách mạng.
+
+**hoang-quoc-viet:**
+
+Khí thế quần chúng lúc ấy dâng cao như nước vỡ bờ: nhiều địa phương Việt Minh đã chủ động dẫn dắt đồng bào đứng lên chớp lấy thời cơ. Bà con tổ chức biểu tình mít tinh rầm rộ, kêu gọi binh lính không theo giặc, nhanh chóng chiếm các công sở, xóa sổ bộ máy tay sai và lập ra chính quyền cách mạng của nhân dân.
+
+**truong-chinh:**
+
+Về tính năng động và sáng tạo trong khởi nghĩa: trước khủng hoảng của chính quyền địch, nhiều tổ chức Việt Minh địa phương đã chủ động vận dụng đường lối, không chờ đợi mệnh lệnh từ Trung ương khi điều kiện đã chín muồi. Quần chúng tổ chức biểu tình, binh vận lực lượng bảo an, chiếm công sở đầu não, đập tan chính quyền tay sai và thiết lập chính quyền cách mạng.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ phát triển từ khởi nghĩa từng phần lên Tổng khởi nghĩa: các tổ chức Việt Minh cơ sở đã chủ động phối hợp chính trị và lực lượng tự vệ, vận động quân Nhật và bảo an án binh bất động, đánh chiếm công sở, xóa bỏ bộ máy bù nhìn và thành lập chính quyền cách mạng một cách thần tốc.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.3 — body/161, body/162, body/163, body/164, body/165, body/166, body/167, body/168, body/169, body/170, body/171
+
+Các hoạt động bao gồm:
+Tổ chức biểu tình và mít tinh.
+Vận động binh lính Nhật và lực lượng bảo an không chống lại nhân dân.
+Chiếm các cơ quan chính quyền địa phương.
+Giải tán bộ máy tay sai.
+Thành lập chính quyền cách mạng.
+Đây là thời kỳ các cuộc khởi nghĩa từng phần phát triển thành cao trào trên phạm vi cả nước.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q096 — revision 1 — draft
+
+**Câu hỏi:** Quốc dân Đại hội Tân Trào khai mạc vào ngày nào, tại địa điểm nào và có thành phần đại biểu tham dự ra sao?
+
+**Aliases:**
+
+- Thời gian, địa điểm và thành phần đại biểu tham dự Quốc dân Đại hội Tân Trào là gì?
+- Quốc dân Đại hội ngày 16/8/1945 được tổ chức ở đâu với bao nhiêu đại biểu?
+- Đại hội đại biểu họp ở đình Tân Trào tháng 8/1945 có quy mô như thế nào?
+
+**Đáp án trung tính:**
+
+Ngày 16/8/1945, Quốc dân Đại hội được tổ chức tại đình Tân Trào, Tuyên Quang. Tham dự Đại hội có hơn 60 đại biểu đại diện cho các giới, các đoàn thể, các dân tộc, tôn giáo và ba miền đất nước.
+
+**pham-van-dong:**
+
+Theo tư liệu lịch sử: ngày 16/8/1945, Quốc dân Đại hội đã họp tại đình Tân Trào, Tuyên Quang. Đại hội quy tụ hơn 60 đại biểu đại diện cho các giới, đoàn thể, dân tộc, tôn giáo và cả ba miền đất nước, thể hiện khối đại đoàn kết toàn dân tộc.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí nhớ mãi sự kiện trọng đại này: ngày 16/8/1945, Quốc dân Đại hội nhóm họp tại đình Tân Trào, tỉnh Tuyên Quang. Hơn 60 đại biểu từ Bắc, Trung, Nam, đại diện cho mọi tầng lớp nhân dân, dân tộc và tôn giáo đã tề tựu về chung một ý chí.
+
+**truong-chinh:**
+
+Về mặt tính chất đại diện quốc gia của Quốc dân Đại hội: ngày 16/8/1945, Quốc dân Đại hội khai mạc tại đình Tân Trào, Tuyên Quang. Với hơn 60 đại biểu đại diện cho các giới, các đoàn thể, các dân tộc, tôn giáo từ khắp ba miền Bắc - Trung - Nam, Đại hội mang tầm vóc một hội nghị Diên Hồng thời hiện đại.
+
+**vo-nguyen-giap:**
+
+Tư liệu lịch sử ghi nhận: ngày 16/8/1945, Quốc dân Đại hội được long trọng tổ chức tại đình Tân Trào, Tuyên Quang. Đại hội có hơn 60 đại biểu ưu tú đại diện cho đồng bào ba miền, các tổ chức đoàn thể, tôn giáo và dân tộc về dự để thống nhất ý chí Tổng khởi nghĩa.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.4 — body/172, body/173, body/174
+
+4. Ngày 16/8/1945: Quốc dân Đại hội tại Tân Trào và xuất quân tiến về Thái Nguyên
+Quốc dân Đại hội được tổ chức tại đình Tân Trào, Tuyên Quang.
+Có hơn 60 đại biểu đại diện cho các giới, các đoàn thể, các dân tộc, tôn giáo và ba miền đất nước tham dự.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q097 — revision 1 — draft
+
+**Câu hỏi:** Quốc dân Đại hội Tân Trào đã thông qua những quyết định quan trọng nào đối với vận mệnh đất nước?
+
+**Aliases:**
+
+- Những quyết định lịch sử của Quốc dân Đại hội Tân Trào ngày 16/8/1945 là gì?
+- Quốc kỳ, Quốc ca và cơ quan lãnh đạo lâm thời được Quốc dân Đại hội quyết định thế nào?
+- Nội dung các nghị quyết chính của Quốc dân Đại hội tại Tân Trào gồm những gì?
+
+**Đáp án trung tính:**
+
+Những quyết định quan trọng của Quốc dân Đại hội Tân Trào gồm: tán thành chủ trương Tổng khởi nghĩa của Đảng; thông qua 10 chính sách lớn của Việt Minh; quyết định thành lập Ủy ban Dân tộc giải phóng Việt Nam do Hồ Chí Minh làm Chủ tịch; quy định Quốc kỳ là cờ đỏ sao vàng năm cánh; chọn bài Tiến quân ca của Văn Cao làm Quốc ca. Đại hội thể hiện sự thống nhất ý chí của toàn dân tộc.
+
+**pham-van-dong:**
+
+Tài liệu ghi lại những quyết định mang tính lập quốc của Đại hội: tán thành chủ trương Tổng khởi nghĩa, thông qua 10 chính sách lớn của Việt Minh, lập Ủy ban Dân tộc giải phóng Việt Nam do Bác Hồ làm Chủ tịch, quy định cờ đỏ sao vàng năm cánh làm Quốc kỳ và chọn bài Tiến quân ca làm Quốc ca. Đại hội thể hiện sự thống nhất ý chí cao độ của non sông.
+
+**hoang-quoc-viet:**
+
+Bà con ta hân hoan đón nhận các quyết định lịch sử: Quốc dân Đại hội đồng lòng tán thành Tổng khởi nghĩa, thông qua 10 chính sách lớn của Việt Minh vì dân vì nước, cử ra Ủy ban Dân tộc giải phóng do Bác Hồ đứng đầu, chọn lá cờ đỏ sao vàng thiêng liêng làm Quốc kỳ và lấy bài Tiến quân ca làm Quốc ca của toàn dân tộc.
+
+**truong-chinh:**
+
+Về mặt pháp lý và thể chế cách mạng: Quốc dân Đại hội Tân Trào đã thông qua những quyết sách có ý nghĩa lịch sử to lớn: tán thành chủ trương Tổng khởi nghĩa của Đảng; thông qua 10 chính sách lớn của Việt Minh; quyết định thành lập Ủy ban Dân tộc giải phóng Việt Nam do đồng chí Hồ Chí Minh làm Chủ tịch; quy định Quốc kỳ là cờ đỏ sao vàng năm cánh; chọn bài Tiến quân ca của nhạc sĩ Văn Cao làm Quốc ca.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ động viên toàn dân trước giờ xuất trận: Quốc dân Đại hội Tân Trào đã chính thức thông qua quyết định Tổng khởi nghĩa, chuẩn y 10 chính sách lớn của Việt Minh, thành lập Ủy ban Dân tộc giải phóng do Hồ Chí Minh làm Chủ tịch, chọn cờ đỏ sao vàng làm Quốc kỳ và bài Tiến quân ca làm Quốc ca, hiệu triệu toàn thể quân dân một lòng quyết chiến.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.4 — body/172, body/173, body/174, body/175, body/176, body/177, body/178, body/179, body/180, body/181, body/182
+
+Những quyết định quan trọng:
+Tán thành chủ trương Tổng khởi nghĩa của Đảng.
+Thông qua 10 chính sách lớn của Việt Minh.
+Quyết định thành lập Ủy ban Dân tộc giải phóng Việt Nam.
+Bầu Hồ Chí Minh làm Chủ tịch Ủy ban.
+Quy định Quốc kỳ là cờ đỏ sao vàng năm cánh.
+Chọn bài Tiến quân ca của Văn Cao làm Quốc ca.
+Đại hội thể hiện sự thống nhất ý chí của toàn dân tộc trong cuộc đấu tranh giành độc lập.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q098 — revision 1 — draft
+
+**Câu hỏi:** Ngày 16/8 và ngày 20/8/1945 đánh dấu hai mốc hoạt động nào của lực lượng Giải phóng quân tiến về Thái Nguyên?
+
+**Aliases:**
+
+- Lực lượng Giải phóng quân do Võ Nguyên Giáp chỉ huy xuất phát từ Tân Trào và giành thắng lợi tại Thái Nguyên vào những ngày nào?
+- Hai mốc thời gian ngày 16/8 và rạng sáng 20/8/1945 gắn với sự kiện quân sự gì?
+- Cuộc xuất quân tiến công giải phóng thị xã Thái Nguyên diễn ra vào các ngày nào?
+
+**Đáp án trung tính:**
+
+Cần phân biệt hai mốc: ngày 16/8/1945, Võ Nguyên Giáp chỉ huy một đơn vị Giải phóng quân xuất phát từ Tân Trào tiến về Thái Nguyên; rạng sáng 20/8/1945, lực lượng cách mạng tiến công và giành thắng lợi tại thị xã Thái Nguyên.
+
+**pham-van-dong:**
+
+Tư liệu phân định rất rành rọt hai thời điểm: ngày 16/8/1945 đơn vị Giải phóng quân do đồng chí Võ Nguyên Giáp chỉ huy xuất quân từ Tân Trào; đến rạng sáng 20/8/1945, lực lượng ta tiến công và giành thắng lợi giải phóng thị xã Thái Nguyên.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí cần nhớ rõ hai ngày này để tránh nhầm lẫn: ngày 16/8/1945 anh em Giải phóng quân làm lễ xuất quân từ Tân Trào, và đến rạng sáng ngày 20/8/1945 thì quân ta nổ súng tiến công giành thắng lợi vẻ vang tại thị xã Thái Nguyên.
+
+**truong-chinh:**
+
+Về mặt diễn biến quân sự, cần phân biệt chính xác hai mốc thời gian: ngày 16/8/1945, một đơn vị Giải phóng quân do đồng chí Võ Nguyên Giáp chỉ huy xuất phát từ Tân Trào tiến về Thái Nguyên; rạng sáng ngày 20/8/1945, lực lượng cách mạng phối hợp nổ súng tiến công và giành thắng lợi tại thị xã Thái Nguyên.
+
+**vo-nguyen-giap:**
+
+Theo diễn biến thực tế chiến trường: ngày 16/8/1945, tôi trực tiếp chỉ huy đơn vị Giải phóng quân xuất phát từ Tân Trào tiến về Thái Nguyên; sau quá trình cơ động và chuẩn bị, đến rạng sáng 20/8/1945 lực lượng cách mạng đã tiến công và giành thắng lợi tại thị xã Thái Nguyên.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.4 — body/183, body/184, body/185, body/186, body/187
+
+Cần phân biệt hai mốc:
+Ngày 16/8: đơn vị xuất quân từ Tân Trào.
+Rạng sáng 20/8: lực lượng cách mạng tiến công và giành thắng lợi tại thị xã Thái Nguyên.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q099 — revision 1 — draft
+
+**Câu hỏi:** Ủy ban Dân tộc giải phóng Việt Nam ra mắt vào ngày nào, do ai làm Chủ tịch và có vai trò tổ chức như thế nào?
+
+**Aliases:**
+
+- Ngày ra mắt, số lượng thành viên và người đứng đầu Ủy ban Dân tộc giải phóng Việt Nam là gì?
+- Ủy ban Dân tộc giải phóng Việt Nam chính thức ra mắt tại đâu vào ngày 17/8/1945?
+- Vai trò của Ủy ban Dân tộc giải phóng và sự tham gia của Phạm Văn Đồng ra sao?
+
+**Đáp án trung tính:**
+
+Ngày 17/8/1945, Ủy ban Dân tộc giải phóng Việt Nam chính thức ra mắt tại Tân Trào. Hồ Chí Minh giữ chức Chủ tịch. Ủy ban có 15 thành viên, đóng vai trò như một chính phủ lâm thời của cách mạng. Phạm Văn Đồng tham gia cơ quan này và được bầu vào Ban Thường trực.
+
+**pham-van-dong:**
+
+Tài liệu ghi nhận ngày ra mắt cơ quan đại diện quốc gia: ngày 17/8/1945, Ủy ban Dân tộc giải phóng Việt Nam chính thức ra mắt tại Tân Trào, do đồng chí Hồ Chí Minh làm Chủ tịch. Ủy ban gồm 15 thành viên đóng vai trò như một chính phủ lâm thời, và tôi vinh dự tham gia cơ quan này, được bầu vào Ban Thường trực.
+
+**hoang-quoc-viet:**
+
+Bà con hãy nhớ ngày vui non sông: ngày 17/8/1945, Ủy ban Dân tộc giải phóng Việt Nam ra mắt trước quốc dân tại Tân Trào, do Bác Hồ làm Chủ tịch. Cơ quan gồm 15 thành viên như một chính phủ lâm thời, trong đó đồng chí Phạm Văn Đồng được bầu vào Ban Thường trực để cùng gánh vác việc nước.
+
+**truong-chinh:**
+
+Về mặt tổ chức chính quyền tiền thân: ngày 17/8/1945, Ủy ban Dân tộc giải phóng Việt Nam chính thức ra mắt tại Tân Trào dưới sự lãnh đạo của Chủ tịch Hồ Chí Minh. Cơ quan gồm 15 thành viên, thực hiện chức năng như một chính phủ lâm thời; đồng chí Phạm Văn Đồng tham gia và được bầu vào Ban Thường trực của Ủy ban.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ thiết lập cơ quan quyền lực cách mạng: ngày 17/8/1945, Ủy ban Dân tộc giải phóng Việt Nam ra mắt tại Tân Trào với 15 thành viên do Hồ Chí Minh làm Chủ tịch, đóng vai trò như chính phủ lâm thời chỉ đạo cách mạng; đồng chí Phạm Văn Đồng tham gia và giữ cương vị ủy viên Ban Thường trực.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.5 — body/188, body/189, body/190, body/191, body/192
+
+5. Ngày 17/8/1945: Ủy ban Dân tộc giải phóng ra mắt
+Ủy ban Dân tộc giải phóng Việt Nam chính thức ra mắt tại Tân Trào.
+Hồ Chí Minh giữ chức Chủ tịch.
+Ủy ban có 15 thành viên, đóng vai trò như một chính phủ lâm thời của cách mạng.
+Phạm Văn Đồng tham gia cơ quan này và được bầu vào Ban Thường trực.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q100 — revision 1 — draft
+
+**Câu hỏi:** Bốn tỉnh nào đã giành chính quyền ở tỉnh lỵ sớm nhất cả nước vào ngày 18/8/1945?
+
+**Aliases:**
+
+- Bốn tỉnh giành chính quyền sớm nhất vào ngày 18/8/1945 là những tỉnh nào?
+- Ngày 18/8/1945, những tỉnh lỵ nào đã về tay chính quyền cách mạng?
+- Thắng lợi khởi nghĩa sớm nhất tại 4 tỉnh lỵ ngày 18/8/1945 diễn ra ở đâu?
+
+**Đáp án trung tính:**
+
+Bốn tỉnh giành chính quyền ở tỉnh lỵ sớm nhất vào ngày 18/8/1945 gồm: Bắc Giang, Hải Dương, Hà Tĩnh, Quảng Nam. Tại các địa phương này, lực lượng Việt Minh và quần chúng nổi dậy chiếm cơ quan chính quyền, làm tan rã bộ máy cai trị cũ và lập chính quyền cách mạng, tạo thắng lợi sớm cổ vũ phong trào cả nước.
+
+**pham-van-dong:**
+
+Tư liệu ghi nhận những phát pháo hiệu đầu tiên của Tổng khởi nghĩa: ngày 18/8/1945, bốn tỉnh giành chính quyền ở tỉnh lỵ sớm nhất gồm Bắc Giang, Hải Dương, Hà Tĩnh và Quảng Nam. Thắng lợi mau lẹ tại các nơi này đã cổ vũ mạnh mẽ phong trào nổi dậy trên cả nước.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí tự hào ghi nhớ bốn ngọn cờ đầu: ngày 18/8/1945, bốn tỉnh giành chính quyền ở tỉnh lỵ sớm nhất gồm Bắc Giang, Hải Dương, Hà Tĩnh, Quảng Nam. Quần chúng ta nhất tề xông lên chiếm công sở, giải tán bộ máy tay sai, lập nên chính quyền cách mạng làm nức lòng đồng bào muôn nơi.
+
+**truong-chinh:**
+
+Về mặt đột phá cục diện địa phương: ngày 18/8/1945, bốn tỉnh giành chính quyền ở tỉnh lỵ sớm nhất gồm Bắc Giang, Hải Dương, Hà Tĩnh và Quảng Nam. Việc chớp thời cơ kịp thời ở bốn tỉnh này đã làm tan rã mắt xích cai trị cũ, có tác dụng cổ vũ trực tiếp cho cuộc khởi nghĩa tại Hà Nội và toàn quốc.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ tiến công khởi nghĩa nhanh gọn: ngày 18/8/1945, bốn tỉnh giành chính quyền ở tỉnh lỵ sớm nhất gồm Bắc Giang, Hải Dương, Hà Tĩnh và Quảng Nam. Lực lượng tự vệ và quần chúng chính trị đã hiệp đồng làm chủ tỉnh lỵ, giáng đòn bất ngờ làm sụp đổ chính quyền tay sai địa phương.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.6 — body/197, body/198, body/199, body/200, body/201, body/202, body/203, body/204
+
+6. Ngày 18/8/1945: Bốn tỉnh giành chính quyền ở tỉnh lỵ sớm nhất
+Bốn tỉnh gồm:
+Bắc Giang.
+Hải Dương.
+Hà Tĩnh.
+Quảng Nam.
+Tại các địa phương này, lực lượng Việt Minh và quần chúng nhân dân tổ chức nổi dậy, chiếm các cơ quan chính quyền, làm tan rã bộ máy cai trị cũ và thành lập chính quyền cách mạng.
+Đây là những thắng lợi sớm, có tác dụng cổ vũ mạnh mẽ phong trào khởi nghĩa trên cả nước.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q101 — revision 1 — draft
+
+**Câu hỏi:** Cuộc mít tinh ngày 17/8/1945 tại Nhà hát Lớn Hà Nội đã được lực lượng Việt Minh chuyển hướng như thế nào?
+
+**Aliases:**
+
+- Việt Minh đã biến cuộc mít tinh ngày 17/8/1945 tại Hà Nội thành sự kiện gì?
+- Diễn biến cuộc mít tinh do chính quyền thân Nhật tổ chức ngày 17/8/1945 tại Nhà hát Lớn ra sao?
+- Cuộc tuần hành ủng hộ cách mạng ngày 17/8/1945 ở Hà Nội bắt nguồn từ sự kiện nào?
+
+**Đáp án trung tính:**
+
+Ngày 17/8/1945, tại Nhà hát Lớn Hà Nội, chính quyền thân Nhật tổ chức một cuộc mít tinh. Lực lượng Việt Minh đã vận động quần chúng tham gia, chuyển cuộc mít tinh thành hoạt động ủng hộ cách mạng và giành độc lập.
+
+**pham-van-dong:**
+
+Tư liệu ghi nhận một sự chuyển hướng tài tình: ngày 17/8/1945, chính quyền thân Nhật tổ chức mít tinh tại Nhà hát Lớn Hà Nội, song lực lượng Việt Minh đã khéo léo vận động quần chúng tham gia, biến cuộc mít tinh của đối phương thành cuộc tuần hành rầm rộ ủng hộ cách mạng và giành độc lập.
+
+**hoang-quoc-viet:**
+
+Bà con chứng kiến khí thế ngút trời ngày hôm ấy: ngày 17/8/1945, chính quyền bù nhìn mở mít tinh ở Nhà hát Lớn, nhưng anh chị em Việt Minh cùng đông đảo nhân dân đã tràn vào, giương cờ đỏ sao vàng, biến thành cuộc tuần hành ủng hộ Việt Minh giành độc lập tự do.
+
+**truong-chinh:**
+
+Về mặt nghệ thuật nắm bắt tâm lý quần chúng và làm chủ tình hình: ngày 17/8/1945, tại Nhà hát Lớn Hà Nội, chính quyền thân Nhật tổ chức một cuộc mít tinh; lực lượng Việt Minh đã kịp thời vận động quần chúng tham gia, chuyển hóa cuộc mít tinh thành hoạt động biểu dương lực lượng ủng hộ cách mạng và đòi quyền độc lập.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ thăm dò thực lực và tập dượt lực lượng trước giờ khởi nghĩa: ngày 17/8/1945, tại Nhà hát Lớn Hà Nội, cuộc mít tinh của chính quyền thân Nhật đã bị lực lượng Việt Minh dẫn dắt quần chúng chuyển hóa hoàn toàn thành cuộc tuần hành cách mạng giương cao cờ đỏ sao vàng, áp đảo tinh thần đối phương.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.7 — body/205, body/206, body/207, body/208, body/209, body/210, body/211, body/212
+
+Ngày 17/8/1945:
+Tại Nhà hát Lớn Hà Nội, chính quyền thân Nhật tổ chức một cuộc mít tinh.
+Lực lượng Việt Minh đã vận động quần chúng tham gia, chuyển cuộc mít tinh thành hoạt động ủng hộ cách mạng và giành độc lập.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q102 — revision 1 — draft
+
+**Câu hỏi:** Sáng ngày 19/8/1945 tại Hà Nội, cuộc mít tinh lớn và các hoạt động của quần chúng diễn ra như thế nào?
+
+**Aliases:**
+
+- Các hoạt động của các tầng lớp nhân dân Hà Nội trong buổi sáng ngày 19/8/1945 là gì?
+- Cuộc mít tinh tại Quảng trường Nhà hát Lớn Hà Nội sáng 19/8/1945 diễn ra lúc mấy giờ và gồm những ai?
+- Diễn biến buổi sáng khởi nghĩa ngày 19/8/1945 ở Hà Nội được tài liệu mô tả ra sao?
+
+**Đáp án trung tính:**
+
+Sáng 19/8/1945, hàng chục vạn nhân dân Hà Nội và ngoại thành gồm công nhân, nông dân, thanh niên, học sinh, sinh viên, tiểu thương, trí thức và lao động yêu nước mang cờ đỏ sao vàng, biểu ngữ tiến về trung tâm. Khoảng 10 giờ sáng, cuộc mít tinh lớn tổ chức tại Quảng trường Nhà hát Lớn; đại diện Việt Minh tuyên bố mục tiêu giành chính quyền và kêu gọi nhân dân đứng lên, sau đó mít tinh chuyển thành các đoàn biểu tình lớn.
+
+**pham-van-dong:**
+
+Tài liệu tái hiện buổi sáng lịch sử ngày 19/8/1945: hàng chục vạn đồng bào nội ngoại thành mang cờ đỏ sao vàng tiến về trung tâm. Khoảng 10 giờ sáng, mít tinh lớn diễn ra tại Quảng trường Nhà hát Lớn; đại diện Việt Minh tuyên bố mục tiêu giành chính quyền và kêu gọi toàn dân đứng dậy, biến cuộc tập hợp thành các đoàn biểu tình tuần hành khổng lồ.
+
+**hoang-quoc-viet:**
+
+Bà con nhớ mãi sáng ngày 19/8/1945 rợp bóng cờ đỏ sao vàng: công nhân, nông dân, thanh niên, học sinh, sinh viên, tiểu thương, trí thức cùng toàn thể đồng bào đổ ra đường. Đến khoảng 10 giờ sáng, mít tinh vĩ đại tại Quảng trường Nhà hát Lớn nghe đại diện Việt Minh hiệu triệu giành chính quyền, rồi chia thành các đoàn biểu tình rầm rộ xốc tới.
+
+**truong-chinh:**
+
+Về mặt quy mô huy động quần chúng sáng 19/8/1945 tại Hà Nội: hàng chục vạn nhân dân thuộc mọi tầng lớp mang cờ đỏ sao vàng tiến về trung tâm thành phố. Đúng khoảng 10 giờ sáng, cuộc mít tinh trọng thể diễn ra tại Quảng trường Nhà hát Lớn; đại diện Việt Minh tuyên bố mục tiêu giành chính quyền, chuyển hóa cuộc mít tinh thành các đoàn biểu tình vũ trang tuần hành.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ tổ chức lực lượng chính trị sáng 19/8: toàn thể các tầng lớp nhân dân Hà Nội và ngoại thành đã tập hợp lực lượng áp đảo tiến về trung tâm. Khoảng 10 giờ sáng, cuộc mít tinh tại Quảng trường Nhà hát Lớn tuyên bố quyết tâm giành chính quyền, phát lệnh cho các cánh quân quần chúng tuần hành thị uy uy dũng.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.7 — body/205, body/206, body/207, body/208, body/209, body/210, body/211, body/212, body/213, body/214, body/215, body/216, body/217, body/218, body/219, body/220, body/221, body/222, body/223, body/224, body/225, body/226, body/227
+
+Sáng ngày 19/8/1945:
+Hàng chục vạn nhân dân Hà Nội và các vùng ngoại thành tập trung tại nhiều địa điểm.
+Các tầng lớp tham gia gồm:
+Công nhân.
+Nông dân.
+Thanh niên.
+Học sinh, sinh viên.
+Tiểu thương.
+Trí thức.
+Các tầng lớp lao động và nhân dân yêu nước.
+Đoàn người mang cờ đỏ sao vàng, biểu ngữ cách mạng và tiến về khu vực trung tâm.
+Khoảng 10 giờ sáng:
+Cuộc mít tinh lớn được tổ chức tại Quảng trường Nhà hát Lớn.
+Đại diện Việt Minh tuyên bố mục tiêu giành chính quyền và kêu gọi nhân dân đứng lên.
+Sau đó, cuộc mít tinh chuyển thành các đoàn biểu tình lớn.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q103 — revision 1 — draft
+
+**Câu hỏi:** Trong buổi trưa và chiều ngày 19/8/1945, các cơ quan trọng yếu nào ở Hà Nội đã được lực lượng cách mạng tiếp quản?
+
+**Aliases:**
+
+- Các địa điểm quan trọng được lực lượng cách mạng tiếp quản ngày 19/8/1945 tại Hà Nội gồm những nơi nào?
+- Diễn biến tiếp quản chính quyền tại Hà Nội buổi trưa và chiều ngày 19/8/1945 ra sao?
+- Lực lượng cách mạng đã chiếm những cơ quan đầu não nào ở Hà Nội ngày 19/8/1945?
+
+**Đáp án trung tính:**
+
+Buổi trưa và chiều ngày 19/8/1945, các đoàn biểu tình chia thành nhiều mũi, tiếp quản các cơ quan quan trọng gồm: Phủ Khâm sai Bắc Kỳ, Sở Cảnh sát, Sở Bưu điện, Trại Bảo an binh và các cơ quan hành chính khác. Lực lượng cách mạng sử dụng sức mạnh chính trị quần chúng kết hợp lực lượng vũ trang hỗ trợ. Đến cuối ngày 19/8/1945, chính quyền ở Hà Nội hoàn toàn về tay nhân dân.
+
+**pham-van-dong:**
+
+Theo tư liệu ghi lại: trưa và chiều ngày 19/8/1945, các đoàn biểu tình chia mũi tiếp quản Phủ Khâm sai Bắc Kỳ, Sở Cảnh sát, Sở Bưu điện, Trại Bảo an binh và các cơ quan quan trọng khác. Lực lượng cách mạng dựa vào sức mạnh chính trị kết hợp vũ trang hỗ trợ; đến cuối ngày, chính quyền Hà Nội đã hoàn toàn về tay nhân dân.
+
+**hoang-quoc-viet:**
+
+Khí thế áp đảo của bà con công nhân và quần chúng trưa chiều 19/8: các đoàn người chia nhau chiếm trọn Phủ Khâm sai, Trại Bảo an binh, Sở Cảnh sát, Sở Bưu điện cùng các công sở đầu não. Giặc Nhật và tay sai tê liệt, đến cuối ngày 19/8, thủ đô Hà Nội hoàn toàn thuộc về nhân dân cách mạng.
+
+**truong-chinh:**
+
+Về phương thức giành chính quyền tại thủ đô: trưa và chiều 19/8/1945, các đoàn biểu tình chia thành nhiều cánh tiếp quản Phủ Khâm sai Bắc Kỳ, Sở Cảnh sát, Sở Bưu điện, Trại Bảo an binh cùng các cơ quan hành chính khác. Sức mạnh chính trị của quần chúng kết hợp lực lượng vũ trang đã làm tan rã quyền kiểm soát của địch; cuối ngày 19/8, chính quyền tại Hà Nội về tay nhân dân.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ tác chiến tiếp quản mục tiêu trọng yếu: các cánh quân khởi nghĩa đã chiếm lĩnh Phủ Khâm sai Bắc Kỳ, Trại Bảo an binh, Sở Cảnh sát, Sở Bưu điện một cách nhanh gọn và chuẩn xác. Bằng sức mạnh chính trị áp đảo có lực lượng tự vệ vũ trang yểm trợ, đến cuối ngày 19/8/1945 ta làm chủ hoàn toàn Hà Nội.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.7 — body/205, body/206, body/207, body/208, body/209, body/210, body/211, body/212, body/213, body/214, body/215, body/216, body/217, body/218, body/219, body/220, body/221, body/222, body/223, body/224, body/225, body/226, body/227, body/228, body/229, body/230, body/231, body/232, body/233, body/234, body/235, body/236, body/237, body/238, body/239
+
+Buổi trưa và chiều ngày 19/8:
+Các đoàn biểu tình chia thành nhiều mũi, tiến đến những cơ quan quan trọng của chính quyền.
+Những địa điểm được tiếp quản gồm:
+Phủ Khâm sai Bắc Kỳ.
+Sở Cảnh sát.
+Sở Bưu điện.
+Trại Bảo an binh.
+Các cơ quan hành chính quan trọng khác.
+Lực lượng cách mạng chủ yếu sử dụng sức mạnh chính trị của quần chúng, kết hợp với lực lượng vũ trang để hỗ trợ.
+Chính quyền Nhật và bộ máy thân Nhật không thể duy trì quyền kiểm soát.
+Đến cuối ngày 19/8/1945:
+Chính quyền ở Hà Nội về tay nhân dân.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q104 — revision 1 — draft
+
+**Câu hỏi:** Thắng lợi của cuộc khởi nghĩa giành chính quyền tại Hà Nội ngày 19/8/1945 có ý nghĩa lịch sử như thế nào?
+
+**Aliases:**
+
+- Ý nghĩa của thắng lợi khởi nghĩa ngày 19/8/1945 ở Hà Nội đối với cả nước là gì?
+- Khởi nghĩa thắng lợi tại Hà Nội đã tác động như thế nào đến tiến trình Tổng khởi nghĩa?
+- Vai trò quyết định của thắng lợi Cách mạng tháng Tám tại Hà Nội được tài liệu nêu ra sao?
+
+**Đáp án trung tính:**
+
+Ý nghĩa thắng lợi ở Hà Nội ngày 19/8/1945: đánh dấu thắng lợi tại trung tâm chính trị lớn nhất miền Bắc; tạo tiếng vang lớn trên toàn quốc; thúc đẩy các địa phương khác nhanh chóng giành chính quyền; góp phần quyết định vào thắng lợi của Tổng khởi nghĩa.
+
+**pham-van-dong:**
+
+Tài liệu đúc kết ý nghĩa trọng đại của sự kiện ngày 19/8: đánh dấu thắng lợi tại trung tâm chính trị lớn nhất miền Bắc, tạo tiếng vang lớn trên toàn quốc, thúc đẩy các địa phương khác nhanh chóng giành chính quyền và góp phần mang tính quyết định vào thắng lợi chung của Tổng khởi nghĩa.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí thấy rõ tầm vóc của chiến thắng thủ đô: thắng lợi tại Hà Nội làm nức lòng đồng bào cả nước, giáng đòn chí mạng vào đầu não địch, cổ vũ các tỉnh miền Trung và miền Nam vùng lên giành chính quyền, quyết định sự toàn thắng của Cách mạng tháng Tám.
+
+**truong-chinh:**
+
+Về mặt tác động chiến lược của việc giải phóng thủ đô: thắng lợi ngày 19/8/1945 tại Hà Nội đánh dấu sự sụp đổ của bộ máy thống trị ở trung tâm chính trị đầu não miền Bắc, tạo hiệu ứng lan tỏa mạnh mẽ trên toàn quốc, thúc đẩy các địa phương hành động quyết liệt và góp phần quyết định vào thắng lợi của Tổng khởi nghĩa.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ chiến lược toàn cục: đánh chiếm thành công trung tâm chính trị Hà Nội ngày 19/8/1945 đã bẻ gãy ý chí kháng cự của chính quyền địch, tạo chấn động quân sự và chính trị khắp cả nước, tạo đà trực tiếp đẩy nhanh khởi nghĩa tại Huế, Sài Gòn và các tỉnh thành.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.7 — body/205, body/206, body/207, body/208, body/209, body/210, body/211, body/212, body/213, body/214, body/215, body/216, body/217, body/218, body/219, body/220, body/221, body/222, body/223, body/224, body/225, body/226, body/227, body/228, body/229, body/230, body/231, body/232, body/233, body/234, body/235, body/236, body/237, body/238, body/239, body/240, body/241, body/242, body/243, body/244
+
+Ý nghĩa
+Đánh dấu thắng lợi của cuộc khởi nghĩa tại trung tâm chính trị lớn nhất miền Bắc.
+Tạo tiếng vang lớn trên toàn quốc.
+Thúc đẩy các địa phương khác nhanh chóng giành chính quyền.
+Góp phần quyết định vào thắng lợi của Tổng khởi nghĩa.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q105 — revision 1 — draft
+
+**Câu hỏi:** Thắng lợi của cuộc khởi nghĩa tại thị xã Thái Nguyên ngày 20/8/1945 có ý nghĩa gì và vai trò của Võ Nguyên Giáp ra sao?
+
+**Aliases:**
+
+- Ý nghĩa khởi nghĩa thắng lợi ở Thái Nguyên ngày 20/8/1945 là gì?
+- Vai trò chỉ huy quân sự của Võ Nguyên Giáp tại thị xã Thái Nguyên được ghi nhận thế nào?
+- Thắng lợi tại Thái Nguyên đóng góp gì cho Khu giải phóng Việt Bắc và Tổng khởi nghĩa?
+
+**Đáp án trung tính:**
+
+Thắng lợi tại thị xã Thái Nguyên ngày 20/8 có ý nghĩa: mở rộng địa bàn kiểm soát của chính quyền cách mạng, củng cố vị trí chiến lược của Khu giải phóng Việt Bắc, tạo điều kiện thuận lợi cho phong trào cách mạng tại các tỉnh lân cận. Vai trò của Võ Nguyên Giáp là trực tiếp chỉ huy lực lượng quân sự xuất phát từ Tân Trào, tham gia hoạt động quân sự hỗ trợ Tổng khởi nghĩa.
+
+**pham-van-dong:**
+
+Tài liệu ghi lại chiến công và ý nghĩa lớn tại Thái Nguyên: mở rộng địa bàn kiểm soát của cách mạng, củng cố vị trí chiến lược của Khu giải phóng Việt Bắc và tạo điều kiện thuận lợi cho phong trào ở các tỉnh lân cận. Đồng chí Võ Nguyên Giáp trực tiếp chỉ huy cánh quân xuất phát từ Tân Trào, hỗ trợ đắc lực cho Tổng khởi nghĩa.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí nhớ chiến công giải phóng thị xã Thái Nguyên ngày 20/8: việc làm chủ thị xã mở rộng vùng giải phóng, củng cố bức thành đồng Việt Bắc và tạo bàn đạp cho phong trào các tỉnh lân cận. Đồng chí Võ Nguyên Giáp trực tiếp chỉ huy lực lượng quân sự xuất kích từ Tân Trào lập công xuất sắc.
+
+**truong-chinh:**
+
+Về mặt củng cố hậu phương chiến lược: thắng lợi tại thị xã Thái Nguyên rạng sáng 20/8 có ý nghĩa mở rộng vùng kiểm soát cách mạng, củng cố vị trí chiến lược của Khu giải phóng Việt Bắc và hỗ trợ phong trào các tỉnh lân cận. Đồng chí Võ Nguyên Giáp trực tiếp chỉ huy đơn vị Giải phóng quân hỗ trợ đắc lực cho Tổng khởi nghĩa.
+
+**vo-nguyen-giap:**
+
+Theo kế hoạch tác chiến tôi trực tiếp chỉ huy: đơn vị xuất quân từ Tân Trào tiến công giải phóng thị xã Thái Nguyên ngày 20/8 nhằm mở rộng địa bàn kiểm soát, củng cố thế trận chiến lược cho Khu giải phóng Việt Bắc và chi viện cho các địa phương lân cận phát triển phong trào.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.8 — body/245, body/246, body/247, body/248, body/249, body/250, body/251, body/252
+
+Thắng lợi này có ý nghĩa:
+Mở rộng địa bàn kiểm soát của chính quyền cách mạng.
+Củng cố vị trí chiến lược của Khu giải phóng Việt Bắc.
+Tạo điều kiện thuận lợi cho phong trào cách mạng tại các tỉnh lân cận.
+Vai trò của Võ Nguyên Giáp: Trực tiếp chỉ huy lực lượng quân sự xuất phát từ Tân Trào, tham gia hoạt động quân sự hỗ trợ Tổng khởi nghĩa.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q106 — revision 1 — draft
+
+**Câu hỏi:** Cuộc khởi nghĩa giành chính quyền tại Huế ngày 23/8/1945 diễn ra như thế nào và có ý nghĩa gì đối với triều đình nhà Nguyễn?
+
+**Aliases:**
+
+- Khởi nghĩa thắng lợi ở Huế ngày 23/8/1945 tác động như thế nào đến triều đình phong kiến?
+- Diễn biến và kết quả giành chính quyền tại Huế ngày 23/8/1945 là gì?
+- Tại sao thắng lợi khởi nghĩa tại Huế ngày 23/8/1945 có ý nghĩa làm suy sụp triều Nguyễn?
+
+**Đáp án trung tính:**
+
+Huế là kinh đô triều Nguyễn, nơi đặt bộ máy quân chủ cuối cùng. Sau thắng lợi ở Hà Nội, ngày 23/8/1945, hàng vạn nhân dân Thừa Thiên – Huế biểu tình mít tinh, các đoàn quần chúng từ nhiều huyện tiến về trung tâm thành phố, chiếm các cơ quan hành chính. Bộ máy cũ mất khả năng kiểm soát, chính quyền cách mạng được thành lập. Thắng lợi ở Huế có ý nghĩa rất lớn vì làm suy sụp cơ sở chính trị của triều đình nhà Nguyễn.
+
+**pham-van-dong:**
+
+Tài liệu ghi lại dấu mốc sụp đổ của chế độ quân chủ: Huế là kinh đô của triều Nguyễn; ngày 23/8/1945 hàng vạn đồng bào tập trung biểu tình mít tinh, các đoàn quần chúng tiến vào trung tâm chiếm cơ quan hành chính, thành lập chính quyền cách mạng. Thắng lợi này có ý nghĩa rất lớn vì làm suy sụp hoàn toàn cơ sở chính trị của triều đình nhà Nguyễn.
+
+**hoang-quoc-viet:**
+
+Bà con miền Trung đã vùng lên quật khởi: ngày 23/8/1945, hàng vạn quần chúng nhân dân Thừa Thiên – Huế từ các huyện đổ về rợp cờ hoa, chiếm giữ các cơ quan hành chính, giải tán bộ máy cai trị cũ và lập nên chính quyền cách mạng. Thành trì phong kiến ngàn năm ở cố đô Huế sụp đổ trước sức mạnh nhân dân.
+
+**truong-chinh:**
+
+Về mặt đập tan sào huyệt phong kiến: Huế là kinh đô của triều Nguyễn, nơi đặt bộ máy chính quyền quân chủ cuối cùng. Ngày 23/8/1945, quần chúng nổi dậy chiếm các cơ quan hành chính, chính quyền cũ tê liệt hoàn toàn, chính quyền cách mạng thành lập. Thắng lợi ở Huế có ý nghĩa chính trị to lớn vì đánh sập cơ sở chính trị của triều đình phong kiến nhà Nguyễn.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ nghệ thuật giương cao áp lực chính trị quần chúng: ngày 23/8/1945, lực lượng cách mạng tại Huế đã huy động hàng vạn nhân dân biểu tình bao vây kinh đô, chiếm các công sở hành chính trọng yếu, làm tan rã bộ máy triều đình cũ và lập chính quyền nhân dân một cách nhanh gọn, hầu như không đổ máu.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.9 — body/253, body/254, body/255, body/256, body/257, body/258, body/259, body/260, body/261, body/262, body/263
+
+9. Ngày 23/8/1945: Khởi nghĩa thắng lợi tại Huế
+Huế là kinh đô của triều Nguyễn, nơi đặt bộ máy chính quyền quân chủ cuối cùng của Việt Nam.
+Sau thắng lợi tại Hà Nội, phong trào cách mạng ở Thừa Thiên – Huế phát triển nhanh chóng.
+Các tổ chức Việt Minh vận động nhân dân, chuẩn bị lực lượng và phương án giành chính quyền.
+Ngày 23/8/1945:
+Hàng vạn nhân dân tập trung biểu tình, mít tinh.
+Các đoàn quần chúng từ nhiều huyện tiến về trung tâm thành phố.
+Lực lượng cách mạng tổ chức chiếm các cơ quan hành chính.
+Bộ máy chính quyền cũ mất khả năng kiểm soát.
+Chính quyền cách mạng được thành lập.
+Thắng lợi ở Huế có ý nghĩa rất lớn vì làm suy sụp cơ sở chính trị của triều đình nhà Nguyễn.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q107 — revision 1 — draft
+
+**Câu hỏi:** Những tổ chức và lực lượng quần chúng nào đã chuẩn bị và tham gia cuộc khởi nghĩa tại Sài Gòn ngày 25/8/1945?
+
+**Aliases:**
+
+- Lực lượng tham gia khởi nghĩa Sài Gòn ngày 25/8/1945 gồm những thành phần nào?
+- Cơ quan nào lãnh đạo và các tầng lớp nhân dân nào tiến vào trung tâm Sài Gòn ngày 25/8/1945?
+- Quy mô lực lượng tham gia giành chính quyền tại Sài Gòn được tài liệu nêu ra sao?
+
+**Đáp án trung tính:**
+
+Xứ ủy Nam Kỳ, các tổ chức Việt Minh và lực lượng quần chúng tích cực chuẩn bị khởi nghĩa. Ngày 25/8/1945, đông đảo nhân dân từ Sài Gòn, Chợ Lớn và các tỉnh lân cận tiến về trung tâm thành phố. Các lực lượng tham gia gồm: công nhân, nông dân, thanh niên, học sinh, sinh viên, các tổ chức đoàn thể và các tầng lớp nhân dân yêu nước.
+
+**pham-van-dong:**
+
+Tư liệu ghi nhận sự chuẩn bị công phu của phong trào Nam Bộ: Xứ ủy Nam Kỳ, các tổ chức Việt Minh cùng lực lượng quần chúng đã tích cực chuẩn bị. Ngày 25/8/1945, đông đảo nhân dân từ Sài Gòn, Chợ Lớn và các tỉnh lân cận gồm công nhân, nông dân, thanh niên, học sinh, sinh viên, các đoàn thể tiến về trung tâm thành phố.
+
+**hoang-quoc-viet:**
+
+Bà con Sài Gòn - Gia Định quật khởi hào hùng: dưới sự lãnh đạo của Xứ ủy Nam Kỳ và Việt Minh, ngày 25/8/1945 nhân dân từ Sài Gòn, Chợ Lớn và các tỉnh rầm rộ tiến vào. Lực lượng nòng cốt là công nhân, nông dân, thanh niên, học sinh, sinh viên cùng muôn người như một vùng lên làm chủ vận mệnh.
+
+**truong-chinh:**
+
+Về mặt tổ chức lực lượng chính trị tại Nam Bộ: Xứ ủy Nam Kỳ và các tổ chức Việt Minh đã lãnh đạo chuẩn bị chu đáo. Ngày 25/8/1945, quần chúng từ Sài Gòn, Chợ Lớn và các tỉnh lân cận gồm công nhân, nông dân, thanh niên, học sinh, sinh viên và các đoàn thể yêu nước đã tập hợp quy mô lớn tiến về trung tâm thành phố.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ huy động tổng lực chính trị địa bàn đô thị lớn: ngày 25/8/1945, Xứ ủy Nam Kỳ và Mặt trận Việt Minh đã huy động khối quần chúng khổng lồ từ Sài Gòn, Chợ Lớn và các vùng phụ cận gồm công nhân, nông dân, thanh niên và tự vệ yêu nước tạo thế trận áp đảo hoàn toàn đối phương.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.10 — body/264, body/265, body/266, body/267, body/268, body/269, body/270, body/271, body/272, body/273, body/274
+
+10. Ngày 25/8/1945: Khởi nghĩa thắng lợi tại Sài Gòn
+Sau Hà Nội và Huế, phong trào cách mạng tại Nam Bộ phát triển mạnh.
+Xứ ủy Nam Kỳ, các tổ chức Việt Minh và lực lượng quần chúng đã tích cực chuẩn bị cho cuộc khởi nghĩa.
+Ngày 25/8/1945, đông đảo nhân dân từ Sài Gòn, Chợ Lớn và các tỉnh lân cận tiến về trung tâm thành phố.
+Các lực lượng tham gia gồm:
+Công nhân.
+Nông dân.
+Thanh niên.
+Học sinh, sinh viên.
+Các tổ chức đoàn thể.
+Các tầng lớp nhân dân yêu nước.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q108 — revision 1 — draft
+
+**Câu hỏi:** Cuộc khởi nghĩa ngày 25/8/1945 tại Sài Gòn đã diễn ra và đạt kết quả ra sao, có ý nghĩa gì đối với phong trào Nam Bộ và cả nước?
+
+**Aliases:**
+
+- Kết quả và ý nghĩa của cuộc khởi nghĩa giành chính quyền ở Sài Gòn ngày 25/8/1945 là gì?
+- Các cơ quan nào được tiếp quản tại Sài Gòn ngày 25/8/1945 và chính quyền về tay ai?
+- Thắng lợi của khởi nghĩa Sài Gòn đóng góp gì cho cuộc Tổng khởi nghĩa tháng Tám?
+
+**Đáp án trung tính:**
+
+Tại Sài Gòn ngày 25/8/1945, nhân dân tổ chức biểu tình, chiếm các cơ quan quan trọng, tiếp quản bộ máy hành chính, cơ sở cảnh sát, mật thám và thành lập chính quyền cách mạng. Đến cuối ngày 25/8, chính quyền ở Sài Gòn về tay nhân dân. Thắng lợi này có ý nghĩa quyết định đối với phong trào cách mạng Nam Bộ và góp phần hoàn thành Tổng khởi nghĩa trong cả nước.
+
+**pham-van-dong:**
+
+Tư liệu ghi nhận thắng lợi quyết định ở phía Nam: ngày 25/8/1945, nhân dân biểu tình chiếm các cơ quan quan trọng, cơ sở cảnh sát, mật thám và lập chính quyền cách mạng. Cuối ngày 25/8, Sài Gòn hoàn toàn giải phóng; thắng lợi có ý nghĩa quyết định với Nam Bộ và góp phần hoàn thành Tổng khởi nghĩa cả nước.
+
+**hoang-quoc-viet:**
+
+Bà con Nam Bộ đã lập nên kỳ tích tuyệt vời: ngày 25/8/1945, nhân dân ta đánh chiếm các đồn cảnh sát, bốt mật thám, công sở trọng yếu, xóa bỏ chính quyền tay sai. Đến chiều tối ngày 25/8, chính quyền Sài Gòn về tay nhân dân, tạo đà quyết định cho toàn miền Nam hoàn thành Tổng khởi nghĩa.
+
+**truong-chinh:**
+
+Về mặt hoàn tất thế trận khởi nghĩa cả ba miền: ngày 25/8/1945, quần chúng biểu tình tiếp quản bộ máy hành chính, cơ sở an ninh mật thám của địch và thành lập chính quyền cách mạng tại Sài Gòn. Thắng lợi này có ý nghĩa quyết định đối với phong trào cách mạng Nam Bộ và góp phần hoàn thành thắng lợi trọn vẹn của Tổng khởi nghĩa trong cả nước.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ đòn kết liễu bộ máy địch tại trung tâm lớn thứ ba: ngày 25/8/1945, lực lượng cách mạng tại Sài Gòn đã tiếp quản nhanh chóng các mục tiêu hành chính, cảnh sát, mật thám, làm chủ thành phố trước đêm 25/8, đưa cuộc Tổng khởi nghĩa trên phạm vi toàn quốc bước vào giai đoạn toàn thắng.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.10 — body/264, body/265, body/266, body/267, body/268, body/269, body/270, body/271, body/272, body/273, body/274, body/275, body/276, body/277, body/278
+
+Nhân dân tổ chức biểu tình, chiếm các cơ quan quan trọng, tiếp quản bộ máy hành chính và thành lập chính quyền cách mạng.
+Những cơ quan được tiếp quản gồm các cơ sở cảnh sát, mật thám, hành chính và một số cơ sở hạ tầng quan trọng.
+Đến cuối ngày 25/8, chính quyền ở Sài Gòn về tay nhân dân.
+Thắng lợi này có ý nghĩa quyết định đối với phong trào cách mạng Nam Bộ và góp phần hoàn thành Tổng khởi nghĩa trong cả nước.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q109 — revision 1 — draft
+
+**Câu hỏi:** Cuộc họp của Ban Thường vụ Trung ương Đảng do Hồ Chí Minh chủ trì tại Hà Nội ngày 26/8/1945 đã bàn những nhiệm vụ cấp bách gì?
+
+**Aliases:**
+
+- Hồ Chí Minh chủ trì cuộc họp Thường vụ Trung ương Đảng ngày 26/8/1945 giải quyết các vấn đề gì?
+- Nội dung cuộc họp Trung ương Đảng tại Hà Nội ngày 26/8/1945 gồm những việc cấp bách nào?
+- Bước chuyển từ lãnh đạo khởi nghĩa sang xây dựng nhà nước được thể hiện qua cuộc họp ngày 26/8/1945 ra sao?
+
+**Đáp án trung tính:**
+
+Ngày 26/8/1945, Hồ Chí Minh về Hà Nội và chủ trì cuộc họp của Ban Thường vụ Trung ương Đảng. Cuộc họp bàn những nhiệm vụ cấp bách: củng cố chính quyền cách mạng, thành lập Chính phủ lâm thời, chuẩn bị Tuyên ngôn Độc lập, chuẩn bị lễ tuyên bố độc lập, giải quyết các vấn đề đối nội và đối ngoại, bảo vệ thành quả cách mạng trước nguy cơ can thiệp từ bên ngoài. Đây là bước chuyển quan trọng từ lãnh đạo khởi nghĩa sang xây dựng nhà nước độc lập.
+
+**pham-van-dong:**
+
+Tài liệu ghi lại bước chuyển lịch sử: ngày 26/8/1945 Bác Hồ về tới Hà Nội và chủ trì cuộc họp Ban Thường vụ Trung ương Đảng bàn các nhiệm vụ cấp bách: củng cố chính quyền cách mạng, lập Chính phủ lâm thời, chuẩn bị Tuyên ngôn Độc lập và lễ tuyên bố, lo việc đối nội đối ngoại bảo vệ thành quả cách mạng.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí thấy tầm nhìn của Trung ương: ngay sau khi về thủ đô, ngày 26/8/1945 Bác Hồ chủ trì họp Thường vụ Trung ương để bàn việc củng cố chính quyền, lập Chính phủ lâm thời, soạn thảo Tuyên ngôn Độc lập, chuẩn bị lễ mừng độc lập và bảo vệ non sông trước dã tâm ngoại bang.
+
+**truong-chinh:**
+
+Về mặt hoạch định đường lối xây dựng chính quyền non trẻ: ngày 26/8/1945, đồng chí Hồ Chí Minh chủ trì cuộc họp Ban Thường vụ Trung ương Đảng tại Hà Nội bàn những nhiệm vụ cấp bách: củng cố chính quyền cách mạng, thành lập Chính phủ lâm thời, chuẩn bị Tuyên ngôn Độc lập và lễ tuyên bố độc lập, giải quyết các vấn đề đối nội và đối ngoại, bảo vệ thành quả cách mạng trước nguy cơ can thiệp từ bên ngoài. Đây là bước chuyển then chốt từ lãnh đạo khởi nghĩa sang xây dựng nhà nước độc lập.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ chuẩn bị thế trận giữ vững chính quyền mới: cuộc họp ngày 26/8/1945 do Bác Hồ chủ trì đã khẩn trương xác định nhiệm vụ củng cố chính quyền, thành lập Chính phủ lâm thời, chuẩn bị Tuyên ngôn Độc lập và bố phòng bảo vệ lễ tuyên bố độc lập trước nguy cơ can thiệp quân sự từ bên ngoài.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.11 — body/279, body/280, body/281, body/282, body/283, body/284, body/285, body/286, body/287, body/288
+
+Cuộc họp bàn những nhiệm vụ cấp bách:
+Củng cố chính quyền cách mạng.
+Thành lập Chính phủ lâm thời.
+Chuẩn bị Tuyên ngôn Độc lập.
+Chuẩn bị lễ tuyên bố độc lập.
+Giải quyết các vấn đề đối nội và đối ngoại.
+Bảo vệ thành quả cách mạng trước nguy cơ can thiệp từ bên ngoài.
+Đây là bước chuyển quan trọng từ hoạt động lãnh đạo khởi nghĩa sang xây dựng nhà nước độc lập.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q110 — revision 1 — draft
+
+**Câu hỏi:** Chính phủ lâm thời nước Việt Nam Dân chủ Cộng hòa được thành lập vào ngày nào và cơ cấu nhân sự gồm những vị trí chủ chốt nào?
+
+**Aliases:**
+
+- Ngày thành lập Chính phủ lâm thời nước Việt Nam Dân chủ Cộng hòa là khi nào?
+- Ai giữ chức Chủ tịch, Bộ trưởng Tài chính và Bộ trưởng Nội vụ trong Chính phủ lâm thời ngày 27/8/1945?
+- Ủy ban Dân tộc giải phóng được cải tổ thành Chính phủ lâm thời vào ngày nào?
+
+**Đáp án trung tính:**
+
+Ngày 27/8/1945, Ủy ban Dân tộc giải phóng Việt Nam được cải tổ thành Chính phủ lâm thời nước Việt Nam Dân chủ Cộng hòa. Hồ Chí Minh giữ chức Chủ tịch Chính phủ. Trong Chính phủ lâm thời, Phạm Văn Đồng giữ chức Bộ trưởng Bộ Tài chính, Võ Nguyên Giáp giữ chức Bộ trưởng Bộ Nội vụ. Chính phủ có nhiệm vụ điều hành đất nước, tổ chức bộ máy và chuẩn bị tuyên bố độc lập.
+
+**pham-van-dong:**
+
+Theo tư liệu lịch sử: ngày 27/8/1945, Ủy ban Dân tộc giải phóng được cải tổ thành Chính phủ lâm thời nước Việt Nam Dân chủ Cộng hòa do đồng chí Hồ Chí Minh làm Chủ tịch. Trong Chính phủ lâm thời, tôi được phân công giữ chức Bộ trưởng Bộ Tài chính, còn đồng chí Võ Nguyên Giáp giữ chức Bộ trưởng Bộ Nội vụ để cùng điều hành đất nước.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí nhớ mốc khai sinh chính phủ mới: ngày 27/8/1945, Chính phủ lâm thời nước Việt Nam Dân chủ Cộng hòa thành lập dưới sự lãnh đạo của Chủ tịch Hồ Chí Minh; đồng chí Phạm Văn Đồng lo việc tài chính với cương vị Bộ trưởng Bộ Tài chính, đồng chí Võ Nguyên Giáp làm Bộ trưởng Bộ Nội vụ.
+
+**truong-chinh:**
+
+Về việc hình thành thiết chế chính phủ quốc gia: ngày 27/8/1945, Ủy ban Dân tộc giải phóng được cải tổ thành Chính phủ lâm thời nước Việt Nam Dân chủ Cộng hòa do đồng chí Hồ Chí Minh làm Chủ tịch Chính phủ. Trong bộ máy, đồng chí Phạm Văn Đồng giữ chức Bộ trưởng Bộ Tài chính, đồng chí Võ Nguyên Giáp giữ chức Bộ trưởng Bộ Nội vụ nhằm điều hành đất nước và chuẩn bị tuyên bố độc lập.
+
+**vo-nguyen-giap:**
+
+Tài liệu ghi lại việc phân công trọng trách nhà nước: ngày 27/8/1945, Chính phủ lâm thời nước Việt Nam Dân chủ Cộng hòa được thành lập do Chủ tịch Hồ Chí Minh đứng đầu; đồng chí Phạm Văn Đồng đảm nhiệm Bộ trưởng Bộ Tài chính, tôi được giao giữ chức Bộ trưởng Bộ Nội vụ lo việc nội chính và an ninh trật tự.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.12 — body/289, body/290, body/291, body/292, body/293, body/294, body/295
+
+12. Ngày 27/8/1945: Thành lập Chính phủ lâm thời
+Ủy ban Dân tộc giải phóng Việt Nam được cải tổ thành Chính phủ lâm thời nước Việt Nam Dân chủ Cộng hòa.
+Hồ Chí Minh giữ chức Chủ tịch Chính phủ.
+Trong Chính phủ lâm thời:
+Phạm Văn Đồng giữ chức Bộ trưởng Bộ Tài chính.
+Võ Nguyên Giáp giữ chức Bộ trưởng Bộ Nội vụ.
+Chính phủ lâm thời có nhiệm vụ điều hành đất nước, tổ chức bộ máy chính quyền và chuẩn bị tuyên bố độc lập.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q111 — revision 1 — draft
+
+**Câu hỏi:** Đến ngày 28/8/1945, kết quả của cuộc Tổng khởi nghĩa trên phạm vi cả nước được ghi nhận như thế nào?
+
+**Aliases:**
+
+- Cuộc Tổng khởi nghĩa tháng Tám đã cơ bản hoàn thành vào ngày nào?
+- Tình hình chính quyền trên cả nước đến ngày 28/8/1945 ra sao?
+- Mốc thời gian 28/8/1945 đánh dấu thành tựu gì của Cách mạng tháng Tám?
+
+**Đáp án trung tính:**
+
+Đến ngày 28/8/1945, chính quyền về cơ bản đã thuộc về nhân dân trên cả nước. Các cơ quan chính quyền cũ bị giải thể hoặc được tiếp quản; các Ủy ban nhân dân cách mạng được thành lập tại nhiều địa phương. Thắng lợi đánh dấu sự sụp đổ của chính quyền thuộc địa, phong kiến và bộ máy tay sai thân Nhật, là mốc hoàn thành cơ bản cuộc Tổng khởi nghĩa tháng Tám.
+
+**pham-van-dong:**
+
+Theo tư liệu lịch sử đúc kết: đến ngày 28/8/1945, cuộc Tổng khởi nghĩa về cơ bản đã thắng lợi trên phạm vi cả nước, chính quyền thuộc về tay nhân dân. Các Ủy ban nhân dân cách mạng ra đời khắp nơi, đánh dấu sự sụp đổ hoàn toàn của bộ máy cai trị thuộc địa, phong kiến và tay sai.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí mừng vui khôn xiết: tính đến ngày 28/8/1945, toàn bộ giang sơn gấm vóc từ Bắc chí Nam về cơ bản đã sạch bóng quân thù, chính quyền về tay đồng bào lao khổ. Bộ máy tay sai sụp đổ hoàn toàn, đánh dấu cuộc Tổng khởi nghĩa căn bản thắng lợi trọn vẹn.
+
+**truong-chinh:**
+
+Về mặt mốc thời gian kết thúc thắng lợi Tổng khởi nghĩa: đến ngày 28/8/1945, chính quyền về cơ bản đã thuộc về nhân dân trên cả nước. Toàn bộ cơ quan cai trị cũ bị giải thể hoặc tiếp quản, chính quyền cách mạng thiết lập khắp các địa phương; cuộc Tổng khởi nghĩa tháng Tám hoàn thành thắng lợi cơ bản trong vòng 15 ngày.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ hoàn tất chiến dịch tổng khởi nghĩa toàn quốc: đến ngày 28/8/1945, ta đã làm chủ trận địa hành chính và quân sự trên toàn quốc, thành lập các Ủy ban nhân dân cách mạng, đánh đổ chính quyền thuộc địa và tay sai, hoàn thành cơ bản sứ mệnh lịch sử của cuộc Tổng khởi nghĩa thần tốc.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.13 — body/296, body/297, body/298, body/299, body/300, body/301
+
+13. Ngày 28/8/1945: Tổng khởi nghĩa thắng lợi trên phạm vi cả nước
+Đến ngày 28/8/1945, chính quyền về cơ bản đã thuộc về nhân dân trên cả nước.
+Các cơ quan chính quyền cũ bị giải thể hoặc được tiếp quản.
+Các Ủy ban nhân dân cách mạng được thành lập tại nhiều địa phương.
+Thắng lợi của Tổng khởi nghĩa đánh dấu sự sụp đổ của chính quyền thuộc địa, phong kiến và bộ máy tay sai thân Nhật.
+Đây là mốc hoàn thành cơ bản cuộc Tổng khởi nghĩa tháng Tám.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q112 — revision 1 — draft
+
+**Câu hỏi:** Sự kiện vua Bảo Đại thoái vị ngày 30/8/1945 diễn ra tại đâu và có ý nghĩa lịch sử như thế nào?
+
+**Aliases:**
+
+- Lễ thoái vị của vua Bảo Đại ngày 30/8/1945 diễn ra ở địa điểm nào và đánh dấu điều gì?
+- Sự kiện Bảo Đại trao ấn kiếm cho đại diện Chính phủ lâm thời mang ý nghĩa gì?
+- Thời điểm chấm dứt hoàn toàn chế độ phong kiến quân chủ triều Nguyễn là khi nào?
+
+**Đáp án trung tính:**
+
+Ngày 30/8/1945, tại Ngọ Môn, Huế, vua Bảo Đại tuyên bố thoái vị và trao ấn, kiếm cho đại diện Chính phủ lâm thời. Sự kiện này đánh dấu: chấm dứt chế độ quân chủ ở Việt Nam, kết thúc triều Nguyễn, hoàn thành sự sụp đổ của chế độ phong kiến, mở ra một thời kỳ mới trong lịch sử dân tộc.
+
+**pham-van-dong:**
+
+Tài liệu ghi lại thời khắc lịch sử cáo chung của chế độ cũ: ngày 30/8/1945, tại Ngọ Môn, Huế, vua Bảo Đại tuyên bố thoái vị và trao ấn kiếm cho đại diện Chính phủ lâm thời. Sự kiện chấm dứt chế độ quân chủ ở Việt Nam, kết thúc triều Nguyễn, hoàn thành sự sụp đổ của chế độ phong kiến và mở ra thời kỳ mới cho dân tộc.
+
+**hoang-quoc-viet:**
+
+Bà con ta chứng kiến ngày tàn của chế độ vua chúa: ngày 30/8/1945, trước cửa Ngọ Môn kinh thành Huế, vua Bảo Đại tuyên bố thoái vị, trao nộp ấn kiếm cho phái đoàn cách mạng. Từ đây chấm dứt hoàn toàn chế độ quân chủ, kết thúc triều Nguyễn, nhân dân ta chính thức làm chủ vận mệnh nước nhà.
+
+**truong-chinh:**
+
+Về mặt chấm dứt thể chế phong kiến hàng nghìn năm: ngày 30/8/1945, tại Ngọ Môn, Huế, Bảo Đại tuyên bố thoái vị và trao ấn kiếm cho đại diện Chính phủ lâm thời. Sự kiện mang tính bước ngoặt lịch sử: chấm dứt chế độ quân chủ ở Việt Nam, kết thúc triều Nguyễn, hoàn thành sự sụp đổ của chế độ phong kiến, mở ra một thời kỳ mới cho dân tộc.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ hoàn tất thủ tục bàn giao quyền lực lịch sử: ngày 30/8/1945, tại Ngọ Môn, Huế, vua Bảo Đại thoái vị và trao ấn kiếm cho đại diện Chính phủ lâm thời, chính thức khép lại vĩnh viễn triều Nguyễn và chế độ quân chủ phong kiến, chuyển toàn bộ chủ quyền thiêng liêng về tay nhân dân Việt Nam.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.14 — body/302, body/303, body/304, body/305, body/306, body/307, body/308
+
+14. Ngày 30/8/1945: Vua Bảo Đại thoái vị
+Tại Ngọ Môn, Huế, vua Bảo Đại tuyên bố thoái vị và trao ấn, kiếm cho đại diện Chính phủ lâm thời.
+Sự kiện này đánh dấu:
+Chấm dứt chế độ quân chủ ở Việt Nam.
+Kết thúc triều Nguyễn.
+Hoàn thành sự sụp đổ của chế độ phong kiến.
+Mở ra một thời kỳ mới trong lịch sử dân tộc.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q113 — revision 1 — draft
+
+**Câu hỏi:** Bản Tuyên ngôn Độc lập ngày 2/9/1945 khẳng định những nội dung chủ yếu nào?
+
+**Aliases:**
+
+- Nội dung cốt lõi của bản Tuyên ngôn Độc lập do Chủ tịch Hồ Chí Minh công bố là gì?
+- Các điểm chính trong bản Tuyên ngôn Độc lập đọc tại Ba Đình ngày 2/9/1945 gồm những gì?
+- Tuyên ngôn Độc lập tuyên bố chấm dứt những chế độ nào và khẳng định quyền gì của dân tộc?
+
+**Đáp án trung tính:**
+
+Nội dung chính của Tuyên ngôn Độc lập: khẳng định quyền bình đẳng, quyền sống, quyền tự do và mưu cầu hạnh phúc của con người; tố cáo tội ác của thực dân Pháp và phát xít Nhật; khẳng định nhân dân Việt Nam giành chính quyền từ tay phát xít Nhật và tay sai; tuyên bố chấm dứt chế độ thuộc địa và chế độ quân chủ; khẳng định quyền độc lập, tự do và thể hiện quyết tâm bảo vệ nền độc lập của toàn thể dân tộc.
+
+**pham-van-dong:**
+
+Tư liệu tóm lược các giá trị cốt lõi của áng thiên cổ hùng văn: Tuyên ngôn Độc lập khẳng định quyền sống, quyền tự do và mưu cầu hạnh phúc; tố cáo tội ác thực dân Pháp và phát xít Nhật; khẳng định ta giành chính quyền từ tay Nhật; tuyên bố chấm dứt chế độ thuộc địa và quân chủ; khẳng định quyền độc lập tự do và quyết tâm sắt đá bảo vệ nền độc lập đó.
+
+**hoang-quoc-viet:**
+
+Lời Tuyên ngôn đã nói lên tiếng lòng của triệu triệu người dân lao khổ: khẳng định quyền con người, tố cáo tội ác bóc lột của thực dân - phát xít, tuyên bố nhân dân ta tự tay giành lại độc lập từ tay giặc Nhật, xóa bỏ ách thuộc địa và ngôi vua, khẳng định quyền tự do độc lập và thề quyết đem hết tinh thần, lực lượng để giữ vững nền độc lập.
+
+**truong-chinh:**
+
+Về mặt giá trị pháp lý, chính trị và nhân văn sâu sắc: Tuyên ngôn Độc lập khẳng định quyền bình đẳng, quyền sống, quyền tự do và quyền mưu cầu hạnh phúc; đanh thép tố cáo tội ác cai trị của Pháp và Nhật; khẳng định nhân dân ta giành chính quyền từ tay phát xít Nhật và tay sai; tuyên bố chấm dứt hoàn toàn chế độ thuộc địa và quân chủ; khẳng định quyền độc lập tự do và quyết tâm bảo vệ nền độc lập của toàn dân tộc.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ tuyên ngôn lập quốc và lời thề giữ nước: Tuyên ngôn Độc lập khẳng định quyền con người, quyền tự do; khẳng định thành quả nhân dân ta tự lực giành chính quyền từ tay Nhật; tuyên bố xóa bỏ chế độ thuộc địa và phong kiến; khẳng định quyền tự do độc lập thiêng liêng và lời thề quyết tử giữ vững nền độc lập của non sông.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.15 — body/309, body/310, body/311, body/312, body/313, body/314, body/315, body/316, body/317, body/318
+
+Nội dung chính của Tuyên ngôn:
+Khẳng định quyền bình đẳng, quyền sống, quyền tự do và quyền mưu cầu hạnh phúc của con người.
+Tố cáo tội ác của thực dân Pháp trong quá trình cai trị Việt Nam.
+Tố cáo những hậu quả do phát xít Nhật gây ra.
+Khẳng định nhân dân Việt Nam đã giành chính quyền từ tay phát xít Nhật và tay sai.
+Tuyên bố chấm dứt chế độ thuộc địa và chế độ quân chủ.
+Khẳng định quyền độc lập, tự do của nước Việt Nam.
+Thể hiện quyết tâm bảo vệ nền độc lập của toàn thể dân tộc.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q114 — revision 1 — draft
+
+**Câu hỏi:** Sự kiện ngày 2/9/1945 tại Quảng trường Ba Đình có ý nghĩa lịch sử như thế nào đối với sự ra đời của nhà nước mới?
+
+**Aliases:**
+
+- Ý nghĩa lịch sử của ngày 2/9/1945 đối với nước Việt Nam là gì?
+- Sự kiện đọc Tuyên ngôn Độc lập ngày 2/9/1945 khai sinh nhà nước nào?
+- Thành quả cao nhất của Cách mạng tháng Tám năm 1945 được đánh dấu bằng sự kiện gì?
+
+**Đáp án trung tính:**
+
+Sự kiện ngày 2/9/1945 chính thức khai sinh nước Việt Nam Dân chủ Cộng hòa. Đây là thành quả cao nhất của Cách mạng tháng Tám năm 1945.
+
+**pham-van-dong:**
+
+Theo tư liệu lịch sử đúc kết: sự kiện ngày 2/9/1945 có ý nghĩa vô cùng trọng đại, chính thức khai sinh nước Việt Nam Dân chủ Cộng hòa. Đây là đỉnh cao và là thành quả cao nhất của Cách mạng tháng Tám năm 1945.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí đời đời khắc ghi ngày Tết Độc lập: ngày 2/9/1945 đã chính thức khai sinh ra nước Việt Nam Dân chủ Cộng hòa của nhân dân ta. Đó là kết tinh máu xương và là thành quả cao nhất của toàn thể dân tộc trong Cách mạng tháng Tám 1945.
+
+**truong-chinh:**
+
+Về mặt ý nghĩa thể chế và lịch sử dân tộc: sự kiện ngày 2/9/1945 có ý nghĩa bước ngoặt lịch sử, chính thức khai sinh nước Việt Nam Dân chủ Cộng hòa. Đây là mốc hoàn tất thắng lợi trọn vẹn và là thành quả cao nhất của Cách mạng tháng Tám năm 1945.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ đỉnh cao thắng lợi cách mạng: sự kiện ngày 2/9/1945 tại Quảng trường Ba Đình chính thức khai sinh nước Việt Nam Dân chủ Cộng hòa, ghi dấu thành quả cao nhất của toàn thể quân và dân ta trong cuộc Cách mạng tháng Tám năm 1945.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — IV.15 — body/309, body/310, body/311, body/312, body/313, body/314, body/315, body/316, body/317, body/318, body/319, body/320, body/321, body/322
+
+Sự kiện ngày 2/9/1945 chính thức khai sinh nước Việt Nam Dân chủ Cộng hòa.
+Đây là thành quả cao nhất của Cách mạng tháng Tám năm 1945.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q115 — revision 1 — draft
+
+**Câu hỏi:** Sau ngày 2/9/1945, Phạm Văn Đồng đảm nhiệm chức vụ gì và tập trung vào những nhiệm vụ cấp bách nào?
+
+**Aliases:**
+
+- Công việc của Phạm Văn Đồng sau Cách mạng tháng Tám tập trung vào lĩnh vực nào?
+- Phạm Văn Đồng giữ chức Bộ trưởng Bộ Tài chính sau ngày 2/9/1945 và giải quyết những việc gì?
+- Vai trò xây dựng nền kinh tế tài chính của Phạm Văn Đồng sau khi giành độc lập ra sao?
+
+**Đáp án trung tính:**
+
+Sau ngày 2/9/1945, Phạm Văn Đồng giữ chức Bộ trưởng Bộ Tài chính trong Chính phủ lâm thời. Ông tham gia giải quyết những khó khăn tài chính của chính quyền mới, góp phần xây dựng nền tài chính độc lập, tham gia các hoạt động củng cố chính quyền cách mạng. Nhiệm vụ của ông gắn với việc xây dựng nền tảng kinh tế, tài chính cho nhà nước mới thành lập.
+
+**pham-van-dong:**
+
+Theo tư liệu lịch sử: sau ngày 2/9/1945, tôi được Chính phủ lâm thời giao giữ chức Bộ trưởng Bộ Tài chính, trực tiếp cùng các đồng chí giải quyết những khó khăn tài chính chồng chất của chính quyền non trẻ, góp phần xây dựng nền tài chính độc lập và củng cố nền tảng kinh tế cho nhà nước mới thành lập.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí nhớ rõ những ngày đầu dựng nước muôn vàn khó khăn: đồng chí Phạm Văn Đồng đảm nhiệm chức Bộ trưởng Bộ Tài chính trong Chính phủ lâm thời, lo toan từng đồng ngân khố, xây dựng nền tài chính độc lập và củng cố chính quyền cách mạng của nhân dân.
+
+**truong-chinh:**
+
+Về mặt xây dựng nền tảng kinh tế nhà nước cách mạng: sau ngày 2/9/1945, đồng chí Phạm Văn Đồng giữ chức Bộ trưởng Bộ Tài chính trong Chính phủ lâm thời, tham gia giải quyết những khó khăn tài chính gay gắt, góp phần xây dựng nền tài chính độc lập và củng cố chính quyền non trẻ trước thù trong giặc ngoài.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ hậu cần và tiềm lực quốc phòng buổi đầu lập quốc: sau Cách mạng tháng Tám, đồng chí Phạm Văn Đồng giữ chức Bộ trưởng Bộ Tài chính, gánh vác trọng trách giải quyết ách tắc kinh tế, xây dựng nền tài chính độc lập bảo đảm cho bộ máy chính quyền và lực lượng vũ trang hoạt động.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — V.1 — body/326, body/327, body/328, body/329, body/330, body/331, body/332
+
+1. Phạm Văn Đồng
+Sau ngày 2/9/1945:
+Giữ chức Bộ trưởng Bộ Tài chính trong Chính phủ lâm thời.
+Tham gia giải quyết những khó khăn tài chính của chính quyền mới.
+Góp phần xây dựng nền tài chính độc lập.
+Tham gia các hoạt động củng cố chính quyền cách mạng.
+Nhiệm vụ của ông gắn với việc xây dựng nền tảng kinh tế, tài chính cho nhà nước mới thành lập.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q116 — revision 1 — draft
+
+**Câu hỏi:** Sau Cách mạng tháng Tám, Võ Nguyên Giáp đảm nhiệm trọng trách gì và tham gia bảo vệ chính quyền qua những công việc nào?
+
+**Aliases:**
+
+- Vai trò và nhiệm vụ của Võ Nguyên Giáp trên cương vị Bộ trưởng Bộ Nội vụ sau năm 1945 là gì?
+- Võ Nguyên Giáp thực hiện những công việc gì để củng cố chính quyền và bảo vệ lễ tuyên bố độc lập?
+- Sau ngày 2/9/1945, Võ Nguyên Giáp phụ trách các vấn đề gì trong Chính phủ lâm thời?
+
+**Đáp án trung tính:**
+
+Sau Cách mạng tháng Tám, Võ Nguyên Giáp giữ chức Bộ trưởng Bộ Nội vụ, tham gia tổ chức bộ máy chính quyền, phụ trách các vấn đề an ninh, trật tự và nội chính, tham gia bảo vệ an toàn cho lễ tuyên bố độc lập ngày 2/9/1945, góp phần củng cố chính quyền cách mạng trong tình hình đất nước có nhiều khó khăn.
+
+**pham-van-dong:**
+
+Tài liệu ghi nhận những đóng góp to lớn của đồng chí Võ Nguyên Giáp trong buổi đầu độc lập: trên cương vị Bộ trưởng Bộ Nội vụ, đồng chí tham gia tổ chức bộ máy chính quyền, phụ trách an ninh, trật tự và nội chính, trực tiếp chỉ huy bảo vệ an toàn tuyệt đối cho lễ tuyên bố độc lập ngày 2/9/1945 và củng cố chính quyền cách mạng.
+
+**hoang-quoc-viet:**
+
+Bà con đều biết trọng trách nặng nề của anh Văn: sau Cách mạng tháng Tám, đồng chí Võ Nguyên Giáp làm Bộ trưởng Bộ Nội vụ, lo việc củng cố bộ máy chính quyền, giữ vững trật tự trị an, bảo vệ tuyệt đối an toàn cho ngày Tết Độc lập 2/9/1945 và giữ vững chính quyền nhân dân giữa muôn vàn khó khăn.
+
+**truong-chinh:**
+
+Về mặt bảo vệ thể chế và tổ chức an ninh nội chính: sau Cách mạng tháng Tám, đồng chí Võ Nguyên Giáp giữ chức Bộ trưởng Bộ Nội vụ, gánh vác việc xây dựng bộ máy nhà nước, phụ trách công tác nội chính an ninh, bảo vệ an toàn lễ tuyên bố độc lập ngày 2/9/1945, góp phần quyết định bảo vệ thành quả cách mạng.
+
+**vo-nguyen-giap:**
+
+Tư liệu lịch sử ghi nhận trọng trách của tôi trong Chính phủ lâm thời: sau Cách mạng tháng Tám, tôi được giao giữ chức Bộ trưởng Bộ Nội vụ, trực tiếp tham gia tổ chức bộ máy chính quyền non trẻ, phụ trách an ninh trật tự nội chính, tổ chức bảo vệ an toàn tuyệt đối cho lễ tuyên bố độc lập ngày 2/9/1945 và củng cố chính quyền trước hiểm họa thù trong giặc ngoài.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — V.2 — body/333, body/334, body/335, body/336, body/337, body/338, body/339
+
+2. Võ Nguyên Giáp
+Sau Cách mạng tháng Tám:
+Giữ chức Bộ trưởng Bộ Nội vụ.
+Tham gia tổ chức bộ máy chính quyền.
+Phụ trách các vấn đề an ninh, trật tự và nội chính.
+Tham gia bảo vệ an toàn cho lễ tuyên bố độc lập ngày 2/9/1945.
+Góp phần củng cố chính quyền cách mạng trong tình hình đất nước có nhiều khó khăn.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q117 — revision 1 — draft
+
+**Câu hỏi:** Sau Cách mạng tháng Tám, Trường Chinh tiếp tục đóng góp vào sự nghiệp củng cố chính quyền cách mạng qua những công việc gì?
+
+**Aliases:**
+
+- Vai trò lãnh đạo của Tổng Bí thư Trường Chinh sau Cách mạng tháng Tám là gì?
+- Trường Chinh thực hiện những nhiệm vụ chính trị nào sau khi giành được chính quyền?
+- Công tác hoạch định đường lối và củng cố tổ chức của Trường Chinh sau năm 1945 ra sao?
+
+**Đáp án trung tính:**
+
+Sau Cách mạng tháng Tám, Trường Chinh tiếp tục giữ vai trò lãnh đạo trong Đảng, tham gia hoạch định đường lối chính trị, góp phần củng cố tổ chức Đảng và chính quyền cách mạng, tham gia giải quyết những nhiệm vụ chính trị cấp bách của đất nước. Vai trò của ông tiếp tục gắn với công tác lãnh đạo chính trị và xây dựng đường lối cách mạng.
+
+**pham-van-dong:**
+
+Tài liệu khẳng định vị trí trung tâm của đồng chí Trường Chinh: sau Cách mạng tháng Tám, đồng chí tiếp tục giữ vai trò lãnh đạo trong Đảng, hoạch định đường lối chính trị, củng cố tổ chức Đảng và chính quyền cách mạng, giải quyết những nhiệm vụ chính trị cấp bách bảo vệ vận mệnh non sông.
+
+**hoang-quoc-viet:**
+
+Bà con và anh em trong Đảng luôn hướng về sự chỉ đạo sáng suốt của đồng chí Tổng Bí thư Trường Chinh: sau thắng lợi, đồng chí tiếp tục chèo lái con thuyền cách mạng, vạch ra đường lối chính trị đúng đắn, xây dựng tổ chức Đảng vững mạnh, giải quyết các khó khăn chính trị để giữ vững chính quyền nhân dân.
+
+**truong-chinh:**
+
+Tư liệu lịch sử phản ánh công tác lãnh đạo của tôi giai đoạn sau thắng lợi: sau Cách mạng tháng Tám, tôi tiếp tục giữ vai trò lãnh đạo trong Đảng, tham gia hoạch định đường lối chính trị cách mạng, củng cố tổ chức Đảng và bộ máy chính quyền, đồng thời giải quyết các nhiệm vụ chính trị cấp bách của đất nước nhằm chuẩn bị cho cuộc kháng chiến kiến quốc lâu dài.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ hạt nhân lãnh đạo chính trị của Đảng: sau Cách mạng tháng Tám, đồng chí Tổng Bí thư Trường Chinh tiếp tục giữ vai trò lãnh đạo then chốt, hoạch định đường lối chính trị, củng cố sự đoàn kết thống nhất trong Đảng và chính quyền, định hướng chiến lược cho toàn Đảng, toàn quân trước tình thế mới.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — V.4 — body/350, body/351, body/352, body/353, body/354, body/355, body/356
+
+4. Trường Chinh
+Sau Cách mạng tháng Tám:
+Tiếp tục giữ vai trò lãnh đạo trong Đảng.
+Tham gia hoạch định đường lối chính trị.
+Góp phần củng cố tổ chức Đảng và chính quyền cách mạng.
+Tham gia giải quyết những nhiệm vụ chính trị cấp bách của đất nước.
+Vai trò của Trường Chinh tiếp tục gắn với công tác lãnh đạo chính trị và xây dựng đường lối cách mạng.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q118 — revision 1 — draft
+
+**Câu hỏi:** Sự lãnh đạo của Đảng và Chủ tịch Hồ Chí Minh đã góp phần quyết định vào thắng lợi của Cách mạng tháng Tám như thế nào?
+
+**Aliases:**
+
+- Vai trò lãnh đạo của Đảng và Bác Hồ là nguyên nhân thắng lợi của Cách mạng tháng Tám ra sao?
+- Đảng và Hồ Chí Minh đã có những quyết định sáng suốt nào đem lại thắng lợi tháng Tám năm 1945?
+- Nguyên nhân chủ quan hàng đầu dẫn tới thắng lợi Cách mạng tháng Tám 1945 là gì?
+
+**Đáp án trung tính:**
+
+Nguyên nhân chủ quan hàng đầu là sự lãnh đạo đúng đắn của Đảng và Chủ tịch Hồ Chí Minh: Đảng đã xác định đúng nhiệm vụ giải phóng dân tộc, xây dựng lực lượng và lựa chọn thời điểm phát động Tổng khởi nghĩa.
+
+**pham-van-dong:**
+
+Tài liệu khẳng định nguyên nhân chủ quan bao trùm: đó là sự lãnh đạo đúng đắn của Đảng và Chủ tịch Hồ Chí Minh. Đảng đã xác định đúng nhiệm vụ giải phóng dân tộc lên trên hết, bền bỉ xây dựng lực lượng và lựa chọn chính xác thời điểm phát động Tổng khởi nghĩa.
+
+**hoang-quoc-viet:**
+
+Bà con ta đều thấu hiểu: nhân tố quyết định nhất là nhờ có Đảng quang vinh và Bác Hồ muôn vàn kính yêu lãnh đạo. Đảng ta đã chỉ rõ đường giải phóng dân tộc, gây dựng lực lượng trong quần chúng và chọn đúng thời cơ ngàn năm có một để lãnh đạo toàn dân đứng lên thắng lợi.
+
+**truong-chinh:**
+
+Về mặt nguyên nhân chủ quan cốt lõi: sự lãnh đạo đúng đắn của Đảng và Chủ tịch Hồ Chí Minh là nhân tố quyết định hàng đầu. Đảng đã vận dụng sáng tạo chủ nghĩa Mác - Lênin, xác định đúng nhiệm vụ giải phóng dân tộc, chuẩn bị chu đáo về lực lượng và chớp đúng thời điểm lịch sử để phát động Tổng khởi nghĩa thắng lợi.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ nghệ thuật chỉ đạo chiến lược cách mạng: thắng lợi bắt nguồn từ sự lãnh đạo thiên tài, đúng đắn của Đảng và Chủ tịch Hồ Chí Minh. Đảng đã giải quyết triệt để nhiệm vụ giải phóng dân tộc, dày công xây dựng lực lượng vũ trang và chính trị, đồng thời quyết đoán hạ lệnh Tổng khởi nghĩa đúng thời khắc quyết định.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — VII.1 — body/358, body/359, body/360
+
+1. Nguyên nhân chủ quan
+Sự lãnh đạo đúng đắn của Đảng và Chủ tịch Hồ Chí Minh
+Đảng đã xác định đúng nhiệm vụ giải phóng dân tộc, xây dựng lực lượng và lựa chọn thời điểm phát động Tổng khởi nghĩa.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q119 — revision 1 — draft
+
+**Câu hỏi:** Quá trình chuẩn bị lâu dài, chu đáo qua các thời kỳ đã tạo nên những nền tảng thực lực nào cho thắng lợi của Cách mạng tháng Tám?
+
+**Aliases:**
+
+- Cách mạng tháng Tám đã xây dựng được những nền tảng gì qua quá trình chuẩn bị lâu dài?
+- Các yếu tố thực lực cách mạng được tích lũy trong nhiều năm gồm những gì?
+- Tại sao sự chuẩn bị lâu dài, chu đáo là nguyên nhân dẫn đến thắng lợi năm 1945?
+
+**Đáp án trung tính:**
+
+Quá trình chuẩn bị lâu dài, chu đáo là nguyên nhân chủ quan quan trọng. Trong nhiều năm, cách mạng đã xây dựng được: lực lượng chính trị, lực lượng vũ trang, căn cứ địa cách mạng, Mặt trận đoàn kết dân tộc, và hệ thống tổ chức Đảng cùng Việt Minh.
+
+**pham-van-dong:**
+
+Theo tư liệu đúc kết: thắng lợi rực rỡ tháng Tám bắt nguồn từ quá trình chuẩn bị lâu dài và chu đáo. Trong nhiều năm kiên trì, cách mạng ta đã gây dựng được đầy đủ: lực lượng chính trị, lực lượng vũ trang, căn cứ địa cách mạng, Mặt trận đoàn kết dân tộc cùng hệ thống tổ chức Đảng và Việt Minh rộng khắp.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí thấy rõ: thắng lợi không tự nhiên mà có, mà là kết quả chuẩn bị bền bỉ nhiều năm trời. Nhân dân ta dưới sự lãnh đạo của Đảng đã xây dựng nên lực lượng chính trị hùng hậu, các đội quân vũ trang kiên cường, các căn cứ kháng chiến và Mặt trận Việt Minh đại đoàn kết khắp xóm làng.
+
+**truong-chinh:**
+
+Về mặt quy luật tích lũy thực lực cách mạng: chuẩn bị lâu dài, chu đáo là nguyên nhân chủ quan căn bản. Qua các thời kỳ đấu tranh cam go, Đảng và nhân dân ta đã dày công xây dựng được lực lượng chính trị quần chúng, lực lượng vũ trang nhân dân, hệ thống căn cứ địa cách mạng, Mặt trận đại đoàn kết dân tộc và bộ máy tổ chức Đảng cùng Việt Minh chặt chẽ.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ nghệ thuật chuẩn bị chiến tranh giải phóng: thắng lợi Cách mạng tháng Tám là kết tinh của quá trình chuẩn bị lực lượng chu đáo qua nhiều năm tháng, bao gồm việc xây dựng lực lượng chính trị làm nền tảng, lực lượng vũ trang làm nòng cốt, lập căn cứ địa Việt Bắc vững chắc và hoàn thiện hệ thống Mặt trận Việt Minh.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — VII.1 — body/361, body/362, body/363, body/364, body/365, body/366, body/367
+
+Quá trình chuẩn bị lâu dài, chu đáo
+Trong nhiều năm, cách mạng đã xây dựng được:
+Lực lượng chính trị.
+Lực lượng vũ trang.
+Căn cứ địa cách mạng.
+Mặt trận đoàn kết dân tộc.
+Hệ thống tổ chức Đảng và Việt Minh.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q120 — revision 1 — draft
+
+**Câu hỏi:** Tinh thần đoàn kết toàn dân tộc – một nguyên nhân thắng lợi của Cách mạng tháng Tám – được thể hiện qua các lực lượng xã hội nào?
+
+**Aliases:**
+
+- Khối đại đoàn kết toàn dân trong Cách mạng tháng Tám bao gồm những thành phần nào?
+- Lực lượng xã hội nào đã tham gia cuộc đấu tranh giải phóng dân tộc năm 1945?
+- Tinh thần đoàn kết dân tộc đóng vai trò gì trong nguyên nhân thắng lợi Cách mạng tháng Tám?
+
+**Đáp án trung tính:**
+
+Tinh thần đoàn kết toàn dân tộc là nguyên nhân chủ quan quan trọng: nhân dân thuộc nhiều tầng lớp, ngành nghề, dân tộc và tôn giáo đã tham gia đấu tranh.
+
+**pham-van-dong:**
+
+Tư liệu lịch sử nhấn mạnh sức mạnh vĩ đại của sự hòa hợp dân tộc: tinh thần đoàn kết toàn dân tộc thể hiện ở việc nhân dân thuộc mọi tầng lớp xã hội, ngành nghề, các dân tộc anh em và các tôn giáo khác nhau đều chung sức đồng lòng tham gia đấu tranh giành độc lập.
+
+**hoang-quoc-viet:**
+
+Bà con lao động nhớ mãi sức mạnh của khối đại đoàn kết: già trẻ gái trai, công nhân, nông dân, trí thức, tiểu thương, đồng bào các dân tộc thiểu số và các tôn giáo đều kết thành một khối vững chắc trong Mặt trận Việt Minh để đấu tranh giải phóng quê hương.
+
+**truong-chinh:**
+
+Về mặt bài học đại đoàn kết dân tộc: tinh thần đoàn kết toàn dân tộc là cội nguồn sức mạnh vô địch. Đường lối của Đảng đã quy tụ đông đảo nhân dân thuộc nhiều tầng lớp, ngành nghề, không phân biệt dân tộc và tôn giáo, tạo thành làn sóng cách mạng đập tan ách thống trị phát xít - thực dân.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ sức mạnh toàn dân đánh giặc: tinh thần đoàn kết toàn dân tộc đã động viên toàn thể nhân dân thuộc nhiều tầng lớp, ngành nghề, dân tộc và tôn giáo cùng tham gia mặt trận giải phóng, tạo nên bức tường thành chính trị vững chắc hỗ trợ cho cuộc Tổng khởi nghĩa thắng lợi.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — VII.1 — body/368, body/369
+
+Tinh thần đoàn kết toàn dân tộc
+Nhân dân thuộc nhiều tầng lớp, ngành nghề, dân tộc và tôn giáo đã tham gia đấu tranh.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q121 — revision 1 — draft
+
+**Câu hỏi:** Sự kết hợp giữa đấu tranh chính trị và đấu tranh vũ trang trong Cách mạng tháng Tám có vai trò phân công cụ thể như thế nào?
+
+**Aliases:**
+
+- Vai trò của lực lượng chính trị và lực lượng vũ trang trong Cách mạng tháng Tám là gì?
+- Đấu tranh chính trị và đấu tranh vũ trang phối hợp với nhau ra sao để giành thắng lợi?
+- Lực lượng nào giữ vai trò chủ yếu và lực lượng nào giữ vai trò nòng cốt hỗ trợ năm 1945?
+
+**Đáp án trung tính:**
+
+Sự kết hợp giữa đấu tranh chính trị và đấu tranh vũ trang: quần chúng chính trị giữ vai trò chủ yếu, lực lượng vũ trang giữ vai trò hỗ trợ, nòng cốt và bảo vệ phong trào.
+
+**pham-van-dong:**
+
+Tài liệu phân định rất khoa học nghệ thuật kết hợp lực lượng: trong Cách mạng tháng Tám, lực lượng quần chúng chính trị giữ vai trò chủ yếu quyết định, còn lực lượng vũ trang giữ vai trò hỗ trợ, làm nòng cốt và bảo vệ cho phong trào tiến công.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí thấy rõ sự phối hợp tuyệt vời: sức mạnh triệu người biểu tình của quần chúng chính trị là lực lượng chủ yếu áp đảo quân thù, còn các đội tự vệ và lực lượng vũ trang làm nòng cốt bảo vệ, hỗ trợ đắc lực để khởi nghĩa giành toàn thắng.
+
+**truong-chinh:**
+
+Về mặt nghệ thuật khởi nghĩa bạo lực cách mạng: sự kết hợp nhuần nhuyễn giữa đấu tranh chính trị và đấu tranh vũ trang thể hiện ở nguyên lý: lực lượng chính trị của quần chúng giữ vai trò chủ yếu, quyết định trong việc tiếp quản chính quyền; lực lượng vũ trang giữ vai trò hỗ trợ, xung kích làm nòng cốt và bảo vệ phong trào nổi dậy.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ hiệp đồng phương thức tác chiến khởi nghĩa: Cách mạng tháng Tám là đỉnh cao của sự phối hợp hai lực lượng: quần chúng chính trị đông đảo giữ vai trò chủ yếu đè bẹp bộ máy địch, còn lực lượng vũ trang giữ vai trò hỗ trợ đòn điểm, làm nòng cốt và bảo vệ an toàn cho phong trào.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — VII.1 — body/370, body/371
+
+Sự kết hợp giữa đấu tranh chính trị và đấu tranh vũ trang
+Quần chúng chính trị giữ vai trò chủ yếu, lực lượng vũ trang giữ vai trò hỗ trợ, nòng cốt và bảo vệ phong trào.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q122 — revision 1 — draft
+
+**Câu hỏi:** Những điều kiện khách quan quốc tế nào đã tạo thời cơ thuận lợi cho Cách mạng tháng Tám năm 1945 giành thắng lợi?
+
+**Aliases:**
+
+- Nguyên nhân khách quan tạo ra thời cơ cho Cách mạng tháng Tám là gì?
+- Bối cảnh quốc tế nào giúp nhân dân Việt Nam có cơ hội thuận lợi giành chính quyền?
+- Các yếu tố khách quan dẫn tới sự suy yếu của kẻ thù trong Cách mạng tháng Tám gồm những gì?
+
+**Đáp án trung tính:**
+
+Những nguyên nhân khách quan tạo thời cơ gồm: Chiến tranh thế giới thứ hai kết thúc; phát xít Nhật đầu hàng Đồng minh; bộ máy thống trị Nhật và chính quyền tay sai suy yếu nghiêm trọng; quân Đồng minh chưa kịp tiến vào Đông Dương để giải giáp quân Nhật. Những yếu tố này tạo ra thời cơ thuận lợi để nhân dân Việt Nam giành chính quyền.
+
+**pham-van-dong:**
+
+Tài liệu phân tích các điều kiện quốc tế khách quan hết sức thuận lợi: Chiến tranh thế giới thứ hai kết thúc, phát xít Nhật đầu hàng Đồng minh, bộ máy cai trị của Nhật và tay sai suy yếu nghiêm trọng, và quân Đồng minh chưa kịp vào Đông Dương giải giáp. Tất cả đã tạo nên thời cơ thuận lợi ngàn năm có một cho dân tộc ta.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí thấy rõ thời cơ trời cho: giặc phát xít Nhật bị Đồng minh đánh bại phải đầu hàng, chiến tranh thế giới kết thúc, bọn tay sai bán nước run sợ rệu rã, lại thêm quân Đồng minh chưa kịp kéo vào. Chính những điều kiện quốc tế ấy đã mở đường cho toàn dân ta nhất tề đứng dậy.
+
+**truong-chinh:**
+
+Về mặt phân tích thời cơ khách quan của cách mạng: những yếu tố khách quan quyết định gồm: Chiến tranh thế giới thứ hai kết thúc; phát xít Nhật đầu hàng Đồng minh vô điều kiện; bộ máy thống trị Nhật và chính quyền tay sai suy yếu nghiêm trọng; quân Đồng minh chưa kịp tiến vào Đông Dương để giải giáp quân Nhật. Những yếu tố đó tạo ra khoảng trống quyền lực và thời cơ vô cùng thuận lợi để nhân dân ta tiến hành Tổng khởi nghĩa.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ chớp thời cơ thuận lợi quốc tế: Chiến tranh thế giới thứ hai kết thúc, phát xít Nhật đầu hàng Đồng minh làm sụp đổ hoàn toàn ý chí chiến đấu của quân chiếm đóng, chính quyền bù nhìn tan rã, trong khi quân Đồng minh chưa kịp áp sát Đông Dương. Đó là cơ hội thuận lợi nhất để ta đồng loạt xuất kích giành thắng lợi trọn vẹn.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — VII.2 — body/372, body/373, body/374, body/375, body/376, body/377
+
+2. Nguyên nhân khách quan
+Chiến tranh thế giới thứ hai kết thúc.
+Phát xít Nhật đầu hàng Đồng minh.
+Bộ máy thống trị Nhật và chính quyền tay sai suy yếu nghiêm trọng.
+Quân Đồng minh chưa kịp tiến vào Đông Dương để giải giáp quân Nhật.
+Những yếu tố này tạo ra thời cơ thuận lợi để nhân dân Việt Nam giành chính quyền.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+- Ghi chú: CAUSES: Duyệt nghĩa aliases, phân biệt nguyên nhân chủ quan và khách quan.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q123 — revision 1 — draft
+
+**Câu hỏi:** Cách mạng tháng Tám năm 1945 có ý nghĩa lịch sử to lớn như thế nào đối với dân tộc Việt Nam?
+
+**Aliases:**
+
+- Ý nghĩa của Cách mạng tháng Tám đối với tiến trình lịch sử Việt Nam là gì?
+- Thắng lợi Cách mạng tháng Tám 1945 đã làm thay đổi số phận dân tộc và nhân dân Việt Nam ra sao?
+- Nước Việt Nam Dân chủ Cộng hòa ra đời mang lại những chuyển biến căn bản gì cho đất nước?
+
+**Đáp án trung tính:**
+
+Ý nghĩa lịch sử đối với Việt Nam: đập tan ách thống trị của phát xít Nhật và chính quyền tay sai; chấm dứt chế độ thuộc địa và chế độ quân chủ; thành lập nước Việt Nam Dân chủ Cộng hòa; đưa nhân dân Việt Nam từ thân phận nô lệ trở thành người làm chủ đất nước; mở ra kỷ nguyên độc lập, tự do cho dân tộc; tạo cơ sở chính trị và pháp lý để xây dựng nhà nước mới.
+
+**pham-van-dong:**
+
+Tư liệu tổng kết tầm vóc thời đại đối với đất nước: Cách mạng tháng Tám đập tan ách thống trị của phát xít Nhật và tay sai, chấm dứt chế độ thuộc địa và quân chủ, lập nên nước Việt Nam Dân chủ Cộng hòa, đưa nhân dân từ nô lệ thành người làm chủ đất nước, mở ra kỷ nguyên độc lập, tự do và tạo cơ sở chính trị pháp lý để xây dựng nhà nước mới.
+
+**hoang-quoc-viet:**
+
+Bà con hãy tự hào về bước ngoặt đổi đời của dân tộc: cuộc cách mạng đã đập tan xiềng xích nô lệ của phát xít Nhật và tay sai, xóa bỏ chế độ vua chúa và thuộc địa, dựng nên nước Việt Nam Dân chủ Cộng hòa. Đồng bào ta từ thân phận nô lệ lầm than nay hiên ngang đứng dậy làm chủ đất nước, bước vào kỷ nguyên độc lập tự do.
+
+**truong-chinh:**
+
+Về mặt ý nghĩa lịch sử sâu sắc đối với dân tộc: Cách mạng tháng Tám năm 1945 đã đập tan ách thống trị của phát xít Nhật và chính quyền tay sai; chấm dứt chế độ thuộc địa và chế độ quân chủ phong kiến; thành lập nước Việt Nam Dân chủ Cộng hòa; đưa nhân dân Việt Nam từ thân phận nô lệ trở thành người làm chủ đất nước; mở ra kỷ nguyên độc lập, tự do cho dân tộc; tạo cơ sở chính trị và pháp lý vững chắc để xây dựng nhà nước mới.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ chiến công vĩ đại của sự nghiệp giải phóng dân tộc: Cách mạng tháng Tám đã quét sạch ách thống trị quân phiệt Nhật và bù nhìn tay sai, chấm dứt vĩnh viễn chế độ thuộc địa và quân chủ, khai sinh nước Việt Nam Dân chủ Cộng hòa, đưa dân tộc ta bước sang kỷ nguyên độc lập, tự do và nhân dân làm chủ vận mệnh non sông.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — VIII — body/378, body/379, body/380, body/381, body/382, body/383, body/384, body/385
+
+1. Đối với Việt Nam
+Đập tan ách thống trị của phát xít Nhật và chính quyền tay sai.
+Chấm dứt chế độ thuộc địa và chế độ quân chủ.
+Thành lập nước Việt Nam Dân chủ Cộng hòa.
+Đưa nhân dân Việt Nam từ thân phận nô lệ trở thành người làm chủ đất nước.
+Mở ra kỷ nguyên độc lập, tự do cho dân tộc.
+Tạo cơ sở chính trị và pháp lý để xây dựng nhà nước mới.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)
+
+## cmtt45-q124 — revision 1 — draft
+
+**Câu hỏi:** Thắng lợi của Cách mạng tháng Tám năm 1945 có ý nghĩa và đóng góp như thế nào đối với phong trào cách mạng thế giới?
+
+**Aliases:**
+
+- Ý nghĩa quốc tế của Cách mạng tháng Tám năm 1945 là gì?
+- Cách mạng tháng Tám đã cổ vũ phong trào giải phóng dân tộc trên thế giới như thế nào?
+- Thắng lợi của nhân dân Việt Nam đóng góp gì vào cuộc đấu tranh chống phát xít và thực dân toàn cầu?
+
+**Đáp án trung tính:**
+
+Ý nghĩa đối với thế giới: cổ vũ phong trào giải phóng dân tộc tại các nước thuộc địa; góp phần vào cuộc đấu tranh chống chủ nghĩa phát xít và chủ nghĩa thực dân; khẳng định sức mạnh của một dân tộc đoàn kết, có tổ chức và có đường lối lãnh đạo đúng đắn.
+
+**pham-van-dong:**
+
+Tài liệu khẳng định tầm vóc quốc tế to lớn của cuộc cách mạng: cổ vũ mạnh mẽ phong trào giải phóng dân tộc tại các nước thuộc địa, đóng góp xứng đáng vào cuộc đấu tranh chung chống chủ nghĩa phát xít và chủ nghĩa thực dân, đồng thời chứng minh cho thế giới thấy sức mạnh của một dân tộc đoàn kết, có tổ chức và có đường lối lãnh đạo đúng đắn.
+
+**hoang-quoc-viet:**
+
+Bà con và đồng chí tự hào vì thắng lợi của ta đã truyền lửa cho bầu bạn năm châu: cuộc khởi nghĩa đã cổ vũ mạnh mẽ các dân tộc bị áp bức đứng lên tự giải phóng, góp phần đánh bại chủ nghĩa phát xít và thực dân, khẳng định chân lý sáng ngời rằng một dân tộc đoàn kết một lòng theo đường lối đúng đắn thì nhất định chiến thắng.
+
+**truong-chinh:**
+
+Về mặt giá trị lý luận và thực tiễn cách mạng quốc tế: Cách mạng tháng Tám năm 1945 có ý nghĩa to lớn đối với thế giới: cổ vũ phong trào giải phóng dân tộc tại các nước thuộc địa; góp phần vào cuộc đấu tranh chống chủ nghĩa phát xít và chủ nghĩa thực dân; khẳng định sức mạnh của một dân tộc đoàn kết, có tổ chức và có đường lối lãnh đạo đúng đắn của Đảng Mác - Lênin.
+
+**vo-nguyen-giap:**
+
+Dưới góc độ đóng góp vào sự nghiệp giải phóng các dân tộc bị áp bức: thắng lợi Cách mạng tháng Tám đã chọc thủng một khâu yếu trong hệ thống thuộc địa của chủ nghĩa đế quốc, cổ vũ mạnh mẽ phong trào đấu tranh của các dân tộc thuộc địa, đóng góp vào mặt trận chống phát xít và khẳng định sức mạnh vô địch của toàn dân đoàn kết có tổ chức lãnh đạo đúng đắn.
+
+**Nguồn:** Tong-hop-kien-thuc-moi.docx — VIII.2 — body/386, body/387, body/388, body/389
+
+2. Đối với thế giới
+Cổ vũ phong trào giải phóng dân tộc tại các nước thuộc địa.
+Góp phần vào cuộc đấu tranh chống chủ nghĩa phát xít và chủ nghĩa thực dân.
+Khẳng định sức mạnh của một dân tộc đoàn kết, có tổ chức và có đường lối lãnh đạo đúng đắn.
+
+- Ghi chú: Lời thoại mô phỏng giáo dục. Admin cần kiểm tra toàn bộ ý nghĩa, vai trò, địa danh, mốc thời gian và phần diễn đạt ngoài trích đoạn.
+- Ghi chú: NEEDS_REVIEW: Cần quản trị viên đối chiếu nghĩa canonical/aliases và sự thật lịch sử; chưa duyệt hoặc công bố.
+
+- [ ] Đối chiếu tài liệu và các đính chính liên quan
+- [ ] Duyệt câu hỏi và ý nghĩa từng alias
+- [ ] Duyệt đáp án trung tính và cả bốn lời đáp
+- [ ] Xác nhận người duyệt và thời gian qua quy trình quản trị (chưa có ở Phase 1)

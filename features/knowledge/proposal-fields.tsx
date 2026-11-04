@@ -15,7 +15,7 @@ export default function ProposalFields({ value, onChange, notes, onNotes, disabl
       <button type="button" className="btn" disabled={value.aliases.length >= 5} onClick={() => onChange({ ...value, aliases: [...value.aliases, ''] })}>Thêm cách hỏi</button>
     </fieldset>
     <label>Đáp án trung tính — trích nguyên văn phần kiến thức từ nguồn<textarea rows={5} maxLength={12000} value={value.neutralAnswer} disabled={disabled} onChange={e => onChange({ ...value, neutralAnswer: e.target.value })} /></label>
-    {KNOWLEDGE_CHARACTERS.map(k => <label key={k}>{KNOWLEDGE_CHARACTER_LABELS[k]}<textarea rows={4} maxLength={12000} value={value.characterAnswers[k]} disabled={disabled} onChange={e => onChange({ ...value, characterAnswers: { ...value.characterAnswers, [k]: e.target.value } })} />
+    {KNOWLEDGE_CHARACTERS.map(k => <label key={k}>{KNOWLEDGE_CHARACTER_LABELS[k]}<textarea rows={4} maxLength={12000} value={value.characterAnswers[k] || ''} disabled={disabled} onChange={e => onChange({ ...value, characterAnswers: { ...value.characterAnswers, [k]: e.target.value } })} />
       <select aria-label={`Chọn lời dẫn ${KNOWLEDGE_CHARACTER_LABELS[k]}`} value="" disabled={disabled} onChange={e => { if (e.target.value) onChange({ ...value, characterAnswers: { ...value.characterAnswers, [k]: e.target.value + value.neutralAnswer } }); }}><option value="">Chọn lời dẫn + giữ nguyên phần kiến thức…</option>{PERSONA_FRAMES[k].map(frame => <option key={frame} value={frame}>{frame}</option>)}</select>
     </label>)}
     <label>Ghi chú biên tập<textarea maxLength={2000} value={notes} disabled={disabled} onChange={e => onNotes(e.target.value)} /></label>

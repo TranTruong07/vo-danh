@@ -1,0 +1,1358 @@
+[
+  {
+    "unitKey": "I-GERMANY",
+    "sectionId": "I.1",
+    "sectionTitle": "PHẦN I. BỐI CẢNH LỊCH SỬ / 1. Tình hình thế giới",
+    "historicalSummary": "Phát xít Đức đầu hàng Đồng minh vô điều kiện, chiến tranh ở châu Âu kết thúc.",
+    "keyFacts": [
+      "Ngày 9/5/1945",
+      "Phát xít Đức đầu hàng vô điều kiện",
+      "Chiến tranh ở châu Âu kết thúc"
+    ],
+    "characters": [],
+    "timeline": "09/05/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q063",
+    "notes": "Cột mốc quốc tế lớn đánh dấu sự sụp đổ của chủ nghĩa phát xít ở châu Âu."
+  },
+  {
+    "unitKey": "I-USSR",
+    "sectionId": "I.1",
+    "sectionTitle": "PHẦN I. BỐI CẢNH LỊCH SỬ / 1. Tình hình thế giới",
+    "historicalSummary": "Liên Xô tuyên chiến với Nhật Bản và mở cuộc tiến công quân Nhật ở Đông Bắc Á.",
+    "keyFacts": [
+      "Ngày 8/8/1945 Liên Xô tuyên chiến Nhật Bản",
+      "Ngày 9/8/1945 Hồng quân Liên Xô tấn công quân Nhật ở Đông Bắc Á"
+    ],
+    "characters": [],
+    "timeline": "08/08/1945 - 09/08/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q064",
+    "notes": "Hành động quân sự tiêu diệt đạo quân Quan Đông của phát xít Nhật."
+  },
+  {
+    "unitKey": "I-ATOMIC",
+    "sectionId": "I.1",
+    "sectionTitle": "PHẦN I. BỐI CẢNH LỊCH SỬ / 1. Tình hình thế giới",
+    "historicalSummary": "Mỹ ném hai quả bom nguyên tử xuống Hiroshima và Nagasaki.",
+    "keyFacts": [
+      "Ngày 6/8/1945 ném bom xuống Hiroshima",
+      "Ngày 9/8/1945 ném bom xuống Nagasaki"
+    ],
+    "characters": [],
+    "timeline": "06/08/1945 - 09/08/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q065",
+    "notes": "Gây thiệt hại nặng nề cho chính quốc Nhật, đẩy nhanh sự sụp đổ."
+  },
+  {
+    "unitKey": "I-SURRENDER",
+    "sectionId": "I.1",
+    "sectionTitle": "PHẦN I. BỐI CẢNH LỊCH SỬ / 1. Tình hình thế giới",
+    "historicalSummary": "Nhật Bản chấp nhận đầu hàng và Nhật hoàng tuyên bố đầu hàng qua đài phát thanh.",
+    "keyFacts": [
+      "Ngày 14/8/1945 Nhật chấp nhận điều kiện đầu hàng",
+      "Ngày 15/8/1945 Nhật hoàng Hirohito phát thanh tuyên bố đầu hàng",
+      "Quân Nhật ở Đông Dương tê liệt, chính quyền thân Nhật hoang mang",
+      "Thời cơ quốc tế đặc biệt thuận lợi cho cách mạng Việt Nam"
+    ],
+    "characters": [
+      "Hirohito"
+    ],
+    "timeline": "14/08/1945 - 15/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q066",
+    "notes": "Thời khắc mở ra thời cơ ngàn năm có một."
+  },
+  {
+    "unitKey": "I-COUP",
+    "sectionId": "I.2",
+    "sectionTitle": "PHẦN I. BỐI CẢNH LỊCH SỬ / 2. Tình hình Việt Nam trước Tổng khởi nghĩa",
+    "historicalSummary": "Nhật đảo chính Pháp đêm 9/3/1945, loại bỏ Pháp và trực tiếp nắm quyền ở Đông Dương.",
+    "keyFacts": [
+      "Đêm 9/3/1945 Nhật nổ súng đảo chính Pháp",
+      "Bộ máy cai trị của Pháp bị loại bỏ",
+      "Nhật trực tiếp nắm quyền cai trị Đông Dương"
+    ],
+    "characters": [],
+    "timeline": "09/03/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q067",
+    "notes": "Chuyển biến chính trị - quân sự lớn ở Đông Dương trước Tổng khởi nghĩa."
+  },
+  {
+    "unitKey": "I-GOVERNMENT",
+    "sectionId": "I.2",
+    "sectionTitle": "PHẦN I. BỐI CẢNH LỊCH SỬ / 2. Tình hình Việt Nam trước Tổng khởi nghĩa",
+    "historicalSummary": "Chính phủ Trần Trọng Kim được thành lập dưới sự bảo trợ của Nhật nhưng không có thực quyền độc lập.",
+    "keyFacts": [
+      "Chính phủ Trần Trọng Kim thành lập dưới bảo trợ của Nhật",
+      "Không có thực quyền độc lập"
+    ],
+    "characters": [
+      "Trần Trọng Kim"
+    ],
+    "timeline": "Tháng 4/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "MEDIUM",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q068",
+    "notes": "Làm rõ bản chất bù nhìn của chính quyền thân Nhật."
+  },
+  {
+    "unitKey": "I-FAMINE",
+    "sectionId": "I.2",
+    "sectionTitle": "PHẦN I. BỐI CẢNH LỊCH SỬ / 2. Tình hình Việt Nam trước Tổng khởi nghĩa",
+    "historicalSummary": "Nạn đói 1944–1945 khiến hơn hai triệu người chết, đẩy mâu thuẫn xã hội lên đỉnh điểm gay gắt.",
+    "keyFacts": [
+      "Hơn hai triệu đồng bào chết đói",
+      "Mâu thuẫn giữa nhân dân và chế độ thống trị sâu sắc tột cùng"
+    ],
+    "characters": [],
+    "timeline": "Cuối 1944 - đầu 1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q069",
+    "notes": "Tiền đề kinh tế - xã hội trực tiếp thổi bùng ngọn lửa căm thù và khởi nghĩa."
+  },
+  {
+    "unitKey": "I-WINDOW",
+    "sectionId": "I.2",
+    "sectionTitle": "PHẦN I. BỐI CẢNH LỊCH SỬ / 2. Tình hình Việt Nam trước Tổng khởi nghĩa",
+    "historicalSummary": "Yêu cầu cấp bách phải giành chính quyền trước khi quân Đồng minh tiến vào Đông Dương giải giáp quân Nhật.",
+    "keyFacts": [
+      "Quân Trung Hoa Dân quốc vào miền Bắc, quân Anh vào miền Nam",
+      "Thực dân Pháp tìm cách quay lại",
+      "Thời cơ có hạn, phải giành chính quyền trước khi quân Đồng minh vào"
+    ],
+    "characters": [],
+    "timeline": "Tháng 8/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q070",
+    "notes": "Quyết sách sống còn về thời cơ cách mạng."
+  },
+  {
+    "unitKey": "II-RETURN",
+    "sectionId": "II.1",
+    "sectionTitle": "PHẦN II. QUÁ TRÌNH CHUẨN BỊ / 1. Năm 1941",
+    "historicalSummary": "Nguyễn Ái Quốc trở về nước sau hơn 30 năm hoạt động ở nước ngoài.",
+    "keyFacts": [
+      "Ngày 28/1/1941",
+      "Nguyễn Ái Quốc về nước tại Pác Bó, Cao Bằng",
+      "Sau hơn 30 năm hoạt động ở nước ngoài"
+    ],
+    "characters": [
+      "Nguyễn Ái Quốc (Hồ Chí Minh)"
+    ],
+    "timeline": "28/01/1941",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q061",
+    "notes": "Draft pilot đã có từ trước, giữ nguyên không sửa."
+  },
+  {
+    "unitKey": "II-CONFERENCE8",
+    "sectionId": "II.1",
+    "sectionTitle": "PHẦN II. QUÁ TRÌNH CHUẨN BỊ / 1. Năm 1941",
+    "historicalSummary": "Hội nghị Trung ương lần thứ 8 họp tại Pác Bó, Cao Bằng do Nguyễn Ái Quốc chủ trì.",
+    "keyFacts": [
+      "Từ 10 đến 19/5/1941",
+      "Địa điểm: Pác Bó, Cao Bằng",
+      "Người chủ trì: Nguyễn Ái Quốc"
+    ],
+    "characters": [
+      "Nguyễn Ái Quốc"
+    ],
+    "timeline": "10/05/1941 - 19/05/1941",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q071",
+    "notes": "Hội nghị có ý nghĩa quyết định chuyển hướng chiến lược."
+  },
+  {
+    "unitKey": "II-PRIORITIES",
+    "sectionId": "II.1",
+    "sectionTitle": "PHẦN II. QUÁ TRÌNH CHUẨN BỊ / 1. Năm 1941",
+    "historicalSummary": "Hội nghị Trung ương 8 đặt nhiệm vụ giải phóng dân tộc lên hàng đầu, lập Mặt trận Việt Minh và chuẩn bị khởi nghĩa vũ trang.",
+    "keyFacts": [
+      "Đặt giải phóng dân tộc lên hàng đầu",
+      "Tạm gác khẩu hiệu chưa phù hợp",
+      "Thành lập Mặt trận Việt Minh (19/5/1941)",
+      "Chuẩn bị khởi nghĩa vũ trang là nhiệm vụ trọng tâm",
+      "Hoàn chỉnh chuyển hướng chiến lược"
+    ],
+    "characters": [
+      "Nguyễn Ái Quốc"
+    ],
+    "timeline": "Tháng 5/1941",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q072",
+    "notes": "Đường lối chiến lược xuyên suốt dẫn tới Cách mạng tháng Tám."
+  },
+  {
+    "unitKey": "II-ARMY",
+    "sectionId": "II.2",
+    "sectionTitle": "PHẦN II. QUÁ TRÌNH CHUẨN BỊ / 2. Năm 1944",
+    "historicalSummary": "Thành lập Đội Việt Nam Tuyên truyền Giải phóng quân ngày 22/12/1944 tại Cao Bằng do Võ Nguyên Giáp chỉ huy.",
+    "keyFacts": [
+      "Ngày 22/12/1944",
+      "Khu rừng Trần Hưng Đạo, Cao Bằng",
+      "Võ Nguyên Giáp trực tiếp tổ chức và chỉ huy",
+      "Ban đầu gồm 34 chiến sĩ, vũ khí hạn chế nhưng tinh thần cao"
+    ],
+    "characters": [
+      "Võ Nguyên Giáp",
+      "Hồ Chí Minh"
+    ],
+    "timeline": "22/12/1944",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q073",
+    "notes": "Tiền thân của Quân đội nhân dân Việt Nam."
+  },
+  {
+    "unitKey": "II-FIRST-BATTLES",
+    "sectionId": "II.2",
+    "sectionTitle": "PHẦN II. QUÁ TRÌNH CHUẨN BỊ / 2. Năm 1944",
+    "historicalSummary": "Đội Việt Nam Tuyên truyền Giải phóng quân lập chiến công đầu tiên tại Phai Khắt và Nà Ngần.",
+    "keyFacts": [
+      "Trận Phai Khắt ngày 25/12/1944",
+      "Trận Nà Ngần ngày 26/12/1944",
+      "Mở đầu truyền thống đánh thắng trận đầu"
+    ],
+    "characters": [
+      "Võ Nguyên Giáp"
+    ],
+    "timeline": "25/12/1944 - 26/12/1944",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q074",
+    "notes": "Hai trận đánh thắng lợi giòn giã đầu tiên."
+  },
+  {
+    "unitKey": "II-ARMY-MEANING",
+    "sectionId": "II.2",
+    "sectionTitle": "PHẦN II. QUÁ TRÌNH CHUẨN BỊ / 2. Năm 1944",
+    "historicalSummary": "Ý nghĩa việc thành lập lực lượng vũ trang: xây dựng lực lượng tập trung, làm nòng cốt cho quân đội cách mạng và chuẩn bị cho Tổng khởi nghĩa.",
+    "keyFacts": [
+      "Xây dựng lực lượng vũ trang tập trung",
+      "Tạo cơ sở phát triển quân đội cách mạng",
+      "Chuẩn bị lực lượng quân sự cho Tổng khởi nghĩa"
+    ],
+    "characters": [
+      "Võ Nguyên Giáp"
+    ],
+    "timeline": "Tháng 12/1944",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q075",
+    "notes": "Đúc kết ý nghĩa lịch sử của lực lượng vũ trang cách mạng."
+  },
+  {
+    "unitKey": "II-DIRECTIVE-ISSUE",
+    "sectionId": "II.4",
+    "sectionTitle": "PHẦN II. QUÁ TRÌNH CHUẨN BỊ / 4. Ngày 12/3/1945",
+    "historicalSummary": "Ban Thường vụ Trung ương Đảng ban hành Chỉ thị 'Nhật – Pháp bắn nhau và hành động của chúng ta' ngày 12/3/1945.",
+    "keyFacts": [
+      "Ngày 12/3/1945",
+      "Ban Thường vụ Trung ương Đảng ban hành",
+      "Chỉ thị: Nhật – Pháp bắn nhau và hành động của chúng ta"
+    ],
+    "characters": [
+      "Trường Chinh"
+    ],
+    "timeline": "12/03/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q076",
+    "notes": "Văn kiện định hướng kim chỉ nam sau khi Nhật đảo chính."
+  },
+  {
+    "unitKey": "II-DIRECTIVE-CONTENT",
+    "sectionId": "II.4",
+    "sectionTitle": "PHẦN II. QUÁ TRÌNH CHUẨN BỊ / 4. Ngày 12/3/1945",
+    "historicalSummary": "Nội dung Chỉ thị 12/3/1945: xác định phát xít Nhật là kẻ thù chính, phát động cao trào kháng Nhật cứu nước, chuẩn bị tiến tới Tổng khởi nghĩa.",
+    "keyFacts": [
+      "Kẻ thù chính trước mắt: phát xít Nhật",
+      "Đổi khẩu hiệu đấu tranh",
+      "Phát động cao trào kháng Nhật cứu nước",
+      "Kết hợp chính trị với vũ trang, mở rộng Việt Minh",
+      "Chuẩn bị điều kiện tiến tới Tổng khởi nghĩa"
+    ],
+    "characters": [
+      "Trường Chinh"
+    ],
+    "timeline": "Tháng 3/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q077",
+    "notes": "Nội dung chỉ đạo chiến lược và phương châm hành động."
+  },
+  {
+    "unitKey": "II-MILITARY",
+    "sectionId": "II.5",
+    "sectionTitle": "PHẦN II. QUÁ TRÌNH CHUẨN BỊ / 5. Tháng 4/1945",
+    "historicalSummary": "Hội nghị quân sự cách mạng Bắc Kỳ thống nhất các lực lượng vũ trang và chuẩn bị cho khởi nghĩa.",
+    "keyFacts": [
+      "Tháng 4/1945",
+      "Thống nhất lực lượng vũ trang, phát triển căn cứ địa",
+      "Xây dựng tự vệ, du kích",
+      "Chuẩn bị phương án giành chính quyền"
+    ],
+    "characters": [
+      "Trường Chinh",
+      "Võ Nguyên Giáp"
+    ],
+    "timeline": "Tháng 4/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q078",
+    "notes": "Bước chuẩn bị quân sự tập trung trên quy mô lớn."
+  },
+  {
+    "unitKey": "II-ZONE",
+    "sectionId": "II.6",
+    "sectionTitle": "PHẦN II. QUÁ TRÌNH CHUẨN BỊ / 6. Ngày 4/6/1945",
+    "historicalSummary": "Thành lập Khu giải phóng Việt Bắc gồm 6 tỉnh với trung tâm chỉ đạo tại Tân Trào, Tuyên Quang.",
+    "keyFacts": [
+      "Ngày 4/6/1945",
+      "Sáu tỉnh: Cao Bằng, Bắc Kạn, Lạng Sơn, Hà Giang, Tuyên Quang, Thái Nguyên",
+      "Tân Trào, Tuyên Quang là trung tâm chỉ đạo cách mạng"
+    ],
+    "characters": [
+      "Hồ Chí Minh",
+      "Võ Nguyên Giáp"
+    ],
+    "timeline": "04/06/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q079",
+    "notes": "Căn cứ địa đầu não của Cách mạng tháng Tám."
+  },
+  {
+    "unitKey": "II-ZONE-GIAP",
+    "sectionId": "II.6",
+    "sectionTitle": "PHẦN II. QUÁ TRÌNH CHUẨN BỊ / 6. Ngày 4/6/1945",
+    "historicalSummary": "Võ Nguyên Giáp giữ chức thường trực Ủy ban Chỉ huy lâm thời Khu giải phóng, phụ trách quân sự.",
+    "keyFacts": [
+      "Thường trực trong Ủy ban Chỉ huy lâm thời Khu giải phóng",
+      "Phụ trách quân sự",
+      "Xây dựng chính quyền cơ sở và lực lượng vũ trang"
+    ],
+    "characters": [
+      "Võ Nguyên Giáp"
+    ],
+    "timeline": "Tháng 6/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q080",
+    "notes": "Phân công cụ thể của đồng chí Giáp tại chiến khu Việt Bắc."
+  },
+  {
+    "unitKey": "III-CHINH",
+    "sectionId": "III.1",
+    "sectionTitle": "PHẦN III. VAI TRÒ CỦA BỐN NHÂN VẬT / 1. Trường Chinh",
+    "historicalSummary": "Vai trò Tổng Bí thư Trường Chinh trong lãnh đạo đường lối, chính trị và tổ chức Tổng khởi nghĩa.",
+    "keyFacts": [
+      "Tổng Bí thư Đảng Cộng sản Đông Dương",
+      "Chỉ đạo kháng Nhật cứu nước sau ngày 9/3/1945",
+      "Dự Hội nghị toàn quốc Tân Trào (13-15/8/1945)",
+      "Trực tiếp phụ trách Ủy ban Khởi nghĩa toàn quốc",
+      "Chuyển nhận định tình hình thành chủ trương hành động cụ thể"
+    ],
+    "characters": [
+      "Trường Chinh"
+    ],
+    "timeline": "1941 - 1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q081",
+    "notes": "Lãnh đạo tối cao về đường lối chính trị và tổ chức khởi nghĩa."
+  },
+  {
+    "unitKey": "III-GIAP-TRAINING",
+    "sectionId": "III.2",
+    "sectionTitle": "PHẦN III. VAI TRÒ CỦA BỐN NHÂN VẬT / 2. Võ Nguyên Giáp",
+    "historicalSummary": "Võ Nguyên Giáp tổ chức chỉ huy Đội VNTTGPQ, phụ trách quân sự Khu giải phóng và tham gia Trường Quân chính kháng Nhật.",
+    "keyFacts": [
+      "Tổ chức và chỉ huy Đội VNTTGPQ năm 1944",
+      "Phụ trách quân sự Khu giải phóng",
+      "Tổ chức Trường Quân chính kháng Nhật đào tạo cán bộ"
+    ],
+    "characters": [
+      "Võ Nguyên Giáp"
+    ],
+    "timeline": "1944 - 1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q082",
+    "notes": "Xây dựng lực lượng quân sự và đào tạo cán bộ chỉ huy thực tế."
+  },
+  {
+    "unitKey": "III-DONG-PREP",
+    "sectionId": "III.3",
+    "sectionTitle": "PHẦN III. VAI TRÒ CỦA BỐN NHÂN VẬT / 3. Phạm Văn Đồng",
+    "historicalSummary": "Phạm Văn Đồng hoạt động tại căn cứ Tân Trào năm 1945, xây dựng Khu giải phóng, đào tạo cán bộ và dự Hội nghị Tân Trào.",
+    "keyFacts": [
+      "Hoạt động tại căn cứ Tân Trào năm 1945",
+      "Tham gia xây dựng Khu giải phóng",
+      "Đào tạo cán bộ tại Trường Quân chính kháng Nhật",
+      "Dự Hội nghị toàn quốc của Đảng (13-15/8/1945)"
+    ],
+    "characters": [
+      "Phạm Văn Đồng"
+    ],
+    "timeline": "Năm 1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q083",
+    "notes": "Đóng góp quan trọng của đồng chí Đồng tại căn cứ Tân Trào."
+  },
+  {
+    "unitKey": "III-VIET-1937",
+    "sectionId": "III.4",
+    "sectionTitle": "PHẦN III. VAI TRÒ CỦA BỐN NHÂN VẬT / 4. Hoàng Quốc Việt",
+    "historicalSummary": "Năm 1937, Hoàng Quốc Việt được cử làm Bí thư Xứ ủy Bắc Kỳ.",
+    "keyFacts": [
+      "Năm 1937",
+      "Được cử làm Bí thư Xứ ủy Bắc Kỳ",
+      "Cán bộ giàu kinh nghiệm xây dựng Đảng và vận động quần chúng"
+    ],
+    "characters": [
+      "Hoàng Quốc Việt"
+    ],
+    "timeline": "Năm 1937",
+    "importance": "SUPPLEMENTARY",
+    "questionPotential": "MEDIUM",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q084",
+    "notes": "Mốc hoạt động lãnh đạo địa phương trước thời kỳ giải phóng."
+  },
+  {
+    "unitKey": "III-VIET-1941",
+    "sectionId": "III.4",
+    "sectionTitle": "PHẦN III. VAI TRÒ CỦA BỐN NHÂN VẬT / 4. Hoàng Quốc Việt",
+    "historicalSummary": "Tháng 5/1941, Hoàng Quốc Việt tham dự Hội nghị Trung ương 8 và tham gia Ban Chấp hành Trung ương.",
+    "keyFacts": [
+      "Tháng 5/1941",
+      "Tham dự Hội nghị Trung ương lần thứ 8",
+      "Tham gia Ban Chấp hành Trung ương"
+    ],
+    "characters": [
+      "Hoàng Quốc Việt"
+    ],
+    "timeline": "Tháng 5/1941",
+    "importance": "IMPORTANT",
+    "questionPotential": "MEDIUM",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q085",
+    "notes": "Tham gia cơ quan lãnh đạo cao nhất của Đảng từ Hội nghị Pác Bó."
+  },
+  {
+    "unitKey": "III-VIET-1943",
+    "sectionId": "III.4",
+    "sectionTitle": "PHẦN III. VAI TRÒ CỦA BỐN NHÂN VẬT / 4. Hoàng Quốc Việt",
+    "historicalSummary": "Năm 1943, Hoàng Quốc Việt được giao trọng trách quyền Bí thư Tổng bộ Việt Minh.",
+    "keyFacts": [
+      "Năm 1943",
+      "Quyền Bí thư Tổng bộ Việt Minh",
+      "Lãnh đạo công tác Mặt trận và vận động quần chúng"
+    ],
+    "characters": [
+      "Hoàng Quốc Việt"
+    ],
+    "timeline": "Năm 1943",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q086",
+    "notes": "Trọng trách lãnh đạo Mặt trận cứu quốc thời kỳ tiền khởi nghĩa."
+  },
+  {
+    "unitKey": "III-VIET-1945",
+    "sectionId": "III.4",
+    "sectionTitle": "PHẦN III. VAI TRÒ CỦA BỐN NHÂN VẬT / 4. Hoàng Quốc Việt",
+    "historicalSummary": "Tháng 8/1945, Hoàng Quốc Việt được bầu làm Ủy viên Thường vụ Trung ương, cùng Trung ương lãnh đạo Tổng khởi nghĩa.",
+    "keyFacts": [
+      "Tháng 8/1945 tại Hội nghị toàn quốc của Đảng",
+      "Bầu làm Ủy viên Thường vụ Trung ương",
+      "Cùng Trung ương Đảng tham gia lãnh đạo Tổng khởi nghĩa"
+    ],
+    "characters": [
+      "Hoàng Quốc Việt"
+    ],
+    "timeline": "Tháng 8/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q087",
+    "notes": "Kiện toàn Ban Thường vụ Trung ương lãnh đạo trực tiếp Tổng khởi nghĩa."
+  },
+  {
+    "unitKey": "III-VIET-SOUTH",
+    "sectionId": "III.4",
+    "sectionTitle": "PHẦN III. VAI TRÒ CỦA BỐN NHÂN VẬT / 4. Hoàng Quốc Việt",
+    "historicalSummary": "Nhiệm vụ đặc phái viên vào Nam Bộ của Hoàng Quốc Việt (đối chiếu III.4 và V.3).",
+    "keyFacts": [
+      "Được cử làm đặc phái viên vào Nam Bộ",
+      "Kiểm tra và chỉ đạo phong trào giành chính quyền",
+      "Củng cố chính quyền và Mặt trận sau cách mạng"
+    ],
+    "characters": [
+      "Hoàng Quốc Việt"
+    ],
+    "timeline": "Tháng 8 - 9/1945",
+    "importance": "NEEDS_REVIEW",
+    "questionPotential": "LOW",
+    "coverageStatus": "HELD",
+    "questionId": null,
+    "notes": "HELD FOR SOURCE REVIEW: R03 lưu ý phân biệt mốc trước/sau khởi nghĩa, tránh nhầm lẫn với diễn biến 25/8 tại Sài Gòn."
+  },
+  {
+    "unitKey": "IV-COMMITTEE",
+    "sectionId": "IV.1",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 1. Ngày 13/8/1945",
+    "historicalSummary": "Thành lập Ủy ban Khởi nghĩa toàn quốc gồm 5 đồng chí, do Trường Chinh trực tiếp phụ trách.",
+    "keyFacts": [
+      "Ngày 13/8/1945",
+      "Thành viên: Trường Chinh, Võ Nguyên Giáp, Trần Đăng Ninh, Lê Thanh Nghị, Chu Văn Tấn",
+      "Trường Chinh trực tiếp phụ trách"
+    ],
+    "characters": [
+      "Trường Chinh",
+      "Võ Nguyên Giáp"
+    ],
+    "timeline": "13/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q088",
+    "notes": "Cơ quan phát lệnh Tổng khởi nghĩa toàn quốc."
+  },
+  {
+    "unitKey": "IV-ORDER-ISSUE",
+    "sectionId": "IV.1",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 1. Ngày 13/8/1945",
+    "historicalSummary": "Đêm 13/8/1945, Ủy ban Khởi nghĩa toàn quốc ban bố Quân lệnh số 1 phát lệnh Tổng khởi nghĩa.",
+    "keyFacts": [
+      "Đêm 13/8/1945",
+      "Ủy ban Khởi nghĩa toàn quốc ban bố",
+      "Quân lệnh số 1 chính thức phát lệnh Tổng khởi nghĩa"
+    ],
+    "characters": [
+      "Trường Chinh",
+      "Võ Nguyên Giáp"
+    ],
+    "timeline": "Đêm 13/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q089",
+    "notes": "Văn kiện hiệu triệu toàn dân đứng lên khởi nghĩa."
+  },
+  {
+    "unitKey": "IV-ORDER-CONTENT",
+    "sectionId": "IV.1",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 1. Ngày 13/8/1945",
+    "historicalSummary": "Nội dung Quân lệnh số 1: thời cơ đến, kêu gọi toàn dân khởi nghĩa, kết hợp chính trị và vũ trang, giành chính quyền trước khi Đồng minh vào.",
+    "keyFacts": [
+      "Khẳng định thời cơ giành độc lập đã đến",
+      "Kêu gọi quân dân cả nước khởi nghĩa",
+      "Kết hợp đấu tranh chính trị với vũ trang",
+      "Hành động khẩn trương kiên quyết trước khi Đồng minh vào"
+    ],
+    "characters": [],
+    "timeline": "13/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q090",
+    "notes": "Nội dung chỉ đạo hành động tác chiến của Quân lệnh số 1."
+  },
+  {
+    "unitKey": "IV-ORDER-AUTHORS",
+    "sectionId": "IV.1",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 1. Ngày 13/8/1945",
+    "historicalSummary": "Trần Huy Liệu soạn thảo văn bản, Võ Nguyên Giáp thay mặt Ủy ban ký Quân lệnh số 1.",
+    "keyFacts": [
+      "Trần Huy Liệu soạn thảo",
+      "Võ Nguyên Giáp thay mặt Ủy ban Khởi nghĩa toàn quốc ký",
+      "Người soạn và người ký không phải là một người"
+    ],
+    "characters": [
+      "Trần Huy Liệu",
+      "Võ Nguyên Giáp"
+    ],
+    "timeline": "13/08/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q091",
+    "notes": "Chi tiết chính xác về người soạn và người ký Quân lệnh 1."
+  },
+  {
+    "unitKey": "IV-PARTY-CONFERENCE",
+    "sectionId": "IV.2",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 2. Ngày 13–15/8/1945",
+    "historicalSummary": "Hội nghị toàn quốc của Đảng tại Tân Trào quyết định phát động Tổng khởi nghĩa giành chính quyền.",
+    "keyFacts": [
+      "Từ 13 đến 15/8/1945 tại Tân Trào, Tuyên Quang",
+      "Đánh giá Nhật Bản sắp thất bại hoàn toàn",
+      "Quyết định phát động Tổng khởi nghĩa trước khi Đồng minh vào"
+    ],
+    "characters": [
+      "Trường Chinh"
+    ],
+    "timeline": "13/08/1945 - 15/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q092",
+    "notes": "Quyết sách toàn diện của Đảng về Tổng khởi nghĩa."
+  },
+  {
+    "unitKey": "IV-PRINCIPLES",
+    "sectionId": "IV.2",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 2. Ngày 13–15/8/1945",
+    "historicalSummary": "Ba nguyên tắc hành động đề ra tại Hội nghị Tân Trào: Tập trung, Thống nhất và Kịp thời.",
+    "keyFacts": [
+      "Tập trung: tập trung lực lượng vào nhiệm vụ chính",
+      "Thống nhất: thống nhất về chính trị, quân sự, hành động và chỉ huy",
+      "Kịp thời: hành động nhanh chóng, không bỏ lỡ thời cơ"
+    ],
+    "characters": [
+      "Trường Chinh"
+    ],
+    "timeline": "13/08/1945 - 15/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q093",
+    "notes": "Ba nguyên tắc chỉ đạo phương pháp khởi nghĩa."
+  },
+  {
+    "unitKey": "IV-GIAP-ELECTION",
+    "sectionId": "IV.2",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 2. Ngày 13–15/8/1945",
+    "historicalSummary": "Bầu bổ sung Võ Nguyên Giáp vào BCH Trung ương tại Hội nghị toàn quốc của Đảng.",
+    "keyFacts": [
+      "Trường Chinh lãnh đạo đường lối và tổ chức",
+      "Hoàng Quốc Việt bầu vào Thường vụ Trung ương",
+      "Võ Nguyên Giáp bầu bổ sung vào Ban Chấp hành Trung ương"
+    ],
+    "characters": [
+      "Võ Nguyên Giáp",
+      "Hoàng Quốc Việt",
+      "Trường Chinh"
+    ],
+    "timeline": "Tháng 8/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q094",
+    "notes": "Phân công cụ thể trong bộ máy lãnh đạo Đảng."
+  },
+  {
+    "unitKey": "IV-LOCAL-INITIATIVE",
+    "sectionId": "IV.3",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 3. Ngày 14–15/8/1945",
+    "historicalSummary": "Các địa phương chủ động phát động nổi dậy sau tin Nhật đầu hàng, không chờ lệnh Trung ương khi thời cơ chín muồi.",
+    "keyFacts": [
+      "Chính quyền tay sai hoang mang sau tin Nhật đầu hàng",
+      "Các tổ chức Việt Minh chủ động phát động nổi dậy",
+      "Mít tinh, biểu tình, binh vận, chiếm công sở, lập chính quyền"
+    ],
+    "characters": [],
+    "timeline": "14/08/1945 - 15/08/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q095",
+    "notes": "Tính năng động sáng tạo của cơ sở Việt Minh."
+  },
+  {
+    "unitKey": "IV-CONGRESS",
+    "sectionId": "IV.4",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 4. Ngày 16/8/1945",
+    "historicalSummary": "Quốc dân Đại hội Tân Trào ngày 16/8/1945 với hơn 60 đại biểu ba miền.",
+    "keyFacts": [
+      "Ngày 16/8/1945",
+      "Đình Tân Trào, Tuyên Quang",
+      "Hơn 60 đại biểu đại diện các giới, đoàn thể, dân tộc, tôn giáo ba miền"
+    ],
+    "characters": [
+      "Hồ Chí Minh"
+    ],
+    "timeline": "16/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q096",
+    "notes": "Đại hội đại biểu quốc dân lịch sử."
+  },
+  {
+    "unitKey": "IV-CONGRESS-DECISIONS",
+    "sectionId": "IV.4",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 4. Ngày 16/8/1945",
+    "historicalSummary": "Quyết định của Quốc dân Đại hội Tân Trào: tán thành Tổng khởi nghĩa, 10 chính sách Việt Minh, lập Ủy ban DTGP, Quốc kỳ, Quốc ca.",
+    "keyFacts": [
+      "Tán thành Tổng khởi nghĩa",
+      "Thông qua 10 chính sách lớn của Việt Minh",
+      "Thành lập Ủy ban Dân tộc giải phóng do Hồ Chí Minh làm Chủ tịch",
+      "Quy định Quốc kỳ cờ đỏ sao vàng năm cánh",
+      "Chọn Tiến quân ca làm Quốc ca"
+    ],
+    "characters": [
+      "Hồ Chí Minh",
+      "Văn Cao"
+    ],
+    "timeline": "16/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q097",
+    "notes": "Các biểu tượng và quyết sách lập quốc thiêng liêng."
+  },
+  {
+    "unitKey": "IV-THAI-NGUYEN-DATES",
+    "sectionId": "IV.4",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 4. Ngày 16/8/1945",
+    "historicalSummary": "Phân biệt xuất quân ngày 16/8 từ Tân Trào và tiến công thắng lợi ngày 20/8 tại thị xã Thái Nguyên.",
+    "keyFacts": [
+      "Ngày 16/8/1945 đơn vị xuất quân từ Tân Trào",
+      "Rạng sáng 20/8/1945 tiến công giành thắng lợi tại thị xã Thái Nguyên",
+      "Võ Nguyên Giáp trực tiếp chỉ huy"
+    ],
+    "characters": [
+      "Võ Nguyên Giáp"
+    ],
+    "timeline": "16/08/1945 - 20/08/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q098",
+    "notes": "R05 lưu ý phân biệt hai mốc ngày."
+  },
+  {
+    "unitKey": "IV-LIBERATION-COMMITTEE",
+    "sectionId": "IV.5",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 5. Ngày 17/8/1945",
+    "historicalSummary": "Ủy ban Dân tộc giải phóng Việt Nam ra mắt ngày 17/8/1945 tại Tân Trào do Hồ Chí Minh làm Chủ tịch.",
+    "keyFacts": [
+      "Ngày 17/8/1945 ra mắt tại Tân Trào",
+      "Hồ Chí Minh làm Chủ tịch",
+      "15 thành viên như chính phủ lâm thời",
+      "Phạm Văn Đồng trong Ban Thường trực"
+    ],
+    "characters": [
+      "Hồ Chí Minh",
+      "Phạm Văn Đồng"
+    ],
+    "timeline": "17/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q099",
+    "notes": "Chính phủ tiền thân ra mắt trước quốc dân."
+  },
+  {
+    "unitKey": "IV-CALL",
+    "sectionId": "IV.5",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 5. Ngày 17/8/1945",
+    "historicalSummary": "Lời kêu gọi sau khi Ủy ban Dân tộc giải phóng ra mắt (đối chiếu R06).",
+    "keyFacts": [
+      "Lời kêu gọi: Giờ quyết định... Toàn quốc đồng bào hãy đứng dậy...",
+      "Tinh thần tự lực tự cường"
+    ],
+    "characters": [
+      "Hồ Chí Minh"
+    ],
+    "timeline": "17/08/1945",
+    "importance": "NEEDS_REVIEW",
+    "questionPotential": "LOW",
+    "coverageStatus": "HELD",
+    "questionId": null,
+    "notes": "HELD FOR SOURCE REVIEW: R06 cảnh báo về trích dẫn nguyên văn lời nói cá nhân trong nguồn cần kiểm chứng ấn bản gốc."
+  },
+  {
+    "unitKey": "IV-FOUR-PROVINCES",
+    "sectionId": "IV.6",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 6. Ngày 18/8/1945",
+    "historicalSummary": "Bốn tỉnh giành chính quyền ở tỉnh lỵ sớm nhất ngày 18/8/1945: Bắc Giang, Hải Dương, Hà Tĩnh, Quảng Nam.",
+    "keyFacts": [
+      "Ngày 18/8/1945",
+      "Bốn tỉnh: Bắc Giang, Hải Dương, Hà Tĩnh, Quảng Nam",
+      "Thắng lợi sớm cổ vũ phong trào cả nước"
+    ],
+    "characters": [],
+    "timeline": "18/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q100",
+    "notes": "Bốn ngọn cờ đầu giành chính quyền tỉnh lỵ sớm nhất."
+  },
+  {
+    "unitKey": "IV-HANOI-17",
+    "sectionId": "IV.7",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 7. Khởi nghĩa Hà Nội",
+    "historicalSummary": "Ngày 17/8/1945 tại Nhà hát Lớn Hà Nội, Việt Minh chuyển cuộc mít tinh của chính quyền thân Nhật thành tuần hành ủng hộ cách mạng.",
+    "keyFacts": [
+      "Ngày 17/8/1945",
+      "Nhà hát Lớn Hà Nội",
+      "Chuyển mít tinh của chính quyền thân Nhật thành tuần hành ủng hộ cách mạng giành độc lập"
+    ],
+    "characters": [],
+    "timeline": "17/08/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q101",
+    "notes": "Khúc dạo đầu xuất sắc cho khởi nghĩa 19/8 tại Hà Nội."
+  },
+  {
+    "unitKey": "IV-HANOI-MORNING",
+    "sectionId": "IV.7",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 7. Khởi nghĩa Hà Nội",
+    "historicalSummary": "Sáng 19/8/1945, hàng chục vạn người mít tinh tại Quảng trường Nhà hát Lớn rồi chia đoàn biểu tình lớn.",
+    "keyFacts": [
+      "Sáng 19/8/1945",
+      "Hàng chục vạn nhân dân và ngoại thành tiến về trung tâm",
+      "10 giờ sáng: Mít tinh lớn tại Quảng trường Nhà hát Lớn",
+      "Đại diện Việt Minh tuyên bố mục tiêu giành chính quyền",
+      "Chuyển thành các đoàn biểu tình tuần hành"
+    ],
+    "characters": [],
+    "timeline": "Sáng 19/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q102",
+    "notes": "Quy mô biểu dương lực lượng chính trị khổng lồ tại thủ đô."
+  },
+  {
+    "unitKey": "IV-HANOI-TAKEOVER",
+    "sectionId": "IV.7",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 7. Khởi nghĩa Hà Nội",
+    "historicalSummary": "Trưa và chiều 19/8, lực lượng cách mạng tiếp quản Phủ Khâm sai, Sở Cảnh sát, Bưu điện, Trại Bảo an binh; chính quyền Hà Nội về tay nhân dân.",
+    "keyFacts": [
+      "Trưa và chiều ngày 19/8/1945",
+      "Tiếp quản: Phủ Khâm sai Bắc Kỳ, Sở Cảnh sát, Sở Bưu điện, Trại Bảo an binh...",
+      "Sử dụng sức mạnh chính trị kết hợp vũ trang hỗ trợ",
+      "Cuối ngày 19/8 chính quyền Hà Nội về tay nhân dân"
+    ],
+    "characters": [],
+    "timeline": "Chiều 19/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q103",
+    "notes": "Tiếp quản hoàn toàn chính quyền thủ đô."
+  },
+  {
+    "unitKey": "IV-HANOI-MEANING",
+    "sectionId": "IV.7",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 7. Khởi nghĩa Hà Nội",
+    "historicalSummary": "Ý nghĩa thắng lợi ở Hà Nội: thắng lợi tại trung tâm lớn nhất miền Bắc, tạo tiếng vang, thúc đẩy cả nước, góp phần quyết định vào Tổng khởi nghĩa.",
+    "keyFacts": [
+      "Thắng lợi tại trung tâm chính trị lớn nhất miền Bắc",
+      "Tạo tiếng vang lớn toàn quốc",
+      "Thúc đẩy các địa phương nhanh chóng giành chính quyền",
+      "Góp phần quyết định vào thắng lợi Tổng khởi nghĩa"
+    ],
+    "characters": [],
+    "timeline": "19/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q104",
+    "notes": "Ý nghĩa chiến lược lan tỏa toàn quốc của khởi nghĩa Hà Nội."
+  },
+  {
+    "unitKey": "IV-THAI-NGUYEN-MEANING",
+    "sectionId": "IV.8",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 8. Ngày 20/8/1945",
+    "historicalSummary": "Ý nghĩa thắng lợi tại thị xã Thái Nguyên ngày 20/8 và vai trò chỉ huy của Võ Nguyên Giáp.",
+    "keyFacts": [
+      "Mở rộng địa bàn kiểm soát cách mạng",
+      "Củng cố vị trí chiến lược Khu giải phóng Việt Bắc",
+      "Tạo điều kiện thuận lợi cho các tỉnh lân cận",
+      "Võ Nguyên Giáp trực tiếp chỉ huy"
+    ],
+    "characters": [
+      "Võ Nguyên Giáp"
+    ],
+    "timeline": "20/08/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q105",
+    "notes": "Hoạt động quân sự hiệp đồng hỗ trợ khởi nghĩa."
+  },
+  {
+    "unitKey": "IV-HUE",
+    "sectionId": "IV.9",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 9. Ngày 23/8/1945",
+    "historicalSummary": "Khởi nghĩa thắng lợi tại Huế ngày 23/8/1945 làm suy sụp cơ sở chính trị của triều đình nhà Nguyễn.",
+    "keyFacts": [
+      "Ngày 23/8/1945",
+      "Huế là kinh đô triều Nguyễn, bộ máy quân chủ cuối cùng",
+      "Hàng vạn nhân dân chiếm cơ quan hành chính",
+      "Lập chính quyền cách mạng, làm suy sụp cơ sở triều Nguyễn"
+    ],
+    "characters": [],
+    "timeline": "23/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q106",
+    "notes": "Đòn đánh quyết định vào sào huyệt chế độ quân chủ."
+  },
+  {
+    "unitKey": "IV-SAIGON-FORCES",
+    "sectionId": "IV.10",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 10. Ngày 25/8/1945",
+    "historicalSummary": "Lực lượng tham gia khởi nghĩa Sài Gòn ngày 25/8: Xứ ủy Nam Kỳ, Việt Minh, công nhân, nông dân, thanh niên, học sinh, sinh viên, đoàn thể yêu nước.",
+    "keyFacts": [
+      "Xứ ủy Nam Kỳ và Việt Minh chuẩn bị",
+      "Nhân dân Sài Gòn, Chợ Lớn và lân cận",
+      "Các tầng lớp: công nhân, nông dân, thanh niên, học sinh, sinh viên, đoàn thể"
+    ],
+    "characters": [],
+    "timeline": "25/08/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q107",
+    "notes": "Lực lượng quần chúng khổng lồ tại Nam Bộ."
+  },
+  {
+    "unitKey": "IV-SAIGON-RESULT",
+    "sectionId": "IV.10",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 10. Ngày 25/8/1945",
+    "historicalSummary": "Khởi nghĩa Sài Gòn ngày 25/8 thắng lợi, tiếp quản cảnh sát, mật thám, hành chính; chính quyền về tay nhân dân, quyết định thắng lợi ở Nam Bộ.",
+    "keyFacts": [
+      "Ngày 25/8/1945 tiếp quản cơ quan hành chính, cảnh sát, mật thám",
+      "Cuối ngày 25/8 chính quyền về tay nhân dân",
+      "Quyết định phong trào Nam Bộ và góp phần hoàn thành Tổng khởi nghĩa"
+    ],
+    "characters": [],
+    "timeline": "25/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q108",
+    "notes": "Hoàn tất giải phóng trung tâm đô thị lớn thứ ba cả nước."
+  },
+  {
+    "unitKey": "IV-MEETING-26",
+    "sectionId": "IV.11",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 11. Ngày 26/8/1945",
+    "historicalSummary": "Ban Thường vụ Trung ương Đảng họp tại Hà Nội ngày 26/8/1945 do Hồ Chí Minh chủ trì bàn các nhiệm vụ cấp bách của nhà nước mới.",
+    "keyFacts": [
+      "Ngày 26/8/1945 tại Hà Nội, Hồ Chí Minh chủ trì",
+      "Củng cố chính quyền, lập Chính phủ lâm thời",
+      "Chuẩn bị Tuyên ngôn Độc lập và lễ tuyên bố",
+      "Giải quyết đối nội, đối ngoại, bảo vệ cách mạng"
+    ],
+    "characters": [
+      "Hồ Chí Minh"
+    ],
+    "timeline": "26/08/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q109",
+    "notes": "Bước chuyển lịch sử sang xây dựng và bảo vệ chính quyền non trẻ."
+  },
+  {
+    "unitKey": "IV-GOVERNMENT-27",
+    "sectionId": "IV.12",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 12. Ngày 27/8/1945",
+    "historicalSummary": "Thành lập Chính phủ lâm thời ngày 27/8/1945: Hồ Chí Minh làm Chủ tịch, Phạm Văn Đồng làm Bộ trưởng Tài chính, Võ Nguyên Giáp làm Bộ trưởng Nội vụ.",
+    "keyFacts": [
+      "Ngày 27/8/1945 cải tổ Ủy ban Dân tộc giải phóng thành Chính phủ lâm thời",
+      "Hồ Chí Minh làm Chủ tịch Chính phủ",
+      "Phạm Văn Đồng: Bộ trưởng Bộ Tài chính",
+      "Võ Nguyên Giáp: Bộ trưởng Bộ Nội vụ"
+    ],
+    "characters": [
+      "Hồ Chí Minh",
+      "Phạm Văn Đồng",
+      "Võ Nguyên Giáp"
+    ],
+    "timeline": "27/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q110",
+    "notes": "Thiết lập cơ cấu nhân sự chủ chốt của Chính phủ lâm thời."
+  },
+  {
+    "unitKey": "IV-NATIONWIDE-28",
+    "sectionId": "IV.13",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 13. Ngày 28/8/1945",
+    "historicalSummary": "Đến ngày 28/8/1945, Tổng khởi nghĩa cơ bản thắng lợi trên cả nước, chính quyền thuộc về nhân dân.",
+    "keyFacts": [
+      "Ngày 28/8/1945 chính quyền về cơ bản thuộc về nhân dân",
+      "Giải thể chính quyền cũ, lập các Ủy ban nhân dân cách mạng",
+      "Chính quyền thuộc địa, phong kiến và tay sai sụp đổ",
+      "Mốc hoàn thành cơ bản Tổng khởi nghĩa"
+    ],
+    "characters": [],
+    "timeline": "28/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q111",
+    "notes": "Mốc kết thúc toàn thắng của Tổng khởi nghĩa trong 15 ngày."
+  },
+  {
+    "unitKey": "IV-ABDICATION",
+    "sectionId": "IV.14",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 14. Ngày 30/8/1945",
+    "historicalSummary": "Vua Bảo Đại thoái vị ngày 30/8/1945 tại Ngọ Môn (Huế), chấm dứt chế độ phong kiến quân chủ.",
+    "keyFacts": [
+      "Ngày 30/8/1945 tại Ngọ Môn, Huế",
+      "Bảo Đại thoái vị, trao ấn kiếm cho đại diện Chính phủ lâm thời",
+      "Chấm dứt chế độ quân chủ, kết thúc triều Nguyễn",
+      "Hoàn thành sự sụp đổ chế độ phong kiến"
+    ],
+    "characters": [
+      "Bảo Đại",
+      "Trần Huy Liệu"
+    ],
+    "timeline": "30/08/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q112",
+    "notes": "Chấm dứt hoàn toàn thể chế quân chủ phong kiến nghìn năm."
+  },
+  {
+    "unitKey": "IV-DECLARATION-PLACE",
+    "sectionId": "IV.15",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 15. Ngày 2/9/1945",
+    "historicalSummary": "Chủ tịch Hồ Chí Minh đọc bản Tuyên ngôn Độc lập tại Quảng trường Ba Đình, Hà Nội ngày 2/9/1945.",
+    "keyFacts": [
+      "Ngày 2/9/1945",
+      "Địa điểm: Quảng trường Ba Đình, Hà Nội",
+      "Hồ Chí Minh thay mặt Chính phủ lâm thời đọc Tuyên ngôn Độc lập"
+    ],
+    "characters": [
+      "Hồ Chí Minh"
+    ],
+    "timeline": "02/09/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q062",
+    "notes": "Draft pilot đã có từ trước, giữ nguyên không sửa."
+  },
+  {
+    "unitKey": "IV-DECLARATION-CONTENT",
+    "sectionId": "IV.15",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 15. Ngày 2/9/1945",
+    "historicalSummary": "Nội dung Tuyên ngôn Độc lập: quyền con người, tố cáo Pháp - Nhật, khẳng định giành chính quyền từ tay Nhật, chấm dứt thuộc địa quân chủ, quyết tâm bảo vệ độc lập.",
+    "keyFacts": [
+      "Khẳng định quyền bình đẳng, quyền sống, tự do, mưu cầu hạnh phúc",
+      "Tố cáo tội ác thực dân Pháp và phát xít Nhật",
+      "Khẳng định nhân dân giành chính quyền từ tay Nhật",
+      "Chấm dứt thuộc địa và quân chủ",
+      "Khẳng định quyền độc lập tự do và quyết tâm bảo vệ"
+    ],
+    "characters": [
+      "Hồ Chí Minh"
+    ],
+    "timeline": "02/09/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q113",
+    "notes": "Các nội dung tuyên ngôn lịch sử."
+  },
+  {
+    "unitKey": "IV-DECLARATION-QUOTE",
+    "sectionId": "IV.15",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 15. Ngày 2/9/1945",
+    "historicalSummary": "Câu tuyên bố lịch sử về quyền tự do độc lập được tài liệu trích dẫn.",
+    "keyFacts": [
+      "Nước Việt Nam có quyền hưởng tự do và độc lập..."
+    ],
+    "characters": [
+      "Hồ Chí Minh"
+    ],
+    "timeline": "02/09/1945",
+    "importance": "NEEDS_REVIEW",
+    "questionPotential": "LOW",
+    "coverageStatus": "HELD",
+    "questionId": null,
+    "notes": "HELD FOR SOURCE REVIEW: R06 cảnh báo về trích dẫn nguyên văn cần ấn phẩm gốc đối chiếu."
+  },
+  {
+    "unitKey": "IV-DECLARATION-MEANING",
+    "sectionId": "IV.15",
+    "sectionTitle": "PHẦN IV. DIỄN BIẾN CỤ THỂ / 15. Ngày 2/9/1945",
+    "historicalSummary": "Sự kiện 2/9/1945 chính thức khai sinh nước VNDCCH, là thành quả cao nhất của Cách mạng tháng Tám.",
+    "keyFacts": [
+      "Chính thức khai sinh nước Việt Nam Dân chủ Cộng hòa",
+      "Thành quả cao nhất của Cách mạng tháng Tám năm 1945"
+    ],
+    "characters": [
+      "Hồ Chí Minh"
+    ],
+    "timeline": "02/09/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q114",
+    "notes": "Ý nghĩa tột đỉnh của ngày Quốc khánh 2/9."
+  },
+  {
+    "unitKey": "V-DONG",
+    "sectionId": "V.1",
+    "sectionTitle": "PHẦN V. HOẠT ĐỘNG SAU THẮNG LỢI / 1. Phạm Văn Đồng",
+    "historicalSummary": "Phạm Văn Đồng giữ chức Bộ trưởng Bộ Tài chính, giải quyết khó khăn, xây dựng nền tài chính độc lập.",
+    "keyFacts": [
+      "Bộ trưởng Bộ Tài chính trong Chính phủ lâm thời",
+      "Giải quyết khó khăn tài chính chính quyền mới",
+      "Xây dựng nền tài chính độc lập",
+      "Củng cố nền tảng kinh tế tài chính nhà nước mới"
+    ],
+    "characters": [
+      "Phạm Văn Đồng"
+    ],
+    "timeline": "Sau 02/09/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q115",
+    "notes": "Trọng trách xây dựng kinh tế tài chính của đồng chí Đồng."
+  },
+  {
+    "unitKey": "V-GIAP",
+    "sectionId": "V.2",
+    "sectionTitle": "PHẦN V. HOẠT ĐỘNG SAU THẮNG LỢI / 2. Võ Nguyên Giáp",
+    "historicalSummary": "Võ Nguyên Giáp giữ chức Bộ trưởng Bộ Nội vụ, tổ chức bộ máy, phụ trách an ninh nội chính và bảo vệ lễ 2/9/1945.",
+    "keyFacts": [
+      "Bộ trưởng Bộ Nội vụ",
+      "Tổ chức bộ máy chính quyền, an ninh trật tự nội chính",
+      "Bảo vệ an toàn lễ tuyên bố độc lập ngày 2/9/1945",
+      "Củng cố chính quyền trước thù trong giặc ngoài"
+    ],
+    "characters": [
+      "Võ Nguyên Giáp"
+    ],
+    "timeline": "Sau 02/09/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q116",
+    "notes": "Nhiệm vụ nội chính và bảo vệ chính quyền non trẻ."
+  },
+  {
+    "unitKey": "V-VIET",
+    "sectionId": "V.3",
+    "sectionTitle": "PHẦN V. HOẠT ĐỘNG SAU THẮNG LỢI / 3. Hoàng Quốc Việt",
+    "historicalSummary": "Hoàng Quốc Việt làm đặc phái viên vào Nam Bộ, đến Sài Gòn 27/8 và họp 7/9/1945 thống nhất lực lượng.",
+    "keyFacts": [
+      "Đặc phái viên Trung ương vào Nam Bộ",
+      "Đến Sài Gòn ngày 27/8/1945",
+      "Cuộc họp ngày 7/9/1945 thống nhất các tổ chức cách mạng",
+      "Củng cố chính quyền và Mặt trận, giải quyết chia rẽ"
+    ],
+    "characters": [
+      "Hoàng Quốc Việt",
+      "Cao Hồng Lãnh"
+    ],
+    "timeline": "27/08/1945 - 07/09/1945",
+    "importance": "NEEDS_REVIEW",
+    "questionPotential": "LOW",
+    "coverageStatus": "HELD",
+    "questionId": null,
+    "notes": "HELD FOR SOURCE REVIEW: R03 lưu ý phân biệt mốc đến Sài Gòn 27/8 sau khi Sài Gòn đã khởi nghĩa 25/8."
+  },
+  {
+    "unitKey": "V-CHINH",
+    "sectionId": "V.4",
+    "sectionTitle": "PHẦN V. HOẠT ĐỘNG SAU THẮNG LỢI / 4. Trường Chinh",
+    "historicalSummary": "Trường Chinh tiếp tục giữ vai trò lãnh đạo Đảng, hoạch định đường lối chính trị, củng cố tổ chức và giải quyết nhiệm vụ cấp bách.",
+    "keyFacts": [
+      "Tiếp tục giữ vai trò lãnh đạo trong Đảng",
+      "Hoạch định đường lối chính trị",
+      "Củng cố tổ chức Đảng và chính quyền",
+      "Giải quyết nhiệm vụ chính trị cấp bách"
+    ],
+    "characters": [
+      "Trường Chinh"
+    ],
+    "timeline": "Sau 02/09/1945",
+    "importance": "IMPORTANT",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q117",
+    "notes": "Đầu não lãnh đạo chính trị của Đảng sau khi giành độc lập."
+  },
+  {
+    "unitKey": "VII-LEADERSHIP",
+    "sectionId": "VII.1",
+    "sectionTitle": "PHẦN VII. NGUYÊN NHÂN THẮNG LỢI / 1. Nguyên nhân chủ quan",
+    "historicalSummary": "Sự lãnh đạo đúng đắn của Đảng và Hồ Chí Minh: xác định đúng nhiệm vụ, xây dựng lực lượng, lựa chọn đúng thời điểm khởi nghĩa.",
+    "keyFacts": [
+      "Sự lãnh đạo đúng đắn của Đảng và Chủ tịch Hồ Chí Minh",
+      "Xác định đúng nhiệm vụ giải phóng dân tộc",
+      "Xây dựng lực lượng và chọn đúng thời điểm phát động"
+    ],
+    "characters": [
+      "Hồ Chí Minh"
+    ],
+    "timeline": "1930 - 1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q118",
+    "notes": "Nguyên nhân chủ quan có tính chất quyết định hàng đầu."
+  },
+  {
+    "unitKey": "VII-PREPARATION",
+    "sectionId": "VII.1",
+    "sectionTitle": "PHẦN VII. NGUYÊN NHÂN THẮNG LỢI / 1. Nguyên nhân chủ quan",
+    "historicalSummary": "Quá trình chuẩn bị lâu dài, chu đáo: xây dựng lực lượng chính trị, vũ trang, căn cứ địa, Mặt trận và hệ thống Đảng - Việt Minh.",
+    "keyFacts": [
+      "Chuẩn bị lâu dài chu đáo trong nhiều năm",
+      "Lực lượng chính trị, lực lượng vũ trang",
+      "Căn cứ địa cách mạng, Mặt trận đoàn kết",
+      "Hệ thống tổ chức Đảng và Việt Minh"
+    ],
+    "characters": [],
+    "timeline": "1930 - 1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q119",
+    "notes": "Thực lực cách mạng tích lũy qua 15 năm chuẩn bị."
+  },
+  {
+    "unitKey": "VII-UNITY",
+    "sectionId": "VII.1",
+    "sectionTitle": "PHẦN VII. NGUYÊN NHÂN THẮNG LỢI / 1. Nguyên nhân chủ quan",
+    "historicalSummary": "Tinh thần đoàn kết toàn dân tộc: nhân dân nhiều tầng lớp, ngành nghề, dân tộc và tôn giáo tham gia đấu tranh.",
+    "keyFacts": [
+      "Tinh thần đoàn kết toàn dân tộc",
+      "Nhiều tầng lớp, ngành nghề, dân tộc và tôn giáo",
+      "Khối đại đoàn kết trong Mặt trận Việt Minh"
+    ],
+    "characters": [],
+    "timeline": "1941 - 1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q120",
+    "notes": "Sức mạnh vô địch của khối đại đoàn kết dân tộc."
+  },
+  {
+    "unitKey": "VII-FORCES",
+    "sectionId": "VII.1",
+    "sectionTitle": "PHẦN VII. NGUYÊN NHÂN THẮNG LỢI / 1. Nguyên nhân chủ quan",
+    "historicalSummary": "Kết hợp đấu tranh chính trị và vũ trang: quần chúng chính trị giữ vai trò chủ yếu, lực lượng vũ trang hỗ trợ, nòng cốt và bảo vệ.",
+    "keyFacts": [
+      "Kết hợp đấu tranh chính trị và đấu tranh vũ trang",
+      "Quần chúng chính trị giữ vai trò chủ yếu",
+      "Lực lượng vũ trang giữ vai trò hỗ trợ, nòng cốt và bảo vệ"
+    ],
+    "characters": [],
+    "timeline": "1941 - 1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q121",
+    "notes": "Nghệ thuật quân sự kết hợp hai lực lượng."
+  },
+  {
+    "unitKey": "VII-OBJECTIVE",
+    "sectionId": "VII.2",
+    "sectionTitle": "PHẦN VII. NGUYÊN NHÂN THẮNG LỢI / 2. Nguyên nhân khách quan",
+    "historicalSummary": "Điều kiện khách quan: CTTG II kết thúc, Nhật đầu hàng, bộ máy thống trị suy yếu, Đồng minh chưa kịp vào giải giáp.",
+    "keyFacts": [
+      "Chiến tranh thế giới thứ hai kết thúc",
+      "Phát xít Nhật đầu hàng Đồng minh",
+      "Bộ máy thống trị Nhật và tay sai suy yếu nghiêm trọng",
+      "Quân Đồng minh chưa kịp tiến vào Đông Dương",
+      "Tạo thời cơ thuận lợi cho nhân dân giành chính quyền"
+    ],
+    "characters": [],
+    "timeline": "Tháng 8/1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q122",
+    "notes": "Điều kiện thời cơ quốc tế thuận lợi."
+  },
+  {
+    "unitKey": "VIII-VIETNAM",
+    "sectionId": "VIII",
+    "sectionTitle": "PHẦN VIII. Ý NGHĨA LỊCH SỬ / 1. Đối với Việt Nam",
+    "historicalSummary": "Ý nghĩa đối với Việt Nam: đập tan ách Nhật - tay sai, chấm dứt thuộc địa và quân chủ, lập nước VNDCCH, nhân dân làm chủ, mở ra kỷ nguyên độc lập.",
+    "keyFacts": [
+      "Đập tan ách thống trị phát xít Nhật và tay sai",
+      "Chấm dứt chế độ thuộc địa và quân chủ",
+      "Thành lập nước Việt Nam Dân chủ Cộng hòa",
+      "Nhân dân từ nô lệ thành người làm chủ đất nước",
+      "Mở ra kỷ nguyên độc lập tự do cho dân tộc",
+      "Tạo cơ sở chính trị pháp lý xây dựng nhà nước mới"
+    ],
+    "characters": [],
+    "timeline": "Năm 1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q123",
+    "notes": "Ý nghĩa bước ngoặt vĩ đại nhất lịch sử hiện đại Việt Nam."
+  },
+  {
+    "unitKey": "VIII-WORLD",
+    "sectionId": "VIII.2",
+    "sectionTitle": "PHẦN VIII. Ý NGHĨA LỊCH SỬ / 2. Đối với thế giới",
+    "historicalSummary": "Ý nghĩa đối với thế giới: cổ vũ phong trào giải phóng dân tộc thuộc địa, góp phần chống phát xít - thực dân, khẳng định sức mạnh dân tộc đoàn kết có đường lối đúng.",
+    "keyFacts": [
+      "Cổ vũ phong trào giải phóng dân tộc thuộc địa",
+      "Góp phần chống chủ nghĩa phát xít và thực dân",
+      "Khẳng định sức mạnh dân tộc đoàn kết, có tổ chức và đường lối đúng đắn"
+    ],
+    "characters": [],
+    "timeline": "Năm 1945",
+    "importance": "CORE",
+    "questionPotential": "HIGH",
+    "coverageStatus": "COVERED",
+    "questionId": "cmtt45-q124",
+    "notes": "Tầm vóc quốc tế và thời đại của Cách mạng tháng Tám."
+  }
+]

@@ -30,7 +30,7 @@ test('valid draft passes structure but is never auto-approved, mutated, or publi
 });
 test('missing character, invalid source/excerpt/locator/hash and injected fields are rejected', () => {
   for (const mutate of [
-    row => { delete row.characterAnswers['le-duan']; },
+    row => { delete row.characterAnswers['hoang-quoc-viet']; },
     row => { row.source.excerpt = 'Bịa nội dung không có nguồn'; },
     row => { row.source.blockIds = ['body/999']; },
     row => { row.source.sourceSha256 = 'b'.repeat(64); },

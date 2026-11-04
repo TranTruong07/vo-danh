@@ -18,13 +18,17 @@ export async function readKnowledgeManifest(reference?: KnowledgeSource): Promis
     } catch { throw new KnowledgeAdminError('SOURCE_UNAVAILABLE', 'Chưa đối chiếu được nguồn đã xác nhận của revision này.', 503); }
   }
   try {
-    const [docx, raw] = await Promise.all([readFile(join(process.cwd(), "docs/source/Tong-hop-kien-thuc.docx")), readFile(join(process.cwd(), "knowledge/extraction-manifest.json"), "utf8")]);
+    const isNew = reference?.document === 'Tong-hop-kien-thuc-moi.docx';
+    const document = isNew ? 'Tong-hop-kien-thuc-moi.docx' : 'Tong-hop-kien-thuc.docx';
+    const hash = isNew ? 'fc0f492babe6407a2d9469b9e935f6ce6543916842d1d5e1de6c8a80e64c385e' : SOURCE_SHA256;
+    if (reference && (reference.document !== document || reference.sourceSha256 !== hash)) throw new Error('unknown source');
+    const [docx, raw] = await Promise.all([readFile(join(process.cwd(), 'docs/source', document)), readFile(join(process.cwd(), isNew ? 'knowledge/new-source-manifest.json' : 'knowledge/extraction-manifest.json'), 'utf8')]);
     const manifest = JSON.parse(raw) as ExtractionManifest;
-    if (createHash("sha256").update(docx).digest("hex") !== SOURCE_SHA256 || manifest.sourceSha256 !== SOURCE_SHA256 || manifest.schemaVersion !== 1 || !Array.isArray(manifest.blocks)) throw new Error("source changed");
+    if (createHash("sha256").update(docx).digest("hex") !== hash || manifest.sourceSha256 !== hash || manifest.document !== document || manifest.schemaVersion !== 1 || !Array.isArray(manifest.blocks)) throw new Error("source changed");
     return manifest;
   } catch { throw new KnowledgeAdminError("SOURCE_UNAVAILABLE", "Chưa đối chiếu được tài liệu nguồn trên server. Kiểm tra bộ nguồn trước khi duyệt hoặc công bố.", 503); }
 }
 export async function readKnowledgePreview(): Promise<unknown> {
-  try { return JSON.parse(await readFile(join(process.cwd(), "knowledge/draft-questions-phase-2-v3.json"), "utf8")); }
-  catch { throw new KnowledgeAdminError("PREVIEW_UNAVAILABLE", "Không tìm thấy bộ nháp revision 3 để xem trước.", 503); }
+  try { return JSON.parse(await readFile(join(process.cwd(), "knowledge/new-questions-draft.json"), "utf8")); }
+  catch { throw new KnowledgeAdminError("PREVIEW_UNAVAILABLE", "Chưa có bộ kiến thức mới để xem trước.", 503); }
 }

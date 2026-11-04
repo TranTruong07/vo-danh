@@ -1,4 +1,4 @@
-import type { KnowledgeDraft, KnowledgeSource, KnowledgeStatus, KnowledgeCharacterId } from "@/server/domain/knowledge";
+import type { KnowledgeDraft, KnowledgeSource, KnowledgeStatus, KnowledgeAnswers } from "@/server/domain/knowledge";
 
 export interface KnowledgeQuestionModel {
   _id: string; topicId: KnowledgeDraft["topicId"]; publishedVersionId?: string;
@@ -8,7 +8,7 @@ export interface KnowledgeQuestionModel {
 export interface KnowledgeRevisionModel {
   _id: string; questionId: string; version: number;
   canonicalQuestion: string; aliases: string[]; normalizedPhrases: string[];
-  approvedAnswer: string; characterAnswers: Record<KnowledgeCharacterId, string>;
+  approvedAnswer: string; characterAnswers: KnowledgeAnswers;
   source: KnowledgeSource; status: KnowledgeStatus; reviewNotes: string[];
   reviewedBy?: string; reviewedAt?: Date; rejectionReason?: string;
   createdAt: Date; updatedAt: Date; importBatchId: string;

@@ -1,0 +1,715 @@
+{
+  "phase": "chatbot-knowledge-rebuild-phase-1",
+  "reportedAt": "2026-11-03T06:01:58.351Z",
+  "status": "AWAITING_NEW_BATCH_APPROVAL; PILOT_DRAFTS_PRESERVED",
+  "database": "vo_danh",
+  "cleanup": {
+    "questionsDeleted": 60,
+    "revisionsDeleted": 75,
+    "publishedPointersRemoved": 59,
+    "mode": "explicitly confirmed transaction; no drop",
+    "source": "Tong-hop-kien-thuc.docx",
+    "result": {
+      "database": "vo_danh",
+      "questionsDeleted": 60,
+      "revisionsDeleted": 75,
+      "publishedPointersRemoved": 59,
+      "remaining": {
+        "questions": 0,
+        "revisions": 0
+      },
+      "completedAt": "2026-11-02T00:07:14.554Z",
+      "droppedCollections": [],
+      "retried": false
+    }
+  },
+  "finalKnowledge": {
+    "logicalQuestions": 2,
+    "revisions": 2,
+    "versions": {
+      "1": 2
+    },
+    "draft": 2,
+    "approved": 0,
+    "publishedPointers": 0,
+    "runtimeReadable": 0,
+    "orphanRevisions": 0
+  },
+  "postflight": {
+    "adminRepositoryRows": 2,
+    "resolvedSources": [
+      {
+        "questionId": "cmtt45-q061",
+        "document": "Tong-hop-kien-thuc-moi.docx",
+        "status": "draft",
+        "reviewerPresent": false,
+        "published": false
+      },
+      {
+        "questionId": "cmtt45-q062",
+        "document": "Tong-hop-kien-thuc-moi.docx",
+        "status": "draft",
+        "reviewerPresent": false,
+        "published": false
+      }
+    ],
+    "protectedCollections": [
+      {
+        "name": "knowledge_audit",
+        "count": 135,
+        "unchanged": true
+      },
+      {
+        "name": "knowledge_generation_audit",
+        "count": 8,
+        "unchanged": true
+      },
+      {
+        "name": "knowledge_generation_locks",
+        "count": 1,
+        "unchanged": true
+      },
+      {
+        "name": "knowledge_private_files.chunks",
+        "count": 1,
+        "unchanged": true
+      },
+      {
+        "name": "knowledge_private_files.files",
+        "count": 1,
+        "unchanged": true
+      },
+      {
+        "name": "knowledge_proposals",
+        "count": 4,
+        "unchanged": true
+      },
+      {
+        "name": "knowledge_source_chunks",
+        "count": 187,
+        "unchanged": true
+      },
+      {
+        "name": "knowledge_sources",
+        "count": 1,
+        "unchanged": true
+      }
+    ],
+    "publishedRuntimeCount": 0,
+    "retiredQuestionAnswer": null,
+    "draftQuestionAnswer": null,
+    "dailyBudget": {
+      "day": "2026-11-02",
+      "used": 2,
+      "limit": 5,
+      "remaining": 3
+    }
+  },
+  "source": {
+    "document": "Tong-hop-kien-thuc-moi.docx",
+    "sha256": "fc0f492babe6407a2d9469b9e935f6ce6543916842d1d5e1de6c8a80e64c385e",
+    "counts": {
+      "paragraphs": 395,
+      "tables": 0,
+      "blocks": 395
+    },
+    "sections": [
+      {
+        "sectionId": "I",
+        "title": "BỐI CẢNH LỊCH SỬ"
+      },
+      {
+        "sectionId": "II",
+        "title": "QUÁ TRÌNH CHUẨN BỊ CHO CÁCH MẠNG THÁNG TÁM"
+      },
+      {
+        "sectionId": "III",
+        "title": "VAI TRÒ CỦA BỐN NHÂN VẬT TRONG QUÁ TRÌNH CHUẨN BỊ VÀ LÃNH ĐẠO CÁCH MẠNG"
+      },
+      {
+        "sectionId": "IV",
+        "title": "DIỄN BIẾN CỤ THỂ CỦA CÁCH MẠNG THÁNG TÁM NĂM 1945"
+      },
+      {
+        "sectionId": "V",
+        "title": "HOẠT ĐỘNG CỦA BỐN NHÂN VẬT SAU KHI CÁCH MẠNG THÁNG TÁM THẮNG LỢI"
+      },
+      {
+        "sectionId": "VII",
+        "title": "NGUYÊN NHÂN THẮNG LỢI"
+      },
+      {
+        "sectionId": "VIII",
+        "title": "Ý NGHĨA LỊCH SỬ"
+      }
+    ],
+    "nonemptyParagraphs": 394,
+    "storage": "private DOCX + static extraction manifest; not auto-confirmed/registered in MongoDB"
+  },
+  "generation": {
+    "authorizedMaximumCalls": 2,
+    "actualGenerationRequests": 2,
+    "retries": 0,
+    "model": "gemini-3.5-flash-lite",
+    "apiVersion": "v1beta",
+    "providerTimeoutMs": 30000,
+    "matchingTimeoutUnchanged": true,
+    "calls": [
+      {
+        "call": 1,
+        "blockId": "body/24",
+        "at": "2026-11-02T05:32:14.399Z",
+        "model": "gemini-3.5-flash-lite",
+        "status": "draft_exported",
+        "generationRequests": 1,
+        "httpStatus": 200,
+        "tokens": {
+          "promptTokenCount": 627,
+          "candidatesTokenCount": 393,
+          "totalTokenCount": 1020,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 627
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "duplicateCount": 0,
+        "draftId": "cmtt45-q061",
+        "latencyMs": 2926
+      },
+      {
+        "call": 2,
+        "blockId": "body/310",
+        "at": "2026-11-02T05:32:42.739Z",
+        "model": "gemini-3.5-flash-lite",
+        "status": "draft_exported",
+        "generationRequests": 1,
+        "httpStatus": 200,
+        "tokens": {
+          "promptTokenCount": 638,
+          "candidatesTokenCount": 482,
+          "totalTokenCount": 1120,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 638
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "duplicateCount": 0,
+        "draftId": "cmtt45-q062",
+        "latencyMs": 2596
+      }
+    ],
+    "totalTokens": 2140,
+    "schemaValid": 2,
+    "grounded": 2,
+    "fourPersonas": 2,
+    "newQuestions": 2,
+    "aliases": 4,
+    "needsAdminReview": 2,
+    "insufficientEvidenceRejected": 0,
+    "duplicatesDetected": 0,
+    "historicalTruthApproved": false,
+    "rawOutputLocation": ".local/knowledge-rebuild/pilot-call-{1,2}-raw.json",
+    "freeTierEvidence": {
+      "ownerConfirmedNoBilling": true,
+      "officialPricingChecked": "2026-11-02",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing#gemini-3.5-flash-lite",
+      "projectQuotaIndependentlyVerified": false
+    }
+  },
+  "import": {
+    "dryRun": {
+      "mode": "dry-run",
+      "batchId": "651c869fb99061d3e6df554448bd8288f4d7d653035c8728d442dc61423ea0ee",
+      "actions": [
+        {
+          "questionId": "cmtt45-q061",
+          "revisionId": "cmtt45-q061:v1",
+          "action": "insert_draft",
+          "reason": "Tạo revision draft, không publish."
+        },
+        {
+          "questionId": "cmtt45-q062",
+          "revisionId": "cmtt45-q062:v1",
+          "action": "insert_draft",
+          "reason": "Tạo revision draft, không publish."
+        }
+      ],
+      "duplicateAliases": [],
+      "warnings": [
+        {
+          "questionId": "cmtt45-q062",
+          "code": "DATES_REVIEW",
+          "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+        }
+      ],
+      "writes": 0,
+      "published": 0,
+      "approved": 0
+    },
+    "apply": {
+      "mode": "apply",
+      "batchId": "651c869fb99061d3e6df554448bd8288f4d7d653035c8728d442dc61423ea0ee",
+      "actions": [
+        {
+          "questionId": "cmtt45-q061",
+          "revisionId": "cmtt45-q061:v1",
+          "action": "insert_draft",
+          "reason": "Tạo revision draft, không publish."
+        },
+        {
+          "questionId": "cmtt45-q062",
+          "revisionId": "cmtt45-q062:v1",
+          "action": "insert_draft",
+          "reason": "Tạo revision draft, không publish."
+        }
+      ],
+      "duplicateAliases": [],
+      "warnings": [
+        {
+          "questionId": "cmtt45-q062",
+          "code": "DATES_REVIEW",
+          "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+        }
+      ],
+      "writes": 2,
+      "published": 0,
+      "approved": 0
+    },
+    "idempotency": {
+      "mode": "dry-run",
+      "batchId": "651c869fb99061d3e6df554448bd8288f4d7d653035c8728d442dc61423ea0ee",
+      "actions": [
+        {
+          "questionId": "cmtt45-q061",
+          "revisionId": "cmtt45-q061:v1",
+          "action": "skip",
+          "reason": "Nội dung đã có; không đổi status hoặc publishedVersionId."
+        },
+        {
+          "questionId": "cmtt45-q062",
+          "revisionId": "cmtt45-q062:v1",
+          "action": "skip",
+          "reason": "Nội dung đã có; không đổi status hoặc publishedVersionId."
+        }
+      ],
+      "duplicateAliases": [],
+      "warnings": [
+        {
+          "questionId": "cmtt45-q062",
+          "code": "DATES_REVIEW",
+          "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+        }
+      ],
+      "writes": 0,
+      "published": 0,
+      "approved": 0
+    }
+  },
+  "tests": {
+    "unitRegression": {
+      "total": 248,
+      "passed": 247,
+      "failed": 1,
+      "exitCode": 1,
+      "generationCalls": 0,
+      "networkBlocked": true
+    },
+    "knownBaselineFailure": {
+      "exitCode": 1,
+      "total": 16,
+      "passed": 15,
+      "failures": [
+        "not ok 14 - holdout contains independent short/reordered/unaccented/negative/multi/scope cases"
+      ],
+      "headTrackedFilesRestoredOnlyInIsolatedCopy": true
+    },
+    "pythonExtraction": {
+      "passed": 3,
+      "failed": 0
+    },
+    "typescriptDocxPdfExtraction": {
+      "passed": 11,
+      "failed": 0,
+      "warning": "PDF fixture font fallback warnings; assertions passed"
+    },
+    "typescript": {
+      "exitCode": 0
+    },
+    "eslintChangedScope": {
+      "exitCode": 0
+    },
+    "productionBuild": {
+      "exitCode": 0,
+      "isolatedWorkspace": true,
+      "copiedEnvFile": false,
+      "generationCalls": 0,
+      "networkBlocked": true
+    },
+    "mongoDestructiveIntegration": {
+      "status": "NOT_RUN",
+      "reason": "Current database must not be used for fixtures/destructive/concurrency/rollback tests. Mocks used; no test URI required."
+    },
+    "browserE2E": {
+      "status": "NOT_RUN"
+    },
+    "publishedOnlyRealRead": {
+      "publishedIndex": 0,
+      "retiredQuestionAnswer": null,
+      "draftQuestionAnswer": null
+    }
+  },
+  "changedFiles": [
+    ".env.chat.example",
+    "features/knowledge/knowledge-detail.tsx",
+    "features/knowledge/knowledge-list.tsx",
+    "features/knowledge/proposal-fields.tsx",
+    "next.config.ts",
+    "scripts/extract-knowledge.py",
+    "scripts/knowledge/character-dialogue.ts",
+    "scripts/knowledge/phase-2-5.ts",
+    "server/domain/knowledge-admin.ts",
+    "server/domain/knowledge-generation.ts",
+    "server/domain/knowledge.ts",
+    "server/infrastructure/gemini-knowledge-generator.ts",
+    "server/models/knowledge.ts",
+    "server/repositories/knowledge-generation.ts",
+    "server/repositories/knowledge-source.ts",
+    "server/services/chat-characters.ts",
+    "server/services/chat-history-admin.ts",
+    "server/services/knowledge-admin.ts",
+    "server/services/knowledge-generation-validation.ts",
+    "server/services/knowledge-import.ts",
+    "server/services/knowledge-validation.ts",
+    "tests/chat-repositories.test.mjs",
+    "tests/chat.test.mjs",
+    "tests/knowledge-extraction.test.py",
+    "tests/knowledge-generation.test.mjs",
+    "tests/knowledge.test.mjs",
+    "tests/support/knowledge-admin-fixture.mjs"
+  ],
+  "createdFiles": [
+    "scripts/cleanup-old-knowledge.ts",
+    "scripts/rebuild-knowledge-pilot.ts",
+    "scripts/check-knowledge-rebuild.mjs",
+    "server/services/knowledge-cleanup.ts",
+    "server/repositories/knowledge-cleanup.ts",
+    "tests/knowledge-rebuild.test.mjs",
+    "knowledge/new-source-manifest.json",
+    "knowledge/new-questions-draft.json",
+    "docs/chatbot-rebuild-phase-1.md",
+    "docs/chatbot-rebuild-phase-1-test-report.json",
+    "docs/chatbot-rebuild-knowledge-review.md"
+  ],
+  "constraints": {
+    "approved": false,
+    "published": false,
+    "deployed": false,
+    "envLocalChanged": false,
+    "quizQrTtsPwaPaymentChanged": false,
+    "oldLedgerReset": false,
+    "fakeReviewerCreated": false,
+    "characterProfileModified": false
+  },
+  "limitations": [
+    "Only 2 pilot questions under explicit budget; not full coverage.",
+    "Distinct persona prefixes preserve the exact source core; broader stylistic paraphrases need review.",
+    "Source chronology/citations and alias meaning require admin review.",
+    "One pre-existing Phase 2.5 matcher snapshot test still fails on isolated HEAD.",
+    "Mongo test integration and browser E2E not executed.",
+    "New source is traced private static content, not a Mongo source-management upload.",
+    "Current character profile rename is left to owner; server reuses prior Le Duan ObjectId as requested."
+  ],
+  "planningContinuation": {
+    "dateLocal": "2026-11-03",
+    "timezone": "Asia/Bangkok",
+    "status": "AWAITING_BATCH_APPROVAL",
+    "counts": {
+      "units": 68,
+      "existing": 2,
+      "proposed": 62,
+      "held": 4,
+      "facets": 273
+    },
+    "coverage": {
+      "definition": "Completed draft intents / planned meaningful intents; not historical approval, paragraph coverage or alias coverage.",
+      "draftIntentPercent": 2.94,
+      "publishedIntentPercent": 0
+    },
+    "sections": [
+      {
+        "section": "I",
+        "units": 8,
+        "existing": 0,
+        "proposed": 8,
+        "held": 0
+      },
+      {
+        "section": "II",
+        "units": 11,
+        "existing": 1,
+        "proposed": 10,
+        "held": 0
+      },
+      {
+        "section": "III",
+        "units": 8,
+        "existing": 0,
+        "proposed": 7,
+        "held": 1
+      },
+      {
+        "section": "IV",
+        "units": 30,
+        "existing": 1,
+        "proposed": 27,
+        "held": 2
+      },
+      {
+        "section": "V",
+        "units": 4,
+        "existing": 0,
+        "proposed": 3,
+        "held": 1
+      },
+      {
+        "section": "VII",
+        "units": 5,
+        "existing": 0,
+        "proposed": 5,
+        "held": 0
+      },
+      {
+        "section": "VIII",
+        "units": 2,
+        "existing": 0,
+        "proposed": 2,
+        "held": 0
+      }
+    ],
+    "nextBatch": {
+      "id": "B01",
+      "unitKeys": [
+        "I-GERMANY",
+        "II-CONFERENCE8",
+        "II-MILITARY"
+      ],
+      "maximumCalls": 3,
+      "maximumNewDrafts": 3,
+      "status": "awaiting_owner_confirmation"
+    },
+    "newGenerationCalls": 0,
+    "newDatabaseWrites": 0,
+    "priorPilotCalls": 2,
+    "authorizedNewCalls": 0,
+    "readOnlyPreflight": {
+      "at": "2026-11-03T00:47:07.080Z",
+      "databaseName": "vo_danh",
+      "mode": "read-only",
+      "environmentDatabaseNameConfigured": true,
+      "config": {
+        "enabled": true,
+        "model": "gemini-3.5-flash-lite",
+        "dailyCalls": 5,
+        "maxPerRequest": 1,
+        "apiKeyPresent": true,
+        "apiVersion": "v1beta"
+      },
+      "applicationBudget": {
+        "day": "2026-11-03",
+        "used": 0,
+        "limit": 5,
+        "remaining": 5
+      },
+      "providerRemainingQuota": "UNVERIFIED",
+      "newSourceConfirmedInMongo": false,
+      "existingDraftIds": [
+        "cmtt45-q061",
+        "cmtt45-q062"
+      ],
+      "duplicateCandidateCount": 3,
+      "duplicates": [
+        {
+          "unit": "II-RETURN",
+          "existingQuestionId": "cmtt45-q061",
+          "matches": [
+            {
+              "kind": "exact_duplicate",
+              "id": "cmtt45-q061",
+              "question": "Ngày 28/1/1941 diễn ra sự kiện gì liên quan đến Nguyễn Ái Quốc?",
+              "revisionId": "cmtt45-q061:v1"
+            }
+          ]
+        },
+        {
+          "unit": "IV-DECLARATION-PLACE",
+          "existingQuestionId": "cmtt45-q062",
+          "matches": [
+            {
+              "kind": "exact_duplicate",
+              "id": "cmtt45-q062",
+              "question": "Ngày 2/9/1945, tại đâu, Chủ tịch Hồ Chí Minh thay mặt Chính phủ lâm thời đọc bản Tuyên ngôn Độc lập?",
+              "revisionId": "cmtt45-q062:v1"
+            }
+          ]
+        }
+      ],
+      "intentOverlaps": [
+        {
+          "left": "III-VIET-1945",
+          "right": "IV-GIAP-ELECTION",
+          "kind": "possible_duplicate"
+        },
+        {
+          "left": "VIII-VIETNAM",
+          "right": "VIII-WORLD",
+          "kind": "possible_duplicate"
+        }
+      ],
+      "writes": 0,
+      "generationCalls": 0
+    },
+    "preservation": {
+      "collections": 11,
+      "identicalCountAndContentSha256": true,
+      "snapshots": [
+        ".local/knowledge-rebuild-planning/inventory-before.json",
+        ".local/knowledge-rebuild-planning/inventory-after.json"
+      ]
+    },
+    "dryRun": {
+      "mode": "dry-run",
+      "batchId": "651c869fb99061d3e6df554448bd8288f4d7d653035c8728d442dc61423ea0ee",
+      "actions": [
+        {
+          "questionId": "cmtt45-q061",
+          "revisionId": "cmtt45-q061:v1",
+          "action": "skip",
+          "reason": "Nội dung đã có; không đổi status hoặc publishedVersionId."
+        },
+        {
+          "questionId": "cmtt45-q062",
+          "revisionId": "cmtt45-q062:v1",
+          "action": "skip",
+          "reason": "Nội dung đã có; không đổi status hoặc publishedVersionId."
+        }
+      ],
+      "duplicateAliases": [],
+      "warnings": [
+        {
+          "questionId": "cmtt45-q062",
+          "code": "DATES_REVIEW",
+          "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+        }
+      ],
+      "writes": 0,
+      "published": 0,
+      "approved": 0
+    },
+    "mongo": {
+      "database": "vo_danh",
+      "logicalQuestions": 2,
+      "revisions": 2,
+      "statuses": {
+        "draft": 2
+      },
+      "approved": 0,
+      "published": 0,
+      "runtime": 0,
+      "integrity": {
+        "duplicateVersions": [],
+        "invalidRevisionIds": [],
+        "orphanRevisions": [],
+        "brokenPublishedPointers": []
+      }
+    },
+    "tests": {
+      "unitRegression": {
+        "total": 257,
+        "passed": 256,
+        "failed": 1,
+        "exitCode": 1,
+        "generationCalls": 0,
+        "networkBlocked": true
+      },
+      "newPlanningTests": {
+        "passed": 9,
+        "failed": 0
+      },
+      "pythonExtraction": {
+        "passed": 3,
+        "failed": 0
+      },
+      "docxPdfExtraction": {
+        "passed": 11,
+        "failed": 0
+      },
+      "typescript": {
+        "exitCode": 0
+      },
+      "eslint": {
+        "exitCode": 0
+      },
+      "productionBuild": {
+        "exitCode": 0,
+        "isolatedWorkspace": true,
+        "copiedEnvFile": false,
+        "generationCalls": 0,
+        "networkBlocked": true
+      },
+      "mongoWriteIntegration": {
+        "status": "NOT_RUN",
+        "reason": "Current database must not be used for fixtures/destructive/concurrency/rollback tests. Mocks used; no test URI required."
+      },
+      "browserE2E": {
+        "status": "NOT_RUN"
+      }
+    },
+    "warnings": {
+      "unresolvedEditorialCodes": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10"
+      ],
+      "heldUnits": [
+        "III-VIET-SOUTH",
+        "IV-CALL",
+        "IV-DECLARATION-QUOTE",
+        "V-VIET"
+      ],
+      "providerQuota": "UNVERIFIED",
+      "sourceConfirmedInMongo": false
+    },
+    "files": [
+      "scripts/knowledge/rebuild-generation-plan.mjs",
+      "scripts/plan-knowledge-rebuild.mjs",
+      "scripts/inspect-rebuild-plan.ts",
+      "scripts/check-knowledge-rebuild.mjs",
+      "tests/knowledge-generation-plan.test.mjs",
+      "knowledge/new-generation-plan.json",
+      "docs/chatbot-rebuild-generation-plan.md",
+      "docs/chatbot-rebuild-phase-1.md",
+      "docs/chatbot-rebuild-phase-1-test-report.json",
+      "docs/chatbot-rebuild-knowledge-review.md"
+    ],
+    "limitations": [
+      "68 planned intents are editorial grouping, not independently approved historical facts.",
+      "No new canonical/aliases/answers generated; future duplicate/coverage audit required.",
+      "Multi-paragraph batch adapter not live-tested; do not rerun exhausted pilot.",
+      "One existing Phase 2.5 snapshot failure remains.",
+      "No Mongo write integration or browser E2E in this planning pass."
+    ]
+  }
+}

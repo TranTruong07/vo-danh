@@ -4,9 +4,9 @@ export class KnowledgeAdminError extends Error {
   constructor(public code: string, message: string, public status = 400) { super(message); }
 }
 export const KNOWLEDGE_STATUS_LABELS: Record<KnowledgeStatus, string> = { draft: "Bản nháp", pending_review: "Chờ duyệt", approved: "Đã duyệt", rejected: "Từ chối" };
-export const KNOWLEDGE_CHARACTER_LABELS: Record<KnowledgeCharacterId, string> = { "truong-chinh": "Trường Chinh", "le-duan": "Lê Duẩn", "pham-van-dong": "Phạm Văn Đồng", "vo-nguyen-giap": "Võ Nguyên Giáp" };
+export const KNOWLEDGE_CHARACTER_LABELS: Record<KnowledgeCharacterId, string> = { "truong-chinh": "Trường Chinh", "le-duan": "Lê Duẩn", "hoang-quoc-viet": "Hoàng Quốc Việt", "pham-van-dong": "Phạm Văn Đồng", "vo-nguyen-giap": "Võ Nguyên Giáp" };
 export type KnowledgeOperation = "create_revision" | "submit" | "approve" | "reject" | "publish" | "unpublish";
-export interface KnowledgeEdit { canonicalQuestion: string; aliases: string[]; approvedAnswer: string; characterAnswers: Record<KnowledgeCharacterId, string> }
+export interface KnowledgeEdit { canonicalQuestion: string; aliases: string[]; approvedAnswer: string; characterAnswers: KnowledgeDraft['characterAnswers'] }
 export interface KnowledgeCommand {
   action: KnowledgeOperation; revisionId: string; expectedVersion: number; reason: string;
   acknowledged?: boolean; content?: KnowledgeEdit;

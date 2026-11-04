@@ -1,0 +1,101 @@
+{
+  "validRecords": 64,
+  "errors": [],
+  "warnings": [
+    {
+      "questionId": "cmtt45-q062",
+      "code": "DATES_REVIEW",
+      "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+    },
+    {
+      "questionId": "cmtt45-q066",
+      "code": "CAUSES",
+      "message": "Duyệt nghĩa aliases, phân biệt nguyên nhân chủ quan và khách quan."
+    },
+    {
+      "questionId": "cmtt45-q089",
+      "code": "QUAN_LENH",
+      "message": "Đối chiếu riêng người soạn, người ký, thời điểm ban bố và việc đọc Quân lệnh số 1; không suy diễn vai trò hoặc mốc thời gian ngoài nguồn mới."
+    },
+    {
+      "questionId": "cmtt45-q090",
+      "code": "QUAN_LENH",
+      "message": "Đối chiếu riêng người soạn, người ký, thời điểm ban bố và việc đọc Quân lệnh số 1; không suy diễn vai trò hoặc mốc thời gian ngoài nguồn mới."
+    },
+    {
+      "questionId": "cmtt45-q091",
+      "code": "QUAN_LENH",
+      "message": "Đối chiếu riêng người soạn, người ký, thời điểm ban bố và việc đọc Quân lệnh số 1; không suy diễn vai trò hoặc mốc thời gian ngoài nguồn mới."
+    },
+    {
+      "questionId": "cmtt45-q102",
+      "code": "DATES_REVIEW",
+      "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+    },
+    {
+      "questionId": "cmtt45-q103",
+      "code": "DATES_REVIEW",
+      "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+    },
+    {
+      "questionId": "cmtt45-q104",
+      "code": "DATES_REVIEW",
+      "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+    },
+    {
+      "questionId": "cmtt45-q106",
+      "code": "DATES_REVIEW",
+      "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+    },
+    {
+      "questionId": "cmtt45-q107",
+      "code": "DATES_REVIEW",
+      "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+    },
+    {
+      "questionId": "cmtt45-q108",
+      "code": "DATES_REVIEW",
+      "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+    },
+    {
+      "questionId": "cmtt45-q113",
+      "code": "DATES_REVIEW",
+      "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+    },
+    {
+      "questionId": "cmtt45-q114",
+      "code": "DATES_REVIEW",
+      "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+    },
+    {
+      "questionId": "cmtt45-q115",
+      "code": "DATES_REVIEW",
+      "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+    },
+    {
+      "questionId": "cmtt45-q116",
+      "code": "DATES_REVIEW",
+      "message": "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện."
+    },
+    {
+      "questionId": "cmtt45-q118",
+      "code": "CAUSES",
+      "message": "Duyệt nghĩa aliases, phân biệt nguyên nhân chủ quan và khách quan."
+    },
+    {
+      "questionId": "cmtt45-q119",
+      "code": "CAUSES",
+      "message": "Duyệt nghĩa aliases, phân biệt nguyên nhân chủ quan và khách quan."
+    },
+    {
+      "questionId": "cmtt45-q120",
+      "code": "CAUSES",
+      "message": "Duyệt nghĩa aliases, phân biệt nguyên nhân chủ quan và khách quan."
+    },
+    {
+      "questionId": "cmtt45-q122",
+      "code": "CAUSES",
+      "message": "Duyệt nghĩa aliases, phân biệt nguyên nhân chủ quan và khách quan."
+    }
+  ]
+}

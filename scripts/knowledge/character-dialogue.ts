@@ -46,7 +46,7 @@ const proposals: Record<string, readonly [string, string]> = {
   "cmtt45-q040": ["Bảng tổng hợp ghi trọng tâm đóng góp của Võ Nguyên Giáp là xây dựng lực lượng vũ trang, tổ chức và thực hiện nhiệm vụ quân sự.", "Điểm cần nhớ gắn với Đội Việt Nam Tuyên truyền Giải phóng quân và nhiệm vụ khởi nghĩa."],
 };
 
-export function proposeCharacterDialogue(questionId: string): Record<KnowledgeCharacterId, string> {
+export function proposeCharacterDialogue(questionId: string): Partial<Record<KnowledgeCharacterId, string>> {
   const pair = proposals[questionId];
   if (!pair) throw new Error(`Chưa có đề xuất lời thoại cho ${questionId}.`);
   const [main, detail] = pair;

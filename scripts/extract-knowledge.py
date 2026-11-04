@@ -33,7 +33,7 @@ def extract(source):
         nonlocal major, section
         text = unicodedata.normalize("NFC", text)
         normalized = normalize_source(text)
-        top = re.match(r"^(VIII|VII|VI|V|IV|IX|III|II|I|X)\.\s+(.+)$", normalized)
+        top = re.match(r"^(?:PHẦN\s+)?(VIII|VII|VI|V|IV|IX|III|II|I|X)\.\s+(.+)$", normalized)
         sub = re.match(r"^(\d+)\.\s+(.+)$", normalized)
         heading = False
         if kind == "paragraph" and top:
@@ -75,7 +75,7 @@ def extract(source):
 
     walk(document, document.element.body)
     for block in blocks:
-        if "Đính chính" in block["text"] or block["sectionId"].startswith("V.2"):
+        if source.name == 'Tong-hop-kien-thuc.docx' and ("Đính chính" in block["text"] or block["sectionId"].startswith("V.2")):
             warnings.append(f"REVIEW_LE_DUAN: đối chiếu {block['id']} với đính chính sau bảng V.5 và IX.4.")
     return {"schemaVersion": 1, "document": source.name,
             "sourceSha256": hashlib.sha256(source.read_bytes()).hexdigest(),

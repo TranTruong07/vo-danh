@@ -18,7 +18,7 @@ function matches(doc, query, vars = {}) {
     });
   });
 }
-const characters = ['truong-chinh', 'le-duan', 'pham-van-dong', 'vo-nguyen-giap'];
+const characters = ['truong-chinh', 'hoang-quoc-viet', 'pham-van-dong', 'vo-nguyen-giap'];
 const logical = () => ({ _id: 'cmtt45-q001', topicId: 'cach-mang-thang-tam-1945', publishedVersionId: 'cmtt45-q001:v2' });
 const revision = () => ({ _id: 'cmtt45-q001:v2', questionId: 'cmtt45-q001', status: 'approved', reviewedBy: 'synthetic-reviewer', reviewedAt: new Date(), canonicalQuestion: 'Synthetic question?', aliases: ['Synthetic alias?'], approvedAnswer: 'Synthetic neutral', source: { document: 'fixture', sectionId: 'I', excerpt: 'Synthetic source' }, characterAnswers: Object.fromEntries(characters.map(c => [c, `Synthetic ${c}`])) });
 function fixture(question = logical(), revisions = [revision()]) {

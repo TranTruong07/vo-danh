@@ -41,9 +41,9 @@ export function parseProposal(input: unknown, chunks: SourceChunk[]): ProposalCo
   // editor correction before draft conversion. Style may frame this core but is always human-reviewed.
   const core = normalizeKnowledgeSource(neutralAnswer);
   const supported = evidence.some(e => normalizeKnowledgeSource(e.quote).includes(core));
-  const preserved = KNOWLEDGE_CHARACTERS.every(k => normalizeKnowledgeSource(characterAnswers[k]).includes(core));
+  const preserved = KNOWLEDGE_CHARACTERS.every(k => normalizeKnowledgeSource(characterAnswers[k]!).includes(core));
   const framed = KNOWLEDGE_CHARACTERS.every(k => [neutralAnswer, ...PERSONA_FRAMES[k].map(prefix => prefix + neutralAnswer)]
-    .some(allowed => normalizeKnowledgeSource(allowed) === normalizeKnowledgeSource(characterAnswers[k])));
+    .some(allowed => normalizeKnowledgeSource(allowed) === normalizeKnowledgeSource(characterAnswers[k]!)));
   if (!supported) warnings.push('Đáp án trung tính phải là trích đoạn liên tục trong evidence; cần biên tập và đối chiếu nguồn.');
   if (!preserved) warnings.push('Bốn lời đáp phải giữ nguyên đầy đủ phần thông tin trung tính.');
   if (!framed) warnings.push('Lời đáp chỉ được thêm lời dẫn sư phạm được hỗ trợ vào nguyên văn đáp án trung tính; phần ngoài khung cần biên tập lại để không thêm dữ kiện.');

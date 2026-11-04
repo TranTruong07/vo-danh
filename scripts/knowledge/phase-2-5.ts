@@ -170,7 +170,7 @@ export const newProposals: Proposal[] = [
 
 // Retain EVERY neutral clause verbatim in each complete educational persona.
 // Different address, teaching rhythm and transitions; no invented memory or quote.
-export function fullPersonaAnswers(clauses: string[], variant: number): Record<KnowledgeCharacterId, string> {
+export function fullPersonaAnswers(clauses: string[], variant: number): Partial<Record<KnowledgeCharacterId, string>> {
   const first = clauses[0], rest = clauses.slice(1);
   return {
     "truong-chinh": `${variant % 2 ? "Ta cùng phân tích từng ý, cháu nhé." : "Cháu sắp xếp các ý theo trình tự này nhé."}\n${clauses.map((s, i) => `${i + 1}. ${s}`).join("\n")}`,

@@ -7,6 +7,7 @@ const load = loader();
 const { validateChatInput, ChatError } = load('@/server/domain/chat');
 const { matchChatQuestion } = load('@/server/services/chat-matcher');
 const { resolveMappedCharacter, CHARACTER_ENV_KEYS, CHAT_PERSONAS } = load('@/server/services/chat-characters');
+const { KNOWLEDGE_CHARACTERS } = load('@/server/domain/knowledge');
 const sid = '12345678-1234-1234-1234-123456789abc', hash = 'a'.repeat(64), dbid = 'b'.repeat(24);
 const row = { questionId: 'cmtt45-q001', revisionId: 'cmtt45-q001:v2', canonicalQuestion: 'Khởi nghĩa ở Hà Nội thắng lợi ngày nào?', aliases: ['Hà Nội giành chính quyền khi nào?', 'Ngày thắng lợi ở Hà Nội?'] };
 const errorCode = code => error => error.code === code;
@@ -44,13 +45,13 @@ test('strict input rejects character overrides, arbitrary fields and malformed v
   assert.throws(() => validateChatInput({ sessionId: sid, questionId: { $ne: '' } }, 'answer'), errorCode('INVALID_INPUT'));
 });
 test('server mapping resolves all four IDs and fails closed on absent/duplicate/malformed mapping', () => {
-  const env = Object.fromEntries(Object.entries(CHARACTER_ENV_KEYS).map(([, key], i) => [key, String(i + 1).repeat(24)]));
-  for (const [character, key] of Object.entries(CHARACTER_ENV_KEYS)) assert.equal(resolveMappedCharacter(env[key], env), character);
+  const env = Object.fromEntries(KNOWLEDGE_CHARACTERS.map((id, i) => [CHARACTER_ENV_KEYS[id], String(i + 1).repeat(24)]));
+  for (const character of KNOWLEDGE_CHARACTERS) assert.equal(resolveMappedCharacter(env[CHARACTER_ENV_KEYS[character]], env), character);
   assert.throws(() => resolveMappedCharacter(dbid, {}), errorCode('CHARACTER_UNAVAILABLE'));
   const keys = Object.values(CHARACTER_ENV_KEYS);
   assert.throws(() => resolveMappedCharacter(dbid, { [keys[0]]: dbid, [keys[1]]: dbid }), errorCode('CHAT_CONFIGURATION'));
   assert.throws(() => resolveMappedCharacter(dbid, { [keys[0]]: 'Võ Nguyên Giáp' }), errorCode('CHAT_CONFIGURATION'));
-  assert.equal(new Set(Object.values(CHAT_PERSONAS).map(p => p.refusalText)).size, 4);
+  assert.equal(new Set(KNOWLEDGE_CHARACTERS.map(id => CHAT_PERSONAS[id].refusalText)).size, 4);
   for (const persona of Object.values(CHAT_PERSONAS)) assert.match(persona.displayName, /mô phỏng giáo dục/);
 });
 

@@ -5,7 +5,7 @@ import type { KnowledgeQuestionModel, KnowledgeRevisionModel } from "@/server/mo
 export function knowledgeContent(row: Pick<KnowledgeRevisionModel, "canonicalQuestion" | "aliases" | "normalizedPhrases" | "approvedAnswer" | "characterAnswers" | "source" | "reviewNotes">) {
   // Explicit field order: immutable comparison excludes review/import timestamps and state.
   return JSON.stringify({ canonicalQuestion: row.canonicalQuestion, aliases: row.aliases, normalizedPhrases: row.normalizedPhrases,
-    approvedAnswer: row.approvedAnswer, characterAnswers: ["truong-chinh", "le-duan", "pham-van-dong", "vo-nguyen-giap"].map(key => row.characterAnswers[key as keyof typeof row.characterAnswers]),
+    approvedAnswer: row.approvedAnswer, characterAnswers: Object.entries(row.characterAnswers).sort(([a], [b]) => a.localeCompare(b)),
     source: [row.source.document, row.source.sectionId, row.source.sourceSha256, row.source.blockIds, row.source.excerpt, row.source.paragraphIndex, row.source.tableIndex], reviewNotes: row.reviewNotes });
 }
 export function planKnowledgeImport(drafts: KnowledgeDraft[], questions: KnowledgeQuestionModel[], revisions: KnowledgeRevisionModel[]) {

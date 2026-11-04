@@ -1,0 +1,2050 @@
+[
+  {
+    "questionId": "cmtt45-q061",
+    "distinctiveness": "TEMPLATE_BASED_PILOT",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật dùng cấu trúc khung của AI pilot cũ (chỉ thay câu mở đầu, thân giữ nguyên neutral).",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 115,
+        "style": "Pilot template lead-in",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 116,
+        "style": "Pilot template lead-in",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 113,
+        "style": "Pilot template lead-in",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 117,
+        "style": "Pilot template lead-in",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q062",
+    "distinctiveness": "TEMPLATE_BASED_PILOT",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật dùng cấu trúc khung của AI pilot cũ (chỉ thay câu mở đầu, thân giữ nguyên neutral).",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 159,
+        "style": "Pilot template lead-in",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 160,
+        "style": "Pilot template lead-in",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 157,
+        "style": "Pilot template lead-in",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 161,
+        "style": "Pilot template lead-in",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q063",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 221,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 236,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 267,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 249,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q064",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 237,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 233,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 283,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 242,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q065",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 225,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 189,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 239,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 228,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q066",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 303,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 270,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 340,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 328,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q067",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 239,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 188,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 313,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 233,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q068",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 205,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 189,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 227,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 201,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q069",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 210,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 260,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 258,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 229,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q070",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 360,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 349,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 414,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 369,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q071",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 192,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 185,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 239,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 207,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q072",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 372,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 344,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 447,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 346,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q073",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 306,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 317,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 326,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 298,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q074",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 212,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 230,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 246,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 226,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q075",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 226,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 239,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 288,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 265,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q076",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 209,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 245,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 254,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 243,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q077",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 369,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 359,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 450,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 387,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q078",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 333,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 329,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 364,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 358,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q079",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 269,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 275,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 256,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 279,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q080",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 306,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 311,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 338,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 292,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q081",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 411,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 373,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 479,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 361,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q082",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 376,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 325,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 374,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 357,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q083",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 330,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 303,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 332,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 301,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q084",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 194,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 211,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 204,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 193,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q085",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 172,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 188,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 251,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 199,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q086",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 188,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 178,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 206,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 218,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q087",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 229,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 243,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 262,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 242,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q088",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 267,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 249,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 278,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 267,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q089",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 236,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 215,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 248,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 224,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q090",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 299,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 280,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 356,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 315,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q091",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 244,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 207,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 260,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 229,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q092",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 253,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 257,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 319,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 272,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q093",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 228,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 255,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 342,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 294,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q094",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 288,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 275,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 251,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 273,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q095",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 342,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 309,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 364,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 289,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q096",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 240,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 250,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 303,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 263,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q097",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 350,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 317,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 403,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 351,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q098",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 239,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 239,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 305,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 275,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q099",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 310,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 287,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 313,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 296,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q100",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 260,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 291,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 295,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 284,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q101",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 289,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 261,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 317,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 305,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q102",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 348,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 344,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 364,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 316,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q103",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 321,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 288,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 375,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 308,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q104",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 287,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 263,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 318,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 266,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q105",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 327,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 300,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 324,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 275,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q106",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 347,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 302,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 358,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 305,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q107",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 318,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 292,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 314,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 283,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q108",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 306,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 287,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 342,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 293,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q109",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 303,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 283,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 487,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 294,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q110",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 332,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 297,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 383,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 306,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q111",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 279,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 265,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 320,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 291,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q112",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 317,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 289,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 336,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 298,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q113",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 352,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 342,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 416,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 330,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q114",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 209,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 245,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 246,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 237,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q115",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 302,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 262,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 305,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 286,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q116",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 328,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 295,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 306,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 362,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q117",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 289,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 304,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 361,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 306,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q118",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 260,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 270,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 315,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 321,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q119",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 304,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 296,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 353,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 325,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q120",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 264,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 256,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 289,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 279,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q121",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 243,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 251,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 333,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 287,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q122",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 321,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 288,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 428,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 334,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q123",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 342,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 319,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 428,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 326,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  },
+  {
+    "questionId": "cmtt45-q124",
+    "distinctiveness": "DISTINCT_EDITORIAL",
+    "hasLeDuan": false,
+    "allPersonasPresent": true,
+    "allPersonasFactual": true,
+    "noFakeMemories": true,
+    "noFakeQuotes": true,
+    "auditNotes": "Lời đáp 4 nhân vật có cấu trúc câu, văn phong, góc độ tiếp cận và cách xưng hô riêng biệt hoàn toàn.",
+    "personaDetails": {
+      "pham-van-dong": {
+        "textLength": 342,
+        "style": "Điềm đạm, trang trọng, giải thích sâu sắc về thể chế và tổ chức",
+        "verdict": "PASS"
+      },
+      "hoang-quoc-viet": {
+        "textLength": 325,
+        "style": "Gần gũi quần chúng, thực tế, nhấn mạnh đại đoàn kết và Mặt trận Việt Minh",
+        "verdict": "PASS"
+      },
+      "truong-chinh": {
+        "textLength": 368,
+        "style": "Chặt chẽ, giàu tính lý luận, phân tích bối cảnh, phương châm và thời cơ",
+        "verdict": "PASS"
+      },
+      "vo-nguyen-giap": {
+        "textLength": 355,
+        "style": "Điềm tĩnh, dứt khoát, tư duy chiến lược quân sự, nòng cốt vũ trang",
+        "verdict": "PASS"
+      }
+    }
+  }
+]

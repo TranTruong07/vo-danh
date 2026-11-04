@@ -27,16 +27,19 @@ export function revisionDraft(row: KnowledgeRevisionModel): KnowledgeDraft {
 }
 const view = (row: KnowledgeRevisionModel): KnowledgeRevisionView => ({ revisionId: row._id, draft: revisionDraft(row), createdBy: row.createdBy, basedOnRevisionId: row.basedOnRevisionId });
 async function previewPack() {
-  const manifest = await readKnowledgeManifest();
-  const result = validateKnowledge(await readKnowledgePreview(), manifest);
-  if (result.errors.length || result.records.length !== 40 || result.records.some(r => r.version !== 3 || r.status !== "draft" || r.reviewedAt || r.reviewedBy)) throw new KnowledgeAdminError("INVALID_PREVIEW", "Bộ xem trước phải gồm 40 bản nháp revision 3 hợp lệ, chưa duyệt.", 503);
-  return { ...result, manifest };
+  const raw = await readKnowledgePreview();
+  if (!Array.isArray(raw)) throw new KnowledgeAdminError('INVALID_PREVIEW', 'Bộ xem trước không hợp lệ.', 503);
+  if (!raw.length) return { records: [], errors: [], warnings: [] };
+  const manifest = await readKnowledgeManifest(raw[0]?.source);
+  const result = validateKnowledge(raw, manifest);
+  if (result.errors.length || result.records.some(r => r.status !== 'draft' || r.reviewedAt || r.reviewedBy)) throw new KnowledgeAdminError('INVALID_PREVIEW', 'Bộ xem trước phải là bản nháp hợp lệ, chưa duyệt.', 503);
+  return result;
 }
 export async function adminKnowledgeList(preview = false): Promise<KnowledgeList> {
   await requireKnowledgeAdmin();
   const rows = preview ? [] : await listKnowledgeRecords();
   if (rows.length > 2000) throw new KnowledgeAdminError("TOO_MANY_RECORDS", "Kho kiến thức vượt giới hạn danh sách quản trị.", 503);
-  if (preview || !rows.length) {
+  if (preview) {
     const pack = await previewPack();
     return { preview: true, items: pack.records.map(r => ({ id: r._id, question: r.canonicalQuestion, aliases: r.aliases, section: r.sectionId, status: r.status, version: r.version, publishedVersionId: null })) };
   }

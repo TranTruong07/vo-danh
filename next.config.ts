@@ -4,8 +4,8 @@ const nextConfig: NextConfig = {
   serverExternalPackages: ['pdfjs-dist', 'yauzl'],
   // Private source stays in server traces for authenticated knowledge review only.
   outputFileTracingIncludes: {
-    "/admin/knowledge{,/**}": ["./knowledge/extraction-manifest.json", "./knowledge/draft-questions-phase-2-v3.json", "./docs/source/Tong-hop-kien-thuc.docx"],
-    "/api/admin/knowledge{,/**}": ["./knowledge/extraction-manifest.json", "./knowledge/draft-questions-phase-2-v3.json", "./docs/source/Tong-hop-kien-thuc.docx"],
+    "/admin/knowledge{,/**}": ["./knowledge/extraction-manifest.json", "./knowledge/new-questions-draft.json", "./knowledge/new-source-manifest.json", "./docs/source/Tong-hop-kien-thuc-moi.docx", "./docs/source/Tong-hop-kien-thuc.docx"],
+    "/api/admin/knowledge{,/**}": ["./knowledge/extraction-manifest.json", "./knowledge/new-questions-draft.json", "./knowledge/new-source-manifest.json", "./docs/source/Tong-hop-kien-thuc-moi.docx", "./docs/source/Tong-hop-kien-thuc.docx"],
   },
   async headers() {
     return [{ source: "/sw.js", headers: [{ key: "Cache-Control", value: "no-store, max-age=0" }, { key: "Service-Worker-Allowed", value: "/" }] }, { source: "/pwa-assets.json", headers: [{ key: "Cache-Control", value: "no-store" }] }];

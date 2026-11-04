@@ -1,5 +1,5 @@
 import 'server-only';
-import { KNOWLEDGE_CHARACTERS, type KnowledgeCharacterId } from '@/server/domain/knowledge';
+import { ALL_KNOWLEDGE_CHARACTERS as KNOWLEDGE_CHARACTERS, type KnowledgeCharacterId } from '@/server/domain/knowledge';
 import { KnowledgeAdminError } from '@/server/domain/knowledge-admin';
 import { CHAT_REVIEW_STATUSES, type ChatHistoryFilter, type ChatReview, type ChatReviewStatus } from '@/server/domain/chat-history';
 import { chatAnalytics, deleteChatGroup, queryChatGroups, readChatGroup, updateChatReview } from '@/server/repositories/chat-history';

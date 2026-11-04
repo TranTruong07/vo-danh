@@ -1,5 +1,5 @@
 import {
-  KNOWLEDGE_CHARACTERS, KNOWLEDGE_TOPIC, normalizeKnowledgePhrase, normalizeKnowledgeSource,
+  KNOWLEDGE_CHARACTERS, LEGACY_KNOWLEDGE_CHARACTERS, KNOWLEDGE_TOPIC, normalizeKnowledgePhrase, normalizeKnowledgeSource,
   type ExtractionManifest, type KnowledgeDraft, type KnowledgeIssue,
 } from "@/server/domain/knowledge";
 
@@ -32,7 +32,8 @@ export function validateKnowledge(input: unknown, manifest: ExtractionManifest, 
     const aliases = row.aliases;
     if (!Array.isArray(aliases) || aliases.length < 2 || aliases.length > 5 || !aliases.every(alias => text(alias, 500))) fail("ALIASES", "Cần 2–5 aliases không rỗng, tối đa 500 ký tự mỗi alias.");
     if (!text(row.approvedAnswer)) fail("ANSWER", "Thiếu đáp án trung tính (tên trường không phải trạng thái phê duyệt).");
-    if (!object(row.characterAnswers) || Object.keys(row.characterAnswers).length !== 4 || !KNOWLEDGE_CHARACTERS.every(character => object(row.characterAnswers) && text(row.characterAnswers[character]))) fail("CHARACTERS", "Phải có đủ đúng bốn lời đáp nhân vật.");
+    const characters = manifest.document === 'Tong-hop-kien-thuc.docx' ? LEGACY_KNOWLEDGE_CHARACTERS : KNOWLEDGE_CHARACTERS;
+    if (!object(row.characterAnswers) || Object.keys(row.characterAnswers).length !== 4 || !characters.every(character => object(row.characterAnswers) && text(row.characterAnswers[character]))) fail("CHARACTERS", "Phải có đủ đúng bốn lời đáp nhân vật của bộ nguồn.");
     if (!["draft", "pending_review", "approved", "rejected"].includes(String(row.status))) fail("STATUS", "Trạng thái không hợp lệ.");
     if (!Number.isSafeInteger(row.version) || Number(row.version) < 1) fail("VERSION", "Version phải là số nguyên dương.");
     if (!date(row.createdAt) || !date(row.updatedAt) || Date.parse(String(row.updatedAt)) < Date.parse(String(row.createdAt))) fail("DATES", "Ngày tạo/cập nhật không hợp lệ.");
@@ -63,7 +64,7 @@ export function validateKnowledge(input: unknown, manifest: ExtractionManifest, 
     }
     const historicalText = `${row.canonicalQuestion} ${row.approvedAnswer} ${JSON.stringify(row.characterAnswers)}`;
     if (/Lê Duẩn/u.test(historicalText)) issue(warnings, id, "LE_DUAN", "Đối chiếu V.2, bảng V.5, đính chính sau bảng và IX.4; không suy diễn trực tiếp chỉ huy Sài Gòn tháng 8/1945.");
-    if (/Quân lệnh số 1/u.test(historicalText)) issue(warnings, id, "QUAN_LENH", "Phân biệt ban bố đêm 13/8 và Võ Nguyên Giáp đọc ngày 16/8 tại Tân Trào.");
+    if (/Quân lệnh số 1/u.test(historicalText)) issue(warnings, id, "QUAN_LENH", manifest.document === 'Tong-hop-kien-thuc.docx' ? "Phân biệt ban bố đêm 13/8 và Võ Nguyên Giáp đọc ngày 16/8 tại Tân Trào." : "Đối chiếu riêng người soạn, người ký, thời điểm ban bố và việc đọc Quân lệnh số 1; không suy diễn vai trò hoặc mốc thời gian ngoài nguồn mới.");
     if (/(19|23|25)\/8|2\/9/u.test(historicalText)) issue(warnings, id, "DATES_REVIEW", "Đối chiếu riêng Hà Nội, Huế, Sài Gòn và Tuyên ngôn Độc lập; không gộp các sự kiện.");
     if (/chủ quan|khách quan/u.test(historicalText)) issue(warnings, id, "CAUSES", "Duyệt nghĩa aliases, phân biệt nguyên nhân chủ quan và khách quan.");
     if (errors.length === before) records.push(row as unknown as KnowledgeDraft);

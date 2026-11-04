@@ -5,6 +5,7 @@ export type ProposalStatus = 'queued' | 'generating' | 'ready_for_review' | 'ins
 export const PERSONA_FRAMES: Record<KnowledgeCharacterId, string[]> = {
   'truong-chinh': ['Bạn hãy chú ý điểm cốt lõi này: ', 'Ta cùng làm rõ nội dung này: '],
   'le-duan': ['Ta cùng nhìn vào nội dung tài liệu nhé: ', 'Bạn cùng tìm hiểu điểm này nhé: '],
+  'hoang-quoc-viet': ['Cháu cùng bác nắm rõ điều này nhé: ', 'Ta cùng tìm hiểu cho rõ, cháu nhé: '],
   'pham-van-dong': ['Để bạn dễ theo dõi, tài liệu nêu: ', 'Mình cùng đọc chậm đoạn này nhé: '],
   'vo-nguyen-giap': ['Cháu cùng xem đoạn tư liệu này nhé: ', 'Bác mời cháu tìm hiểu qua tư liệu: '],
 };
@@ -21,7 +22,7 @@ export interface SourceRecord {
 export interface Evidence { sourceId: string; chunkId: string; quote: string; start: number; end: number }
 export interface ProposalContent {
   canonicalQuestion: string; aliases: string[]; neutralAnswer: string;
-  characterAnswers: Record<KnowledgeCharacterId, string>; evidence: Evidence[];
+  characterAnswers: Partial<Record<KnowledgeCharacterId, string>>; evidence: Evidence[];
   warnings: string[]; insufficientEvidence: boolean;
 }
 export interface Duplicate {

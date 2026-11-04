@@ -10,6 +10,16 @@ spec.loader.exec_module(extractor)
 
 
 class ExtractionTests(unittest.TestCase):
+    def test_new_source_part_headings_and_exact_pilot_locators(self):
+        data = extractor.extract('docs/source/Tong-hop-kien-thuc-moi.docx')
+        self.assertEqual(data['counts'], {'paragraphs': 395, 'tables': 0, 'blocks': 395})
+        self.assertEqual([s['sectionId'] for s in data['sections']], ['I','II','III','IV','V','VII','VIII'])
+        by_id = {b['id']: b for b in data['blocks']}
+        self.assertEqual(by_id['body/24']['sectionId'], 'II.1')
+        self.assertEqual(by_id['body/310']['sectionId'], 'IV.15')
+        self.assertIn('Quảng trường Ba Đình, Hà Nội', by_id['body/310']['text'])
+        self.assertFalse(any(w.startswith('REVIEW_LE_DUAN') for w in data['warnings']))
+
     def test_body_table_order_and_locators(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "fixture.docx"
