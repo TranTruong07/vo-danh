@@ -14,7 +14,12 @@ export interface ProductContent {
   playTime: string;
   boxContents: string;
 }
-export interface CatalogProduct extends ProductContent { price: number; ready: boolean }
+export interface CatalogProduct extends ProductContent {
+  price: number;
+  ready: boolean;
+  discountPercent: number;
+  originalPrice: number;
+}
 export const DEFAULT_PRODUCT: ProductContent = {
   name: "Board game Dấu Chân Sử Ký", headline: "Mang lịch sử lên bàn chơi.",
   summary: "Cùng bạn bè khám phá câu chuyện của cha ông qua từng lượt chơi. Kết hợp trải nghiệm trên bàn, mã QR và câu hỏi về nhân vật để mỗi câu hỏi đều mở ra một điều thú vị.",

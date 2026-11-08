@@ -4,7 +4,7 @@ import { loader } from './support/load-typescript.mjs';
 
 const domain=loader()('@/server/domain/product');
 const photo=`https://media.example.test/images/products/${'a'.repeat(8)}-aaaa-aaaa-aaaa-${'a'.repeat(12)}.webp`;
-const form=(product={...domain.DEFAULT_PRODUCT,mainImage:photo},price='599000')=>{const f=new FormData();f.set('price',price);f.set('product',JSON.stringify(product));return f;};
+const form=(product={...domain.DEFAULT_PRODUCT,mainImage:photo},price='599000',discountPercent='0')=>{const f=new FormData();f.set('price',price);f.set('discountPercent',discountPercent);f.set('product',JSON.stringify(product));return f;};
 
 function fixture(){
   let allowed=true,row=null,uploads=0,writes=0,reads=0;
@@ -15,7 +15,7 @@ function fixture(){
     '@/server/repositories/images':{uploadProductImage:async()=>{uploads++;return {url:photo,key:'private'};}},
     '@/server/repositories/settings':{
       readShopSettings:async()=>{reads++;return row;},
-      writeShopProduct:async(product,productPrice)=>{writes++;row={product,productPrice};},
+      writeShopProduct:async(product,productPrice,discountPercent=0)=>{writes++;row={product,productPrice,discountPercent};},
     },
   });
   return {service:load('@/server/services/products'),catalog:load('@/server/services/catalog'),set allowed(v){allowed=v;},get counts(){return {uploads,writes,reads};},get row(){return row;}};
@@ -82,4 +82,28 @@ test('product updates change offline version; missing catalog does not prevent q
   const first=await offlineGamePack();product={...product,mainImage:photo,price:699000};const second=await offlineGamePack();
   assert.notEqual(first.version,second.version);assert.equal(second.product.mainImage,photo);assert.deepEqual(first.questions,second.questions);
   product=null;const third=await offlineGamePack();assert.equal(third.product,undefined);assert.equal(third.questions.length,1);
+});
+
+test('discount percent calculates original price and validates percent boundaries',async()=>{
+  const run=fixture();
+  // Valid discount calculation: 410,000 / (1 - 0.21) = 518,987 (Math.round)
+  const saved=await run.service.saveProduct(form(undefined,'410000','21'));
+  assert.equal(saved.price,410000);
+  assert.equal(saved.discountPercent,21);
+  assert.equal(saved.originalPrice,518987);
+
+  const product=await run.catalog.shopProduct();
+  assert.equal(product.price,410000);
+  assert.equal(product.discountPercent,21);
+  assert.equal(product.originalPrice,518987);
+
+  // 0% discount keeps originalPrice === price
+  const savedZero=await run.service.saveProduct(form(undefined,'410000','0'));
+  assert.equal(savedZero.discountPercent,0);
+  assert.equal(savedZero.originalPrice,410000);
+
+  // Rejects invalid discounts: negative, >= 100, non-integers, floats
+  for(const invalid of ['-1','100','105','abc','12.5']){
+    await assert.rejects(()=>run.service.saveProduct(form(undefined,'410000',invalid)),/Phần trăm giảm giá/);
+  }
 });

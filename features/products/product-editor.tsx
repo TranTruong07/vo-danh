@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { saveProductAction, uploadProductPhotoAction } from "@/actions/products";
 import { MAX_PRODUCT_GALLERY, type CatalogProduct } from "@/server/domain/product";
+import { calculateOriginalPrice } from "@/server/domain/settings";
 import { MAX_IMAGE_BYTES } from "@/server/domain/image";
 import { money } from "@/server/domain/order";
 
@@ -13,7 +14,14 @@ export default function ProductEditor({ initial }: { initial: CatalogProduct }) 
   const router = useRouter(), lock = useRef(false);
   const [mainImage, setMainImage] = useState(initial.mainImage), [gallery, setGallery] = useState(initial.gallery);
   const [price, setPrice] = useState(initial.ready ? String(initial.price) : "");
+  const [discountPercent, setDiscountPercent] = useState(String(initial.discountPercent ?? 0));
   const [busy, setBusy] = useState(""), [error, setError] = useState(""), [message, setMessage] = useState("");
+
+  const numPrice = Number(price);
+  const numDiscount = discountPercent.trim() === "" ? 0 : Number(discountPercent);
+  const isPriceValid = Number.isSafeInteger(numPrice) && numPrice >= 1000 && numPrice <= 100_000_000;
+  const isDiscountValid = Number.isSafeInteger(numDiscount) && numDiscount >= 0 && numDiscount < 100;
+  const originalPrice = isPriceValid && isDiscountValid ? calculateOriginalPrice(numPrice, numDiscount) : 0;
 
   async function upload(files: FileList | null, main: boolean) {
     if (!files?.length || lock.current) return;
@@ -55,6 +63,50 @@ export default function ProductEditor({ initial }: { initial: CatalogProduct }) 
       <section className="card"><h2>Thông tin hiển thị trên home</h2><p className="subtitle">Ảnh chính, tên, mô tả, đặc điểm và giá bán sẽ xuất hiện ở phần sản phẩm.</p>
         <label>Tên sản phẩm<input name="name" defaultValue={initial.name} maxLength={120} required /></label>
         <div className="product-editor-grid"><label>Giá bán (VND)<input name="price" type="number" inputMode="numeric" min={1000} max={100000000} step={1} required value={price} onChange={event => setPrice(event.target.value)} /><small>{price && Number.isSafeInteger(Number(price)) ? money(Number(price)) : "Nhập số nguyên, không thêm dấu phân cách."}</small></label><label>Tiêu đề giới thiệu<input name="headline" defaultValue={initial.headline} maxLength={120} required /></label></div>
+        <div className="product-discount-card">
+          <div className="product-discount-original">
+            <span className="product-discount-label">Giá gốc (chưa chiết khấu) <span className="product-discount-info" title="Giá gốc tự động tính: Giá bán / (1 - Giảm giá / 100)">ⓘ</span></span>
+            <div className="product-discount-original-value">{isPriceValid ? money(originalPrice) : "—"}</div>
+          </div>
+          <div className="product-discount-divider" aria-hidden="true" />
+          <div className="product-discount-input-wrap">
+            <label htmlFor="discountPercentInput" className="product-discount-label">Giảm giá</label>
+            <div className="product-discount-field">
+              <input
+                id="discountPercentInput"
+                name="discountPercent"
+                type="number"
+                inputMode="numeric"
+                min={0}
+                max={99}
+                step={1}
+                value={discountPercent}
+                onChange={event => setDiscountPercent(event.target.value)}
+                placeholder="0"
+              />
+              <span className="product-discount-suffix">%</span>
+            </div>
+          </div>
+          <div className="product-discount-badge-preview">
+            <svg className="product-discount-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+              <line x1="7" y1="7" x2="7.01" y2="7"/>
+            </svg>
+            <div className="product-discount-badge-text">
+              {isDiscountValid && numDiscount > 0 ? (
+                <>
+                  <strong>Giảm {numDiscount}%</strong>
+                  <span>để còn {isPriceValid ? money(numPrice) : "—"}</span>
+                </>
+              ) : (
+                <>
+                  <strong>Không giảm giá (0%)</strong>
+                  <span>Nguyên giá {isPriceValid ? money(numPrice) : "—"}</span>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
         <label>Mô tả ngắn<textarea name="summary" defaultValue={initial.summary} rows={4} maxLength={1000} required /></label>
         <label>Đặc điểm nổi bật<textarea name="tags" defaultValue={initial.tags.join("\n")} rows={3} maxLength={305} /><small>Mỗi dòng một đặc điểm. Tối đa 6 dòng, 50 ký tự/dòng.</small></label>
       </section>

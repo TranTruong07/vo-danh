@@ -13,7 +13,21 @@ export default function HomeProduct({ initial, offline }: { initial: CatalogProd
     <div className="product-main-visual"><Image src={product.mainImage || DEFAULT_PRODUCT.mainImage} alt={product.name} fill unoptimized sizes="(max-width:760px) 100vw, 50vw" /></div>
     <div className="product-copy"><p className="eyebrow">MỘT HỘP NHỎ, CẢ HÀNH TRÌNH LỚN</p><h2>{product.headline}</h2><h3>{product.name}</h3><p>{product.summary}</p>
       {!!product.tags.length && <div className="product-tags">{product.tags.map(tag => <span key={tag}>{tag}</span>)}</div>}
-      <div className="product-purchase"><div><span>GIÁ BÁN</span><strong>{product.ready ? money(product.price) : "Đang cập nhật"}</strong></div><PurchaseButton /></div>
+      <div className="product-purchase">
+        <div className="product-price-block">
+          <span className="product-price-label">GIÁ BÁN</span>
+          <div className="product-price-row">
+            <strong className="product-current-price">{product.ready ? money(product.price) : "Đang cập nhật"}</strong>
+            {product.ready && product.discountPercent > 0 && (
+              <>
+                <span className="product-original-price">{money(product.originalPrice)}</span>
+                <span className="product-discount-badge">GIẢM {product.discountPercent}%</span>
+              </>
+            )}
+          </div>
+        </div>
+        <PurchaseButton />
+      </div>
       <p className="product-note">Một món quà khơi gợi sự tò mò và tình yêu lịch sử.</p>
     </div>
   </section>;

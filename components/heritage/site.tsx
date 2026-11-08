@@ -24,12 +24,12 @@ export async function SiteHeader({ active, initialAuthMode, resetToken, publicOn
 }
 
 export async function ProductSection({ shop = false, offline = false }: { shop?: boolean; offline?: boolean }) {
-  const fallback = { ...DEFAULT_PRODUCT, ready: false, price: 0 };
+  const fallback = { ...DEFAULT_PRODUCT, ready: false, price: 0, discountPercent: 0, originalPrice: 0 };
   const product = offline ? fallback : await shopProduct().catch(() => fallback);
   if (!shop) return <HomeProduct initial={product} offline={offline} />;
   return <ShopProduct product={product} />;
 }
 
 export function SiteFooter() {
-  return <footer className="heritage-footer" id="lien-he"><div className="section-wrap footer-grid"><div className="footer-about"><Brand /><p>Kết nối thế hệ trẻ với những câu chuyện ngàn năm.<br />Bằng niềm vui, sự tò mò và công nghệ.</p></div><div><h3>Cùng khám phá</h3><Link href="/#cau-chuyen">Về Dấu Chân Sử Ký</Link><Link href="/shop">Board game của chúng mình</Link></div><div className="contact-column"><h3>Kết nối với chúng mình</h3><p>Dành cho đặt mua, hợp tác và những ý tưởng hay.</p>{contact.isExample ? <><span>dauchansuky@gmail.com</span><span>0332 368 215</span><small className="contact-example"></small></> : <>{contact.email && <a href={`mailto:${contact.email}`}>{contact.email} ↗</a>}{contact.phone && <a href={`tel:${contact.phone.replace(/[^+\d]/g, "")}`}>{contact.phone}</a>}</>}</div></div><div className="footer-bottom section-wrap"><span>© {new Date().getFullYear()} Dấu Chân Sử Ký</span><span>Được tạo nên từ tình yêu lịch sử Việt Nam <span className="footer-heart">♥</span></span><a href="#main-content">Về đầu trang ↑</a></div></footer>;
+  return <footer className="heritage-footer" id="lien-he"><div className="section-wrap footer-grid"><div className="footer-about"><Brand /><p>Kết nối thế hệ trẻ với những câu chuyện ngàn năm.<br />Bằng niềm vui, sự tò mò và công nghệ.</p></div><div><h3>Cùng khám phá</h3><Link href="/#cau-chuyen">Về Dấu Chân Sử Ký</Link><Link href="/shop">Board game của chúng mình</Link></div><div className="contact-column"><h3>Kết nối với chúng mình</h3><p>Dành cho đặt mua, hợp tác và những ý tưởng hay.</p>{contact.isExample ? <><span>dauchansuky@gmail.com</span><span>0987 002 348</span><small className="contact-example"></small></> : <>{contact.email && <a href={`mailto:${contact.email}`}>{contact.email} ↗</a>}{contact.phone && <a href={`tel:${contact.phone.replace(/[^+\d]/g, "")}`}>{contact.phone}</a>}</>}</div></div><div className="footer-bottom section-wrap"><span>© {new Date().getFullYear()} Dấu Chân Sử Ký</span><span>Được tạo nên từ tình yêu lịch sử Việt Nam <span className="footer-heart">♥</span></span><a href="#main-content">Về đầu trang ↑</a></div></footer>;
 }

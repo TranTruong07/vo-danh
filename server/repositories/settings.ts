@@ -13,10 +13,10 @@ export async function writeProductPrice(productPrice: number) {
   );
   return { productPrice, updatedAt: updatedAt.toISOString() };
 }
-export async function writeShopProduct(product: ProductContent, productPrice: number) {
+export async function writeShopProduct(product: ProductContent, productPrice: number, discountPercent = 0) {
   // Content and checkout price share one atomic document update.
   await (await getDatabase()).collection<ShopSettingsModel>("settings").updateOne(
-    { _id: "shop" }, { $set: { product, productPrice, updatedAt: new Date() } }, { upsert: true },
+    { _id: "shop" }, { $set: { product, productPrice, discountPercent, updatedAt: new Date() } }, { upsert: true },
   );
 }
 export async function paymentProbeOrderCode() {

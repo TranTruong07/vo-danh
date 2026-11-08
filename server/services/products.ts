@@ -2,7 +2,7 @@ import "server-only";
 import { requireAdmin } from "./admin-auth";
 import { shopProduct } from "./catalog";
 import { DEFAULT_PRODUCT, validateProductContent } from "@/server/domain/product";
-import { parseProductPrice, SettingsError } from "@/server/domain/settings";
+import { calculateOriginalPrice, parseDiscountPercent, parseProductPrice, SettingsError } from "@/server/domain/settings";
 import { MAX_IMAGE_BYTES } from "@/server/domain/image";
 import { prepareCharacterImage } from "@/server/infrastructure/character-image";
 import { R2_PUBLIC_BASE_URL } from "@/server/infrastructure/r2";
@@ -20,14 +20,15 @@ export function isProductImage(url: string) {
 export async function saveProduct(form: FormData) {
   await requireAdmin();
   const price = parseProductPrice(form.get("price"));
+  const discountPercent = parseDiscountPercent(form.get("discountPercent"));
   const raw = form.get("product");
   if (typeof raw !== "string" || raw.length > 40000) throw new SettingsError("Thông tin sản phẩm quá lớn hoặc không hợp lệ.");
   let parsed: unknown;
   try { parsed = JSON.parse(raw); } catch { throw new SettingsError("Thông tin sản phẩm không hợp lệ."); }
   const product = validateProductContent(parsed);
   if (![product.mainImage, ...product.gallery.map(image => image.url)].every(isProductImage)) throw new SettingsError("Vui lòng dùng ảnh sản phẩm tải lên từ màn quản trị này.");
-  await writeShopProduct(product, price);
-  return { ...product, price, ready: true };
+  await writeShopProduct(product, price, discountPercent);
+  return { ...product, price, ready: true, discountPercent, originalPrice: calculateOriginalPrice(price, discountPercent) };
 }
 
 export async function uploadProductPhoto(form: FormData) {
