@@ -4,6 +4,7 @@ export interface OrderModel {
   _id: ObjectId; orderCode: number; userId: string; requestKey: string;
   email: string; name: string; phone: string; address: string; note: string;
   productName: string; unitPrice: number; quantity: number; total: number;
+  variantId?: string; variantName?: string;
   paymentMethod: PaymentMethod; status: OrderStatus;
   paymentLinkId?: string; checkoutUrl?: string; qrCode?: string; providerStatus?: string;
   paymentLeaseUntil?: Date; lastPaymentCheck?: Date;

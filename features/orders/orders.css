@@ -14,3 +14,11 @@
 @media (max-width: 600px) {
   .admin-shell .order-confirm { padding: 24px; }
 }
+.checkout-variant-picker{margin:18px 0;display:flex;flex-direction:column;gap:8px}
+.checkout-variant-picker>label{font-size:12px;font-weight:600;text-transform:uppercase;color:#7c7776;letter-spacing:1px}
+.checkout-variant-options{display:flex;flex-wrap:wrap;gap:8px}
+.checkout-variant-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid #dcdfe5;background:#fcfcfd;border-radius:8px;font:inherit;font-size:13px;font-weight:550;color:#282f3e;cursor:pointer;transition:all .18s}
+.checkout-variant-btn:hover{border-color:#9f2429;background:#fff}
+.checkout-variant-btn.active{border-color:#9f2429;background:#9f2429;color:#fff}
+.checkout-variant-btn small{font-size:11px;opacity:.9;padding-left:6px;border-left:1px solid currentColor}
+.checkout-variant-tag{font-size:16px;font-weight:500;color:#9f2429}

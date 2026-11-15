@@ -24,7 +24,7 @@ export async function SiteHeader({ active, initialAuthMode, resetToken, publicOn
 }
 
 export async function ProductSection({ shop = false, offline = false }: { shop?: boolean; offline?: boolean }) {
-  const fallback = { ...DEFAULT_PRODUCT, ready: false, price: 0, discountPercent: 0, originalPrice: 0 };
+  const fallback = { ...DEFAULT_PRODUCT, ready: false, price: 0, discountPercent: 0, originalPrice: 0, variants: [] };
   const product = offline ? fallback : await shopProduct().catch(() => fallback);
   if (!shop) return <HomeProduct initial={product} offline={offline} />;
   return <ShopProduct product={product} />;

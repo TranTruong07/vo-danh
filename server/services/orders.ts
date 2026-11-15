@@ -21,12 +21,27 @@ export async function placeOrder(form: FormData) {
   if (existing) return repository.orderView(existing);
   const product = await shopProduct();
   if (!product.ready) throw new OrderError("Cửa hàng đang cập nhật giá bán. Vui lòng quay lại sau.");
-  if (form.get("quotedPrice") !== String(product.price)) throw new OrderError("Giá bán vừa được cập nhật. Vui lòng tải lại trang để xem và xác nhận giá mới trước khi đặt hàng.");
+
+  let unitPrice = product.price;
+  let productName = product.name;
+  let variantName: string | undefined = undefined;
+  let variantId: string | undefined = undefined;
+
+  if (product.variants && product.variants.length > 0) {
+    const matched = input.variantId ? product.variants.find(v => v.id === input.variantId) : undefined;
+    const variant = matched || product.variants[0];
+    unitPrice = typeof variant.price === "number" && variant.price > 0 ? variant.price : product.price;
+    variantName = variant.name;
+    variantId = variant.id;
+    productName = `${product.name} (${variant.name})`;
+  }
+
+  if (form.get("quotedPrice") !== String(unitPrice)) throw new OrderError("Giá bán vừa được cập nhật. Vui lòng tải lại trang để xem và xác nhận giá mới trước khi đặt hàng.");
   if (input.paymentMethod === "payos" && !payosReady()) throw new OrderError("Thanh toán online chưa sẵn sàng. Vui lòng chọn COD.");
   const now = new Date();
   const order = await repository.insertOrder({ ...input, userId: user.userId, email: user.email,
-    orderCode: Date.now() * 1000 + randomInt(1000), productName: product.name, unitPrice: product.price,
-    total: product.price * input.quantity,
+    orderCode: Date.now() * 1000 + randomInt(1000), productName, unitPrice,
+    total: unitPrice * input.quantity, variantId, variantName,
     status: input.paymentMethod === "cod" ? "unpaid" : "pending", createdAt: now, updatedAt: now });
   return repository.orderView(order);
 }

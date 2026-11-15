@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { saveProductAction, uploadProductPhotoAction } from "@/actions/products";
-import { MAX_PRODUCT_GALLERY, type CatalogProduct } from "@/server/domain/product";
+import { MAX_PRODUCT_GALLERY, MAX_PRODUCT_VARIANTS, type CatalogProduct, type ProductVariant } from "@/server/domain/product";
 import { calculateOriginalPrice } from "@/server/domain/settings";
 import { MAX_IMAGE_BYTES } from "@/server/domain/image";
 import { money } from "@/server/domain/order";
@@ -15,7 +15,27 @@ export default function ProductEditor({ initial }: { initial: CatalogProduct }) 
   const [mainImage, setMainImage] = useState(initial.mainImage), [gallery, setGallery] = useState(initial.gallery);
   const [price, setPrice] = useState(initial.ready ? String(initial.price) : "");
   const [discountPercent, setDiscountPercent] = useState(String(initial.discountPercent ?? 0));
+  const [variants, setVariants] = useState<ProductVariant[]>(() => initial.variants ? initial.variants.map(v => ({ ...v })) : []);
   const [busy, setBusy] = useState(""), [error, setError] = useState(""), [message, setMessage] = useState("");
+
+  function addVariant() {
+    if (variants.length >= MAX_PRODUCT_VARIANTS) return;
+    const nextId = `var-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`;
+    setVariants(current => [...current, { id: nextId, name: "", price: undefined, description: "" }]);
+  }
+  function updateVariant(index: number, patch: Partial<ProductVariant>) {
+    setVariants(current => current.map((item, i) => i === index ? { ...item, ...patch } : item));
+  }
+  function removeVariant(index: number) {
+    setVariants(current => current.filter((_, i) => i !== index));
+  }
+  function moveVariant(index: number, direction: number) {
+    setVariants(current => {
+      const next = [...current];
+      [next[index], next[index + direction]] = [next[index + direction], next[index]];
+      return next;
+    });
+  }
 
   const numPrice = Number(price);
   const numDiscount = discountPercent.trim() === "" ? 0 : Number(discountPercent);
@@ -46,7 +66,13 @@ export default function ProductEditor({ initial }: { initial: CatalogProduct }) 
     event.preventDefault(); if (lock.current) return;
     const form = new FormData(event.currentTarget), text = (key: string) => String(form.get(key) || "");
     form.set("product", JSON.stringify({ name: text("name"), headline: text("headline"), summary: text("summary"), mainImage, gallery,
-      tags: text("tags").split("\n").map(tag => tag.trim()).filter(Boolean), description: text("description"), players: text("players"), ageRange: text("ageRange"), playTime: text("playTime"), boxContents: text("boxContents") }));
+      tags: text("tags").split("\n").map(tag => tag.trim()).filter(Boolean), description: text("description"), players: text("players"), ageRange: text("ageRange"), playTime: text("playTime"), boxContents: text("boxContents"),
+      variants: variants.filter(v => v.name.trim()).map((v, i) => ({
+        id: v.id || `variant-${i + 1}`,
+        name: v.name.trim(),
+        price: v.price && Number.isSafeInteger(v.price) && v.price >= 1000 ? v.price : undefined,
+        description: (v.description || "").trim(),
+      })) }));
     lock.current = true; setBusy("Đang lưu sản phẩm…"); setError(""); setMessage("");
     try {
       const result = await saveProductAction(form);
@@ -109,6 +135,113 @@ export default function ProductEditor({ initial }: { initial: CatalogProduct }) 
         </div>
         <label>Mô tả ngắn<textarea name="summary" defaultValue={initial.summary} rows={4} maxLength={1000} required /></label>
         <label>Đặc điểm nổi bật<textarea name="tags" defaultValue={initial.tags.join("\n")} rows={3} maxLength={305} /><small>Mỗi dòng một đặc điểm. Tối đa 6 dòng, 50 ký tự/dòng.</small></label>
+      </section>
+      <section className="card">
+        <div className="product-variants-card-header">
+          <div>
+            <h2>Tùy chọn loại sản phẩm</h2>
+            <p className="subtitle">Thêm các loại / phiên bản sản phẩm để người dùng lựa chọn khi mua (ví dụ: Bản Tiêu chuẩn, Bản Cao cấp). <strong>Loại đầu tiên (#1) sẽ làm mặc định khi khách bấm Mua ngay.</strong></p>
+          </div>
+          <button
+            type="button"
+            className="btn"
+            onClick={addVariant}
+            disabled={variants.length >= MAX_PRODUCT_VARIANTS || !!busy}
+          >
+            + Thêm loại sản phẩm
+          </button>
+        </div>
+
+        {variants.length === 0 ? (
+          <div className="product-variants-empty">
+            Chưa có tùy chọn loại sản phẩm nào. Khách hàng sẽ đặt mua theo giá bán và thông tin chung ở trên.
+          </div>
+        ) : (
+          <div className="product-variants-list">
+            {variants.map((variant, index) => (
+              <div key={variant.id || index} className={`product-variant-item ${index === 0 ? "is-default" : ""}`}>
+                <div className="product-variant-item-top">
+                  <span className={`product-variant-badge ${index === 0 ? "is-badge-default" : ""}`}>
+                    {index === 0 ? "★ Mặc định khi Mua ngay (#1)" : `Loại #${index + 1}`}
+                  </span>
+                  <div className="btn-row">
+                    <button
+                      type="button"
+                      className="btn"
+                      disabled={index === 0 || !!busy}
+                      onClick={() => moveVariant(index, -1)}
+                      title="Chuyển lên trước"
+                    >
+                      ↑ Lên
+                    </button>
+                    <button
+                      type="button"
+                      className="btn"
+                      disabled={index === variants.length - 1 || !!busy}
+                      onClick={() => moveVariant(index, 1)}
+                      title="Chuyển xuống sau"
+                    >
+                      ↓ Xuống
+                    </button>
+                    <button
+                      type="button"
+                      className="btn danger"
+                      disabled={!!busy}
+                      onClick={() => removeVariant(index)}
+                      title="Xóa loại này"
+                    >
+                      Xóa
+                    </button>
+                  </div>
+                </div>
+
+                <div className="product-editor-grid">
+                  <label>
+                    Tên loại sản phẩm
+                    <input
+                      value={variant.name}
+                      onChange={e => updateVariant(index, { name: e.target.value })}
+                      placeholder="Ví dụ: Bản Tiêu chuẩn, Bản Cao cấp..."
+                      maxLength={80}
+                      required
+                    />
+                  </label>
+                  <label>
+                    Giá bán riêng (VND)
+                    <input
+                      type="number"
+                      inputMode="numeric"
+                      min={1000}
+                      max={100000000}
+                      step={1}
+                      value={variant.price !== undefined ? variant.price : ""}
+                      onChange={e => {
+                        const val = e.target.value.trim();
+                        updateVariant(index, { price: val ? Number(val) : undefined });
+                      }}
+                      placeholder={isPriceValid ? `Dùng giá chung (${money(numPrice)})` : "Dùng giá chung"}
+                    />
+                    <small>
+                      {variant.price && Number.isSafeInteger(variant.price)
+                        ? money(variant.price)
+                        : "Để trống nếu áp dụng giá bán chung của sản phẩm."}
+                    </small>
+                  </label>
+                </div>
+
+                <label>
+                  Mô tả ngắn cho loại này <small>(tùy chọn, tối đa 200 ký tự)</small>
+                  <input
+                    value={variant.description || ""}
+                    onChange={e => updateVariant(index, { description: e.target.value })}
+                    placeholder="Ví dụ: Kèm hộp gỗ chạm khắc, 20 thẻ bài độc bản..."
+                    maxLength={200}
+                  />
+                </label>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
       <section className="card"><h2>Ảnh sản phẩm</h2><p className="subtitle">PNG, JPEG hoặc WebP, tối đa 3 MB/ảnh. Ảnh được lưu trên R2; thay đổi có hiệu lực sau khi lưu sản phẩm.</p>
         <div className="product-editor-grid"><div><h3>Ảnh chính</h3><Image className="product-main-preview" src={mainImage} alt="Ảnh chính sản phẩm" width={560} height={420} unoptimized /><label>Thay ảnh chính<input type="file" accept="image/png,image/jpeg,image/webp" onChange={event => { void upload(event.target.files, true); event.target.value = ""; }} /></label></div>

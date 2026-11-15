@@ -107,3 +107,36 @@ test('discount percent calculates original price and validates percent boundarie
     await assert.rejects(()=>run.service.saveProduct(form(undefined,'410000',invalid)),/Phần trăm giảm giá/);
   }
 });
+
+test('product variants can be saved, read, validated and first variant acts as default',async()=>{
+  const run=fixture();
+  const variants = [
+    { id: 'v-standard', name: 'Bản Tiêu chuẩn', price: 410000, description: 'Đầy đủ phụ kiện tiêu chuẩn' },
+    { id: 'v-deluxe', name: 'Bản Cao cấp', price: 590000, description: 'Hộp gỗ, 20 thẻ bài độc bản' },
+  ];
+  const saved = await run.service.saveProduct(form({ ...domain.DEFAULT_PRODUCT, variants }, '410000', '0'));
+  assert.equal(saved.variants.length, 2);
+  assert.equal(saved.variants[0].name, 'Bản Tiêu chuẩn');
+  assert.equal(saved.variants[0].price, 410000);
+  assert.equal(saved.variants[1].name, 'Bản Cao cấp');
+  assert.equal(saved.variants[1].price, 590000);
+
+  const product = await run.catalog.shopProduct();
+  assert.equal(product.variants.length, 2);
+  assert.equal(product.variants[0].id, 'v-standard');
+  assert.equal(product.variants[1].id, 'v-deluxe');
+
+  // Variant validation: reject invalid price or long name
+  await assert.rejects(
+    () => run.service.saveProduct(form({ ...domain.DEFAULT_PRODUCT, variants: [{ id: 'v1', name: '', price: 1000 }] })),
+    /Tên loại sản phẩm/
+  );
+  await assert.rejects(
+    () => run.service.saveProduct(form({ ...domain.DEFAULT_PRODUCT, variants: [{ id: 'v1', name: 'Bản lỗi', price: 500 }] })),
+    /Giá của loại/
+  );
+  await assert.rejects(
+    () => run.service.saveProduct(form({ ...domain.DEFAULT_PRODUCT, variants: Array(11).fill({ id: 'v', name: 'Loại' }) })),
+    /Tối đa 10 loại sản phẩm/
+  );
+});

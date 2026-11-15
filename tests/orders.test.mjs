@@ -32,7 +32,10 @@ const form = () => {
 };
 test('catalog reads MongoDB settings and exported amounts remain numeric in the 15-column workbook', async () => {
   const { shopProduct } = loader({ '@/server/repositories/settings': { readShopSettings: async () => ({ productPrice: 349000 }) } })('@/server/services/catalog');
-  assert.deepEqual(await shopProduct(), { name: 'Board game Dấu Chân Sử Ký', price: 349000, ready: true });
+  const product = await shopProduct();
+  assert.equal(product.name, 'Board game Dấu Chân Sử Ký');
+  assert.equal(product.price, 349000);
+  assert.equal(product.ready, true);
   const row = { orderCode: 123, createdAt: new Date(), name: 'Khách', email: 'test@example.com', phone: '0912345678', address: 'Hà Nội', productName: 'Board game', quantity: 2, unitPrice: 349000, total: 698000, paymentMethod: 'cod', status: 'unpaid', note: '=1+1' };
   let closed = false;
   const service = loader({
@@ -110,4 +113,49 @@ test('real payOS SDK rejects tampered signatures without any payment network req
     assert.deepEqual(await service.verifyPayosWebhook({ data, signature }), data);
     await assert.rejects(service.verifyPayosWebhook({ data: { ...data, amount: 1 }, signature }), /Chữ ký/);
   } finally { keys.forEach((key, i) => { if (prior[i] === undefined) delete process.env[key]; else process.env[key] = prior[i]; }); }
+});
+
+test('placing order with variant records variant name, price and defaults to first variant when omitted', async () => {
+  let savedOrder = null;
+  const variants = [
+    { id: 'v-std', name: 'Bản Tiêu chuẩn', price: 410000 },
+    { id: 'v-vip', name: 'Bản Cao cấp', price: 590000 },
+  ];
+  const service = loader({
+    './account-session': { currentAccount: async () => ({ userId: 'user-1', email: 'khach@test.com' }) },
+    './catalog': {
+      shopProduct: async () => ({
+        name: 'Board game Sử Ký',
+        price: 410000,
+        ready: true,
+        variants,
+      }),
+    },
+    '@/server/infrastructure/payos': { payosReady: () => false },
+    '@/server/repositories/orders': {
+      findOrderByRequest: async () => null,
+      insertOrder: async order => { savedOrder = order; return order; },
+      orderView: order => ({ ...order, id: 'order-1' }),
+    },
+  })('@/server/services/orders');
+
+  // Case 1: Specific variant selected (Bản Cao cấp)
+  const formVip = form();
+  formVip.set('variantId', 'v-vip');
+  formVip.set('quotedPrice', '590000');
+  formVip.set('requestKey', '11111111-1111-1111-1111-111111111111');
+  const resVip = await service.placeOrder(formVip);
+  assert.equal(resVip.unitPrice, 590000);
+  assert.equal(savedOrder.productName, 'Board game Sử Ký (Bản Cao cấp)');
+  assert.equal(savedOrder.variantId, 'v-vip');
+
+  // Case 2: Omitted variantId defaults to first variant (Bản Tiêu chuẩn)
+  const formDefault = form();
+  formDefault.delete('variantId');
+  formDefault.set('quotedPrice', '410000');
+  formDefault.set('requestKey', '22222222-2222-2222-2222-222222222222');
+  const resDef = await service.placeOrder(formDefault);
+  assert.equal(resDef.unitPrice, 410000);
+  assert.equal(savedOrder.productName, 'Board game Sử Ký (Bản Tiêu chuẩn)');
+  assert.equal(savedOrder.variantId, 'v-std');
 });

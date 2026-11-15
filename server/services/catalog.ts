@@ -1,7 +1,7 @@
 import "server-only";
 import { readShopSettings } from "@/server/repositories/settings";
 import { calculateOriginalPrice, validDiscountPercent, validProductPrice } from "@/server/domain/settings";
-import { DEFAULT_PRODUCT, readProductGallery, type CatalogProduct } from "@/server/domain/product";
+import { DEFAULT_PRODUCT, readProductGallery, readProductVariants, type CatalogProduct } from "@/server/domain/product";
 export async function shopProduct(): Promise<CatalogProduct> {
   const settings = await readShopSettings();
   const price = settings?.productPrice;
@@ -12,6 +12,7 @@ export async function shopProduct(): Promise<CatalogProduct> {
     ...DEFAULT_PRODUCT,
     ...settings?.product,
     gallery: readProductGallery(settings?.product?.gallery),
+    variants: readProductVariants(settings?.product?.variants),
     price: validPrice,
     ready: validProductPrice(price),
     discountPercent,

@@ -28,7 +28,7 @@ export async function saveProduct(form: FormData) {
   const product = validateProductContent(parsed);
   if (![product.mainImage, ...product.gallery.map(image => image.url)].every(isProductImage)) throw new SettingsError("Vui lòng dùng ảnh sản phẩm tải lên từ màn quản trị này.");
   await writeShopProduct(product, price, discountPercent);
-  return { ...product, price, ready: true, discountPercent, originalPrice: calculateOriginalPrice(price, discountPercent) };
+  return { ...product, price, ready: true, discountPercent, originalPrice: calculateOriginalPrice(price, discountPercent), variants: product.variants || [] };
 }
 
 export async function uploadProductPhoto(form: FormData) {
